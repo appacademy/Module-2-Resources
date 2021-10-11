@@ -1,0 +1,22 @@
+{
+  "name": "search-sort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "binary-search.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "a"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-spies": "^1.0.0",
+    "mocha": "^8.3.2"
+  }
+}
