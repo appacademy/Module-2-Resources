@@ -12,27 +12,26 @@ class Fish {
   }
 }
 
-const nemo = new Fish("Nemo");
-const dory = new Fish("Dory");
+const nemo = new Fish('Nemo');
+
 /********************************* Scenario 1 *********************************/
 // eat(); // ?
 
+
 /********************************* Scenario 2 *********************************/
-// // nemo.eat = eat;
-// console.log(nemo)
-// // nemo.eat(); // ?
-// dory.eat = eat;
-// dory.eat()
-// let swimz = dory.swim.bind(dory);
-// swimz();
+// nemo.eat = eat;
+// nemo.eat(); // ?
+
 
 /********************************* Scenario 3 *********************************/
 // nemo.eat = eat;
 // eat(); // ?
 
+
 /********************************* Scenario 4 *********************************/
 // nemo.swim(); // ?
 
+
 /********************************* Scenario 5 *********************************/
-const swim = nemo.swim;
-swim(); // ?
+// const swim = nemo.swim;
+// swim(); // ?

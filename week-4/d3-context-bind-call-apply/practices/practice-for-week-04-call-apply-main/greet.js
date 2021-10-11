@@ -6,8 +6,5 @@ function say(name) {
 helloMessage = { message: 'Hello,' };
 heyThereMessage = { message: 'Hey there,' };
 
-say.call(helloMessage, "John");
-say.call(heyThereMessage, "Michael");
-
-// let sayBound = say.bind(helloMessage)
-// sayBound('John')
+say(helloMessage, "John");
+say(heyThereMessage, "Michael");
