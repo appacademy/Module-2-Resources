@@ -1,4 +1,4 @@
-const Person = require("./person");
+const Person = require('./person');
 
 class Teacher extends Person {
   constructor(firstName, lastName, subject, yearsOfExperience) {
@@ -14,13 +14,8 @@ class Teacher extends Person {
     }
     return count;
   }
-  introduce() {
-    return `Hello. I am ${this.firstName} ${this.lastName}, and I have been teaching ${this.subject} for ${this.yearsOfExperience} years.`;
-  }
 }
 
-const teacher = new Teacher("kristen", "chauncey", "swe", 10);
-console.log(teacher.introduce());
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
 

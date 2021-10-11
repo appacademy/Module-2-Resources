@@ -1,4 +1,4 @@
-const Person = require("./person");
+const Person = require('./person');
 
 class Student extends Person {
   constructor(firstName, lastName, major, GPA) {
@@ -16,14 +16,8 @@ class Student extends Person {
       return "Both students have the same GPA";
     }
   }
-  introduce() {
-    
-    return `Hello. I am ${this.firstName} ${this.lastName}, and I study ${this.major}.`;
-  }
 }
 
-const badger = new Student("badger", "bear", "couch-eating", 0.75);
-console.log(badger.introduce());
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
 
