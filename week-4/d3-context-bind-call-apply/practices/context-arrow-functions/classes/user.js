@@ -1,12 +1,12 @@
-const User = require('./classes/user');
+class User {
+  constructor(name) {
+    this.name = name;
+  }
 
-const michelle = new User('Michelle');
-
-function greetAfterNameChange(changeName, newName) {
-  const name = changeName(newName);
-
-  console.log(`Hi my name is ${name}`);
+  changeName(newName) {
+    this.name = newName;
+    return this.name;
+  }
 }
 
-greetAfterNameChange(michelle.changeName, 'Elle');
-  // should print out: Hi my name is Elle
+module.exports = User;
