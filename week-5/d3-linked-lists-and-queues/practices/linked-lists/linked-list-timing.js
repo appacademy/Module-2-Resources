@@ -9,7 +9,7 @@ Construct a timing test to verify the time complexities of `addToHead` and
 let n = 10000
 let ll = new LinkedList();
 
-// time complexity:
+// time complexity: sll addToHead is O(1); the loop O(n)
 console.time("LL: addToHead")
 for (let i = 0 ; i < n ; i++) {
   ll.addToHead(i);
@@ -17,7 +17,7 @@ for (let i = 0 ; i < n ; i++) {
 console.timeEnd("LL: addToHead")
 
 
-// time complexity:
+// time complexity: sll addToTail is O(n); the loop O(n^2)
 ll = new LinkedList();
 console.time("LL: addToTail")
 for (let i = 0 ; i < n ; i++) {
@@ -26,7 +26,7 @@ for (let i = 0 ; i < n ; i++) {
 console.timeEnd("LL: addToTail")
 
 
-// time complexity:
+// time complexity: dll addToHead is O(1); the loop O(n)
 let dll = new DoublyLinkedList();
 console.time("DLL: addToHead")
 for (let i = 0 ; i < n ; i++) {
@@ -35,7 +35,7 @@ for (let i = 0 ; i < n ; i++) {
 console.timeEnd("DLL: addToHead")
 
 
-// time complexity:
+// time complexity: dll addToTail is O(1); the loop O(n)
 dll = new DoublyLinkedList();
 console.time("DLL: addToTail")
 for (let i = 0 ; i < n ; i++) {
