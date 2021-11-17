@@ -6,15 +6,39 @@ Construct a timing test to verify the time complexities of `addToHead` and
 `addToTail` for both singly and doubly linked lists.
 */
 
-const sll = new LinkedList()
-const dll = new DoublyLinkedList()
+let n = 10000
+let ll = new LinkedList();
 
-const n = 10000
-
-// timer start
-for (let i = 0; i < n; i++ ){
-    sll.addToHead(i)
+// time complexity:
+console.time("LL: addToHead")
+for (let i = 0 ; i < n ; i++) {
+  ll.addToHead(i);
 }
-// timer end
+console.timeEnd("LL: addToHead")
 
-dll.addToHead(2)
+
+// time complexity:
+ll = new LinkedList();
+console.time("LL: addToTail")
+for (let i = 0 ; i < n ; i++) {
+  ll.addToTail(i);
+}
+console.timeEnd("LL: addToTail")
+
+
+// time complexity:
+let dll = new DoublyLinkedList();
+console.time("DLL: addToHead")
+for (let i = 0 ; i < n ; i++) {
+  dll.addToHead(i);
+}
+console.timeEnd("DLL: addToHead")
+
+
+// time complexity:
+dll = new DoublyLinkedList();
+console.time("DLL: addToTail")
+for (let i = 0 ; i < n ; i++) {
+  dll.addToTail(i);
+}
+console.timeEnd("DLL: addToTail")
