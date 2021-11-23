@@ -50,13 +50,13 @@ class BinarySearchTree {
   }
 
 // recursive solution; requires extra parameter
-search(val, currentNode = this.root) {
-  if (!currentNode) return false
-  if (val === currentNode.val) return true
+  // search(val, currentNode = this.root) {
+  //   if (!currentNode) return false
+  //   if (val === currentNode.val) return true
 
-  if (val < currentNode.val) return this.search(val, currentNode.left)
-  if (val > currentNode.val) return this.search(val, currentNode.right)
-}
+  //   if (val < currentNode.val) return this.search(val, currentNode.left)
+  //   if (val > currentNode.val) return this.search(val, currentNode.right)
+  // }
 
   preOrderTraversal(currentNode = this.root) {
     // Your code here
