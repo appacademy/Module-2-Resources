@@ -34,8 +34,8 @@ class BinarySearchTree {
     }
   }
 
-  search(val) {
-    // Your code here
+  // iterative solution
+  search(val, currentNode = this.root) {
     let currentNode = this.root;
     while (currentNode) {
       if (val < currentNode.val) {
@@ -48,6 +48,15 @@ class BinarySearchTree {
     }
     return false;
   }
+
+// recursive solution; requires extra parameter
+search(val, currentNode = this.root) {
+  if (!currentNode) return false
+  if (val === currentNode.val) return true
+
+  if (val < currentNode.val) return this.search(val, currentNode.left)
+  if (val > currentNode.val) return this.search(val, currentNode.right)
+}
 
   preOrderTraversal(currentNode = this.root) {
     // Your code here
