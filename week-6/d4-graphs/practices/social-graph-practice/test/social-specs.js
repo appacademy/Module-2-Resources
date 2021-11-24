@@ -22,6 +22,8 @@ describe ('Tree practice', function () {
 
       expect(Object.keys(socialNetwork.users).length).to.equal(1);
 
+      expect(socialNetwork.users['1']).to.deep.equal({ id: 1, name: 'User 1' });
+
     });
 
     it('returns an incrementing userID', function () {
@@ -33,6 +35,18 @@ describe ('Tree practice', function () {
       expect(socialNetwork.addUser("User 5")).to.equal(5);
 
     });
+
+    it("initializes an empty set for the user's followers", function () {
+
+        expect(Object.keys(socialNetwork.follows).length).to.equal(0);
+
+        expect(socialNetwork.addUser('User 1')).to.equal(1);
+
+        expect(Object.keys(socialNetwork.follows).length).to.equal(1);
+
+        expect(socialNetwork.follows['1']).to.be.an.instanceof(Set)
+
+    })
   });
 
   describe('getUser', () => {
