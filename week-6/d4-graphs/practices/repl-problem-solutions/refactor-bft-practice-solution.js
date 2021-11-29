@@ -9,21 +9,25 @@ const adjList = {
 
 function printBreadthFirst(start) {
   // Paste your previous code here and refactor it
-    let queue = [];
-    let visited = new Set();
-    queue.push(start);
-    visited.add(start);
+  let queue = [];
+  let visited = new Set();
+  queue.push(start);
+  visited.add(start);
 
-    while (queue.length > 0) {
-      let currentNode = queue.shift();
-      console.log("current:", currentNode);
-      adjList[currentNode].forEach((neighbor) => {
-        if (!visited.has(neighbor)) {
-          queue.push(neighbor);
-          visited.add(neighbor);
-        }
-      });
-    }
+  let nodes = [];
+
+  while (queue.length > 0) {
+    let currentNode = queue.shift();
+    //   console.log("current:", currentNode);
+    nodes.push(currentNode);
+    adjList[currentNode].forEach((neighbor) => {
+      if (!visited.has(neighbor)) {
+        queue.push(neighbor);
+        visited.add(neighbor);
+      }
+    });
+  }
+  console.log(nodes);
 }
 
 console.log("First Test:");
