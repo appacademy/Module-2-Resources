@@ -4,7 +4,7 @@
 -2 coding problems worth 12 points
 -total points: 17
 -passing points: 13
--time allowed: 2 hours 15 min
+-time allowed: 3 hours
 -Resources Allowed:
 -MDN
 -open.appacademy.io
