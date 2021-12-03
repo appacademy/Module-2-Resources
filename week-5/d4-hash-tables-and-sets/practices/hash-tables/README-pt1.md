@@ -5,7 +5,7 @@ handles hash collisions with linked list chaining.
 
 ## Setup
 
-1. Clone the [starter] from github
+1. Download the starter at the bottom of this page
 2. Install all packages with `npm install`
 3. Run specs with `npm test test/hash-table-pt1-spec.js`
 
@@ -40,5 +40,3 @@ Example: `hashMod('ABC')` in a hash table with 10 buckets would return
 3050570844 modulo 10, or `4`.
 
 Read the specs in `test/hash-table-pt1-spec.js` for more details.
-
-[starter]: https://github.com/appacademy-starters/hash-tables-practice

@@ -5,7 +5,7 @@ handles hash collisions with linked list chaining.
 
 ## Setup
 
-1. Continue working in the same [starter] as part 1 and 2
+1. Continue working in the same starter as part 1 and 2
 2. Run specs with `npm test test/hash-table-pt3-spec.js`
 
 ## Hash table insert with hash collisions
@@ -30,6 +30,3 @@ capacity at the cost of performance.
 The bucket order of keys is reliant on a valid hash function from part 1.
 
 Read the specs in `test/hash-table-pt3-spec.js` for more details.
-
-
-[starter]: https://github.com/appacademy-starters/hash-tables-practice
