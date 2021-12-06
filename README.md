@@ -1,8 +1,17 @@
 # a/A Module 2 Resources
 
+## Welcome to Module 2!
+
+In this module, you will learn the following:
+
+---
+
 ## Instructions on how to use this repo
 
-This repo has templates for practices and study guides. Students should use their own cohort specific branch. It will follow syntax similar to `2021-November-Cohort`. Solutions and work will come from this specific branch.
+This repo has templates for practices and study guides. Students should use their own cohort specific branch. Solutions and cohort specific work will come from their respective branch.
+
+
+---
 
 ## Setup
 
@@ -22,11 +31,11 @@ Cloning (using SSH) may look like:
 
     git clone -b 2021-November-Cohort git@github.com:appacademy/Module-2-Resources.git
 
-## Welcome to Module 2!
+---
 
-In this module, you will learn the following:
+## Contents covered in module 2:
 
-## Week 4
+### Week 4
 
 - Basics of Clean Coding Principles
 - The importance of and guidelines for asking efficient questions
@@ -37,7 +46,7 @@ In this module, you will learn the following:
 - Test Driven Development (TDD)
 - How to write your own unit tests with Mocha and Chai
 
-## Week 5
+### Week 5
 
 - Big O Analysis of time and space complexity (O(1), O(n), O(n^2))
 - Logic operators
@@ -49,7 +58,7 @@ In this module, you will learn the following:
 - Sets
 - Hash Tables
 
-## Week 6
+### Week 6
 
 - Big O Analysis of time and space complexity (O(log n), O(n* log n))
 - Sorting algorithms(naive and efficient)
