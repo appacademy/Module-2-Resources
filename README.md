@@ -10,7 +10,6 @@ In this module, you will learn the following:
 
 This repo has templates for practices and study guides. Students should use their own cohort specific branch. Solutions and cohort specific work will come from their respective branch.
 
-
 ---
 
 ## Setup
@@ -19,17 +18,19 @@ To clone the repo run this command in the directory of your choice:
 
     git clone -b <your-cohort-branchname> --single-branch <remote-repo-url>
 
-`<your-cohort-branchname>` will follow the format of ___your cohort's___ `Year-Month-Cohort`, e.g., `2021-November-Cohort`.
+- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2021-November-Cohort`).
 
-`<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub
+- `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
 
-Cloning (using PAT) may look like:
+Examples:
 
-    git clone -b 2021-November-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
+- Cloning (using PAT) may look like:
 
-Cloning (using SSH) may look like:
+        git clone -b 2021-November-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
 
-    git clone -b 2021-November-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
+- Cloning (using SSH) may look like:
+
+        git clone -b 2021-November-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
 
 ---
 
