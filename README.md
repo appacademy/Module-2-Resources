@@ -16,7 +16,9 @@ _Before exploring this repo, please consult the sections on [how to use this rep
 
 This repo has templates for a/A module 2 practices and study guides. Students should use their own cohort specific branch. Solutions and cohort specific work will come from their respective branch as the cohort progresses through curriculum.
 
-__It is recommended that students create two clones of this repo__. One to check for updates (`git pull`) and another for their own commits which has been connected to their own GitHub repo. Consult the [git flow guide][git flow] how to change a `git remote`.
+__It is recommended that students create two clones of this repo__. One to check for updates (`git pull`) and another for their own commits which has been connected to their own GitHub repo.
+
+__Follow the instructions in the [setup][setup] section how to clone this repo__. Consult the [git flow guide][git flow] how to change a `git remote` to connect to your personal repo.
 
 ---
 
