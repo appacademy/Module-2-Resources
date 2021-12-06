@@ -2,13 +2,22 @@
 
 _Before exploring this repo, please consult the sections on [how to use this repo][how to use] and [setup][setup] to learn the intended utilization of these resources._
 
-<!-- ## Welcome to Module 2! -->
+---
 
-## Sections Outline
+## Welcome to module 2!
+
+App Academy's module 2 covers subjects in computer science, from coding design practices to data structures and algorithms. Please use this student resource to facilitate your studies here at App Academy!
+
+
+---
+
+## Sections outline
 
 -   [How to use this repo][how to use]
 -   [Setup][setup]
 -   [Content covered in module 2][content]
+-   [Guides][guides]
+    - [Git Flow Guide][git flow]
 
 ---
 
@@ -18,7 +27,7 @@ This repo has templates for a/A module 2 practices and study guides. Students sh
 
 __It is recommended that students create two clones of this repo__. One to check for updates (`git pull`) and another for their own commits which has been connected to their own GitHub repo.
 
-__Follow the instructions in the [setup][setup] section how to clone this repo__. Consult the [git flow guide][git flow] how to change a `git remote` to connect to your personal repo.
+__Follow the instructions in the [setup][setup] section how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
 
 ---
 
@@ -77,11 +86,19 @@ Examples:
 - Tree data structures and traversals/searching
 - Graph data structures and traversals/searching
 
+---
+
+## Guides
+
+-   [Git Flow Guide][git flow]
+
 <!-- internal links -->
 
 [content]: README.md#content-covered-in-module-2
+[guides]: README.md#guides
 [how to use]: README.md#how-to-use-this-repo
 [setup]: README.md#setup
 
 <!-- redirect links -->
-[git flow]: ./git-flow-guide/README.md#connecting-a-local-cloned-repo-to-a-github-repo
+[git flow]: ./git-flow-guide/README.md
+[connecting]: ./git-flow-guide/README.md#connecting-a-local-cloned-repo-to-a-github-repo
