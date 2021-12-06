@@ -1,4 +1,28 @@
-# Welcome to Module 2!
+# a/A Module 2 Resources
+
+## Instructions on how to use this repo
+
+This repo has templates for practices and study guides. Students should use their own cohort specific branch. It will follow syntax similar to `2021-November-Cohort`. Solutions and work will come from this specific branch.
+
+## Setup
+
+To clone the repo run this command in the directory of your choice:
+
+    git clone -b <your-cohort-branchname> <remote-repo-url>
+
+`<your-cohort-branchname>` will follow the format of ___your cohort's___ `Year-Month-Cohort`, e.g., `2021-November-Cohort`.
+
+`<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub
+
+Cloning (using PAT) may look like:
+
+    git clone -b 2021-November-Cohort https://github.com/appacademy/Module-2-Resources.git
+
+Cloning (using SSH) may look like:
+
+    git clone -b 2021-November-Cohort git@github.com:appacademy/Module-2-Resources.git
+
+## Welcome to Module 2!
 
 In this module, you will learn the following:
 
