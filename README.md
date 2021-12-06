@@ -1,12 +1,16 @@
 # a/A Module 2 Resources
 
+_Before exploring this repo, please consult the sections on [how to use this repo][how] and [setup][setup] to learn the intended utilization of these resources._
+
 ## Welcome to Module 2!
 
-In this module, you will learn the following:
+
+
+
 
 ---
 
-## Instructions on how to use this repo
+## How to use this repo
 
 This repo has templates for practices and study guides. Students should use their own cohort specific branch. Solutions and cohort specific work will come from their respective branch.
 
@@ -66,3 +70,8 @@ Examples:
 - JavaScript built in arr.sort method
 - Tree data structures and traversals/searching
 - Graph data structures and traversals/searching
+
+<!-- internal links -->
+
+[how]: README.md#how-to-use-this-repo
+[setup]: README.md#setup
