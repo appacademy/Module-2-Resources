@@ -1,18 +1,22 @@
 # a/A Module 2 Resources
 
-_Before exploring this repo, please consult the sections on [how to use this repo][how] and [setup][setup] to learn the intended utilization of these resources._
+_Before exploring this repo, please consult the sections on [how to use this repo][how to use] and [setup][setup] to learn the intended utilization of these resources._
 
-## Welcome to Module 2!
+<!-- ## Welcome to Module 2! -->
 
+## Sections Outline
 
-
-
+-   [How to use this repo][how to use]
+-   [Setup][setup]
+-   [Content covered in module 2][content]
 
 ---
 
 ## How to use this repo
 
-This repo has templates for practices and study guides. Students should use their own cohort specific branch. Solutions and cohort specific work will come from their respective branch.
+This repo has templates for a/A module 2 practices and study guides. Students should use their own cohort specific branch. Solutions and cohort specific work will come from their respective branch as the cohort progresses through curriculum.
+
+__It is recommended that students create two clones of this repo__. One to check for updates (`git pull`) and another for their own commits which has been connected to their own GitHub repo. Consult the [git flow guide][git flow] how to change a `git remote`.
 
 ---
 
@@ -38,7 +42,7 @@ Examples:
 
 ---
 
-## Contents covered in module 2:
+## Content covered in module 2
 
 ### Week 4
 
@@ -73,5 +77,9 @@ Examples:
 
 <!-- internal links -->
 
-[how]: README.md#how-to-use-this-repo
+[content]: README.md#content-covered-in-module-2
+[how to use]: README.md#how-to-use-this-repo
 [setup]: README.md#setup
+
+<!-- redirect links -->
+[git flow]: ./git-flow-guide/README.md#connecting-a-local-cloned-repo-to-a-github-repo
