@@ -1,37 +1,40 @@
 const sha256 = require('js-sha256');
 
 class KeyValuePair {
-    constructor(key, value) {
-        this.key = key;
-        this.value = value;
-        this.next = null;
-    }
+  constructor(key, value) {
+    this.key = key;
+    this.value = value;
+    this.next = null;
+  }
 }
 
 class HashTable {
-    constructor(numBuckets = 4) {
-        // Your code here
-    }
 
-    hash(key) {
-        // Your code here
-    }
+  constructor(numBuckets = 4) {
+    // Your code here
+  }
 
-    hashMod(key) {
-        // Your code here
-    }
+  hash(key) {
+    // Your code here
+  }
 
-    insertNoCollisions(key, value) {
-        // Your code here
-    }
+  hashMod(key) {
+    // Your code here
+  }
 
-    insertWithHashCollisions(key, value) {
-        // Your code here
-    }
+  insertNoCollisions(key, value) {
+    // Your code here
+  }
 
-    insert(key, value) {
-        // Your code here
-    }
+  insertWithHashCollisions(key, value) {
+    // Your code here
+  }
+
+  insert(key, value) {
+    // Your code here
+  }
+
 }
+
 
 module.exports = HashTable;
