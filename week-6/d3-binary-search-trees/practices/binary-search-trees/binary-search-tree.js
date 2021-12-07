@@ -8,106 +8,42 @@ class TreeNode {
 }
 
 class BinarySearchTree {
+
   constructor() {
     // Your code here
-    this.root = null;
   }
 
-  insert(val, currentNode = this.root) {
+  insert(val, currentNode=this.root) {
     // Your code here
-    if (!this.root) {
-      this.root = new TreeNode(val);
-      return;
-    }
-    if (val < currentNode.val) {
-      if (!currentNode.left) {
-        currentNode.left = new TreeNode(val);
-      } else {
-        this.insert(val, currentNode.left);
-      }
-    } else {
-      if (!currentNode.right) {
-        currentNode.right = new TreeNode(val);
-      } else {
-        this.insert(val, currentNode.right);
-      }
-    }
   }
 
-  // iterative solution
-  // search(val) {
-  //   let currentNode = this.root;
-  //   while (currentNode) {
-  //     if (val < currentNode.val) {
-  //       currentNode = currentNode.left;
-  //     } else if (val > currentNode.val) {
-  //       currentNode = currentNode.right;
-  //     } else {
-  //       return true;
-  //     }
-  //   }
-  //   return false;
-  // }
-
-// recursive solution; requires extra parameter
-  search(val, currentNode = this.root) {
-    if (!currentNode) return false
-    if (val === currentNode.val) return true
-
-    if (val < currentNode.val) return this.search(val, currentNode.left)
-    if (val > currentNode.val) return this.search(val, currentNode.right)
+  search(val) {
+    // Your code here
   }
+
 
   preOrderTraversal(currentNode = this.root) {
-    if (!currentNode) return
-
-    console.log(currentNode.val)
-    this.preOrderTraversal(currentNode.left)
-    this.preOrderTraversal(currentNode.right)
+    // Your code here
   }
+
 
   inOrderTraversal(currentNode = this.root) {
-    if (!currentNode) return
-
-    this.inOrderTraversal(currentNode.left)
-    console.log(currentNode.val)
-    this.inOrderTraversal(currentNode.right)
+    // Your code here
   }
+
 
   postOrderTraversal(currentNode = this.root) {
-    if (!currentNode) return
-
-    this.postOrderTraversal(currentNode.left)
-    this.postOrderTraversal(currentNode.right)
-    console.log(currentNode.val)
+    // Your code here
   }
 
-  // Breadth First Traversal - Iterative
+    // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
-    const queue = [this.root]
-
-    while (queue.length > 0) {
-      let currentNode = queue.shift()
-
-      console.log(currentNode.val)
-
-      if (currentNode.left) queue.push(currentNode.left)
-      if (currentNode.right) queue.push(currentNode.right)
-    }
+    // Your code here
   }
 
   // Depth First Traversal - Iterative
   depthFirstTraversal() {
-    const stack = [this.root]
-
-    while (stack.length > 0) {
-      let currentNode = stack.pop()
-
-      console.log( currentNode.val)
-
-      if (currentNode.left) stack.push(currentNode.left)
-      if (currentNode.right) stack.push(currentNode.right)
-    }
+    // Your code here
   }
 }
 
