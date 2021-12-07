@@ -1,8 +1,61 @@
-# Welcome to Module 2!
+# a/A Module 2 Resources
 
-In this module, you will learn the following:
+_Before exploring this repo, please consult the sections on [how to use this repo][how to use] and [setup][setup] to learn the intended utilization of these resources._
 
-## Week 4
+---
+
+## Welcome to module 2!
+
+App Academy's module 2 covers subjects in computer science, from coding design practices to data structures and algorithms. Please use this student resource to facilitate your studies here at App Academy!
+
+
+---
+
+## Sections outline
+
+-   [How to use this repo][how to use]
+-   [Setup][setup]
+-   [Content covered in module 2][content]
+-   [Guides][guides]
+    - [Git Flow Guide][git flow]
+
+---
+
+## How to use this repo
+
+This repo has templates for a/A module 2 practices and study guides. Students should use their own cohort specific branch. Solutions and cohort specific work will come from their respective branch as the cohort progresses through curriculum.
+
+__It is recommended that students create two clones of this repo__. One to check for updates (`git pull`) and another for their own commits which has been connected to their own GitHub repo.
+
+__Follow the instructions in the [setup][setup] section how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
+
+---
+
+## Setup
+
+To clone the repo run this command in the directory of your choice:
+
+    git clone -b <your-cohort-branchname> --single-branch <remote-repo-url>
+
+- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2021-November-Cohort`).
+
+- `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
+
+Examples:
+
+- Cloning (using PAT) may look like:
+
+        git clone -b 2021-November-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
+
+- Cloning (using SSH) may look like:
+
+        git clone -b 2021-November-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
+
+---
+
+## Content covered in module 2
+
+### Week 4
 
 - Basics of Clean Coding Principles
 - The importance of and guidelines for asking efficient questions
@@ -13,7 +66,7 @@ In this module, you will learn the following:
 - Test Driven Development (TDD)
 - How to write your own unit tests with Mocha and Chai
 
-## Week 5
+### Week 5
 
 - Big O Analysis of time and space complexity (O(1), O(n), O(n^2))
 - Logic operators
@@ -25,7 +78,7 @@ In this module, you will learn the following:
 - Sets
 - Hash Tables
 
-## Week 6
+### Week 6
 
 - Big O Analysis of time and space complexity (O(log n), O(n* log n))
 - Sorting algorithms(naive and efficient)
@@ -33,4 +86,19 @@ In this module, you will learn the following:
 - Tree data structures and traversals/searching
 - Graph data structures and traversals/searching
 
-<!-- test -->
+---
+
+## Guides
+
+-   [Git Flow Guide][git flow]
+
+<!-- internal links -->
+
+[content]: README.md#content-covered-in-module-2
+[guides]: README.md#guides
+[how to use]: README.md#how-to-use-this-repo
+[setup]: README.md#setup
+
+<!-- redirect links -->
+[git flow]: ./git-flow-guide/README.md
+[connecting]: ./git-flow-guide/README.md#connecting-a-local-cloned-repo-to-a-github-repo

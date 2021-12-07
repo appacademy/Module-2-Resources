@@ -5,7 +5,7 @@ handles hash collisions with linked list chaining.
 
 ## Setup
 
-1. Continue working in the same [starter] as part 1
+1. Continue working in the same starter as part 1
 2. Run specs with `npm test test/hash-table-pt2-spec.js`
 
 ## Hash table insert
@@ -22,6 +22,3 @@ If a `KeyValuePair()` is inserted at a location that is already occupied your
 method should throw an `Error` with an appropriate error message.
 
 Read the specs in `test/hash-table-pt2-spec.js` for more details.
-
-
-[starter]: https://github.com/appacademy-starters/hash-tables-practice
