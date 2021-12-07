@@ -1,0 +1,16 @@
+{
+  "name": "DRY",
+  "version": "1.0.0",
+  "description": "Practice with DRY",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3"
+  }
+}

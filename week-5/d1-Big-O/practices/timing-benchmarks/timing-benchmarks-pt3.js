@@ -1,0 +1,27 @@
+const [addNums, addManyNums] = require("./timing-benchmarks-pt1.js");
+
+function addNums10Timing(increment) {
+
+  // Copy your `addNums10` code here
+  // Then, add timing code
+
+}
+
+
+function addManyNums10Timing(increment) {
+
+  // Copy your `addManyNums10` code here
+  // Then, add timing code
+
+}
+
+
+n = 1000000
+console.log(`addNums(${n}): `);
+addNums10Timing(1000000);
+
+console.log("\n***********\n");
+
+n = 1000
+console.log(`addManyNums(${n}): `);
+addManyNums10Timing(5000);

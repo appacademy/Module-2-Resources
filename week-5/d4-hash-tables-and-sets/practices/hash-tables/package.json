@@ -1,0 +1,16 @@
+{
+  "name": "hash-tables-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hash-table.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "js-sha256": "^0.9.0",
+    "mocha": "^8.3.2"
+  }
+}
