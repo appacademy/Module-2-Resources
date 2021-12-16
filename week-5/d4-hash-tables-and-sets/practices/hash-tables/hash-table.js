@@ -46,10 +46,48 @@ class HashTable {
 
   insertWithHashCollisions(key, value) {
     // Your code here
+    const index = this.hashMod(key);
+    const newPair = new KeyValuePair(key, value);
+    //nothing is at the index
+    if (!this.data[index]) {
+      this.data[index] = newPair;
+    } else {
+      //if a pair is already at index
+      newPair.next = this.data[index];
+      this.data[index] = newPair;
+    }
+    this.count++;
   }
 
   insert(key, value) {
     // Your code here
+    //find index
+    const index = this.hashMod(key);
+    //starting with the pair at that indecx
+    let currentPair = this.data[index];
+    //while there is a currentPair and the key of that pair does NOT equal the key passed into method
+    while (currentPair && currentPair.key !== key) {
+      //keep walking to next pair
+      currentPair = currentPair.next;
+    }
+    //out of loop because the key matches, but we still have a current pair
+    if (currentPair) {
+      //because the key matches, we are overriding the value
+      currentPair.value = value;
+
+    } else {
+      //nothing exists at index, so we insert new pair
+      const newPair = new KeyValuePair(key, value);
+      if (!this.data[index]) {
+        this.data[index] = newPair;
+      } else {
+        //there is something at the index, but key doesn't match, so we are using ll format to insert new pair at head
+        newPair.next = this.data[index];
+        this.data[index] = newPair;
+      }
+      //increment count up to reflect total nodes in structure
+      this.count++;
+    }
   }
 }
 
