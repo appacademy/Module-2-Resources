@@ -32,6 +32,16 @@ class HashTable {
 
   insertNoCollisions(key, value) {
     // Your code here
+    //find index
+    const index = this.hashMod(key);
+
+    //insert key/value pair if nothing there
+    if (!this.data[index]) {
+      this.data[index] = new KeyValuePair(key, value);
+      this.count++;
+    } else {
+      throw Error("hash collision or same key/value pair already exists!");
+    }
   }
 
   insertWithHashCollisions(key, value) {
