@@ -62,11 +62,11 @@ console.log(arr2); // [ 0, 0, 1, 2, 3, 4 ]
 // Array.sort()
 //
 
-// const numbers = [5, 6, 4, 3, 2, 0, 1];
-// const letters = ['C', 'B', 'F', 'A', 'D', 'G', 'E'];
+const numbers = [5, 6, 4, 3, 2, 0, 1];
+const letters = ['C', 'B', 'F', 'A', 'D', 'G', 'E'];
 
-// console.log(numbers.sort()); // [ 0, 1, 2, 3, 4, 5, 6 ]
-// console.log(letters.sort()); // [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
+console.log(numbers.sort()); // [ 0, 1, 2, 3, 4, 5, 6 ]
+console.log(letters.sort()); // [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
 
 // const moreNumbers = [12, 10, 120, 100, 1100, 11];
 
