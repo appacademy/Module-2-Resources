@@ -33,8 +33,34 @@ class BinarySearchTree {
         }
     }
 
+    // iterative
     search(val) {
-        // Your code here
+        // O(logn)
+        if (this.root === val) return true;
+
+        let currentNode = this.root; // current node i'm lookign at pointer
+
+        while (currentNode) {
+            if (val < currentNode.val) {
+                currentNode = currentNode.left;
+            } else if (val > currentNode.val) {
+                currentNode = currentNode.right;
+            } else {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    // recursive
+    search(val, currentNode = this.root) {
+        if (!currentNode) return false;
+
+        if (val === currentNode.val) return true;
+
+        if (val < currentNode.val) return this.search(val, currentNode.left);
+        if (val > currentNode.val) return this.search(val, currentNode.right);
     }
 
     preOrderTraversal(currentNode = this.root) {
