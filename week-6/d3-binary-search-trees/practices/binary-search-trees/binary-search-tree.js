@@ -63,26 +63,50 @@ class BinarySearchTree {
         if (val > currentNode.val) return this.search(val, currentNode.right);
     }
 
+    //      4
+    //    /   \
+    //   2     6
+    //  / \   / \
+    // 1   3 5   7
+
     preOrderTraversal(currentNode = this.root) {
-        // Your code here
+        if (!currentNode) return;
+
+        console.log(currentNode.val);
+        this.preOrderTraversal(currentNode.left);
+        this.preOrderTraversal(currentNode.right);
     }
 
     inOrderTraversal(currentNode = this.root) {
-        // Your code here
+        if (!currentNode) return;
+
+        this.inOrderTraversal(currentNode.left);
+        console.log(currentNode.val);
+        this.inOrderTraversal(currentNode.right);
     }
 
     postOrderTraversal(currentNode = this.root) {
-        // Your code here
+        if (!currentNode) return;
+
+        this.postOrderTraversal(currentNode.left);
+        this.postOrderTraversal(currentNode.right);
+        console.log(currentNode.val);
     }
 
     // Breadth First Traversal - Iterative
     breadthFirstTraversal() {
-        // Your code here
+        // queue
+        [];
+        queue.shift();
+
+        queue.push();
     }
 
     // Depth First Traversal - Iterative
     depthFirstTraversal() {
-        // Your code here
+        // stack
+        stack.pop();
+        stack.push();
     }
 }
 
