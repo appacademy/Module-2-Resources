@@ -65,10 +65,10 @@ console.log(arr2); // [ 0, 0, 1, 2, 3, 4 ]
 const numbers = [5, 6, 4, 3, 2, 0, 1];
 const letters = ['C', 'B', 'F', 'A', 'D', 'G', 'E'];
 
-console.log(numbers.sort()); // [ 0, 1, 2, 3, 4, 5, 6 ]
-console.log(letters.sort()); // [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
+// console.log(numbers.sort()); // [ 0, 1, 2, 3, 4, 5, 6 ]
+// console.log(letters.sort()); // [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
 
-// const moreNumbers = [12, 10, 120, 100, 1100, 11];
+const moreNumbers = [12, 10, 120, 100, 1100, 11];
 
 // console.log(moreNumbers.sort()); // ???
 
@@ -76,9 +76,9 @@ console.log(letters.sort()); // [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
 
 // console.log(
 //     numbers.sort((a, b) => {
-//     letters.sort((a, b) => {
-//     moreNumbers.sort((a, b) => {
-//         a = `${a}`;
+//         // letters.sort((a, b) => {
+//         // moreNumbers.sort((a, b) => {
+//         // a = `${a}`;
 //         b = `${b}`;
 
 //         console.log(a);
@@ -98,7 +98,7 @@ console.log(letters.sort()); // [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
 // < 0	sort a before b
 
 // ascending
-// console.log(moreNumbers.sort((a, b) => a - b));
+console.log(moreNumbers.sort((a, b) => a - b)); // a = 1000 - b = 10 === positive
 
-// ascending
-// console.log(moreNumbers.sort((a, b) => b - a));
+// descending
+console.log(moreNumbers.sort((a, b) => b - a)); // b = 1000 - a = 10 === negative
