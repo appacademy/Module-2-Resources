@@ -17,7 +17,34 @@ const adjList = {
 };
 
 function aShortestPath(start, end) {
-    // your code here
+    const queue = [[start]];
+    const visited = new Set().add(start);
+
+    while (queue.length) {
+        console.log({ queue });
+        const currentPath = queue.shift(); // an array
+        console.log({ currentPath });
+        const currentNode = currentPath[currentPath.length - 1]; // a node
+        console.log({ currentNode });
+
+        if (currentNode === end) {
+            return currentPath;
+        }
+
+        adjList[currentNode].forEach((neighbor) => {
+            if (!visited.has(neighbor)) {
+                visited.add(neighbor);
+
+                // const pathCopy = [...currentPath];
+                // pathCopy.push(neighbor);
+                // queue.push(pathCopy);
+
+                queue.push(currentPath.concat(neighbor));
+            }
+        });
+    }
+
+    return false;
 }
 
 console.log('First Test:');
