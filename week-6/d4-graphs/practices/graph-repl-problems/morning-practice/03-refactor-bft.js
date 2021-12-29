@@ -14,7 +14,28 @@ const adjList = {
 };
 
 function printBreadthFirst(start) {
-    // Paste your previous code here and refactor it
+    const queue = [];
+    const visited = new Set();
+
+    queue.push(start);
+
+    const nodes = [];
+
+    while (queue.length) {
+        const currentNode = queue.shift();
+
+        if (!visited.has(currentNode)) {
+            visited.add(currentNode);
+
+            nodes.push(currentNode);
+
+            adjList[currentNode].forEach((neighbor) => {
+                queue.push(neighbor);
+            });
+        }
+    }
+
+    console.log({ nodes });
 }
 
 console.log('First Test:');
