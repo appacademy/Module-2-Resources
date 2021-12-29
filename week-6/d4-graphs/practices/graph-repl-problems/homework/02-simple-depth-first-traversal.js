@@ -4,6 +4,7 @@ printing each node when visited exactly once, on a newline.
 */
 
 const adjList = {
+    // pojo
     1: [2, 5],
     2: [1, 3, 5],
     3: [2, 4],
@@ -13,7 +14,25 @@ const adjList = {
 };
 
 function printDepthFirst(start) {
-    // your code here
+    const stack = [start];
+    const visited = new Set().add(start);
+
+    while (stack.length) {
+        console.log({ stack });
+        const currentNode = stack.pop();
+
+        console.log({ currentNode });
+
+        const neighborArray = adjList[currentNode];
+        console.log({ neighborArray });
+
+        neighborArray.forEach((neighbor) => {
+            if (!visited.has(neighbor)) {
+                stack.push(neighbor);
+                visited.add(neighbor);
+            }
+        });
+    }
 }
 
 console.log('First Test:');
