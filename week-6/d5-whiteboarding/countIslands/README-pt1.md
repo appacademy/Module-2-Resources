@@ -71,6 +71,6 @@ coordinates of all the adjacent squares containing 1s.
 ```
 
 For the above matrix, `getNeighbors(1, 1, matrix)` would return `[[0, 0], [0, 1]
-, [0, 2], [1, 2], [2, 1], [2, 2]]` since the neighbors of row 1, col 1 are `[0, 0]`, `[0, 1]`, `[0, 2]`, `[1, 0]`, `[1, 2]`, `[2, 0]`, `[2, 1]`, and `[2, 2]`. All of these contain 1s except for `[1, 0]` and `[2, 0]` which are excluded.
+, [0, 2], [1, 2], [2, 1], [2, 2]]` since the neighbors of row 1, col 1 are `[0, 0]`, `[0, 1]`, `[0, 2]`,`[1, 2]`, `[2, 1]`, and `[2, 2]`. All of these contain 1s except for `[1, 0]` and `[2, 0]` which are excluded.
 
 Read the specs in `test/countIslands-specs.js` for more details.
