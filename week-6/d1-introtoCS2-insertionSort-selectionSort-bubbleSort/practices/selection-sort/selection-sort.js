@@ -1,46 +1,64 @@
-
-
 function selectionSort(arr) {
+    // Copy the original array
+    const copy = [...arr];
 
-  // Copy the original array
+    // Create an array to store the sorted values
+    const sorted = [];
 
-  // Create an array to store the sorted values
+    // While the array is not empty...
+    while (copy.length) {
+        // Do not move this console.log
+        console.log(sorted.join(','));
 
-  // While the array is not empty...
+        // Find the index of the minimum value in the unsorted half
+        let minIndex = 0;
+        for (let i = 1; i < copy.length; i++) {
+            if (copy[i] < copy[minIndex]) {
+                minIndex = i;
+            }
+        }
 
-    // Do not move this console.log
-    console.log(sorted.join(","));
+        // Save and remove the value at the min index
+        const minValue = copy.splice(minIndex, 1)[0];
 
-    // Find the index of the minimum value in the unsorted half
+        // Add the min value to the end of the sorted array
+        sorted.push(minValue);
+    }
 
-    // Save and remove the value at the min index
-
-    // Add the min value to the end of the sorted array
-
+    return sorted;
 }
-
-
 
 function selectionSortInPlace(arr) {
+    // Set a pointer at zero diving the array into sorted and unsorted halves
+    let divider = 0;
 
-  // Set a pointer at zero diving the array into sorted and unsorted halves
+    // Repeat while the unsorted half is not empty:
+    while (divider < arr.length) {
+        // Do not move this console.log
+        console.log(arr.join(','));
 
-  // Repeat while the unsorted half is not empty:
+        // Find the index of the minimum value in the unsorted half
+        let minIndex = divider;
+        for (let i = divider + 1; i < arr.length; i++) {
+            if (arr[i] < arr[minIndex]) {
+                minIndex = i;
+            }
+        }
 
-    // Do not move this console.log
-    console.log(arr.join(","));
+        // Save the min value
+        const minValue = arr[minIndex];
 
-    // Find the index of the minimum value in the unsorted half
+        // Shift every unsorted value to the left of the min value to the right by 1
+        for (let i = minIndex; i >= divider; i--) {
+            arr[i] = arr[i - 1];
+        }
 
-    // Save the min value
+        // Put the min value at the divider
+        arr[divider] = minValue;
 
-    // Shift every unsorted value to the left of the min value to the right by 1
-
-    // Put the min value at the divider
-
-    // Increment the divider and repeat
-
+        // Increment the divider and repeat
+        divider++;
+    }
 }
-
 
 module.exports = [selectionSort, selectionSortInPlace];

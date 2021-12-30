@@ -14,8 +14,12 @@ class Teacher extends Person {
     }
     return count;
   }
+  introduce() {
+    return `Hello. I am ${this.firstName} ${this.lastName}, and I have been teaching ${this.subject} for ${this.yearsOfExperience} years.`
+  }
 }
-
+const kristen = new Teacher('kristen', 'chauncey', 'underwater basketweaving', 23)
+console.log(kristen.introduce())
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
 
