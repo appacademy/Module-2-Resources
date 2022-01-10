@@ -1,40 +1,20 @@
-// // 1.
+// 1.
 function sum(array) {
   let sum = 0;
-  try {
-    for (let i = 0; i < array.length; i++) {
-      sum += array[i];
-    }
-  } catch (error) {
-    if (error instanceof TypeError) {
-      console.log(error.message)
-      // console.error(error.message)
-    } else {
-      console.log(error.name, error.message)
-    }
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
   }
   return sum;
 }
 
-// let res = sum(null);
-// console.log(res);
+let res = sum(null);
+console.log(res);
 
 // 2.
 // tests
-function sayName(name) {
-  if (!(typeof name === 'string')) {
-    throw new TypeError('This is not a string! You did it wrong!')
-  } else {
-    console.log(name)
-  }
-}
-
-try {
-  sayName("Alex");
-  sayName(1);
-} catch (e) {
-  console.log('Something went wrong: ', e.message)
-}
+sayName("Alex");
+sayName(1);
+// Your code here
 
 // 3.
 function greet(greeting) {
@@ -43,11 +23,4 @@ function greet(greeting) {
   }
 
   console.log(greeting);
-}
-
-try {
-  greet("Hello there")
-  greet()
-} catch (e) {
-  console.log('Hello World!')
 }
