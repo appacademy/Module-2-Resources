@@ -4,6 +4,7 @@ class Doctor extends User {
     constructor(name, birthMonth, birthDate, birthYear) {
         super(name, birthMonth, birthDate, birthYear)
         this.acceptedInsurances = []
+        this.appointments = []
     }
 
     addInsurance(insurance){
@@ -19,6 +20,21 @@ class Doctor extends User {
 
     acceptsInsurance(insurance){
         return this.acceptedInsurances.includes(insurance)
+    }
+
+    checkAppointment(appointment) {
+        for (let currAppointment of this.appointments) {
+            // console.log(currAppointment.date.toDateString(), appointment.date.toDateString())
+            if (currAppointment.date.toString() === appointment.date.toString()) {
+                return true
+            }
+        }
+
+        return false
+    }
+
+    addAppointment(appointment) {
+        this.appointments.push(appointment)
     }
 }
 
