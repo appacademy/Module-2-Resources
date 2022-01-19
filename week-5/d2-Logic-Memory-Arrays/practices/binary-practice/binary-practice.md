@@ -2,6 +2,9 @@
 
 In this exercise, translate the following values into the appropriate number base
 
+## Manual conversion
+
+Solve these problems without using functions or methods.
 
 ## Binary to base 10
 
@@ -34,6 +37,11 @@ In this exercise, translate the following values into the appropriate number bas
 1. 8
 2. 24
 3. 255
+
+
+## Method conversions in Javascript
+
+Solve these problems with built-in JavaScript methods.
 
 ## Base 10 to ASCII
 
