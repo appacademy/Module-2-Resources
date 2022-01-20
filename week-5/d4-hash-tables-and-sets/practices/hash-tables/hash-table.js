@@ -64,6 +64,26 @@ class HashTable {
 
   insert(key, value) {
     // Your code here
+    const index = this.hashMod(key);
+    let currentPair = this.data[index];
+
+    //check if same key already exists
+    while (currentPair && currentPair.key !== key) {
+      currentPair = currentPair.next;
+    }
+    //if truthy the same key exists so update value
+    if (currentPair) {
+      currentPair.value = value;
+    } else {
+      const newPair = new KeyValuePair(key, value);
+      if (!this.data[index]) {
+        this.data[index] = newPair;
+      } else {
+        newPair.next = this.data[index];
+        this.data[index] = newPair;
+      }
+      this.count++;
+    }
   }
 }
 
