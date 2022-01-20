@@ -1,4 +1,4 @@
-const sha256 = require('js-sha256');
+const sha256 = require("js-sha256");
 
 class KeyValuePair {
   constructor(key, value) {
@@ -9,17 +9,25 @@ class KeyValuePair {
 }
 
 class HashTable {
-
   constructor(numBuckets = 4) {
     // Your code here
+    this.count = 0;
+    this.capacity = numBuckets;
+    this.data = new Array(this.capacity).fill(null);
   }
 
   hash(key) {
     // Your code here
+    //first 8 chars of sha256 hash of key
+    const hashHexString = sha256(key).slice(0, 8);
+    //convert to int
+    return parseInt(`0x${hashHexString}`);
   }
 
   hashMod(key) {
     // Your code here
+    //get index after hashing
+    return this.hash(key) % this.capacity;
   }
 
   insertNoCollisions(key, value) {
@@ -33,8 +41,6 @@ class HashTable {
   insert(key, value) {
     // Your code here
   }
-
 }
-
 
 module.exports = HashTable;
