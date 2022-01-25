@@ -10,7 +10,7 @@ const letters = ['C', 'B', 'F', 'A', 'D', 'G', 'E'];
 
 const moreNumbers = [10, 120, 100, 1100, 11];
 
-// console.log('default sort: ', moreNumbers.sort()); // ???
+console.log('default sort: ', moreNumbers.sort()); // ???
 
 // moreNumbers.sort((a, b) => console.log({ a }, { b }));
 
@@ -36,7 +36,7 @@ compareFunction(a, b) return value sort order
 */
 
 // // ascending
-// console.log('ascending sort: ', moreNumbers.sort((a, b) => a - b)); // a = 1000 - b = 10 === positive
+console.log('ascending sort: ', moreNumbers.sort((a, b) => a - b)); // a = 1000 - b = 10 === positive
 
 // // descending
-// console.log('descendsing sort: ', moreNumbers.sort((a, b) => b - a)); // b = 1000 - a = 10 === negative
+console.log('descending sort: ', moreNumbers.sort((a, b) => b - a)); // b = 1000 - a = 10 === negative
