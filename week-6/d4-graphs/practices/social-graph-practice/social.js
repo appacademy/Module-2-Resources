@@ -16,10 +16,10 @@ class SocialNetwork {
     }
 
     this.follows = {
-    '1':  { "id": 1, "follows": [1, ,2 3, 4,] },
-    '2':  { "id": 2, "follows": [1, ,2 3, 4,] },
-    '3':  { "id": 3, "follows": [1, ,2 3, 4,] },
-    '4':  { "id": 4, "follows": [1, ,2 3, 4,] },
+    '1':  { "id": 1, "follows": [1, 2, 3, 4,] },
+    '2':  { "id": 2, "follows": [1, 2, 3, 4,] },
+    '3':  { "id": 3, "follows": [1, 2, 3, 4,] },
+    '4':  { "id": 4, "follows": [1, 2, 3, 4,] },
     }
 
     this.users[user4ID] = { "id": 4, "name": "John Doe" },
