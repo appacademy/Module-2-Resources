@@ -8,23 +8,24 @@ class SocialNetwork {
   }
 
   /*
-this.users = {
- '1': { "id": 1, "name": "John Doe" },
-  2:  { "id": 2, "name": "John Doe" },
-  3:  { "id": 3, "name": "John Doe" },
-  4:  { "id": 4, "name": "John Doe" },
-}
+    this.users = {
+    '1':  { "id": 1, "name": "John Doe" },
+    '2':  { "id": 2, "name": "John Doe" },
+    '3':  { "id": 3, "name": "John Doe" },
+    '4':  { "id": 4, "name": "John Doe" },
+    }
 
-this.follows = {
- '1': { "id": 1, "follows": [1, ,2 3, 4,] },
-  2:  { "id": 2, "follows": [1, ,2 3, 4,] },
-  3:  { "id": 3, "follows": [1, ,2 3, 4,] },
-  4:  { "id": 4, "follows": [1, ,2 3, 4,] },
-}
+    this.follows = {
+    '1':  { "id": 1, "follows": [1, ,2 3, 4,] },
+    '2':  { "id": 2, "follows": [1, ,2 3, 4,] },
+    '3':  { "id": 3, "follows": [1, ,2 3, 4,] },
+    '4':  { "id": 4, "follows": [1, ,2 3, 4,] },
+    }
 
-this.users[user4ID] = { "id": 4, "name": "John Doe" },
-this.follows[user4ID] = 4: { "id": 4, "follows": [1, ,2 3, 4,] },
+    this.users[user4ID] = { "id": 4, "name": "John Doe" },
+    this.follows[user4ID] =  { "id": 4, "follows": [1, 2, 3, 4] },
   */
+
   addUser(name) {
     // Your code here
   }
