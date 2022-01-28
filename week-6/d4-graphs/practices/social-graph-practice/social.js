@@ -16,10 +16,10 @@ class SocialNetwork {
     }
 
     this.follows = {
-    '1':  { "id": 1, "follows": [1, 2, 3, 4,] },
-    '2':  { "id": 2, "follows": [1, 2, 3, 4,] },
-    '3':  { "id": 3, "follows": [1, 2, 3, 4,] },
-    '4':  { "id": 4, "follows": [1, 2, 3, 4,] },
+    '1':  Set(),
+    '2':  Set(),
+    '3':  Set(),
+    '4':  Set()
     }
 
     this.users[user4ID] = { "id": 4, "name": "John Doe" },
@@ -27,23 +27,39 @@ class SocialNetwork {
   */
 
   addUser(name) {
-    // Your code here
+    this.currentID++
+    const newId = this.currentID
+
+    this.users[newId] = { id: newId, name: name}
+    this.follows[newId] = new Set()
+
+    return newId
   }
 
   getUser(userID) {
-    // Your code here
+    if (this.users[userID]) return this.users[userID]
+    else return null
   }
 
   follow(userID1, userID2) {
-    // Your code here
+    if (!this.users[userID1] || !this.users[userID2]) return false
+
+    this.follows[userID1].add(userID2)
+    return true
   }
 
   getFollows(userID) {
-    // Your code here
+    return this.follows[userID]
   }
 
   getFollowers(userID) {
-    // Your code here
+    const followers = new Set()
+
+    for (let id in this.follows) {
+      if (this.follows[id].has(userID)) followers.add(parseInt(id))
+    }
+
+    return followers
   }
 
   getRecommendedFollows(userID, degrees) {
