@@ -19,8 +19,9 @@ const nemo = new Fish('Nemo');
 
 
 /********************************* Scenario 2 *********************************/
-// nemo.eat = eat;
-// nemo.eat(); // ?
+nemo.eat = eat;
+const nemoEats = nemo.eat.bind(nemo); // ?
+nemoEats();
 
 
 /********************************* Scenario 3 *********************************/
