@@ -32,22 +32,6 @@ You learned to count in a base 10 system. All numbers are based on a 0-9 countin
 *   '0b' prefix identifies string/num as binary: 0b0100 -> 4
 *   Avoids confusion, 8 -> 0b1000 to differentiate from base 10 number 1000
 
-
-## Exponents refresher:
-
-Recalling these aspects about powers will be helpful going forward.
-
-```
-// base to the power of zero is one, e.g.:
-2^0 // 1
-16^0 // 1
-
-// base to the power of one is one, e.g.:
-
-2^1 // 2
-16^1 // 16
-```
-
 ## Converting from binary to decimal (base 10):
 
 Formula: Multiply each digit by the number base raised to the nth power, where n
@@ -82,6 +66,27 @@ r = remainder
 1/2 = 0 r1 <-- left most binary digit (Most Significant Bit)
 
 202 = 0b11001010
+```
+
+```javascript
+// programmatic solution using powers
+const binary = '0b11001010';
+
+const binaryToDecimal = (binaryStr) => {
+    binaryStr = binaryStr.substring(2);
+    binaryStr = binaryStr.split('').reverse().join('');
+
+    let sum = 0;
+
+    for (let i = 0; i < binaryStr.length; i++) {
+        let num = Math.pow(2, i) * parseInt(binaryStr[i]);
+        sum += num;
+    }
+
+    return sum;
+};
+
+console.log(binaryToDecimal(binary));
 ```
 
 ## Base 16 - Hexadecimal:
@@ -159,66 +164,8 @@ r = remainder
 62012 = 0xF23C
 ```
 
-## ASCII:
-
--   `String.fromCharCode()`
-
 ```javascript
-String.fromCharCode(65); // = A;
-String.fromCharCode(66); // = B;
-String.fromCharCode(67); // = C;
-```
-
--   `String.prototype.charCodeAt()`
-
-```javascript
-const str = 'ABC';
-str.charCodeAt(0); // 65 => A;
-str.charCodeAt(1); // 66 => B;
-str.charCodeAt(2); // 67 => C;
-```
-
-
-## More Built in JavaScript Conversion Methods:
-
-```javascript
-// Convert Binary to Base10 & back`
-// 0b11001010
-let num = parseInt('11001010', 2); // 202
-let str = num.toString(2); // '11001010'
-```
-
-```javascript
-// Convert Hexadecimal to Base10 & back`
-// 0xa1
-let num = parseInt('0xa1', 16); // 161
-// alternatively, for hex only:
-// let num = parseInt('0xa1'); // 161
-
-let str = num.toString(16); // 'a1'
-```
-
-
-## Important to Know:
-
-### Bytes, kilobytes, megabytes, gigabytes, terabytes:
-
-1 byte = 8 bits
-
--   kilo - thousand
--   mega - million
--   giga - billion
--   tera - trillion
--   peta - quadrillion
--   exa - quintillion
--   zetta - sextillion
--   yotta - septillion
-
-
-## Programmatic conversions
-
-```javascript
-// hexadecimal to decimal programmatic solution using powers
+// programmatic solution using powers
 const hexChars = {
     A: 10,
     B: 11,
@@ -252,23 +199,44 @@ const hexToDecimal = (hexStr) => {
 console.log(hexToDecimal(hex1));
 ```
 
+## ASCII:
+
+-   `String.fromCharCode()`
+
 ```javascript
-// binary to decimal programmatic solution using powers
-const binary = '0b11001010';
-
-const binaryToDecimal = (binaryStr) => {
-    binaryStr = binaryStr.substring(2);
-    binaryStr = binaryStr.split('').reverse().join('');
-
-    let sum = 0;
-
-    for (let i = 0; i < binaryStr.length; i++) {
-        let num = Math.pow(2, i) * parseInt(binaryStr[i]);
-        sum += num;
-    }
-
-    return sum;
-};
-
-console.log(binaryToDecimal(binary));
+console.log(String.fromCharCode(65)); // = A;
+console.log(String.fromCharCode(66)); // = B;
+console.log(String.fromCharCode(67)); // = C;
 ```
+
+-   `String.prototype.charCodeAt()`
+
+```javascript
+const str = 'ABC';
+console.log(str.charCodeAt(0)); // 65 => A;
+console.log(str.charCodeAt(1)); // 66 => B;
+console.log(str.charCodeAt(2)); // 67 => C;
+```
+
+## More Built in JavaScript Conversion Methods:
+
+```javascript
+// Convert Hexadecimal to Base10 & back`
+let num = parseInt('0xa1', 16); // 161
+let str = num.toString(16); // 'a1'
+```
+
+## Important to Know:
+
+### Bytes, kilobytes, megabytes, gigabytes, terabytes:
+
+1 byte = 8 bits
+
+-   kilo - thousand
+-   mega - million
+-   giga - billion
+-   tera - trillion
+-   peta - quadrillion
+-   exa - quintillion
+-   zetta - sextillion
+-   yotta - septillion
