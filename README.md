@@ -37,7 +37,7 @@ To clone the repo run this command in the directory of your choice:
 
     git clone -b <your-cohort-branchname> --single-branch <remote-repo-url>
 
-- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2021-December-Cohort`).
+- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-January-Cohort`).
 
 - `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
 
@@ -45,11 +45,11 @@ Examples:
 
 - Cloning (using PAT) may look like:
 
-        git clone -b 2021-December-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
+        git clone -b 2022-January-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
 
 - Cloning (using SSH) may look like:
 
-        git clone -b 2021-December-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
+        git clone -b 2022-January-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
 
 ---
 
