@@ -23,11 +23,11 @@ App Academy's module 2 covers subjects in computer science, from coding design p
 
 ## How to use this repo
 
-This repo has templates for a/A module 2 practices and study guides. __Students should use their own cohort specific branch__. Solutions and cohort specific work will be available on their respective branch as the cohort progresses through curriculum.
+This repo has templates for a/A module 2 practices and study guides. __Students should use their own cohort's specific branch__. Solutions and cohort specific work will be available on their respective branch as their cohort progresses through curriculum. Content is regularly iterated on, adjusted and improved so each cohort's materials might change.
 
 _Please follow the specific steps for setting up this repo. They are designed for incoming students for this module._
 
-__It is recommended that students create two clones of this repo__. One to check for updates (`git pull`) and another for their own commits which the student will connect to their own GitHub repo.
+__It is recommended that students create two clones of this repo__. One to check for updates (with `git pull`) and another for their own commits which the student will connect to their own GitHub repo.
 
 __Follow the instructions in the [setup][setup] section (below) how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
 
