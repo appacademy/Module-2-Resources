@@ -23,11 +23,13 @@ App Academy's module 2 covers subjects in computer science, from coding design p
 
 ## How to use this repo
 
-This repo has templates for a/A module 2 practices and study guides. Students should use their own cohort specific branch. Solutions and cohort specific work will come from their respective branch as the cohort progresses through curriculum.
+This repo has templates for a/A module 2 practices and study guides. __Students should use their own cohort specific branch__. Solutions and cohort specific work will be available on their respective branch as the cohort progresses through curriculum.
 
-__It is recommended that students create two clones of this repo__. One to check for updates (`git pull`) and another for their own commits which has been connected to their own GitHub repo.
+_Please follow the specific steps for setting up this repo. They are designed for incoming students for this module._
 
-__Follow the instructions in the [setup][setup] section how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
+__It is recommended that students create two clones of this repo__. One to check for updates (`git pull`) and another for their own commits which the student will connect to their own GitHub repo.
+
+__Follow the instructions in the [setup][setup] section (below) how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
 
 ---
 
@@ -41,7 +43,11 @@ To clone the repo run this command in the directory of your choice:
 
 - `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
 
+This command will clone the resource repo and only grab the branch relevant to your cohort, while making it the default branch of your local repo. You will have consistent access to this branch with all content preserved as your cohort left it to utilize at a future time.
+
 Examples:
+
+#### _Note, the version you use depends on how you have previously setup your GitHub authentication. Usually only one method is utilized._
 
 - Cloning (using PAT) may look like:
 
