@@ -45,7 +45,7 @@ To clone the repo run this command in the directory of your choice:
 
 This command will clone the resource repo and only grab the branch relevant to your cohort, while making it the default branch of your local repo. This branch with be preserved as your cohort left it to utilize at your convenience in the future.
 
-Examples:
+### Example:
 
 #### _Note, the version you use depends on how you have previously setup your GitHub authentication. Usually only one method is utilized._
 
