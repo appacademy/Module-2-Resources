@@ -43,7 +43,7 @@ To clone the repo run this command in the directory of your choice:
 
 - `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
 
-This command will clone the resource repo and only grab the branch relevant to your cohort, while making it the default branch of your local repo. You will have consistent access to this branch with all content preserved as your cohort left it to utilize at a future time.
+This command will clone the resource repo and only grab the branch relevant to your cohort, while making it the default branch of your local repo. This branch with be preserved as your cohort left it to utilize at your convenience in the future.
 
 Examples:
 
