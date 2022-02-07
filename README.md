@@ -23,7 +23,21 @@ App Academy's module 2 covers subjects in computer science, from coding design p
 
 ## How to use this repo
 
-This repo has templates for a/A module 2 practices and study guides. __Students should use their own cohort's specific branch__. Solutions and cohort specific work will be available on their respective branch as their cohort progresses through curriculum. Content is regularly iterated on, adjusted and improved so each cohort's materials might change.
+This repo has templates for a/A module 2 practices and study guides. __Students should use their own cohort's specific branch__.
+
+Cohort specific work and solutions will be available on their respective branch as their cohort progresses through curriculum. Content is regularly iterated on, adjusted and improved so each cohort's materials might change.
+
+### The general use of this repo will be:
+
+- Each day have will have short morning practices. These are already provided for you in this repo so that you do not have to clone them from a/A Open.
+
+- In the afternoon there will be more complex long practices. These will still be accessed via a/A Open.
+
+- Lectures will be done with notes and practices on this resources repo. Short practice solutions will be pushed intermittently in between each short practice and lecture.
+
+- Long practice solutions will be uploaded at the end of the day they are assigned.
+
+- Practice assessment solutions and material will be available on this repo as they are reviewed at the end of each week.
 
 _Please follow the specific steps for setting up this repo. They are designed for incoming students for this module._
 
