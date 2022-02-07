@@ -23,11 +23,27 @@ App Academy's module 2 covers subjects in computer science, from coding design p
 
 ## How to use this repo
 
-This repo has templates for a/A module 2 practices and study guides. Students should use their own cohort specific branch. Solutions and cohort specific work will come from their respective branch as the cohort progresses through curriculum.
+This repo has templates for a/A module 2 practices and study guides. __Students should use their own cohort's specific branch__.
 
-__It is recommended that students create two clones of this repo__. One to check for updates (`git pull`) and another for their own commits which has been connected to their own GitHub repo.
+Cohort specific work and solutions will be available on their respective branch as their cohort progresses through curriculum. Content is regularly iterated on, adjusted and improved so each cohort's materials might change.
 
-__Follow the instructions in the [setup][setup] section how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
+### The general use of this repo will be:
+
+- Each day have will have short morning practices. These are already provided for you in this repo so that you do not have to clone them from a/A Open.
+
+- In the afternoon there will be more complex long practices. These will still be accessed via a/A Open.
+
+- Lectures will be done with notes and practices on this resources repo. Short practice solutions will be pushed intermittently in between each short practice and lecture.
+
+- Long practice solutions will be uploaded at the end of the day they are assigned.
+
+- Practice assessment solutions and material will be available on this repo as they are reviewed at the end of each week.
+
+_Please follow the specific steps for setting up this repo. They are designed for incoming students for this module._
+
+__It is recommended that students create two clones of this repo__. One to check for updates (with `git pull`) and another for their own commits which the student will connect to their own GitHub repo.
+
+__Follow the instructions in the [setup][setup] section (below) how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
 
 ---
 
@@ -37,19 +53,23 @@ To clone the repo run this command in the directory of your choice:
 
     git clone -b <your-cohort-branchname> --single-branch <remote-repo-url>
 
-- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2021-December-Cohort`).
+- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-January-Cohort`).
 
 - `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
 
-Examples:
+This command will clone the resource repo and only grab the branch relevant to your cohort, while making it the default branch of your local repo. This branch with be preserved as your cohort left it to utilize at your convenience in the future.
+
+### Example:
+
+#### _Note, the version you use depends on how you have previously setup your GitHub authentication. Usually only one method is utilized._
 
 - Cloning (using PAT) may look like:
 
-        git clone -b 2021-December-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
+        git clone -b 2022-January-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
 
 - Cloning (using SSH) may look like:
 
-        git clone -b 2021-December-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
+        git clone -b 2022-January-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
 
 ---
 
