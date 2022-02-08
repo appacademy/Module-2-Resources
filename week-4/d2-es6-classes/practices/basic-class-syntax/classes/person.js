@@ -15,15 +15,35 @@ class Person {
       console.log("introducePeople only takes an array as an argument.");
       return;
     }
-    for (let i = 0; i < people.length; i++){
-      let person = people[i]
+    for (let i = 0; i < people.length; i++) {
+      let person = people[i];
       if (!(person instanceof Person)) {
         console.log("All items in array must be Person class instances.");
         return;
       }
       person.introduce();
-    };
+    }
   }
+  /*
+  Alternate method for static introducePeople:
+  static introducePeople(people) {
+    if (!Array.isArray(people)) {
+      // throw new Error("introducePeople only takes an array as an argument.");
+      console.log("introducePeople only takes an array as an argument.");
+      return;
+    }
+
+    for (let person of people) {
+      if (!(person instanceof Person)) {
+        // throw new Error("All items in array must be Person class instances.");
+        console.log("All items in array must be Person class instances.");
+        return;
+      }
+    }
+
+    people.forEach((person) => person.introduce());
+  }
+  */
 }
 
 const kristen = new Person("kristen", "chauncey", 39);
