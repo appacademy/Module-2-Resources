@@ -22,11 +22,11 @@ class Appointment {
             throw new AppointmentError("Patient's insurance not supported")
         }
 
-        if (this.doctor.checkAppointment(this)) {
+        if (doctor.checkAppointment(this)) {
             throw new AppointmentError("Invalid time slot")
         }
 
-        this.doctor.addAppointment(this)
+        doctor.addAppointment(this)
     }
 }
 
