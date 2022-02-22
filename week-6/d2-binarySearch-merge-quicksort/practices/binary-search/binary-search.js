@@ -28,5 +28,21 @@ function binarySearch(arr, target) {
   }
   return -1;
 }
+function recursiveBinarySearch(arr, low, high, target) {
+  if (high >= low) {
+    let mid = low + Math.floor((high - low) / 2);
+
+   
+    if (arr[mid] == target) return mid;
+
+    if (arr[mid] > target) return recursiveBinarySearch(arr, low, mid - 1, target);
+
+    
+    return recursiveBinarySearch(arr, mid + 1, high, target);
+  }
+
+  return -1;
+}
+
 
 module.exports = [linearSearch, binarySearch];
