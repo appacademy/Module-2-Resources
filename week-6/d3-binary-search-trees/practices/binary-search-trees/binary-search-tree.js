@@ -8,35 +8,51 @@ class TreeNode {
 }
 
 class BinarySearchTree {
-
   constructor() {
     // Your code here
+    this.root = null;
   }
 
-  insert(val, currentNode=this.root) {
+  insert(val, currentNode = this.root) {
     // Your code here
+    //empty tree
+    if (!this.root) {
+      this.root = new TreeNode(val);
+      return;
+    }
+    //tree with at least a root
+    if (val < currentNode.val) {
+      if (!currentNode.left) {
+        currentNode.left = new TreeNode(val);
+      } else {
+        this.insert(val, currentNode.left);
+      }
+    } else {
+      if (!currentNode.right) {
+        currentNode.right = new TreeNode(val);
+      } else {
+        this.insert(val, currentNode.right);
+      }
+    }
   }
 
   search(val) {
     // Your code here
   }
 
-
   preOrderTraversal(currentNode = this.root) {
     // Your code here
   }
-
 
   inOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-
   postOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-    // Breadth First Traversal - Iterative
+  // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
     // Your code here
   }
