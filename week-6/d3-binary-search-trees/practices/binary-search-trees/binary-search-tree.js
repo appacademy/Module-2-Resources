@@ -36,8 +36,25 @@ class BinarySearchTree {
     }
   }
 
-  search(val) {
+  search(val, currentNode = this.root) {
     // Your code here
+    //iterative solution
+    // let currentNode = this.root;
+    // while (currentNode) {
+    //   if (val < currentNode.val) {
+    //     currentNode = currentNode.left;
+    //   } else if (val > currentNode.val) {
+    //     currentNode = currentNode.right;
+    //   } else {
+    //     return true;
+    //   }
+    // }
+    // return false;
+    //recursive version
+    if (!currentNode) return false;
+    if (val === currentNode.val) return true;
+    if (val < currentNode.val) return this.search(val, currentNode.left);
+    if (val > currentNode.val) return this.search(val, currentNode.right);
   }
 
   preOrderTraversal(currentNode = this.root) {
