@@ -44,6 +44,27 @@ class SocialNetwork {
 
   getRecommendedFollows(userID, degrees) {
     // Your code here
+    const queue = [[userID]];
+    const visited = new Set().add(userID);
+
+    const recommended = [];
+
+    while (queue.length) {
+      console.log({ queue });
+      const currentPath = queue.shift();
+      const currentID = currentPath[currentPath.length - 1];
+      if (currentPath.length > degrees + 2) break;
+      if (currentPath.length > 2) recommended.push(currentID);
+
+      for (let follow of this.follows[currentID]) {
+        if (!visited.has(follow)) {
+          visited.add(follow);
+          queue.push(currentPath.concat(follow));
+        }
+      }
+    }
+    console.log('recommended', recommended)
+    return recommended;
   }
 }
 
