@@ -100,7 +100,7 @@ describe('trenchTraversal', () => {
   it('Can traverse a trench that is too short and return false', () => {
 
     let visited = new Set();
-    const shortTrench = trenchTraversal([2, 3], sonar_2, visited)
+    const shortTrench = trenchTraversal([2, 1], sonar_3, visited)
 
     expect(shortTrench).to.equal(false)
 
