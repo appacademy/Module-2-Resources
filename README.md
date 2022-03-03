@@ -10,7 +10,6 @@ _Before exploring this repo, please consult the sections on [how to use this rep
 
 App Academy's module 2 covers subjects in computer science, from coding design practices to data structures and algorithms. Please use this student resource to facilitate your studies here at App Academy!
 
-
 ---
 
 ## Sections outline
@@ -84,7 +83,6 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 - Cloning a second copy, with new repo name, may look like this (using PAT). This will clone the repo but name the folder "my-mod-2-resources":
 
         git clone -b 2022-February-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
-
 
 ---
 
