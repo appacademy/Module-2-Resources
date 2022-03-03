@@ -55,7 +55,7 @@ To clone the repo run this command in the directory of your choice:
 
     git clone -b <your-cohort-branchname> --single-branch <remote-repo-url> <new-folder-name>
 
-- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-January-Cohort`).
+- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-February-Cohort`).
 
 - `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
 
@@ -75,15 +75,15 @@ Cloning this branch, as demonstrated, will enable GitHub to track your contribut
 
 - Cloning (using PAT) may look like:
 
-        git clone -b 2022-January-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
+        git clone -b 2022-February-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
 
 - Cloning (using SSH) may look like:
 
-        git clone -b 2022-January-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
+        git clone -b 2022-February-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
 
 - Cloning a second copy, with new repo name, may look like this (using PAT). This will clone the repo but name the folder "my-mod-2-resources":
 
-        git clone -b 2022-January-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
+        git clone -b 2022-February-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
 
 
 ---
