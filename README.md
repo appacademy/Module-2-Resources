@@ -29,13 +29,13 @@ This repo has templates for a/A module 2 practices and study guides. __Students 
 
 Cohort specific work and solutions will be available on their respective branch as their cohort progresses through curriculum. Content is regularly iterated on, adjusted and improved so each cohort's materials might change. The current cohort branch will receive the latest updates.
 
-### The general use of this repo will be:
+### The general day to day use of this repo will be:
 
-- Each day have will have short morning practices. These are already provided for you in this repo so that you do not have to clone them from a/A Open.
+- Each morning will have short practices. These are already provided for you in this repo so that you do not have to clone them from a/A Open.
 
 - In the afternoon there will be more complex long practices. These will still be accessed via a/A Open.
 
-- Lectures will be done with notes and practices on this resources repo. Short practice solutions will be pushed intermittently in between each short practice and lecture.
+- Lectures will be done with these notes and practices on this resources repo. Short practice solutions will be pushed intermittently in between each short practice and lecture. Students can then pull them down as soon as they are available.
 
 - Long practice solutions will be uploaded at the end of the day they are assigned.
 
@@ -53,15 +53,23 @@ __Follow the instructions in the [setup][setup] section (below) how to clone thi
 
 To clone the repo run this command in the directory of your choice:
 
-    git clone -b <your-cohort-branchname> --single-branch <remote-repo-url>
+    git clone -b <your-cohort-branchname> --single-branch <remote-repo-url> <new-folder-name>
 
 - `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-January-Cohort`).
 
 - `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
 
-This command will clone the resource repo and only grab the branch relevant to your cohort, while making it the default branch of your local repo. This branch with be preserved as your cohort left it to utilize at your convenience in the future.
+- `<new-folder-name>` will change the name of the local repo to this name (e.g., "my-mod-2-resources", etc.)
 
-### Example:
+[See below for examples][examples].
+
+If you intend to make a second clone, you should rename the previous cloned repo or git will give you an error. Altneratively, you can append an additional option to the above `git clone` command which will be the name of your newly cloned repo. See example below.
+
+These commands will clone the resource repo and only grab the branch relevant to your cohort, while making it the default branch of your local repo. This branch with be preserved as your cohort left it to utilize at your convenience in the future.
+
+Cloning this branch, as demonstrated, will enable GitHub to track your contributions should you change the remote to your own repositority (see the [git flow guide][connecting] how to do this).
+
+### Examples:
 
 #### _Note, the version you use depends on how you have previously setup your GitHub authentication. Usually only one method is utilized._
 
@@ -72,6 +80,11 @@ This command will clone the resource repo and only grab the branch relevant to y
 - Cloning (using SSH) may look like:
 
         git clone -b 2022-January-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
+
+- Cloning a second copy, with new repo name, may look like this (using PAT). This will clone the repo but name the folder "my-mod-2-resources":
+
+        git clone -b 2022-January-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
+
 
 ---
 
@@ -120,6 +133,7 @@ This command will clone the resource repo and only grab the branch relevant to y
 [guides]: README.md#guides
 [how to use]: README.md#how-to-use-this-repo
 [setup]: README.md#setup
+[examples]: README.md#examples
 
 <!-- redirect links -->
 [git flow]: ./git-flow-guide/README.md
