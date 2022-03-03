@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 
-const [addNums10, addManyNums10] = require("../timing-benchmarks-pt2.js");
+const [addNums10, addManyNums10] = require("../phase-2.js");
 
 describe ('addNums10', function () {
 

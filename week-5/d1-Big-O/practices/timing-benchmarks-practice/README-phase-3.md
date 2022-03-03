@@ -1,22 +1,15 @@
-# Practice Timing Benchmarks Part 3
+# Practice Timing Benchmarks Phase 3 - Timing your code
 
-In this 3-part exercise, you will be implementing a few simple JavaScript
-functions, then testing them at _massive_ scale.
-
-## Setup
-
-1. Continue working in the same [starter] repo as part 1 and 2.
-
-## Part 3: Timing your code
-
-Copy your `addNums10` and `addManyNums10` into the part 3 starter. Your task
+Copy your `addNums10` and `addManyNums10` into the phase 3 starter. Your task
 is to add timing reports to your code at key points to measure the time it
 takes to run with various input sizes.
 
-There are no test specs for this exercise but you can run the timing tests by
-typing `node timing-benchmarks-pt3.js`
+Read through the starter, **phase-3.js**, for details.
 
-### Directions
+There are no test specs for this exercise but you can run the timing tests by
+running the command `node phase-3.js`
+
+## Directions
 
 1. Copy your `addNums10` and `addManyNums10` code into `addNums10Timing` and
    `addManyNums10Timing`.
@@ -27,10 +20,5 @@ typing `node timing-benchmarks-pt3.js`
 4. Plot the results of `addNums10(1000000)` in a Google Sheet
 5. Plot the results of `addManyNums10(5000)` in a Google Sheet
 6. Identify the time complexity of both functions
-
-### Bonus
-
-7. Implement `addNums100` and `addManyNums100` and chart the performance for
-   better resolution.
-
-[starter]: https://github.com/appacademy-starters/practice-timing-benchmarks
+7. **BONUS**: Implement `addNums100` and `addManyNums100` and chart the
+   performance for better resolution.

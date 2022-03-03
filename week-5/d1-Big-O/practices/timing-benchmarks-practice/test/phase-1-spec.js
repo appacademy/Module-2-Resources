@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 
-const [addNums, addManyNums] = require("../timing-benchmarks-pt1.js");
+const [addNums, addManyNums] = require("../phase-1.js");
 
 describe ('addNums', function () {
 
@@ -65,7 +65,7 @@ describe ('addNums', function () {
     const runtime = endTime - startTime
 
     // Don't get too clever, should run in O(n) time
-    expect(runtime).to.be.above(10);
+    expect(runtime).to.be.above(3);
 
     // Even slow computers should be able to run in under 800ms
     expect(runtime).to.be.below(800);

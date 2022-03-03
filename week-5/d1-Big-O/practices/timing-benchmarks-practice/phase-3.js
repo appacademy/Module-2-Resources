@@ -1,18 +1,14 @@
-const [addNums, addManyNums] = require("./timing-benchmarks-pt1.js");
+const [addNums, addManyNums] = require("./phase-1");
 
 function addNums10Timing(increment) {
-
   // Copy your `addNums10` code here
   // Then, add timing code
-
 }
 
 
 function addManyNums10Timing(increment) {
-
-  // Copy your `addManyNums10` code here
-  // Then, add timing code
-
+// Copy your `addManyNums10` code here
+// Then, add timing code
 }
 
 
