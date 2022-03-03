@@ -71,7 +71,7 @@ Cloning this branch, as demonstrated, will enable GitHub to track your contribut
 
 ### Examples:
 
-#### _Note, the version you use depends on how you have previously setup your GitHub authentication. Usually only one method is utilized._
+_Note, the version you use depends on how you have previously setup your GitHub authentication. Usually only one method is utilized._
 
 - Cloning (using PAT) may look like:
 
