@@ -1,5 +1,7 @@
 # a/A Module 2 Resources
 
+___PLEASE READ BEFORE CLONING:___
+
 _Before exploring this repo, please consult the sections on [how to use this repo][how to use] and [setup][setup] to learn the intended utilization of these resources._
 
 ---
