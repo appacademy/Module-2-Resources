@@ -19,6 +19,7 @@ App Academy's module 2 covers subjects in computer science, from coding design p
 -   [Content covered in module 2][content]
 -   [Guides][guides]
     - [Git Flow Guide][git flow]
+-   [Frequently asked questions][faq]
 
 ---
 
@@ -125,6 +126,12 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 -   [Git Flow Guide][git flow]
 
+---
+
+## Frequently asked questions
+
+
+
 <!-- internal links -->
 
 [content]: README.md#content-covered-in-module-2
@@ -132,6 +139,7 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 [how to use]: README.md#how-to-use-this-repo
 [setup]: README.md#setup
 [examples]: README.md#examples
+[faq]: README.md#frequently-asked-questions
 
 <!-- redirect links -->
 [git flow]: ./git-flow-guide/README.md
