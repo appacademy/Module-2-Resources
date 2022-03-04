@@ -51,6 +51,8 @@ __It is recommended that students create two clones of this repo__. One to check
 
 __Follow the instructions in the [setup][setup] section (below) how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
 
+##### [Back to the top][top]
+
 ---
 
 ## Setup
@@ -89,6 +91,8 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
         git clone -b 2022-February-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
 
+##### [Back to the top][top]
+
 ---
 
 ## Content covered in module 2
@@ -124,11 +128,15 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 - Tree data structures and traversals/searching
 - Graph data structures and traversals/searching
 
+##### [Back to the top][top]
+
 ---
 
 ## Guides
 
 -   [Git Flow Guide][git flow]
+
+##### [Back to the top][top]
 
 ---
 
@@ -152,9 +160,11 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 -   For longer practices it is expected that pairs follow a/A suggested pair programming git flow of working from the same repo while taking turns swapping roles between driving and navigating.
 
+##### [Back to the top][top]
 
 <!-- internal links -->
 
+[top]: README.md#welcome-to-module-2
 [content]: README.md#content-covered-in-module-2
 [guides]: README.md#guides
 [how to use]: README.md#how-to-use-this-repo
