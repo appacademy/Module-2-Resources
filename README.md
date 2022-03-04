@@ -89,6 +89,10 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 - Cloning a second copy, with new repo name, may look like this (using PAT). This will clone the repo but name the folder "my-mod-2-resources":
 
+        <same command as above> my-mod-2-resources
+
+        or
+
         git clone -b 2022-February-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
 
 ##### [Back to the top][top]
@@ -159,6 +163,10 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 ### What is the recommended git flow for long project problems?
 
 -   For longer practices it is expected that pairs follow a/A suggested pair programming git flow of working from the same repo while taking turns swapping roles between driving and navigating.
+
+### How do I connect my own repo?
+
+-   Please consult our [git flow guide][git flow] which has step by step instructions with pictures.
 
 ##### [Back to the top][top]
 
