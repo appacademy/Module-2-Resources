@@ -29,13 +29,13 @@ App Academy's module 2 covers subjects in computer science, from coding design p
 
 ## How to use this repo
 
-This repo has templates for a/A module 2 practices and study guides. __Students should use their own cohort's specific branch__. Do __not__ use the `main` branch of this repo; it is reserved for empty templates only.
+This repo has templates for a/A module 2 practices and study guides. __Students should use their own cohort's specific branch to access solutions__. Do __not__ use the `main` branch of this repo; it is reserved for empty templates only.
 
-Cohort specific work and solutions will be available on their respective branch as their cohort progresses through curriculum. Content is regularly iterated on, adjusted and improved so each cohort's materials might change. The current cohort branch will receive the latest updates.
+Cohort specific work and solutions will be available to students on their respective branch as their cohort progresses through curriculum. Content is regularly iterated on, adjusted and improved so each cohort's materials might change. The current cohort branch has the latest updates.
 
 ### The general day to day use of this repo will be:
 
-- Each morning will have short practices. These are already provided for you in this repo so that you do not have to clone them from a/A Open.
+- Each morning will have short practices. These are provided for you in this repo so that you do not have to clone them from a/A Open.
 
 - In the afternoon there will be more complex long practices. These will still be accessed via a/A Open.
 
@@ -47,7 +47,7 @@ Cohort specific work and solutions will be available on their respective branch 
 
 _Please follow the specific steps for setting up this repo. They are designed for incoming students for this module._
 
-__It is recommended that students create two clones of this repo__. One to check for updates (with `git pull`) and another for their own commits which the student will connect to their own GitHub repo.
+__It is recommended that students create two clones of this repo__. One to check for updates (with `git pull`) and another for their own work and commits which the student will connect to their own GitHub repo.
 
 __Follow the instructions in the [setup][setup] section (below) how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
 
@@ -57,7 +57,7 @@ __Follow the instructions in the [setup][setup] section (below) how to clone thi
 
 ## Setup
 
-To clone the repo run this command in the directory of your choice:
+To clone the repo use this command in the directory of your choice:
 
     git clone -b <your-cohort-branchname> --single-branch <remote-repo-url> <new-folder-name>
 
@@ -69,11 +69,11 @@ To clone the repo run this command in the directory of your choice:
 
 [See below for examples][examples].
 
-If you intend to make a second clone, you should rename the previous cloned repo or git will give you an error. Altneratively, you can append an additional option to the above `git clone` command which will be the name of your newly cloned repo. See example below.
-
 These commands will clone the resource repo and only grab the branch relevant to your cohort, while making it the default branch of your local repo. This branch with be preserved as your cohort left it to utilize at your convenience in the future.
 
 Cloning this branch, as demonstrated, will enable GitHub to track your contributions should you change the remote to your own repositority (see the [git flow guide][connecting] how to do this).
+
+If you intend to make a second clone, you should rename the previous cloned repo or git will give you an error. Alternatively, you can utilize an optional command with `git clone` which will be the name of your newly cloned repo. See example below.
 
 ### Examples:
 
@@ -104,30 +104,30 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 ### [Week 4](#week-4)
 
 - The importance of and guidelines for asking efficient questions
-- Basics of Clean Coding Principles
+- Basics of clean coding principles
 - Reading unit tests
-- Object Oriented Programming (OOP)
-- CommonJS Modules
-- JavaScript Classes
-- Test Driven Development (TDD)
+- Object oriented programming (OOP)
+- Common JavaScript modules
+- JavaScript classes
+- Test driven development (TDD)
 - Writing unit tests with Mocha and Chai
 
 ### [Week 5](#week-5)
 
-- Big O Analysis of time and space complexity (O(1), O(n), O(n^2))
+- Big O analysis of time and space complexity (O(1), O(n), O(n^2))
 - Logic operators
 - Computer memory addresses/pointers
-- Binary, Hexidecimal, ASCII representation and conversion
-- Dynamic arrays and the Big O analysis of array methods
+- Binary, hexidecimal, ASCII representation and conversion
+- Dynamic arrays and the big O analysis of array methods
 - Linked lists (single and doubly linked lists)
-- Stacks and Queues
-- Hash Tables and Sets
+- Stacks and queues
+- Hash tables and Sets
 
 ### [Week 6](#week-6)
 
-- Big O Analysis of time and space complexity (O(log n), O(n* log n))
+- Big O analysis of time and space complexity (O(log n), O(n * log n))
 - Sorting algorithms (naive and efficient)
-- JavaScript built in arr.sort method
+- JavaScript built in Array.sort() method
 - Binary tree data structures, traversals and searches
 - Graph data structures, traversals and searches
 
@@ -147,17 +147,19 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 ### Why do I not see any solutions?
 
--   Please make sure your repo is on the correct branch. If using the command `git branch` indicates you are on `main` you will not see solutions. The solutions for your cohort are on your cohort specific branch (e.g., 2022-February-Cohort). Please refer to [the setup instructions][setup] on how to setup your repo.
+-   Please make sure your repo is on the correct branch. If using the command `git branch` indicates you are on `main` you will not see solutions. The `main` branch only has empty templates. Solutions for your cohort are on your cohort specific branch (e.g., 2022-February-Cohort). Please refer to [the setup instructions][setup] on how to setup your repo.
 
-### Why can't I just `git clone` or `git fork` the resources repo?
+### Why can't I simply `git clone` or `git fork` the resources repo?
 
--   These are not necessarily incorrect approaches. However to get the intended utility of the repo, 1) access to the solutions and 2) easy setup to make your contributions to your own repo on GitHub, requires additional steps after using those commands. Some of those steps may not be known to newer incoming students to a/A. The instructions in [the setup section][setup] were designed to accomodate students in an effective manner relative to their current expected experience with `git` and a/A's goals to gradually encourage familiarity with `git` over time.
+-   These are not necessarily incorrect approaches. However to get the intended utility of the repo requires additional steps after using those commands. Some of those steps may not be known to newer incoming students to a/A. The instructions in [the setup section][setup] were designed to accomodate students in an effective manner relative to their current expected experience with `git` and a/A's goals to gradually encourage familiarity with `git` over time.
+
+-   The goals of this repo are:
+    1) Access to the short practices, all solutions and various curriculum resources.
+    2) Convenient setup to make your contributions to your own repo on GitHub.
 
 ### What is the recommended git flow for short practice problems?
 
--   In Module 2, morning practice sessions are short periods of time to tackle concepts through smaller problems. In the interest of time, you may find it simpler to work on your own code and repos for these shorter sessions while collaborating with your pair. Working together to understand and solve the problems but maximizing your own coding practice time as well.
-
--   If you would prefer to commit to the same repos, you may do so. Attempt to coordinate with your pair in advance, prior to the designated practice time, to decide who creates the repos, send/accept links. This will minimize downtime.
+-   In module 2, morning practices are short sessions to tackle concepts through smaller problems. In the interest of time, you may find it simpler to work on your own code and repos while collaborating with your pair. Working together to understand and solve the problems but maximizing your own coding practice time as well. This resources repo conveniently has all of the short practices setup for you.
 
 ### What is the recommended git flow for long project problems?
 
@@ -165,7 +167,7 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 ### How do I connect my own repo?
 
--   Please consult our [git flow guide][git flow] which has step by step instructions with pictures.
+-   Please consult our [git flow guide][git flow] which has step by step instructions with images for extra details.
 
 ##### [Back to the top][top]
 
@@ -180,7 +182,7 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 <!-- faq links -->
 [why solutions]: README.md#why-do-I-not-see-any-solutions
-[why not git x]: README.md#why-cant-I-just-git-clone-or-git-fork-the-resources-repo
+[why not git x]: README.md#why-cant-I-simply-git-clone-or-git-fork-the-resources-repo
 [short git flow]: README.md#what-is-the-recommended-git-flow-for-short-practice-problems
 [long git flow]: README.md#what-is-the-recommended-git-flow-for-long-project-problems
 
