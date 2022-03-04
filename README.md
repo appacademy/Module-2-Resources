@@ -26,6 +26,7 @@ App Academy's module 2 covers subjects in computer science, from coding design p
     -   [What is the recommended git flow for long project problems?][long git flow]
     -   [How do I connect my own local repo?][how connect]
     -   [What is a recommended file structure for my own notes going forward?][how files]
+    -   [Will I still have access to these materials once I leave the module?][will access]
 
 ---
 
@@ -193,6 +194,10 @@ _Note, the version you use depends on how you have previously setup your GitHub 
     └── mod-3...
 ```
 
+### Will I still have access to these materials once I leave the module?
+
+-   Yes. We have cohort specific branches so that they can remain unchanged once the cohort departs this module and continues through the a/A program. The branch will be preserved and can be referred to at your discretion and we will have new branches for future cohorts. Since you cloned your branch directly, you will not need to re-clone nor do anything else differently to access this material if you keep your local repo.
+
 ##### [Back to the top][top]
 
 <!-- internal links -->
@@ -211,6 +216,7 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 [long git flow]: README.md#what-is-the-recommended-git-flow-for-long-project-problems
 [how connect]: README.md#how-do-i-connect-my-own-local-repo
 [how files]: README.md#what-is-a-recommended-file-structure-for-my-own-notes-going-forward
+[will access]: README.md#will-i-still-have-access-to-these-materials-once-i-leave-the-module
 
 <!-- git flow guide links -->
 [git flow]: ./git-flow-guide/README.md
