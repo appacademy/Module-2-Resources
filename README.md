@@ -16,7 +16,7 @@ App Academy's module 2 covers subjects in computer science, from coding design p
 
 -   [How to use this repo][how to use]
 -   [Setup][setup]
--   [Content covered in module 2][content]
+-   [Content outline for module 2][content]
 -   [Guides][guides]
     - [Git Flow Guide][git flow]
 -   [FAQ (Frequently asked questions)][faq]
@@ -99,38 +99,37 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 ---
 
-## Content covered in module 2
+## Content outline for module 2
 
-### Week 4
+### [Week 4](#week-4)
 
-- Basics of Clean Coding Principles
 - The importance of and guidelines for asking efficient questions
-- How to read unit tests
+- Basics of Clean Coding Principles
+- Reading unit tests
 - Object Oriented Programming (OOP)
-- JavaScript Classes
 - CommonJS Modules
+- JavaScript Classes
 - Test Driven Development (TDD)
-- How to write your own unit tests with Mocha and Chai
+- Writing unit tests with Mocha and Chai
 
-### Week 5
+### [Week 5](#week-5)
 
 - Big O Analysis of time and space complexity (O(1), O(n), O(n^2))
 - Logic operators
 - Computer memory addresses/pointers
-- Binary/Hexidecimal representation
-- Dynamic arrays and the Big O cost of array methods
+- Binary, Hexidecimal, ASCII representation and conversion
+- Dynamic arrays and the Big O analysis of array methods
 - Linked lists (single and doubly linked lists)
 - Stacks and Queues
-- Sets
-- Hash Tables
+- Hash Tables and Sets
 
-### Week 6
+### [Week 6](#week-6)
 
 - Big O Analysis of time and space complexity (O(log n), O(n* log n))
-- Sorting algorithms(naive and efficient)
+- Sorting algorithms (naive and efficient)
 - JavaScript built in arr.sort method
-- Tree data structures and traversals/searching
-- Graph data structures and traversals/searching
+- Binary tree data structures, traversals and searches
+- Graph data structures, traversals and searches
 
 ##### [Back to the top][top]
 
@@ -171,9 +170,8 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 ##### [Back to the top][top]
 
 <!-- internal links -->
-
 [top]: README.md#welcome-to-module-2
-[content]: README.md#content-covered-in-module-2
+[content]: README.md#content-outline-for-module-2
 [guides]: README.md#guides
 [how to use]: README.md#how-to-use-this-repo
 [setup]: README.md#setup
@@ -186,6 +184,6 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 [short git flow]: README.md#what-is-the-recommended-git-flow-for-short-practice-problems
 [long git flow]: README.md#what-is-the-recommended-git-flow-for-long-project-problems
 
-<!-- redirect links -->
+<!-- git flow guide links -->
 [git flow]: ./git-flow-guide/README.md
 [connecting]: ./git-flow-guide/README.md#connecting-a-local-cloned-repo-to-a-github-repo
