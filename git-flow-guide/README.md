@@ -39,10 +39,6 @@ Let's git into it!
 
 -   [FAQ](#faq)
 
-    -   [What is the recommended git flow for short practice problems?](#what-is-the-recommended-git-flow-for-short-practice-problems)
-
-    -   [What is the recommended git flow for long project problems?](#what-is-the-recommended-git-flow-for-long-project-problems)
-
     -   [Why are we not using `git init` here?](#why-are-we-not-using-git-init-here)
 
 -   [External Resources](#external-resources)
@@ -189,16 +185,6 @@ Each member can then take turns driving and navigating, committing and pushing c
 --- -->
 
 ## FAQ
-
-### What is the recommended git flow for short practice problems?
-
--   In Module 2, morning practice sessions are short periods of time to tackle concepts through smaller problems. In the interest of time, you may find it simpler to work on your own code and repos for these shorter sessions while collaborating with your pair. Working together to understand and solve the problems but maximizing your own coding practice time as well.
-
--   If you would prefer to commit to the same repos, you may do so. Attempt to coordinate with your pair in advance, prior to the designated practice time, to decide who creates the repos, send/accept links. This will minimize downtime.
-
-### What is the recommended git flow for long project problems?
-
--   For longer practices it is expected that pairs follow a/A suggested git flow of working from the same repo while taking turns swapping roles between driving and navigating.
 
 ### Why are we not using `git init` here?
 

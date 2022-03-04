@@ -19,7 +19,7 @@ App Academy's module 2 covers subjects in computer science, from coding design p
 -   [Content covered in module 2][content]
 -   [Guides][guides]
     - [Git Flow Guide][git flow]
--   [Frequently asked questions][faq]
+-   [FAQ][faq]
 
 ---
 
@@ -128,8 +128,25 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 ---
 
-## Frequently asked questions
+## FAQ (Frequently asked questions)
 
+### Why do I not see any solutions?
+
+-   Please make sure your repo is on the correct branch. If using the command `git branch` indicates you are on `main` you will not see solutions. The solutions for your cohort are on your cohort specific branch (e.g., 2022-February-Cohort). Please refer to [the setup instructions][setup] on how to setup your repo.
+
+### Why can't I just `git clone` or `git fork` the resources repo?
+
+-   These are not necessarily incorrect approaches. However to get the intended utility of the repo, 1) access to the solutions and 2) easy setup to make your contributions to your own repo on GitHub, requires additional steps after using those commands. Some of those steps may not be known to newer incoming students to a/A. The instructions in [the setup section][setup] were designed to accomodate students in an effective manner relative to their current expected experience with `git` and a/A's goals to gradually encourage familiarity with `git` over time.
+
+### What is the recommended git flow for short practice problems?
+
+-   In Module 2, morning practice sessions are short periods of time to tackle concepts through smaller problems. In the interest of time, you may find it simpler to work on your own code and repos for these shorter sessions while collaborating with your pair. Working together to understand and solve the problems but maximizing your own coding practice time as well.
+
+-   If you would prefer to commit to the same repos, you may do so. Attempt to coordinate with your pair in advance, prior to the designated practice time, to decide who creates the repos, send/accept links. This will minimize downtime.
+
+### What is the recommended git flow for long project problems?
+
+-   For longer practices it is expected that pairs follow a/A suggested pair programming git flow of working from the same repo while taking turns swapping roles between driving and navigating.
 
 
 <!-- internal links -->
