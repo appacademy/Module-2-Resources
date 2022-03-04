@@ -160,13 +160,13 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 [how to use]: README.md#how-to-use-this-repo
 [setup]: README.md#setup
 [examples]: README.md#examples
-[faq]: README.md#FAQ-(Frequently-asked-questions)
+[faq]: README.md#faq-frequently-asked-questions
 
 <!-- faq links -->
-[why solutions]: README.md#why-do-I-not-see-any-solutions?
-[why not git x]: README.md#Why-can't-I-just-`git-clone`-or-`git-fork`-the-resources-repo?
-[short git flow]: README.md#What-is-the-recommended-git-flow-for-short-practice-problems?
-[long git flow]: README.md#What-is-the-recommended-git-flow-for-long-project-problems?
+[why solutions]: README.md#why-do-I-not-see-any-solutions
+[why not git x]: README.md#why-cant-I-just-git-clone-or-git-fork-the-resources-repo
+[short git flow]: README.md#what-is-the-recommended-git-flow-for-short-practice-problems
+[long git flow]: README.md#what-is-the-recommended-git-flow-for-long-project-problems
 
 <!-- redirect links -->
 [git flow]: ./git-flow-guide/README.md
