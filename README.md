@@ -19,7 +19,11 @@ App Academy's module 2 covers subjects in computer science, from coding design p
 -   [Content covered in module 2][content]
 -   [Guides][guides]
     - [Git Flow Guide][git flow]
--   [FAQ][faq]
+-   [FAQ (Frequently asked questions)][faq]
+    -   [Why do I not see any solutions?][why solutions]
+    -   [Why can't I just `git clone` or `git fork` the resources repo?][why not git x]
+    -   [What is the recommended git flow for short practice problems?][short git flow]
+    -   [What is the recommended git flow for long project problems?][long git flow]
 
 ---
 
@@ -156,7 +160,13 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 [how to use]: README.md#how-to-use-this-repo
 [setup]: README.md#setup
 [examples]: README.md#examples
-[faq]: README.md#frequently-asked-questions
+[faq]: README.md#FAQ-(Frequently-asked-questions)
+
+<!-- faq links -->
+[why solutions]: README.md#why-do-I-not-see-any-solutions?
+[why not git x]: README.md#Why-can't-I-just-`git-clone`-or-`git-fork`-the-resources-repo?
+[short git flow]: README.md#What-is-the-recommended-git-flow-for-short-practice-problems?
+[long git flow]: README.md#What-is-the-recommended-git-flow-for-long-project-problems?
 
 <!-- redirect links -->
 [git flow]: ./git-flow-guide/README.md
