@@ -24,6 +24,8 @@ App Academy's module 2 covers subjects in computer science, from coding design p
     -   [Why can't I just `git clone` or `git fork` the resources repo?][why not git x]
     -   [What is the recommended git flow for short practice problems?][short git flow]
     -   [What is the recommended git flow for long project problems?][long git flow]
+    -   [How do I connect my own local repo?][how connect]
+    -   [What is a recommended file structure for my own notes going forward?][how files]
 
 ---
 
@@ -165,9 +167,31 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 -   For longer practices it is expected that pairs follow a/A suggested pair programming git flow of working from the same repo while taking turns swapping roles between driving and navigating.
 
-### How do I connect my own repo?
+### How do I connect my own local repo?
 
 -   Please consult our [git flow guide][git flow] which has step by step instructions with images for extra details.
+
+### What is a recommended file structure for my own notes going forward?
+
+-   There are many options and taking the time to find something that makes sense for you will be very useful in the long run. A straight forward example could be the following:
+
+```js
+./appaca
+    ├── mod-1...
+    ├── mod-2
+    |    ├── mod-2-resources // repo `git pull` for solutions!
+    |    ├── my-mod-2-resources // repo for your commits on practices!
+    |    └── long-practices // not a repo; regular directory
+    |         ├── w4...
+    |         ├── w5...
+    |         |    ├── d1...
+    |         |    ├── d3
+    |         |    |    ├── long-practice-1 //  repo for pairing
+    |         |    |    └── long-practice-2 //  "   "   "   "
+    |         |    └── d4...
+    |         └── w6...
+    └── mod-3...
+```
 
 ##### [Back to the top][top]
 
@@ -185,6 +209,8 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 [why not git x]: README.md#why-cant-I-simply-git-clone-or-git-fork-the-resources-repo
 [short git flow]: README.md#what-is-the-recommended-git-flow-for-short-practice-problems
 [long git flow]: README.md#what-is-the-recommended-git-flow-for-long-project-problems
+[how connect]: README.md#how-do-i-connect-my-own-local-repo
+[how files]: README.md#what-is-a-recommended-file-structure-for-my-own-notes-going-forward
 
 <!-- git flow guide links -->
 [git flow]: ./git-flow-guide/README.md
