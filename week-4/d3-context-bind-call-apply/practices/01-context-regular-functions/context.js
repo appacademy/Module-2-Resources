@@ -13,7 +13,6 @@ class Fish {
 }
 
 const nemo = new Fish('Nemo');
-
 /********************************* Scenario 1 *********************************/
 // eat(); // ?
 
@@ -33,5 +32,9 @@ const nemo = new Fish('Nemo');
 
 
 /********************************* Scenario 5 *********************************/
-// const swim = nemo.swim;
-// swim(); // ?
+const swim = nemo.swim.bind(nemo);
+swim(); // ?
+const dory = new Fish('dory')
+dory.swim()
+const swim2 = dory.swim
+swim2()
