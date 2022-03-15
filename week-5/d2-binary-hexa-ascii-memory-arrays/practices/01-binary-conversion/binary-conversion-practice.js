@@ -14,7 +14,7 @@ and consult their documentation on how to utilize them:
 Base 10 to binary
 */
 function deciToBinary(blob) {
-    // Your code here
+    return `0b${blob.toString(2)}`
 }
 
 console.log('Base 10 to binary:');
@@ -27,7 +27,7 @@ console.log('');
 Base 10 to hexadecimal
 */
 function deciToHexa(blob) {
-    // Your code here
+    return `0x${blob.toString(16)}`
 }
 
 console.log('Base 10 to hexadecimal:');
@@ -40,7 +40,7 @@ console.log('');
 Binary to base 10
 */
 function binaryToDeci(blob) {
-    // Your code here
+    return parseInt(blob.substring(2), 2)
 }
 
 console.log('Binary to base 10:');
@@ -52,7 +52,8 @@ console.log('');
 Hexadecimal to base 10
 */
 function hexaToDeci(blob) {
-    // Your code here
+    // return parseInt(blob.substring(2), 16)
+    return parseInt(blob, 16)
 }
 
 console.log('Hexadecimal to base 10:');
@@ -64,7 +65,8 @@ console.log('');
 Binary to hexadecimal
 */
 function binaryToHexa(blob) {
-    // Your code here
+    const decimal = parseInt(blob.substring(2), 2)
+    return `0x${decimal.toString(16)}`
 }
 
 console.log('Binary to hexadecimal:');
@@ -76,7 +78,8 @@ console.log('');
 Hexadecimal to binary
 */
 function hexaToBin(blob) {
-    // Your code here
+    const decimal = parseInt(blob, 16)
+    return `0b${decimal.toString(2)}`
 }
 
 console.log('Hexadecimal to binary:');
@@ -88,35 +91,35 @@ console.log('');
 Base 10 to ASCII
 */
 function deciToAscii(blob) {
-    // Your code here
+    return String.fromCharCode(blob)
 }
 
 console.log('Base 10 to ASCII:');
 console.log(deciToAscii(65)); // 'A'
 console.log(deciToAscii(66)); // 'B'
 console.log(deciToAscii(97)); // 'a'
-console.log(deciToAscii(98)); // 'c'
+console.log(deciToAscii(98)); // 'b'
 console.log('');
 
 /*
 Hexadecimal to ASCII
 */
 function hexaToAscii(blob) {
-    // Your code here
+    return String.fromCharCode(blob)
 }
 
 console.log('Hexadecimal to ASCII:');
-console.log(hexaToAscii(0x41)); // 'A'
-console.log(hexaToAscii(0x42)); // 'B'
-console.log(hexaToAscii(0x61)); // 'a'
-console.log(hexaToAscii(0x62)); // 'b'
+console.log(hexaToAscii(`0x41`)); // 'A'
+console.log(hexaToAscii(`0x42`)); // 'B'
+console.log(hexaToAscii('0x61')); // 'a'
+console.log(hexaToAscii('0x62')); // 'b'
 console.log('');
 
 /*
 Binary to ASCII
 */
 function binToAscii(blob) {
-    // Your code here
+    return String.fromCharCode(blob)
 }
 
 console.log('Binary to ASCII:');
@@ -130,7 +133,7 @@ console.log('');
 ASCII to decimal
 */
 function asciiToDeci(blob) {
-    // Your code here
+    return blob.charCodeAt(0)
 }
 
 console.log('ASCII to decimal:');
@@ -138,3 +141,12 @@ console.log(asciiToDeci('A')); // 65
 console.log(asciiToDeci('B')); // 66
 console.log(asciiToDeci('a')); // 97
 console.log(asciiToDeci('b')); // 98
+console.log(' ')
+
+function asciiStrToDeci(blob) {
+    for (let i = 0; i < blob.length; i++) {
+        console.log(blob[i], blob.charCodeAt(i))
+    }
+}
+
+asciiStrToDeci('abc'); // 97 98 99
