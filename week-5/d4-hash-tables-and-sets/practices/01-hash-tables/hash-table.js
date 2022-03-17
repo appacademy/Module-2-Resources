@@ -19,9 +19,9 @@ class HashTable {
   hash(key) {
     // Your code here
     //first 8 chars of sha256 hash of key
-    const hashHexStr = sha256(key).slice(0, 8)
+    const hashHexStr = sha256(key).slice(0, 8);
     //convert to int
-    return parseInt(`0x${hashHexStr}`)
+    return parseInt(`0x${hashHexStr}`);
   }
 
   hashMod(key) {
@@ -32,6 +32,17 @@ class HashTable {
 
   insertNoCollisions(key, value) {
     // Your code here
+    //find index
+    const index = this.hashMod(key);
+
+    //if index empty
+    if (!this.data[index]) {
+      this.data[index] = new KeyValuePair(key, value);
+      this.count++;
+    } else {
+      //bucket is occupied
+      throw Error("hash collision or same key/value pair already exists");
+    }
   }
 
   insertWithHashCollisions(key, value) {
