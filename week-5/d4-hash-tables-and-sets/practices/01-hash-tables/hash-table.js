@@ -41,7 +41,7 @@ class HashTable {
       this.count++;
     } else {
       //bucket is occupied
-      throw Error("hash collision or same key/value pair already exists");
+      throw Error("hash collision or same key/value pair already exists!");
     }
   }
 
