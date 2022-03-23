@@ -16,8 +16,9 @@ class BinarySearchTree {
 
   insert(val, currentNode = this.root) {
     // Your code here
-    // Empty Tree
     const newNode = new TreeNode(val)
+
+    // Empty Tree
     if (!this.root) {
       this.root = newNode
       return
@@ -38,28 +39,60 @@ class BinarySearchTree {
     }
   }
 
-  search(val) {
+  search(val, currentNode = this.root) {
     // Your code here
+    // Iterative Solution
+    // let currentNode = this.root
+
+    // while (currentNode) {
+    //   if (val < currentNode.val) {
+    //     currentNode = currentNode.left
+    //   } else if (val > currentNode.val) {
+    //     currentNode = currentNode.right
+    //   } else {
+    //     return true
+    //   }
+    // }
+    // return false
+
+    // Recursive Solution
+    if (!currentNode) return false;
+    if (val === currentNode.val) return true;
+    if (val < currentNode.val) return this.search(val, currentNode.left)
+    if (val > currentNode.val) return this.search(val, currentNode.right)
   }
 
 
   preOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return
+    console.log(currentNode.val)
+    this.preOrderTraversal(currentNode.left)
+    this.preOrderTraversal(currentNode.right)
   }
 
 
   inOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return
+    this.inOrderTraversal(currentNode.left)
+    console.log(currentNode.val)
+    this.inOrderTraversal(currentNode.right)
   }
 
 
   postOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return
+    this.postOrderTraversal(currentNode.left)
+    this.postOrderTraversal(currentNode.right)
+    console.log(currentNode.val)
   }
 
     // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
     // Your code here
+    
   }
 
   // Depth First Traversal - Iterative
