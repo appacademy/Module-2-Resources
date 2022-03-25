@@ -24,7 +24,31 @@ class TreeNode {
 // Expected Output -> [ 5, 7, 3, 9, 4 ]
 
 function findMaxEachLevel(root) {
-  // Your code here
+  const queue = [root]
+
+  const maxValues = []
+
+  while(queue.length) {
+    const currentLength = queue.length
+    console.log({currentLength})
+    let currentMax = -Infinity
+
+    for (let i = 0; i < currentLength; i++) {
+      const node = queue.shift()
+      console.log('shift counter:', i, node)
+
+      currentMax = Math.max(node.value, currentMax)
+      // if (currentMax < node.value) currentMax = node.value
+      console.log({currentMax})
+
+      if (node.left) queue.push(node.left)
+      if (node.right) queue.push(node.right)
+    }
+
+    maxValues.push(currentMax)
+  }
+
+  return maxValues
 }
 
 // Uncomment the code below for local testing.
