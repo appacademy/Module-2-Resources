@@ -160,7 +160,7 @@ arrays and the corresponding methods to access or add elements
 1. Example:
 
 ```js
-// time O(n)
+// time O(1)
 function pusher(arr) {
     for (let i = 0; i < 10; i++) {
         console.log(arr.push(i));
@@ -171,7 +171,7 @@ function pusher(arr) {
 2. Example:
 
 ```js
-// time O(n^2)
+// time O(n)
 function unshifter(arr) {
     for (let i = 0; i < 10; i++) {
         console.log(arr.unshift(i));
