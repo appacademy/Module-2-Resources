@@ -21,7 +21,10 @@ describe("isFive(num)", () => {
   });
 });
 
+// Inputting an element to isFive() and returning true for a number 5, anything else will be false
+
 describe("isOdd(number)", () => {
+// block for isOdd function
   it("should return true if number is odd", () => {
     const num1 = 3;
     const num2 = 2953;
@@ -35,6 +38,8 @@ describe("isOdd(number)", () => {
     expect(actual2).to.be.true;
     expect(actual3).to.be.true;
   });
+
+// Using odd inputs, running thru isOdd function, we should get true
 
   it("should return false if the num is even", () => {
     const num1 = 4;
@@ -50,6 +55,8 @@ describe("isOdd(number)", () => {
     expect(actual3).to.be.false;
   });
 
+// Using even inputs, running thru isOdd function, we should get false
+
   it("should throw an error if num is not type of Number", () => {
     const string = "i am a string";
     const object = { i: "am", an: "object" };
@@ -59,10 +66,14 @@ describe("isOdd(number)", () => {
     expect(() => isOdd(object)).to.throw(Error);
     expect(() => isOdd(array)).to.throw(Error);
   });
+
+// Passing in different types, we should have an error thrown
 });
 
 describe("myRange(min, max, step)", () => {
+  // Testing the myRange function
   context("if step is not provided", () => {
+    // Testing for only if the step is not passed in
     it("should return the correct array with default value step=1", () => {
       const [min1, max1] = [0, 5];
       const [min2, max2] = [6, 3];
@@ -75,9 +86,11 @@ describe("myRange(min, max, step)", () => {
       expect(actual1).to.eql(expected1);
       expect(actual2).to.eql(expected2);
     });
+    // Testing what we do without a step, passing in step=1 as a default param
   });
 
   context("if step is provided", () => {
+    // Tests for when the step is provided
     it("should return the correct array", () => {
       const [min1, max1, step1] = [0, 5, 1];
       const [min2, max2, step2] = [0, 5, 2];
@@ -94,5 +107,6 @@ describe("myRange(min, max, step)", () => {
       expect(actual2).to.eql(expected2);
       expect(actual3).to.eql(expected3);
     });
+    // Testing different cases for when we do have a step
   });
 });
