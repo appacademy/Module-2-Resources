@@ -21,7 +21,7 @@ App Academy's module 2 covers subjects in computer science, from coding design p
     - [Git Flow Guide][git flow]
 -   [FAQ (Frequently asked questions)][faq]
     -   [Why do I not see any solutions?][why solutions]
-    -   [Why can't I just `git clone` or `git fork` the resources repo?][why not git x]
+    -   [Why can't I simply `git clone` or `git fork` the resources repo to get solutions?][why not git x]
     -   [What is the recommended git flow for short practice problems?][short git flow]
     -   [What is the recommended git flow for long project problems?][long git flow]
     -   [How do I connect my own local repo?][how connect]
@@ -60,11 +60,11 @@ __Follow the instructions in the [setup][setup] section (below) how to clone thi
 
 ## Setup
 
-To clone the repo use this command in the directory of your choice:
+To access daily uploaded solutions you must clone the repo using this command in the directory of your choice:
 
     git clone -b <your-cohort-branchname> --single-branch <remote-repo-url> <new-folder-name>
 
-- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-February-Cohort`).
+- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-March-Cohort`).
 
 - `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
 
@@ -84,19 +84,21 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 - Cloning (using PAT) may look like:
 
-        git clone -b 2022-February-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
+        git clone -b 2022-March-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
 
 - Cloning (using SSH) may look like:
 
-        git clone -b 2022-February-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
+        git clone -b 2022-March-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
 
-- Cloning a second copy, with new repo name, may look like this (using PAT). This will clone the repo but name the folder "my-mod-2-resources":
+- Cloning with with new repo name, may look like this (using PAT). This will clone the repo but name the folder "my-mod-2-resources":
 
-        <same command as above> my-mod-2-resources
+        <same PAT command as above> my-mod-2-resources
 
         or
 
-        git clone -b 2022-February-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
+        git clone -b 2022-March-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
+
+To determine if you have setup your repo to correctly receive solutions use the command `git branch` in your repo. It should say your cohort specific branch is selected (e.g., `2022-March-Cohort`). If instead it says `main`, you have cloned the empty template branch. This branch will never receive solutions. Please refer to the instructions above how to access solutions.
 
 ##### [Back to the top][top]
 
@@ -150,9 +152,9 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 ### Why do I not see any solutions?
 
--   Please make sure your repo is on the correct branch. If using the command `git branch` indicates you are on `main` you will not see solutions. The `main` branch only has empty templates. Solutions for your cohort are on your cohort specific branch (e.g., 2022-February-Cohort). Please refer to [the setup instructions][setup] on how to setup your repo.
+-   Please make sure your repo is on the correct branch. If using the command `git branch` indicates you are on `main` you will not see solutions. The `main` branch only has empty templates. Solutions for your cohort are on your cohort specific branch (e.g., `2022-March-Cohort`). Please refer to [the setup instructions][setup] on how to setup your repo.
 
-### Why can't I simply `git clone` or `git fork` the resources repo?
+### Why can't I simply `git clone` or `git fork` the resources repo to get solutions?
 
 -   These are not necessarily incorrect approaches. However to get the intended utility of the repo requires additional steps after using those commands. Some of those steps may not be known to newer incoming students to a/A. The instructions in [the setup section][setup] were designed to accomodate students in an effective manner relative to their current expected experience with `git` and a/A's goals to gradually encourage familiarity with `git` over time.
 
