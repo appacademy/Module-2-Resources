@@ -95,7 +95,7 @@ console.log('Base 10 to ASCII:');
 console.log(deciToAscii(65)); // 'A'
 console.log(deciToAscii(66)); // 'B'
 console.log(deciToAscii(97)); // 'a'
-console.log(deciToAscii(98)); // 'c'
+console.log(deciToAscii(98)); // 'b'
 console.log('');
 
 /*
