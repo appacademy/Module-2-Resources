@@ -17,7 +17,7 @@ describe('Dynamic array', () => {
 
   it('has data, capacity and length properties', () => {
 
-    expect(dynamicArr.size).to.equal(0);
+    expect(dynamicArr.length).to.equal(0);
     expect(dynamicArr.capacity).to.equal(8);
     expect(dynamicArr.data instanceof Array).to.be.true;
     expect(dynamicArr.data.length).to.deep.equal(8);
@@ -29,7 +29,7 @@ describe('Dynamic array', () => {
 
     dynamicArr = new DynamicArray(4);
 
-    expect(dynamicArr.size).to.equal(0);
+    expect(dynamicArr.length).to.equal(0);
     expect(dynamicArr.capacity).to.equal(4);
     expect(dynamicArr.data.length).to.deep.equal(4);
   });
@@ -38,7 +38,7 @@ describe('Dynamic array', () => {
   it('can read values in the array', function () {
 
     dynamicArr.data[0] = 99;
-    dynamicArr.size = 1;
+    dynamicArr.length = 1;
 
     expect(dynamicArr.read(0)).to.equal(99);
     expect(dynamicArr.read(1)).to.equal(undefined);
@@ -48,25 +48,25 @@ describe('Dynamic array', () => {
 
   it('can add values to the front using unshift', function () {
 
-    expect(dynamicArr.size).to.equal(0);
+    expect(dynamicArr.length).to.equal(0);
     expect(dynamicArr.capacity).to.equal(8);
 
     dynamicArr.unshift(1);
 
-    expect(dynamicArr.size).to.equal(1);
+    expect(dynamicArr.length).to.equal(1);
     expect(dynamicArr.capacity).to.equal(8);
     expect(dynamicArr.data[0]).to.deep.equal(1);
 
     dynamicArr.unshift(2);
 
-    expect(dynamicArr.size).to.equal(2);
+    expect(dynamicArr.length).to.equal(2);
     expect(dynamicArr.capacity).to.equal(8);
     expect(dynamicArr.data[0]).to.deep.equal(2);
     expect(dynamicArr.data[1]).to.deep.equal(1);
 
     dynamicArr.unshift(3);
 
-    expect(dynamicArr.size).to.equal(3);
+    expect(dynamicArr.length).to.equal(3);
     expect(dynamicArr.capacity).to.equal(8);
     expect(dynamicArr.data[0]).to.deep.equal(3);
     expect(dynamicArr.data[1]).to.deep.equal(2);
