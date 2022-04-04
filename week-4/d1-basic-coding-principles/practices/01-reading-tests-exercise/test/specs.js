@@ -64,17 +64,14 @@ describe("isOdd(number)", () => {
 describe("myRange(min, max, step)", () => {
   context("if step is not provided", () => {
     it("should return the correct array with default value step=1", () => {
-      //Arrange - arranging data to test
       const [min1, max1] = [0, 5];
       const [min2, max2] = [6, 3];
+
+      const actual1 = myRange(min1, max1);
       const expected1 = [0, 1, 2, 3, 4, 5];
+      const actual2 = myRange(min2, max2);
       const expected2 = [];
 
-      //Act - actually call functions with data
-      const actual1 = myRange(min1, max1);
-      const actual2 = myRange(min2, max2);
-
-      //Assert - what do I expect to happen
       expect(actual1).to.eql(expected1);
       expect(actual2).to.eql(expected2);
     });
