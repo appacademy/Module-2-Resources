@@ -35,5 +35,5 @@ eat(); // ?
 
 
 /********************************* Scenario 5 *********************************/
-const swim = nemo.swim;
-swim(); // ?
+// const swim = nemo.swim;
+// swim(); // ?
