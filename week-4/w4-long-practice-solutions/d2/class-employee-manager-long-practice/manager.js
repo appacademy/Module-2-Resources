@@ -3,7 +3,7 @@ const Employee = require('./employee');
 class Manager extends Employee {
   constructor(name, salary, title, manager) {
 		super(name, salary, title, manager);
-    this.employees = [];
+        this.employees = [];
   }
 
   addEmployee(employee) {
@@ -12,22 +12,21 @@ class Manager extends Employee {
     return employee;
   }
 
-  bonus(multiplier) {
-    return (this.salary + this.totalSubsalary()) * multiplier;
+  calculateBonus(multiplier) {
+    return (this.salary + this._totalSubSalary()) * multiplier;
   }
-  
-  totalSubsalary() {
-		let totalSubsalary = 0;
 
+  _totalSubSalary() {
+	let totalSubSalary = 0;
+    
     this.employees.forEach((employee) => {
       if (employee instanceof Manager) {
-        totalSubsalary += employee.salary + employee.totalSubsalary();
+        totalSubSalary += employee.salary + employee._totalSubSalary();
       } else {
-        totalSubsalary += employee.salary;
+        totalSubSalary += employee.salary;
       }
     });
-
-    return totalSubsalary;
+    return totalSubSalary;
   }
 }
 

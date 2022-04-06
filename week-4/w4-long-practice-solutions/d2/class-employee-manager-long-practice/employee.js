@@ -7,7 +7,7 @@ class Employee {
     if (manager) manager.addEmployee(this);
   }
 
-  bonus(multiplier) {
+  calculateBonus(multiplier) {
     return this.salary * multiplier;
   }
 }
