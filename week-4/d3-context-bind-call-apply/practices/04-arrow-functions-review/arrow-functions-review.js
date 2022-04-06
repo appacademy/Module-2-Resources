@@ -28,7 +28,7 @@ console.log('addFive output:');
 console.log(addFive(3)); // 8
 
 // Convert coupon and the function it returns into fat-arrow functions
-const coupon = discount => prices => prices.map((price) => (price -= price * discount));
+const coupon = discount => prices => prices.map(price => (price -= price * discount));
 
 
 console.log('coupon output:');
