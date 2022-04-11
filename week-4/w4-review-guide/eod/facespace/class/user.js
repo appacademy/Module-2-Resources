@@ -21,6 +21,7 @@ class User {
         this.about = '';
         this.relationship = false;
         this.friends = [];
+        this.posts = [];
     }
 
     /*    2. Add the following methods to the Class User
@@ -50,15 +51,21 @@ class User {
         this.password = str;
         console.log(`Your new password is: "${this.password}"`);
     }
-
-    addFriend(friend) {
-        this.friends.push(friend);
-        console.log(this.friends);
+    
+    addFriend(...friends) {
+        friends.forEach( friend => {
+            if(this.friends.includes(friend.name)){
+                console.log("-------ERROR-------");
+                console.log(`${friend.name} is already your friend!`)
+                console.log("-------ERROR-------");
+            } else {
+                this.friends.push(friend);
+            };
+        });
     }
 
     removeFriend(badFriend) {
         this.friends = this.friends.filter(friend => friend != badFriend);
-        console.log(this.friends)
     }
 
     printFriends() {
@@ -66,7 +73,7 @@ class User {
             const viewFriends = this.friends.map(friend => friend.getName());
             console.log(`Your friends are : ${viewFriends}`);
         } else {
-            console.log("You don't have any friends");
+            console.log("You don't have any friends right now 😞");
         }
     }
 
@@ -76,19 +83,49 @@ class User {
         console.log(`A bit about me: ${this.about}`)
         this.printFriends();
     }
+
+    // We need to keep track of the user's posts. 
+    // The post allows us to pass in the author
+    // can we add a new property so each user has a list of their own posts?
+    // we also need a function to print out this list of posts
+
+    addPost(post) {
+        post.author = this
+        this.posts.push(post)
+    }
+
+    printAllPosts() {
+        this.posts.forEach(post => {
+            post.printPost(this)
+        })
+    }
+
+    createAndPrintFeed(){
+        let allPosts = this.posts;
+        this.friends.forEach( friend => {
+            allPosts = [...allPosts, ...friend.posts]
+        })
+      
+        // allPosts.forEach( post => post.printPost())
+
+        const compare = (a,b) => {
+            if (a.date < b.date) return 1;
+            if (a.date > b.date) return -1;
+            if (a.date === b.date) return 0;
+        }
+        
+        let sortedPosts = allPosts.sort(compare)
+        sortedPosts.forEach( post => post.printPost())
+        
+    }
+    
+    // Finally we need to curate a feed. 
+    // Take all of the current user's posts
+    // search all of our friends for posts adding those posts to the user's
+    // sort the posts by date in a descending manner
+    // print the posts
+
+    
 }
 
-const shane = new User('Shane', 40, 'Missouri', );
-const jiff = new User('Jiff', 46);
-
-shane.addFriend(jiff);
-
-const alex = new User('Alex', 24);
-
-shane.addFriend(alex);
-
-shane.updateRelationship();
-
-shane.updateAbout('I love programming.');
-
-shane.printUserInfo();
+module.exports = User;

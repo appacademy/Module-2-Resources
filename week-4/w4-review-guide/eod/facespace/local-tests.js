@@ -1,3 +1,0 @@
-/* 
-    Use this file to set up and run local tests
-*/
