@@ -11,10 +11,7 @@ Consult documentation on how to utilize the following methods:
 Binary to hexadecimal
 */
 function binaryToHexa(blob) {
-    //!!START
-    const decimal = parseInt(blob.substring(2), 2)
-    return `0x${decimal.toString(16)}`
-    //!!END
+    // Your code here
 }
 
 // console.log('Binary to hexadecimal:')
@@ -26,10 +23,7 @@ function binaryToHexa(blob) {
 Hexadecimal to binary
 */
 function hexaToBinary (blob) {
-    //!!START
-    const decimal = parseInt(blob, 16)
-    return `0b${decimal.toString(2)}`
-    //!!END
+    // Your code here
 }
 
 // console.log('Hexadecimal to binary:')
@@ -41,9 +35,7 @@ function hexaToBinary (blob) {
 Base 10 to ASCII
 */
 function deciToAscii(blob) {
-    //!!START
-    return String.fromCharCode(blob)
-    //!!END
+    // Your code here
 }
 
 // console.log('Base 10 to ASCII:')
@@ -55,9 +47,7 @@ function deciToAscii(blob) {
 Binary to ASCII
 */
 function binaryToAscii(blob) {
-    //!!START
-    return String.fromCharCode(blob)
-    //!!END
+    // Your code here
 }
 
 // console.log('Binary to ASCII:')
@@ -69,9 +59,7 @@ function binaryToAscii(blob) {
 Hexadecimal to ASCII
 */
 function hexaToAscii(blob) {
-    //!!START
-    return String.fromCharCode(blob)
-    //!!END
+    // Your code here
 }
 
 // console.log('Hexadecimal to ASCII:')
@@ -83,9 +71,7 @@ function hexaToAscii(blob) {
 ASCII to decimal
 */
 function asciiToDeci(blob) {
-    //!!START
-    return blob.charCodeAt(0)
-    //!!END
+    // Your code here
 }
 
 // console.log('ASCII to decimal:')
