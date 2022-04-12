@@ -9,9 +9,7 @@ Consult documentation on how to utilize the following methods:
 Base 10 to binary
 */
 function deciToBinary(blob) {
-    //!!START
-    return `0b${blob.toString(2)}`
-    //!!END
+    // Your code here
 }
 
 // console.log('Base 10 to binary:')
@@ -23,9 +21,7 @@ function deciToBinary(blob) {
 Base 10 to hexadecimal
 */
 function deciToHexa(blob) {
-    //!!START
-    return `0x${blob.toString(16)}`
-    //!!END
+    // Your code here
 }
 
 // console.log('Base 10 to hexadecimal:')
@@ -37,9 +33,7 @@ function deciToHexa(blob) {
 Binary to base 10
 */
 function binaryToDeci(blob) {
-    //!!START
-    return parseInt(blob.substring(2), 2)
-    //!!END
+    // Your code here
 }
 
 // console.log('Binary to base 10:')
@@ -51,9 +45,7 @@ function binaryToDeci(blob) {
 Hexadecimal to base 10
 */
 function hexaToDeci (blob) {
-    //!!START
-    return parseInt(blob, 16)
-    //!!END
+    // Your code here
 }
 
 // console.log('Hexadecimal to base 10:')
