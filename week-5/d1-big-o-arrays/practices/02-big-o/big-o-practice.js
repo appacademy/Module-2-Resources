@@ -13,26 +13,26 @@ animals = [
 ];
 
 // Count how many animals are in the list
-// Time complexity: O(n)
-// Space complexity: O(1)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function countAnimals(animals) {
-    let count = 0;  // integer 8 bytes => constant space
-    for (let i = 0; i < animals.length; i++) { // O(n) time
-        count++; // O(1) time
+    let count = 0;
+    for (let i = 0; i < animals.length; i++) {
+        count++;
     }
     return count;
 }
 
 // Count how many animals are in the list
-// Time complexity: O(1)
-// Space complexity: O(1)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function countAnimals2(animals) {
     return animals.length;
 }
 
 // Print the first 10 animals in the list
-// Time complexity: O(10) => O(1)
-// Space complexity: O(1)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function printTenAnimals(animals) {
     if (animals.length < 10) {
         throw Error('not enough animals');
@@ -51,8 +51,8 @@ function printTenAnimals(animals) {
 }
 
 // Print out all the animals
-// Time complexity: O(n)
-// Space complexity: O(1)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function printAnimals(animals) {
     for (let i = 0; i < animals.length; i++) {
         console.log(animals[i]);
@@ -60,49 +60,49 @@ function printAnimals(animals) {
 }
 
 // Print out all the animals twice
-// Time complexity: O(2n) => O(n)
-// Space complexity: O(1)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function printAnimalsTwice(animals) {
-    for (let i = 0; i < animals.length; i++) { // O(n)
+    for (let i = 0; i < animals.length; i++) {
         console.log(animals[i]);
     }
-    for (let j = 0; j < animals.length; j++) { // O(n)
+    for (let j = 0; j < animals.length; j++) {
         console.log(animals[j]);
     }
 }
 
 // Print all possible pairs of animals
-// Time complexity: O(n^2)
-// Space complexity: O(1)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function printAnimalPairs(animals) {
-    for (let i = 0; i < animals.length; i++) {  // O(n)
-        for (let j = 0; j < animals.length; j++) {  // O(n)
+    for (let i = 0; i < animals.length; i++) {
+        for (let j = 0; j < animals.length; j++) {
             console.log(`${animals[i]} - ${animals[j]}`);
         }
     }
 }
 
 // Return an array containing all possible pairs of animals
-// Time complexity: O(n^2)
-// Space complexity: O(2n^2) => O(n^2)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function getAnimalPairs(animals) {
-    const pairs = []; // O(n^2) space
-    for (let i = 0; i < animals.length; i++) {  // O(n) time
-        for (let j = 0; j < animals.length; j++) {  // O(n) time
-            pairs.push([animals[i], animals[j]]);  // O(1) time
+    const pairs = [];
+    for (let i = 0; i < animals.length; i++) {
+        for (let j = 0; j < animals.length; j++) {
+            pairs.push([animals[i], animals[j]]);
         }
     }
     return pairs;
 }
 
 // Return an array containing all possible pairs of animals
-// Time complexity: O(n^3)
-// Space complexity: O(n^3)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function getAnimalTriples(animals) {
-    const triples = []; // O(n^3)
-    for (let i = 0; i < animals.length; i++) {  // O(n) time
-        for (let j = 0; j < animals.length; j++) {  // O(n) time
-            for (let k = 0; k < animals.length; k++) {  // O(n) time
+    const triples = [];
+    for (let i = 0; i < animals.length; i++) {
+        for (let j = 0; j < animals.length; j++) {
+            for (let k = 0; k < animals.length; k++) {
                 triples.push([animals[i], animals[j], animals[k]]);
             }
         }
@@ -112,8 +112,8 @@ function getAnimalTriples(animals) {
 
 // Returns the index of the animal if it is in the array
 // Returns -1 if it is not in the array
-// Time complexity: O(n)
-// Space complexity: O(1)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function findAnimal(animals, target) {
     for (let i = 0; i < animals.length; i++) {
         if (animals[i] === target) return i;
