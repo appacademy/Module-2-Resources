@@ -64,7 +64,7 @@ To access daily uploaded solutions you must clone the repo using this command in
 
     git clone -b <your-cohort-branchname> --single-branch <remote-repo-url> <new-folder-name>
 
-- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-March-Cohort`).
+- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-April-Cohort`).
 
 - `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
 
@@ -84,11 +84,11 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 - Cloning (using PAT) may look like:
 
-        git clone -b 2022-March-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
+        git clone -b 2022-April-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
 
 - Cloning (using SSH) may look like:
 
-        git clone -b 2022-March-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
+        git clone -b 2022-April-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
 
 - Cloning with with new repo name, may look like this (using PAT). This will clone the repo but name the folder "my-mod-2-resources":
 
@@ -96,9 +96,9 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
         or
 
-        git clone -b 2022-March-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
+        git clone -b 2022-April-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
 
-To determine if you have setup your repo to correctly receive solutions use the command `git branch` in your repo. It should say your cohort specific branch is selected (e.g., `2022-March-Cohort`). If instead it says `main`, you have cloned the empty template branch. This branch will never receive solutions. Please refer to the instructions above how to access solutions.
+To determine if you have setup your repo to correctly receive solutions use the command `git branch` in your repo. It should say your cohort specific branch is selected (e.g., `2022-April-Cohort`). If instead it says `main`, you have cloned the empty template branch. This branch will never receive solutions. Please refer to the instructions above how to access solutions.
 
 ##### [Back to the top][top]
 
@@ -152,7 +152,7 @@ To determine if you have setup your repo to correctly receive solutions use the 
 
 ### Why do I not see any solutions?
 
--   Please make sure your repo is on the correct branch. If using the command `git branch` indicates you are on `main` you will not see solutions. The `main` branch only has empty templates. Solutions for your cohort are on your cohort specific branch (e.g., `2022-March-Cohort`). Please refer to [the setup instructions][setup] on how to setup your repo.
+-   Please make sure your repo is on the correct branch. If using the command `git branch` indicates you are on `main` you will not see solutions. The `main` branch only has empty templates. Solutions for your cohort are on your cohort specific branch (e.g., `2022-April-Cohort`). Please refer to [the setup instructions][setup] on how to setup your repo.
 
 ### Why can't I simply `git clone` or `git fork` the resources repo to get solutions?
 
