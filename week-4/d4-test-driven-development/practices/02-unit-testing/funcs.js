@@ -1,19 +1,12 @@
 function isFive(num) {
-<<<<<<< HEAD
   // Your code here
-=======
->>>>>>> ca423129d11dac4022b85601f1aae38f00941f9c
   return num === 5;
 }
 
 function isOdd(number) {
-<<<<<<< HEAD
   // Your code here
   if (typeof number !== 'number') throw Error("NOT A NUMBER");
 
-=======
-  if (typeof number !== "number") throw new Error('Not a number')
->>>>>>> ca423129d11dac4022b85601f1aae38f00941f9c
   return number % 2 !== 0;
 }
 
