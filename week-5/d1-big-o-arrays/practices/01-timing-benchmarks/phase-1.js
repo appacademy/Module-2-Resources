@@ -22,7 +22,7 @@ function addManyNums(n) {
 
   return total;
 }
-// O(n^2) time, O(n)
+// O(n^2) time, O(n)/O(1) space - depends on Language
 
 
 module.exports = [addNums, addManyNums];
