@@ -64,7 +64,41 @@ class HashTable {
   }
 
   insert(key, value) {
-    // Your code here
+    // find the index (which bucket we want to use)
+    const index = this.hashMod(key);
+
+    // grab the head of the list at that bucket (could be null)
+    let currentPair = this.data[index];
+
+    // loop through the list until we get to the end or find the key/value
+    // pair with the key we are trying to insert
+    while (currentPair && currentPair.key !== key) {
+      currentPair = currentPair.next;
+    }
+
+    // if the already exists overwrite the value of it
+    if (currentPair) {
+      currentPair.value = value;
+    } 
+
+    // otherwise create a new key/value pair instance and insert it
+    else {
+      const newPair = new KeyValuePair(key, value);
+
+      // there is something in that bucket, add the key/value pair into the head of the list
+      // and add the pointers needed
+      if (this.data[index]) {
+        newPair.next = this.data[index];
+        this.data[index] = newPair;
+      } 
+      // otherwise just add the pair to the bucket
+      else {
+        this.data[index] = newPair;
+      }
+
+      this.count++;
+    }
+
   }
 
 }
