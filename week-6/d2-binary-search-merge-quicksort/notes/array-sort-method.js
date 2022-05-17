@@ -40,3 +40,26 @@ compareFunction(a, b) return value sort order
 
 // // descending
 // console.log('descending sort: ', moreNumbers.sort((a, b) => b - a)); // b = 1000 - a = 10 === negative
+
+
+const petData = [
+    {'name': 'Salsa', 'age':10, 'animal': 'cat', 'description': 'calico' },
+    {'name': 'Jazz', 'age':7, 'animal': 'cat', 'description': 'tuxedo' },
+    {'name': 'Mars', 'age':6, 'animal': 'dog', 'description': 'shepard' },
+    {'name': 'Blondie', 'age':12, 'animal': 'dog', 'description': 'labrador' },
+    {'name': 'Blues', 'age':5, 'animal': 'cat', 'description': 'tabby' },
+    {'name': 'Venus', 'age':3, 'animal': 'dog', 'description': 'husky' },
+]
+
+console.log('Not sorted: ', petData)
+
+function sortPets() {
+    return petData.sort((a, b) => {
+        if (a.animal === b.animal) return b.age - a.age
+        else if (a.animal === 'dog') return 1
+        else if (a.animal === 'cat') return -1
+    })
+
+}
+
+console.log('Sorted: ', sortPets())
