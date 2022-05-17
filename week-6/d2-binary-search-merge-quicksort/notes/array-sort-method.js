@@ -51,15 +51,9 @@ const petData = [
     {'name': 'Venus', 'age':3, 'animal': 'dog', 'description': 'husky' },
 ]
 
-console.log('Not sorted: ', petData)
+// console.log('Not sorted: ', petData)
 
-function sortPets() {
-    return petData.sort((a, b) => {
-        if (a.animal === b.animal) return b.age - a.age
-        else if (a.animal === 'dog') return 1
-        else if (a.animal === 'cat') return -1
-    })
+function sortPets() {}
 
-}
 
-console.log('Sorted: ', sortPets())
+// console.log('Sorted: ', sortPets())
