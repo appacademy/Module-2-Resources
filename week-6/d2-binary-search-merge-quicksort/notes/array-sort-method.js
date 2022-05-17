@@ -4,9 +4,11 @@ Array.sort()
 
 const numbers = [5, 6, 4, 3, 2, 0, 1];
 const letters = ['C', 'B', 'F', 'A', 'D', 'G', 'E'];
+const lettersMix = ['c', 'B', 'F', 'A', 'd', 'g', 'E'];
 
 // console.log(numbers.sort()); // [ 0, 1, 2, 3, 4, 5, 6 ]
 // console.log(letters.sort()); // [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
+console.log(lettersMix.sort()); //
 
 const moreNumbers = [10, 120, 100, 1100, 11];
 
@@ -53,7 +55,13 @@ const petData = [
 
 // console.log('Not sorted: ', petData)
 
-function sortPets() {}
+function sortPets() {
+    return petData.sort((a, b) => {
+        if (a.animal === b.animal) return a.age - b.age
+        else if (a.animal === 'cat') return 1
+        else if (a.animal === 'dog') return -1
+    })
+}
 
 
 // console.log('Sorted: ', sortPets())
