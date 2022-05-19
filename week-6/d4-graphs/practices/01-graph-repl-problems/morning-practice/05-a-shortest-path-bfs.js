@@ -16,7 +16,7 @@ function aShortestPath(start, end) {
   while (queue.length) {
     console.log({queue});
     console.log({visited});
-    let currentPath = queue.pop();
+    let currentPath = queue.shift();
     let currentNode = currentPath[currentPath.length - 1];
     console.log({currentPath});
     console.log({currentNode});
