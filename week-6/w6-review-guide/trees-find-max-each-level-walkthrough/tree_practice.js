@@ -60,6 +60,75 @@ function findMaxEachLevel(root) {
   return maxes
 }
 
+// no object mutation solution
+function findMaxEachLevel(root) {
+  if (!root) return [];
+
+  const result = [];
+  const queue = [];
+  queue.push(root);
+
+  while (queue.length) {
+      const len = queue.length;
+
+      // Keep track of the max per level
+      const max = -Infinity;
+      for (let i = 0; i < len; i++) {
+          const current = queue.shift();
+          max = Math.max(max, current.value);
+          if (current.left) queue.push(current.left);
+          if (current.right) queue.push(current.right);
+      }
+
+      // Add the max to the result array
+      result.push(max);
+  }
+  return result;
+}
+
+// recursion solution
+function findMaxEachLevel(root) {
+  function recursionHelper(root, result, depth) {
+      if (!root) return;
+
+      if (result.length === depth) {
+          result.push(root.value);
+      } else {
+          result[depth] = Math.max(root.value, result[depth]);
+      }
+
+      recursionHelper(root.left, result, depth + 1);
+      recursionHelper(root.right, result, depth + 1);
+  }
+
+  recursionHelper(root, (result = []), (depth = 0));
+  return result;
+}
+
+// counter solution
+function findMaxEachLevel(root) {
+  const queue = [root];
+  const count = 1;
+  const values = [];
+  let currentLevel = [];
+
+  while (queue.length) {
+      const currentNode = queue.shift();
+      currentLevel.push(currentNode.value);
+      count--;
+
+      if (currentNode.left) queue.push(currentNode.left);
+      if (currentNode.right) queue.push(currentNode.right);
+
+      if (!count) {
+          values.push(Math.max(...currentLevel));
+          currentLevel = [];
+          count = queue.length;
+      }
+  }
+
+  return values;
+}
 // Uncomment the code below for local testing.
 
 // // Build a tree for testing

@@ -46,20 +46,91 @@ function findStarts(matrix) {
 }
 
 function findNeighbors(node, matrix) {
-    // Don't forget to include diagonal neighbors!!!
+    const [row, col] = node
+    // const row = node[0]
+    // const col = node[1]
 
-    // Your code here
+    const neighbors = [
+        [row - 1, col], // top
+        [row + 1, col], // bottom
+        [row, col - 1], // left
+        [row, col + 1], // right
+        [row - 1, col - 1],
+        [row - 1, col + 1],
+        [row + 1, col - 1],
+        [row + 1, col + 1]
+    ]
+
+    const currentHeight = matrix[row][col]
+
+    const validNeighbors = neighbors.filter(neighbor => {
+        const [neighborRow, neighborCol] = neighbor
+        return matrix[neighborRow] && Math.abs(matrix[neighborRow][neighborCol] - currentHeight) <= 1
+        // return matrix[currentRow] && matrix[currentRow][currentCol] && Math.abs(matrix[currentRow][currentCol] - currentHeight) <= 1
+    })
+
+    /* why matrix[currentRow] works the way it does */
+    // const matrix = [
+    //     [1, 2, 3],
+    //     [4, 5, 6],
+    //     [7, 8, 9],
+    // ];
+
+    // const test1 = matrix[2][0];
+    // const test2 = matrix[2][-1];
+
+    // // const test3 = matrix[3][0];
+    // // const test4 = matrix[3][-1];
+
+    // const test5 = matrix[-1];
+    // const test6 = matrix[3];
+
+    // console.log(test1, test2); // => 7 undefined
+    // // console.log(test3); // => TypeError
+    // // console.log(test4); // => TypeError
+    // console.log(test5, test6); // => undefined undefined
+
+    return validNeighbors
 }
 
 function pathTraversal(node, matrix, visited, peak) {
-    // Your code here
+    const stack = [node]
+    visited.add(node.toString())
+
+    while (stack.length) {
+        const currentNode = stack.pop()
+        const [currentRow, currentCol] = currentNode
+
+        if (matrix[currentRow][currentCol] === peak) return true
+
+        const neighbors = findNeighbors(currentNode, matrix)
+
+        for (const neighbor of neighbors) {
+            const neighborStr = neighbor.toString()
+            if (!visited.has(neighborStr)) {
+                visited.add(neighborStr)
+                stack.push(neighbor)
+            }
+        }
+    }
+
+    return false
 }
 
 function identifyPath(mountain) {
     // Find the peak
+    const peak = findPeak(mountain)
     // Find the start
+    const starts = findStarts(mountain)
+
+    const visited = new Set()
 
     // Traverse from the starts and try to get to the top
+    for (const start of starts) {
+        if (pathTraversal(start, mountain, visited, peak)) return start
+    }
+
+    return false
     // Your code here
 }
 
