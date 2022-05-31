@@ -7,35 +7,22 @@ Consult documentation on how to utilize the following methods:
 
 /* Base 10 to base 2 */
 function decimalToBinary(blob) {
-  // if you don't know what type of data you're dealing with use this statement below
-  // console.log(blob, typeof blob)
-  // if blob '5134034' => Number(blob).toString(2)
-  return `0b${blob.toString(2)}`
-  return '0b' + blob.toString(2)
+  // Your code here
 }
-
-// 13.toString(2)
-// 13..toString(2)
-// (13).toString(2)
 
 /* Base 10 to base 16 */
 function decimalToHexadecimal(blob) {
-  return `0x${blob.toString(16)}`
+  // Your code here
 }
 
 /* Base 2 to base 10 */
 function binaryToDecimal(blob) {
-  return parseInt(blob.substring(2), 2)
+  // Your code here
 }
 
 /* Base 16 to base 10 */
 function hexadecimalToDecimal(blob) {
-  // console.log(blob)
-  // const decimal = parseInt(blob, 16)
-  // console.log(decimal)
-  // return decimal
-  // return parseInt(blob.slice(2), 16)
-  return parseInt(blob)
+  // Your code here
 }
 
 // console.log('Decimal to binary:')

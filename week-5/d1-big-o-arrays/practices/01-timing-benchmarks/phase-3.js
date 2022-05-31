@@ -3,35 +3,18 @@ const [addNums, addManyNums] = require("./phase-1");
 function addNums10Timing(increment) {
   // Copy your `addNums10` code here
   // Then, add timing code
-  const sums = [];
 
-  for (let i = increment; i <= 10 * increment; i += increment) {
-    console.time(`i=${i}`);
-    // startTime = Date.now()
+  // Your code here
 
-    sums.push(addNums(i));
-    // endTime = Date.now()
-
-    console.timeEnd(`i=${i}`);
-    // console.log(`$${i} = ${endTime - startTime}`)
-  }
-
-  return sums;
 }
 
 
 function addManyNums10Timing(increment) {
 // Copy your `addManyNums10` code here
 // Then, add timing code
-const sums = [];
 
-for (let i = increment; i <= 10 * increment; i += increment) {
-  console.time(`i=${i}`);
-  sums.push(addManyNums(i));
-  console.timeEnd(`i=${i}`);
-}
+  // Your code here
 
-return sums;
 }
 
 
