@@ -38,11 +38,13 @@ Cohort specific work and solutions will be available to students on their respec
 
 ### The general day to day use of this repo will be:
 
-- Each morning will have short practices. These are provided for you in this repo so that you do not have to clone them from a/A Open.
+- Each morning will have short practices. These are provided for you in this repo so that you do not have to clone them from a/A Open. We will rotate between short lectures and time to work on these practices.
+    - Students are to work with their pair, collaboratively but on their own files.
 
-- In the afternoon there will be more complex long practices. These will still be accessed via a/A Open.
+- In the afternoon there will be more challenging long practices. These will still be accessed via a/A Open.
+    - Students are to work with their pair following a/A recommended pair programming practices taking turns driving and navigating.
 
-- Lectures will be done with these notes and practices on this resources repo. Short practice solutions will be pushed intermittently in between each short practice and lecture. Students can then pull them down as soon as they are available.
+- Lectures will be done with these `notes` and `practices` on this resources repo. Short practice solutions will be pushed intermittently in after each short practice and lecture. Students can then pull them down as soon as they are available.
 
 - Long practice solutions will be uploaded at the end of the day they are assigned.
 
