@@ -1,21 +1,3 @@
-<!--
-This is a guide to advise a/A students transitioning from mod1 to mod2, whom have not yet had sufficient practice with cloning repositories from a/A starters.
-
-The content is currently setup to scale, with certain sections commented out for future versions. The main unique (and scaling) section is the FAQ which can easily be filled with suggestions and documentation to address commonly encountered issues.
-
--Alex Pezzati 8/13/2021
--->
-
-<!--
-TO DO:
- [x] reduce/refine instructions 8/14/2021
- [ ] flesh out FAQ
- [ ] flesh out basic git commands (to act as glossary)
- [x] setup external resources section 8/14/2021
- [ ] flesh out external resources
- [ ] improve quality of screenshots
- -->
-
 # Git Flow
 
 This is a guide of _expected_ practices for git and GitHub while in a/A's Module 2: Computer Science and continued studies at a/A.
@@ -153,8 +135,8 @@ Each member can then take turns driving and navigating, committing and pushing c
         <!-- THIS IMAGE SHOULD BE CHANGEDl -->
         <!-- ![connecting-repo-check-remote](./images/connecting-repo-check-remote.png) -->
 
--   Rename our default branch from "master" to "main".
-
+-   If needed, rename our default branch from "master" to "main".
+s
     ```
         git branch -M main
     ```
@@ -201,3 +183,21 @@ Each member can then take turns driving and navigating, committing and pushing c
 -   ### [Git Setup - a/A Resource](https://github.com/appacademy/unified-setup/blob/main/github-setup.md)
 
 ##### [Back to the top](#git-flow)
+
+<!--
+This is a guide to advise a/A students transitioning from mod1 to mod2, whom have not yet had sufficient practice with cloning repositories from a/A starters.
+
+The content is currently setup to scale, with certain sections commented out for future versions. The main unique (and scaling) section is the FAQ which can easily be filled with suggestions and documentation to address commonly encountered issues.
+
+-Alex Pezzati 8/13/2021
+-->
+
+<!--
+TO DO:
+ [x] reduce/refine instructions 8/14/2021
+ [ ] flesh out FAQ
+ [ ] flesh out basic git commands (to act as glossary)
+ [x] setup external resources section 8/14/2021
+ [ ] flesh out external resources
+ [ ] improve quality of screenshots
+-->
