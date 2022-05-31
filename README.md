@@ -52,7 +52,9 @@ Cohort specific work and solutions will be available to students on their respec
 
 _Please follow the specific steps for setting up this repo. They are designed for incoming students for this module._
 
-__It is recommended that students create two clones of this repo__. One to check for updates (with `git pull`) and another for their own work and commits which the student will connect to their own GitHub repo.
+__It is recommended that students create two clones of this repo__. One to check for updates (with `git pull`) and another for their own work and commits which the student will connect to their own GitHub repo. This setup serves two primary purposes:
+1. Convenient access to short practices and lecture material.
+2. Quick acces to solutions for all content in module 2.
 
 __Follow the instructions in the [setup][setup] section (below) how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
 
