@@ -179,9 +179,9 @@ To determine if you have setup your repo to correctly receive solutions use the 
 -   There are many options and taking the time to find something that makes sense for you will be very useful in the long run. A straight forward example could be the following:
 
 ```js
-./appaca
-    ├── mod-1...
-    ├── mod-2
+./appaca // not a repo; regular directory
+    ├── mod-1... // not a repo
+    ├── mod-2 // not a repo
     |    ├── mod-2-resources // repo `git pull` for solutions!
     |    ├── my-mod-2-resources // repo for your commits on practices!
     |    └── long-practices // not a repo; regular directory
