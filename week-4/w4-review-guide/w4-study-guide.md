@@ -46,8 +46,8 @@
     -   Syntax is same as regular methods only with added static keyword
     -   Don't have access to 'this' because they are not invoked on an instance.
     -   Used to preform actions across a group of instances, and preform utility actions that are independent of any specific instances but are related to the object type.
--   **Static Variables:**
 
+-   **Static Variables:**
     -   Are not declared inside of the constructor. Static variables are declared, like static methods, using the static keyword followed by variable name and value assignment.
 
         ```js
@@ -73,13 +73,12 @@
     -   Operation that is attached the opperand is of the wrong type.
     -   Re-assign a const variable;
     -   When trying to invoke a method that doesnt exist an object
--   **ReferenceError:**
 
+-   **ReferenceError:**
     -   Calling variables or methods that have not been declared or are misspelled _(attempting to reference something that has not been defined)._
     -   i.e typo in variable name or invoking a function that has not been declared.
 
 -   **SyntaxError:**
-
     -   Occur during parsing time (when code is broken into meaningful chunks (tokens). First thing that happens when code is run, occurs before compliation time).
     -   i.e.: mispell a keyword, or have an extra/missing token. (think '}')
 
@@ -100,19 +99,16 @@ class Child extends Parent {
 ## Object-Oriented Programming:
 
 -   **Encapsulation:**
-
     -   grouping data and functions together behind an API that hides implementation details from the user.
         > "It works, but you dont have to worry about why it works" - Dorkus.
     -   Encapsulation is what leads some behavior/data to be **public** and some **private**
 
 -   **Inheritance:**
-
     -   A child class can use any properties and methods of a parent class, but not the reverse.
     -   Javascript uses **implementation inheritance**, which means that the properties and methods defined on the parent class are available on objects created from classes that inherit from those parent classes.
     -   Javascript **_DOES NOT_** support **multiple inheritance** (where classes can have more then one parent).
 
 -   **Polymorphism:**
-
     -   The child class can manipulate what it inherits from the parent class.
     -   **Overriding** is when a child class has a different implementation of an inherited method with an equivalent result.
         > 'Same result with a different how'
@@ -174,11 +170,9 @@ dog.arrowDelayedBark(); // Would return bruiser (after 1 second) because the arr
 ## This, OOP principles, and TDD:
 
 -   **Context**
-
     -   context refers to the value of the this keyword when code is executed.
 
 -   **OOP**
-
     -   Eliminate unnecessary repetition with inhertiance, and design classes with intuitive classes (blueprints).
 
 -   **TDD benefits**
@@ -188,9 +182,9 @@ dog.arrowDelayedBark(); // Would return bruiser (after 1 second) because the arr
 
 ## When to use bind/apply/call:
 
--   Both call() and apply() allow a function/method belonging to one object to be assigned and called for a different object because they provide a new value of 'this' to the function/method.
+-   Both `call()` and `apply()` allow a function/method belonging to one object to be assigned and called for a different object because they provide a new value of 'this' to the function/method.
 
--   apply(): Argument being passed must be a single [array] or array-like object (meaning it has a length property and interger index that starts at 0 but does not share all the array methods.
+-   `apply()`: Argument being passed must be a single [array] or array-like object (meaning it has a length property and interger index that starts at 0 but does not share all the array methods.
 
     -   It also allows an array-literal or an Array object to be passed as an argument.
 
@@ -206,21 +200,21 @@ dog.arrowDelayedBark(); // Would return bruiser (after 1 second) because the arr
     const appliedFunc = this.function.apply(context, ...array);
     ```
 
--   call(): Arguments/parameters being passed must consist of a comma separated list.
+-   `call()`: Arguments/parameters being passed must consist of a comma separated list.
 
     ```js
     //general call() syntax
     const calledfunc = this.function.call(context, comma, seperated, args) (Invoked once immediately)
     ```
 
--   bind(): every time boundFunc is called, it is bound with the context or 'this' it is given.
+-   `bind()`: every time boundFunc is called, it is bound with the context or 'this' it is given.
 
     ```js
     // general bind() syntax
     const boundFunc = this.function.bind(context, ...args);
     ```
 # Coding Portion
-
+```
 //Writing parent and child classes, including their constructors and setting up instance variables,
 //both ones that are immediately/default set upon instantiation and those
 //created by passing in variables in the constructor.
@@ -238,7 +232,8 @@ class Child extends Parent {
         super(name, age, food);
     }
 }
-
+```
+```
 //importing and exporting modules using module.exports (HINT!!: pay attention to how files are pulled into the spec file to tell you how to export them)
 module.exports = Child;
 const Child = require('relativePath');
@@ -250,7 +245,8 @@ const { Child } = require('relativePath');
 
 module.exports = [Child];
 const [Child] = require('relativePath');
-
+```
+```
 // writing instance methods that access properties of instances of a class within another class
 
 class Customer {
@@ -320,7 +316,8 @@ we're able to iterate through this particular instance of Customer's cart to tal
 
 ! ALSO..... STUDY THIS PROGRAM!!!! VERY IMPORTANT!!!!!! This will be close to what the coding section is like.
 */
-
+```
+```
 /*
 * Using instanceof to see if something is a child of a parent class.
 
@@ -344,3 +341,4 @@ class LOLError extends Error {
 if (true) {
     throw new LOLError('LOLOL haha..... loser.');
 }
+```
