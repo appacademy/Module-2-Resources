@@ -5,8 +5,8 @@ justification for your answer. Assume `arr` is an array of length _n_.
 
 ## `arr.push()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(1)
+Space complexity: O(1)
 Justification: _Fill this in_
 
 [push on MDN][push]
@@ -14,88 +14,88 @@ Justification: _Fill this in_
 
 ## `arr.pop()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(1)
+Space complexity: O(1)
 Justification: _Fill this in_
 
 [pop on MDN][pop]
 
 ## `arr.shift()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(n)
+Space complexity: O(1)
 Justification: _Fill this in_
 
 [shift on MDN][shift]
 
 ## `arr.unshift()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(n)
+Space complexity: O(1)
 Justification: _Fill this in_
 
 [unshift on MDN][unshift]
 
 ## `arr.splice()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(n)
+Space complexity: O(1)
 Justification: _Fill this in_
 
 [splice on MDN][splice]
 
 ## `arr.slice()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(n)
+Space complexity: O(n)
 Justification: _Fill this in_
 
 [slice on MDN][slice]
 
 ## `arr.indexOf()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(n)
+Space complexity: O(1)
 Justification: _Fill this in_
 
 [indexOf on MDN][indexOf]
 
 ## `arr.map()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(n)
+Space complexity: O(n)
 Justification: _Fill this in_
 
 [map on MDN][map]
 
 ## `arr.filter()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(n)
+Space complexity: O(n)
 Justification: _Fill this in_
 
 [filter on MDN][filter]
 
 ## `arr.reduce()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(n)
+Space complexity: O(1)
 Justification: _Fill this in_
 
 [reduce on MDN][reduce]
 
 ## `arr.reverse()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(n)
+Space complexity: O(1)
 Justification: _Fill this in_
 
 [reverse on MDN][reverse]
 
 ## `[...arr]`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(n)
+Space complexity: O(n)
 Justification: _Fill this in_
 
 [spread on MDN][spread]

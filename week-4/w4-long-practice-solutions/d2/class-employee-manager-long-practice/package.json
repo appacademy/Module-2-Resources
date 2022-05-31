@@ -1,0 +1,20 @@
+{
+  "name": "class-employee-manager-long-practice",
+  "version": "1.0.0",
+  "description": "Now that you've learned about class syntax, commonJs modules, and reading test specs, it's time to bring these skills together! In this practice, you will: 1. Create and use JavaScript ES6 classes 2. Use inheritance to create a child of a parent class 3. Use polymorphism to overwrite/override an inherited method 4. Use commonJS modules to import/export your code",
+  "main": "employee.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "chai-spies": "^1.0.0",
+    "mocha": "^9.2.0"
+  }
+}

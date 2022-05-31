@@ -7,9 +7,43 @@ const adjList = {
     6: [4]
 }
 
+// 1. Create a queue and enqueue the starting node
+// 2. Create a set to store visited nodes
+// 3. While the queue is not empty, repeat steps 4-6
+// 4. Dequeue the first node and check if it's been visited
+// 5. If not, mark it as visited and DO THE THING
+// 6. Put all its neighbors in the back of the queue
+
 function printBreadthFirst(start) {
-    // Paste your previous code here and refactor it
+    let queue = [start];
+    let visited = new Set();
+    visited.add(start);
+
+    let nodes = [];
+
+    while (queue.length) {
+        let currentNode = queue.shift();
+        nodes.push(currentNode);
+
+        adjList[currentNode].forEach(neighbor => {
+            if (!visited.has(neighbor)) {
+                queue.push(neighbor);
+                visited.add(neighbor);
+            }
+        })
+    }
+
+    console.log(nodes);
 }
+
+// const adjList = {
+//     1: [2, 5],
+//     2: [1, 3, 5],
+//     3: [2, 4],
+//     4: [3, 5, 6],
+//     5: [1, 2, 4],
+//     6: [4]
+// }
 
 console.log("First Test:")
 printBreadthFirst(3);   // Prints 1 through 6 in Breadth-first order, starting with 3
