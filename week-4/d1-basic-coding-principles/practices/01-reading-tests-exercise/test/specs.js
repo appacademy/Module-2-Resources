@@ -3,17 +3,12 @@ const expect = chai.expect;
 const { isFive, isOdd, myRange } = require("../funcs");
 
 describe("isFive(num)", () => {
-  // this test is for the isFive function
   it("should return true if the num is 5 otherwise false", () => {
-    // testing isFive function, returning true if input is 5, otherwise false
     const num1 = 5;
 
-    // running num1 through the isFive function and storing the return value
     const actual1 = isFive(num1); // should be true
 
-    // expecting return value from line 12 to be true
     expect(actual1).to.be.true;
-
 
     const otherInput = "not 5";
     const num2 = 4;
@@ -23,7 +18,6 @@ describe("isFive(num)", () => {
 
     expect(actual2).to.be.false;
     expect(actual3).to.be.false;
-    // creating 2 inputs that are not 5, running them through isFive and expecting false
   });
 });
 

@@ -14,17 +14,7 @@ class Teacher extends Person {
     }
     return count;
   }
-
-  introduce() {
-    return `Hello. I am ${this.firstName} ${this.lastName}, and I have been teaching ${this.subject} for ${this.yearsOfExperience} years.`
-  }
 }
-
-// const arr = [1, 2, 3]  // instance of an Array
-// console.log(arr instanceof Array) // true
-// arr.includes(2) // includes is an instance method
-
-// Math.random()
 
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/

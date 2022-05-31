@@ -1,12 +1,4 @@
-const sayHelloTo = require('./send-messages/say-hello-to');
-const giveMessageToMrsPotato = require('./send-messages/give-message-to-mrs-potato');
 
-// IMPORT MESSAGES FROM AN OBJECT
-// const { msg1, msg2, msg3 } = require('./messages');
-
-// IMPORT MESSAGE FROM AN ARRAY
-const [ msg1, msg2, msg3 ] = require('./messages')
- 
 // Your code here
 
 /****************************************************************************/
