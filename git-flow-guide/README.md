@@ -135,8 +135,8 @@ Each member can then take turns driving and navigating, committing and pushing c
         <!-- THIS IMAGE SHOULD BE CHANGEDl -->
         <!-- ![connecting-repo-check-remote](./images/connecting-repo-check-remote.png) -->
 
--   If needed, rename our default branch from "master" to "main".
-s
+-   _OPTIONAL: If needed, rename our default branch from "master" to "main"._
+
     ```
         git branch -M main
     ```
