@@ -171,7 +171,7 @@ function pusher(arr) {
 2. Example:
 
 ```js
-// time O(n)
+// time O(n^2)
 function unshifter(arr) {
     for (let i = 0; i < 10; i++) {
         console.log(arr.unshift(i));
@@ -279,14 +279,14 @@ function doubleFor(arr) {
     -   it creates a new array to copy the selected elements
 
 -   **splice()**
-    -   time O(n) - space O(1)
+    -   time O(n) - space O(n)
     -   It has to iterate through the given index and amount
 
 ---
 
 ## Know when hash table collisions occur:
 
--   A hash table collision occurs when the hashMod function returns the same index for a given key.
+-   A hash table collision occurs when the hashMod function returns the same index for two different given keys.
 -   One of the ways of resolving a collision is by increasing the size of the hashtable (increase the size of the underlying array).
 -   Probablity of a collision is (1 / buckets.length )
     -   Each slot (index) in the array is called a "bucket".
