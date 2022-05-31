@@ -66,11 +66,13 @@ function calculateCostOfPie(pieType) {
     return costOfPie
 }
 
-function sellPies(costOfPie, pieQuantity, profitMargin) {
+function sellPies(costOfPie, pieQuantity, profitMargin = 1.2) {
     // Calculate the total cost of all the pies
     const totalCost = costOfPie * pieQuantity;
 
     // Print the total revenue calculated using the given profitMargin
+    // short circuiting
+    // variable && variable.property
     const revenue = totalCost * (profitMargin || 1.2);
     console.log(`Sold ${pieQuantity} pies for $${revenue.toFixed(2)}!`);
 }
