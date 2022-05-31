@@ -195,7 +195,7 @@ depthFirstTraversal() {
 
 -   **Out-of-place:**
     -   Time: O(nlog(n))
-    -   Space: O(nlog(n))
+    -   Space: O(n)
 
 	-	**Sort function**
 		- 	Time: O(log(n))
@@ -207,13 +207,11 @@ depthFirstTraversal() {
 
 	-	Time complexity explanation: combining the complexities of the sort and merge functions, merge sort has a time complexity of O(n * log(n)) => O(nlog(n))
 
-	-   Space complexity explanation: There are two half arrays and one full length array (space complexity of 2n) and there are log(n) recursive calls. Because the 2n is for space in memory while log(n) is space in the call stack. This would result in O(2n * log(n)) => O(nlog(n)).
-
-		***Note: Merge sort in-place implementations are outside of the scope of this curriculum. It is important to be aware that the optimal version has better space efficiency!***
+	***Note: Merge sort in-place implementations are outside of the scope of this curriculum. It is important to be aware that the optimal version has better space efficiency by using iteration***
 
 -	**In-place:**
 	-	Time: O(nlog(n))
-	-	Space: O(n)
+	-	Space: O(1)
 
 5. **Quick Sort:**
 
@@ -362,11 +360,11 @@ depthFirstTraversal() {
 	while (stack.length > 0) {
 		const node = stack.pop();
 		console.log(node.val);
-		if (node.left) {
-			stack.push(node.left);
-		}
 		if (node.right) {
 			stack.push(node.right);
+		}
+		if (node.left) {
+			stack.push(node.left);
 		}
 	}
 }
