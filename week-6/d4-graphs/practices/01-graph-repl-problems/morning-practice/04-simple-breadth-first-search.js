@@ -1,34 +1,14 @@
 const adjList = {
-    1: [2, 5],
-    2: [1, 3, 5],
-    3: [2, 4],
-    4: [3, 5],
-    5: [1, 2, 4],
-    6: []
+  1: [2, 5],
+  2: [1, 3, 5],
+  3: [2, 4],
+  4: [3, 5],
+  5: [1, 2, 4],
+  6: []
 }
 
 function breadthFirstSearch(start, end) {
-  // your code here
-  let queue = [start];
-  let visited = new Set();
-  visited.add(start);
-
-  while (queue.length) {
-    let currentNode = queue.shift();
-
-    // DO THE THING
-    if (currentNode === end) return true;
-
-
-    adjList[currentNode].forEach(neighbor => {
-      if (!visited.has(neighbor)) {
-        queue.push(neighbor);
-        visited.add(neighbor);
-      }
-    });
-  }
-
-  return false;
+  // Your code here
 }
 
 console.log("First Test:");
