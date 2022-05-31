@@ -1,9 +1,11 @@
 # Week 6 Test Info:
 -11 multiple choice
--2 coding problems worth 12 points
--total points: 23
--passing points: 18
--time allowed: 3 hours
+-2 coding problems worth 18 points
+	- tree problem worth 6 points
+	- graph problem worth 12 points
+-total points: 29
+-passing points: 23
+-time allowed: 3.5 hours
 -Resources Allowed:
     -MDN
     -open.appacademy.io
