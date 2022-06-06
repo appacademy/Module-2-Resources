@@ -9,11 +9,9 @@ function addNums10Timing(increment) {
 
   for (let i = increment; i <= 10 * increment; i += increment) {
     console.time(`i=${i}`);
-
     // let startTime = Date.now();
     sums.push(addNums(i));
     // let endTime = Date.now();
-
     console.timeEnd(`i=${i}`);
     // console.log(`${endTime - startTime}`);
   }
