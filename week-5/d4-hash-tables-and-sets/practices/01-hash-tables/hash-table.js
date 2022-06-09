@@ -8,6 +8,7 @@ class KeyValuePair {
     }
 }
 
+// {} new Set() new Map()  []
 class HashTable {
     constructor(numBuckets = 4) {
         this.count = 0;
@@ -33,10 +34,12 @@ class HashTable {
         // console.log(index);
         const newPair = new KeyValuePair(key, value);
 
+        // if nothing is at that index
         if (!this.data[index]) {
             this.data[index] = newPair;
             this.count++;
         } else {
+            // if there is already a keyvalue pair there
             throw new Error(
                 'hash collision or same key/value pair already exists!'
             );
