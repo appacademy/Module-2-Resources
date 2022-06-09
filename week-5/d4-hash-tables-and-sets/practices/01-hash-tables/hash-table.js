@@ -28,8 +28,19 @@ class HashTable {
     }
 
     insertNoCollisions(key, value) {
-        // Your code here
         // const index = hashmodoutputhere
+        const index = this.hashMod(key);
+        // console.log(index);
+        const newPair = new KeyValuePair(key, value);
+
+        if (!this.data[index]) {
+            this.data[index] = newPair;
+            this.count++;
+        } else {
+            throw new Error(
+                'hash collision or same key/value pair already exists!'
+            );
+        }
     }
 
     insertWithHashCollisions(key, value) {
