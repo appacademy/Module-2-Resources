@@ -47,7 +47,21 @@ class HashTable {
     }
 
     insertWithHashCollisions(key, value) {
-        // Your code here
+        const index = this.hashMod(key);
+        const newPair = new KeyValuePair(key, value);
+
+        if (!this.data[index]) {
+            // if that bucket is empty
+            this.data[index] = newPair;
+        } else {
+            // if something is at that bucket, handle collision
+            // with add to head
+            newPair.next = this.data[index];
+            this.data[index] = newPair;
+        }
+        // this.data[index] is the equivalent to this.head
+
+        this.count++;
     }
 
     insert(key, value) {
