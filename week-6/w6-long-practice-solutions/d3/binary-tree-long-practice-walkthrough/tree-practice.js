@@ -49,7 +49,22 @@ function findMaxBT (rootNode) {
 }
 
 function getHeight (rootNode) {
-  // Your code here
+  if (!rootNode) return 0;
+  
+  let height = -1;
+  const q = [rootNode];
+  while (q.length) {
+    let len = q.length;
+    for (let i = 0; i < len; i++) {
+      let curr = q.shift();
+      if (curr.left) q.push(curr.left);
+      if (curr.right) q.push(curr.right);
+    }
+    
+    height++;
+  }
+  
+  return height;
 }
 
 function countNodes (rootNode) {
