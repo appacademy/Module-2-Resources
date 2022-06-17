@@ -9,26 +9,6 @@ function getNeighbors(row, col, matrix) {
     // Check top left
     // Return neighbors
 
-    // const neighbors = [];
-
-    // if (row > 0 && matrix[row - 1][col] === 1) neighbors.push([row - 1, col]);
-
-    // if (row > 0 && col < matrix[row].length - 1 && matrix[row - 1][col + 1] === 1) neighbors.push([row - 1, col + 1]);
-
-    // if (col < matrix[row].length - 1 && matrix[row][col + 1] === 1) neighbors.push([row, col + 1]);
-
-    // if (row < matrix.length - 1 && col < matrix[row].length - 1 && matrix[row + 1][col + 1] === 1) neighbors.push([row + 1, col + 1]);
-
-    // if (row < matrix.length - 1 && matrix[row + 1][col] === 1) neighbors.push([row + 1, col]);
-
-    // if (row < matrix.length - 1 && col > 0 && matrix[row + 1][col - 1] === 1) neighbors.push([row + 1, col - 1]);
-
-    // if (col > 0 &&  matrix[row][col - 1] === 1) neighbors.push([row, col - 1]);
-
-    // if (row > 0 && col > 0 && matrix[row - 1][col - 1] === 1) neighbors.push([row - 1, col - 1]);
-
-    // return neighbors;
-
     const neighbors = [];
 
     // console.log('starting location ', row, col);
