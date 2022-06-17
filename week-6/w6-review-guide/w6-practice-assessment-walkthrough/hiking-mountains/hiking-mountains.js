@@ -47,20 +47,76 @@ function findStarts(matrix) {
 
 function findNeighbors(node, matrix) {
     // Don't forget to include diagonal neighbors!!!
+    // const [row, col] = node
+    const row = node[0]
+    const col = node[1]
 
-    // Your code here
+    const neighbors = [
+        [row - 1, col], // top
+        [row + 1, col], // bottom
+        [row, col - 1], // left
+        [row, col + 1], // right
+        [row - 1, col - 1], // top left
+        [row + 1, col - 1], // bottom left
+        [row - 1, col + 1], // top right
+        [row + 1, col + 1], // bottom right
+    ]
+
+    const currentHeight = matrix[row][col]
+
+    const validNeighbors = neighbors.filter(neighbor => {
+        const [neighborRow, neighborCol] = neighbor
+
+        // this return statement can be changed to adapt to other valid nodes in other problems
+        return matrix[neighborRow] && Math.abs(matrix[neighborRow][neighborCol] - currentHeight) <= 1
+    })
+
+    return validNeighbors
 }
 
 function pathTraversal(node, matrix, visited, peak) {
-    // Your code here
+    const stack = [node]
+    visited.add(node.toString())
+
+    while (stack.length) {
+        const currentNode = stack.pop()
+        const [currentRow, currentCol] = currentNode
+
+        // do a different thing in a different problem???
+        if (matrix[currentRow][currentCol] === peak) return true
+
+        const neighbors = findNeighbors(currentNode, matrix)
+
+        for (const neighbor of neighbors) {
+            const neighborStr = neighbor.toString()
+            if (!visited.has(neighborStr)) {
+                visited.add(neighborStr)
+                stack.push(neighbor)
+            }
+        }
+    }
+
+    // return something else in a different problem
+    return false
 }
 
 function identifyPath(mountain) {
     // Find the peak
+    const peak = findPeak(mountain)
     // Find the start
+    const starts = findStarts(mountain)
 
+    const visited = new Set()
+
+    // console.log({peak}, {starts})
     // Traverse from the starts and try to get to the top
-    // Your code here
+    // for loop for the find starts
+    for (const start of starts) {
+        console.log(visited)
+        if (pathTraversal(start, mountain, visited, peak)) return start
+    }
+
+    return false
 }
 
 // Uncomment for local testing
@@ -75,16 +131,16 @@ function identifyPath(mountain) {
 // console.log(findNeighbors([2,0], mountain_0)) // <- Expect '[ [ 1, 0 ], [ 1, 1 ] ]'
 
 // // Example 1
-// const mountain_1 = [
-//         [1, 0, 1, 1],
-//         [2, 3, 2, 1],
-//         [0, 2, 4, 1],
-//         [3, 2, 3, 1]
-// ];
+const mountain_1 = [
+        [1, 0, 1, 1],
+        [2, 3, 2, 1],
+        [0, 2, 4, 1],
+        [3, 2, 3, 1]
+];
 
 // test_visited = new Set()
 // console.log(pathTraversal([0, 1], mountain_1, test_visited, 4)) // <- Expect 'true
-// console.log(identifyPath(mountain_1)) // <- Expect '[ 0, 1 ]'
+console.log(identifyPath(mountain_1)) // <- Expect '[ 0, 1 ]'
 
 // // Example 2
 // const mountain_2 = [
