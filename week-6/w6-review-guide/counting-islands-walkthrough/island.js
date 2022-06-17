@@ -1,38 +1,123 @@
 function getNeighbors(row, col, matrix) {
-  
-  // Check top
-  // Check top right
-  // Check right
-  // Check bottom right
-  // Check bottom
-  // Check bottom left
-  // Check left
-  // Check top left
-  // Return neighbors
-  
-  // Your code here
+    // Check top
+    // Check top right
+    // Check right
+    // Check bottom right
+    // Check bottom
+    // Check bottom left
+    // Check left
+    // Check top left
+    // Return neighbors
+
+    // const neighbors = [];
+
+    // if (row > 0 && matrix[row - 1][col] === 1) neighbors.push([row - 1, col]);
+
+    // if (row > 0 && col < matrix[row].length - 1 && matrix[row - 1][col + 1] === 1) neighbors.push([row - 1, col + 1]);
+
+    // if (col < matrix[row].length - 1 && matrix[row][col + 1] === 1) neighbors.push([row, col + 1]);
+
+    // if (row < matrix.length - 1 && col < matrix[row].length - 1 && matrix[row + 1][col + 1] === 1) neighbors.push([row + 1, col + 1]);
+
+    // if (row < matrix.length - 1 && matrix[row + 1][col] === 1) neighbors.push([row + 1, col]);
+
+    // if (row < matrix.length - 1 && col > 0 && matrix[row + 1][col - 1] === 1) neighbors.push([row + 1, col - 1]);
+
+    // if (col > 0 &&  matrix[row][col - 1] === 1) neighbors.push([row, col - 1]);
+
+    // if (row > 0 && col > 0 && matrix[row - 1][col - 1] === 1) neighbors.push([row - 1, col - 1]);
+
+    // return neighbors;
+
+    const neighbors = [];
+
+    // console.log('starting location ', row, col);
+    for (let i = -1; i <= 1; i++) {
+        for (let j = -1; j <= 1; j++) {
+            if (i === 0 && j === 0) continue;
+
+            const currRow = row + i; // 0 + (-1) = -1
+            const currCol = col + j;
+
+            // console.log(currRow, currCol);
+
+            // if out of bounds, continue to next iteration
+            if (currRow < 0 || currRow >= matrix.length) {
+                continue;
+            } else if (currCol < 0 || currCol >= matrix[currRow].length) {
+                continue;
+            } else {
+                // this if statement can be changed to adapted to other matrix problems
+                if (matrix[currRow][currCol] === 1) {
+                    neighbors.push([currRow, currCol]);
+                }
+            }
+        }
+    }
+
+    return neighbors;
+}
+
+function islandTraversal(row, col, visited, matrix) {
+    const startNode = [row, col];
+    const stack = [startNode];
+    visited.add(startNode.toString());
+
+    while (stack.length) {
+        const node = stack.pop();
+        const currRow = node[0];
+        const currCol = node[1];
+
+        // maybe you have to do a thing here on another problem
+
+        const neighbors = getNeighbors(currRow, currCol, matrix);
+
+        for (const neighbor of neighbors) {
+            const neighborStr = neighbor.toString();
+            if (!visited.has(neighborStr)) {
+                visited.add(neighborStr);
+                stack.push(neighbor);
+            }
+        }
+    }
+
+    // maybe you have to return a thing here on another problem
 }
 
 function countIslands(matrix) {
-  
-  // Create a visited set to store visited nodes
-  // Initialize count to 0
-  // Iterate through all indices in matrix
-    // If an index contains a 1 and has not been visited, 
+    // Create a visited set to store visited nodes
+    // Initialize count to 0
+    // Iterate through all indices in matrix
+    // If an index contains a 1 and has not been visited,
     // increment island count and start traversing neighbors
-      // DO THE THING (increment island count by 1)
-      // Initialize a stack with current index
-      // Add stringified version of current index to the visited set
-      // While stack contains elements
-        // Pop element from stack
-        // Get valid neighbors of current element
-        // Iterate over neigbors
-          // If neighbor has not been visited
-            // Add neighbor to stack
-            // Mark neighbor as visited
-  // Return island count
-  
-  // Your code here
+    // DO THE THING (increment island count by 1)
+    // Initialize a stack with current index
+    // Add stringified version of current index to the visited set
+    // While stack contains elements
+    // Pop element from stack
+    // Get valid neighbors of current element
+    // Iterate over neigbors
+    // If neighbor has not been visited
+    // Add neighbor to stack
+    // Mark neighbor as visited
+    // Return island count
+
+    const visited = new Set();
+    let islandCount = 0;
+
+    for (let row = 0; row < matrix.length; row++) {
+        for (let col = 0; col < matrix[row].length; col++) {
+            //
+            const nodeStr = [row, col].toString();
+            if (matrix[row][col] === 1 && !visited.has(nodeStr)) {
+                islandCount++; // do the thing for this problem
+
+                // maybe you have to check or return something from local traversal on another problem
+                islandTraversal(row, col, visited, matrix);
+            }
+        }
+    }
+    return islandCount;
 }
 
 // Uncomment the lines below for local testing
