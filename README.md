@@ -54,7 +54,7 @@ _Please follow the specific steps for setting up this repo. They are designed fo
 
 __It is recommended that students create two clones of this repo__. One to check for updates (with `git pull`) and another for their own work and commits which the student will connect to their own GitHub repo. This setup serves two primary purposes:
 1. Convenient access to short practices and lecture material.
-2. Quick acces to solutions for all content in module 2.
+2. Quick access to solutions for all content in module 2.
 
 __Follow the instructions in the [setup][setup] section (below) how to clone this repo__. Consult the [git flow guide][connecting] how to change a `git remote` to connect to your personal repo.
 
@@ -66,9 +66,9 @@ __Follow the instructions in the [setup][setup] section (below) how to clone thi
 
 To access daily uploaded solutions you must clone the repo using this command in the directory of your choice:
 
-    git clone -b <your-cohort-branchname> --single-branch <remote-repo-url> <new-folder-name>
+    git clone -b <your-cohort-branch-name> --single-branch <remote-repo-url> <new-folder-name>
 
-- `<your-cohort-branchname>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-May-Cohort`).
+- `<your-cohort-branch-name>` will follow the format of __your cohort's__ `Year-Month-Cohort` (e.g., `2022-June-Cohort`).
 
 - `<remote-repo-url>` will depend on if you are using SSH or PAT to access GitHub.
 
@@ -78,7 +78,7 @@ To access daily uploaded solutions you must clone the repo using this command in
 
 These commands will clone the resource repo and only grab the branch relevant to your cohort, while making it the default branch of your local repo. This branch with be preserved as your cohort left it to utilize at your convenience in the future.
 
-Cloning this branch, as demonstrated, will enable GitHub to track your contributions should you change the remote to your own repositority (see the [git flow guide][connecting] how to do this).
+Cloning this branch, as demonstrated, will enable GitHub to track your contributions should you change the remote to your own repository (see the [git flow guide][connecting] how to do this).
 
 If you intend to make a second clone, you should rename the previous cloned repo or git will give you an error. Alternatively, you can utilize an optional command with `git clone` which will be the name of your newly cloned repo. See example below.
 
@@ -88,11 +88,11 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
 - Cloning (using PAT) may look like:
 
-        git clone -b 2022-May-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
+        git clone -b 2022-June-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git
 
 - Cloning (using SSH) may look like:
 
-        git clone -b 2022-May-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
+        git clone -b 2022-June-Cohort --single-branch git@github.com:appacademy/Module-2-Resources.git
 
 - Cloning with with new repo name, may look like this (using PAT). This will clone the repo but name the folder "my-mod-2-resources":
 
@@ -100,9 +100,9 @@ _Note, the version you use depends on how you have previously setup your GitHub 
 
         or
 
-        git clone -b 2022-May-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
+        git clone -b 2022-June-Cohort --single-branch https://github.com/appacademy/Module-2-Resources.git my-mod-2-resources
 
-To determine if you have setup your repo to correctly receive solutions use the command `git branch` in your repo. It should say your cohort specific branch is selected (e.g., `2022-May-Cohort`). If instead it says `main`, you have cloned the empty template branch. This branch will never receive solutions. Please refer to the instructions above how to access solutions.
+To determine if you have setup your repo to correctly receive solutions use the command `git branch` in your repo. It should say your cohort specific branch is selected (e.g., `2022-June-Cohort`). If instead it says `main`, you have cloned the empty template branch. This branch will never receive solutions. Please refer to the instructions above how to access solutions.
 
 ##### [Back to the top][top]
 
@@ -126,7 +126,7 @@ To determine if you have setup your repo to correctly receive solutions use the 
 - Big O analysis of time and space complexity (O(1), O(n), O(n^2))
 - Logic operators
 - Computer memory addresses/pointers
-- Binary, hexidecimal, ASCII representation and conversion
+- Binary, hexadecimal, ASCII representation and conversion
 - Dynamic arrays and the big O analysis of array methods
 - Linked lists (single and doubly linked lists)
 - Stacks and queues
@@ -156,11 +156,11 @@ To determine if you have setup your repo to correctly receive solutions use the 
 
 ### Why do I not see any solutions?
 
--   Please make sure your repo is on the correct branch. If using the command `git branch` indicates you are on `main` you will not see solutions. The `main` branch only has empty templates. Solutions for your cohort are on your cohort specific branch (e.g., `2022-May-Cohort`). Please refer to [the setup instructions][setup] on how to setup your repo.
+-   Please make sure your repo is on the correct branch. If using the command `git branch` indicates you are on `main` you will not see solutions. The `main` branch only has empty templates. Solutions for your cohort are on your cohort specific branch (e.g., `2022-June-Cohort`). Please refer to [the setup instructions][setup] on how to setup your repo.
 
 ### Why can't I simply `git clone` or `git fork` the resources repo to get solutions?
 
--   These are not necessarily incorrect approaches. However to get the intended utility of the repo requires additional steps after using those commands. Some of those steps may not be known to newer incoming students to a/A. The instructions in [the setup section][setup] were designed to accomodate students in an effective manner relative to their current expected experience with `git` and a/A's goals to gradually encourage familiarity with `git` over time.
+-   These are not necessarily incorrect approaches. However to get the intended utility of the repo requires additional steps after using those commands. Some of those steps may not be known to newer incoming students to a/A. The instructions in [the setup section][setup] were designed to accommodate students in an effective manner relative to their current expected experience with `git` and a/A's goals to gradually encourage familiarity with `git` over time.
 
 -   The goals of this repo are:
     1) Access to the short practices, all solutions and various curriculum resources.
