@@ -79,10 +79,10 @@ arrays and the corresponding methods to access or add elements
     -   remove from head: O(1) time
     -   find: O(n)
 
--   Relative Advantanges:
+-   Relative Advantages:
     -   LL > DLL:
         -   less memory
-        -   simplier code
+        -   simpler code
     -   DLL > LL
         -   Improved time complexity for removeFromTail (when LL lacks a tail pointer)
         -   previous pointer (makes removing nodes much easier)
@@ -219,7 +219,7 @@ function doubleFor(arr) {
 -   **push():**
 
     -   time O(1) - space O(1)
-    -   Because dynamic arrays are overallocated with additional memory spaces, adding something to the end of the array fills a slot in memory that was already allocated.
+    -   Because dynamic arrays are over-allocated with additional memory spaces, adding something to the end of the array fills a slot in memory that was already allocated.
     -   worst case scenario, the array has to resize, which would make the push an O(n) time and space. But because it happens so infrequently, we consider push an O(1)
 
 -   **shift():**
@@ -253,7 +253,7 @@ function doubleFor(arr) {
     -   time O(n) - space O(1) or O(n) (depending on your accumulator)
     -   Time is 0(n) because it must iterate through the given array
     -   Space O(1) when the accumulator is an integer.
-    -   spasce O(n) when the accumulator is an array or pojo.
+    -   space O(n) when the accumulator is an array or pojo.
 
 -   **filter():**
 
@@ -287,13 +287,13 @@ function doubleFor(arr) {
 ## Know when hash table collisions occur:
 
 -   A hash table collision occurs when the hashMod function returns the same index for two different given keys.
--   One of the ways of resolving a collision is by increasing the size of the hashtable (increase the size of the underlying array).
--   Probablity of a collision is (1 / buckets.length )
+-   One of the ways of resolving a collision is by increasing the size of the hash table (increase the size of the underlying array).
+-   Probability of a collision is (1 / buckets.length )
     -   Each slot (index) in the array is called a "bucket".
 -   **Load Factor** === the number of key/value pairs divided by the number of "buckets".
 -   Generally, most languages resize when the load factor === 0.7.
     -   This reduces the probability of collisions while minimizing wasted space.
--   Example of code used for dynamically resizing hashtables in javascript that can be added to top of insert() method:
+-   Example of code used for dynamically resizing hash tables in javascript that can be added to top of insert() method:
 
 ```js
 if (this.count / this.capacity > 0.7) {

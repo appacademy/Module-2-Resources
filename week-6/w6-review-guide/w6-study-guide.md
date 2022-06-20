@@ -3,9 +3,9 @@
 -2 coding problems worth 18 points
 	- tree problem worth 6 points
 	- graph problem worth 12 points
--total points: 29
--passing points: 23
--time allowed: 3.5 hours
+-Total points: 29
+-Passing points: 23
+-Time allowed: 3.5 hours
 -Resources Allowed:
     -MDN
     -open.appacademy.io
@@ -14,29 +14,29 @@
     -Code you wrote yourself
 
 # What to study for Multiple Choice:
-    -be able to determine the O(n) of a refactored algorithm
-    -be able to describe the features, benefits, complexities and use cases for:
+    -Be able to determine the O(n) of a refactored algorithm
+    -Be able to describe the features, benefits, complexities and use cases for:
         breadth-first traversal,
         depth-first traversal,
         depth-first search and
         breadth first search
 
-    -be able to give the space and time complexities for the sorting algorithms
+    -Be able to give the space and time complexities for the sorting algorithms
     we learned this week (both in-place and out-of-place)
-    -be able to describe and/or recognize a binary search tree, binary tree,
+    -Be able to describe and/or recognize a binary search tree, binary tree,
     and directed acyclic graph
-    -given a graphic representation of a tree, be able to list out elements in order
+    -Given a graphic representation of a tree, be able to list out elements in order
     for both depth first and breadth first traversals, as well as in-order, pre-order
     and post-order
-    -be able to identify a correct equation for sorting elements in an array using the
+    -Be able to identify a correct equation for sorting elements in an array using the
     built in array.sort() method for ascending and/or descending order
-    -be able to describe the behaviors of quick sort, merge sort, selection sort,
+    -Be able to describe the behaviors of quick sort, merge sort, selection sort,
     bubble sort, and insertion sort
-    -be able to describe the behavior of a binary search
+    -Be able to describe the behavior of a binary search
 
 # What to study for coding portion:
-    -be able to implement a social graph similar to the practice assessment
-    -be able to implement a breadth first search on a tree
+    -Be able to implement a social graph similar to the practice assessment
+    -Be able to implement a breadth first search on a tree
 
 # What to study for Multiple Choice:
 
@@ -83,7 +83,7 @@ breadthFirstTraversal() {
     -   Space complexity of O(w) where w = max width
 
 -   ## **Benefits:**
-    -   Better for traversing unbalenced BST (think linked list).
+    -   Better for traversing unbalanced BST (think linked list).
     -   Useful for finding a shortest path between nodes.
 -   **Complexities:**
     -   Uses more memory at larger n's.
@@ -131,7 +131,7 @@ depthFirstTraversal() {
         -   Can be useful when the graph is very wide with many branching paths, like finding the exit to a maze.
 -   Complexities:
     -   Implementing it recursively.
-    -   can be slower with smalller graphs, like unbalanced BST, that more closely resemble a linked list.
+    -   can be slower with smaller graphs, like unbalanced BST, that more closely resemble a linked list.
 -   Use Cases:
     -   DFT is more suitable for game or puzzle problems. We make a decision, then explore all paths through this decision. And if this decision leads to win situation, we stop.
 
@@ -139,17 +139,17 @@ depthFirstTraversal() {
 
 -   Same as DFT but will only traverse until it finds the **search target** and then stops.
     -   The search target will be your "DO THE THING".
-    -   **Not guarenteed to visit all nodes.** Will only visit all when the search target is the last node to be searched.
+    -   **Not guaranteed to visit all nodes.** Will only visit all when the search target is the last node to be searched.
 
 4. Breadth first search:
 
 -   Same as BFT but will only traverse until it finds the **search target** and then stops.
     -   The search target will be your "DO THE THING".
-    -   **Not guarenteed to visit all nodes.** Will only visit all when the search target is the last node to be searched.
+    -   **Not guaranteed to visit all nodes.** Will only visit all when the search target is the last node to be searched.
 
 ## Be able to give the space and time complexities for the sorting algorithms we learned this week (both in-place and out-of-place):
 
-|      Algorithim      | Time Complexity (Best) | Time Complexity (Avg) | Time Complexity (Worst) | Space Complexity |
+|      Algorithm      | Time Complexity (Best) | Time Complexity (Avg) | Time Complexity (Worst) | Space Complexity |
 | :------------------: | :--------------------: | :-------------------: | :---------------------: | :--------------: |
 |   **Bubble Sort:**   |          O(n)          |        O(n^2)         |         O(n^2)          |       O(1)       |
 | **Selection Sort:**  |         O(n^2)         |        O(n^2)         |         O(n^2)          |       O(1)       |
@@ -191,7 +191,7 @@ depthFirstTraversal() {
 
 4. **Merge Sort:**
 
--   Merge sort is preferred over quicksort for linked lists because it does not require random access to indicies. Remember that linked list nodes may not be stored in adjacent memory. Therefore merge sort can be implemented without taking up extra memory due to the difference in how memory is allocated for arrays and linked lists.
+-   Merge sort is preferred over quicksort for linked lists because it does not require random access to indices. Remember that linked list nodes may not be stored in adjacent memory. Therefore merge sort can be implemented without taking up extra memory due to the difference in how memory is allocated for arrays and linked lists.
 
 -   **Out-of-place:**
     -   Time: O(nlog(n))
@@ -218,7 +218,7 @@ depthFirstTraversal() {
 -   Quicksort is preferred over merge sort for sorting arrays due to the use of extra O(n) storage space.
 
 -   **Worst case explaination:**
-    -   Time: O(n^2). This occurs when the pivot point choosen happens to be the greatest or smallest element, or when the the array is already sorted in increasing or decreasing order. Time complexity of quicksort significantly depends on the organization of data within the input array.
+    -   Time: O(n^2). This occurs when the pivot point chosen happens to be the greatest or smallest element, or when the the array is already sorted in increasing or decreasing order. Time complexity of quicksort significantly depends on the organization of data within the input array.
 
 -   **Out-of-place:**
     -   Time: O(nlog(n))
@@ -236,9 +236,9 @@ depthFirstTraversal() {
 
 6. **Array.sort((a,b)):**
 
--   Node.js and Chrome use the V8 JS engine. For Array.sort(), V8 currently uses a combination of modifed versions of merge sort and then insertion sort for small data sizes called Timsort.
+-   Node.js and Chrome use the V8 JS engine. For Array.sort(), V8 currently uses a combination of modified versions of merge sort and then insertion sort for small data sizes called Timsort.
 
-|      Algorithim      | Time Complexity (Best) | Time Complexity (Avg) | Time Complexity (Worst) | Space Complexity |
+|      Algorithm      | Time Complexity (Best) | Time Complexity (Avg) | Time Complexity (Worst) | Space Complexity |
 | :------------------: | :--------------------: | :-------------------: | :---------------------: | :--------------: |
 |     **Timsort:**     |          O(n)          |        O(nlog(n))     |         O(nlog(n))      |       O(n)       |
 
@@ -276,7 +276,7 @@ class BinarySearchTree {
 }
 ```
 
--   **Seaching:**
+-   **Searching:**
     -   _Balanced BST:_
         -   Time complexity O(log n).
     -   _Unbalanced BST:_

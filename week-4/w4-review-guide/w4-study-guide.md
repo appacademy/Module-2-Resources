@@ -2,7 +2,7 @@
 
 ## About the test:
 
-- time: 3 hours
+- Time: 3 hours
 - 14 MC questions
 - 13 Coding Specs
 - 21/27 points to pass
@@ -32,10 +32,10 @@
 
 - Reading specs and writing code based on the test code
 - Writing parent and child classes, including their constructors and setting up instance variables, both ones that are immediately/default set upon instantiation and those created by passing in variables in the constructor.
-- importing and exporting modules using module.exports (HINT!!: pay attention to how files are pulled into the spec file to tell you how to export them)
-- writing instance methods that access properties of instances of a class within another class
-- using instanceof to see if something is a child of a parent class
-- throwing errors if a condition is not met
+- Importing and exporting modules using module.exports (HINT!!: pay attention to how files are pulled into the spec file to tell you how to export them)
+- Writing instance methods that access properties of instances of a class within another class
+- Using instanceOf to see if something is a child of a parent class
+- Throwing errors if a condition is not met
 
 
 
@@ -70,17 +70,17 @@
 ## Errors:
 
 -   **TypeError:**
-    -   Operation that is attached the opperand is of the wrong type.
+    -   Operation that is attached the operand is of the wrong type.
     -   Re-assign a const variable;
-    -   When trying to invoke a method that doesnt exist an object
+    -   When trying to invoke a method that doesn't exist an object
 
 -   **ReferenceError:**
     -   Calling variables or methods that have not been declared or are misspelled _(attempting to reference something that has not been defined)._
     -   i.e typo in variable name or invoking a function that has not been declared.
 
 -   **SyntaxError:**
-    -   Occur during parsing time (when code is broken into meaningful chunks (tokens). First thing that happens when code is run, occurs before compliation time).
-    -   i.e.: mispell a keyword, or have an extra/missing token. (think '}')
+    -   Occur during parsing time (when code is broken into meaningful chunks (tokens). First thing that happens when code is run, occurs before compilation time).
+    -   i.e.: misspell a keyword, or have an extra/missing token. (think '}')
 
 ## Child Class vs Parent Class Syntax:
 
@@ -100,7 +100,7 @@ class Child extends Parent {
 
 -   **Encapsulation:**
     -   grouping data and functions together behind an API that hides implementation details from the user.
-        > "It works, but you dont have to worry about why it works" - Dorkus.
+        > "It works, but you don't have to worry about why it works" - Dorkus.
     -   Encapsulation is what leads some behavior/data to be **public** and some **private**
 
 -   **Inheritance:**
@@ -133,7 +133,7 @@ class Child extends Parent {
 
     -   Arrow functions' 'this' is lexically bound. Meaning, it inherits it's scope/context from whatever code contains it, not calls it.
         -   Lexical Scoping defines how variable names are resolved in nested functions: inner functions contain the scope of parent functions even if the parent function has returned.
-    -   Arrow functions can omit the _return_ keyword and {} if they consist of a single expression (implict return).
+    -   Arrow functions can omit the _return_ keyword and {} if they consist of a single expression (implicit return).
     -   Arrow functions can also omit the parameter () if there is only a single parameter. _If there are no parameters the () must be included._
     -   Arrow functions are generally anonymous.
 
@@ -173,10 +173,10 @@ dog.arrowDelayedBark(); // Would return bruiser (after 1 second) because the arr
     -   context refers to the value of the this keyword when code is executed.
 
 -   **OOP**
-    -   Eliminate unnecessary repetition with inhertiance, and design classes with intuitive classes (blueprints).
+    -   Eliminate unnecessary repetition with inheritance, and design classes with intuitive classes (blueprints).
 
 -   **TDD benefits**
-    -   Creating test specs that describe the functionality of code to be written and then writting code to meet those tests.
+    -   Creating test specs that describe the functionality of code to be written and then writing code to meet those tests.
     -   It allows you to write only that is needed.
     -   TDD steps: First write tests(Red), write code to pass those specs (green), and finally refactor.
 
@@ -184,7 +184,7 @@ dog.arrowDelayedBark(); // Would return bruiser (after 1 second) because the arr
 
 -   Both `call()` and `apply()` allow a function/method belonging to one object to be assigned and called for a different object because they provide a new value of 'this' to the function/method.
 
--   `apply()`: Argument being passed must be a single [array] or array-like object (meaning it has a length property and interger index that starts at 0 but does not share all the array methods.
+-   `apply()`: Argument being passed must be a single [array] or array-like object (meaning it has a length property and integer index that starts at 0 but does not share all the array methods.
 
     -   It also allows an array-literal or an Array object to be passed as an argument.
 
@@ -204,7 +204,7 @@ dog.arrowDelayedBark(); // Would return bruiser (after 1 second) because the arr
 
     ```js
     //general call() syntax
-    const calledfunc = this.function.call(context, comma, seperated, args) (Invoked once immediately)
+    const calledfunc = this.function.call(context, comma, separated, args) (Invoked once immediately)
     ```
 
 -   `bind()`: every time boundFunc is called, it is bound with the context or 'this' it is given.
