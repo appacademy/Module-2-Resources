@@ -9,28 +9,6 @@ const adjList = {
 
 function aShortestPath(start, end) {
   // Your code here
-  let queue = [];
-  let visited = new Set();
-
-  queue.push([start]);
-  visited.add(start);
-
-  while (queue.length) {
-    let currentPath = queue.shift();
-    let currentNode = currentPath[currentPath.length - 1];
-
-    // Do The thing here
-    if (currentNode === end) return currentPath;// something
-
-    adjList[currentNode].forEach(neighbor => {
-      if (!visited.has(neighbor)) {
-        visited.add(neighbor);
-        queue.push([...currentPath, neighbor]);
-      }
-    });
-  }
-
-  return false;
 }
 
 console.log("First Test:");
