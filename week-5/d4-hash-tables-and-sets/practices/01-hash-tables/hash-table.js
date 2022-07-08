@@ -41,8 +41,7 @@ class HashTable {
     }
   }
 
-  //                kvp1
-  //                 |
+
 
 
   insertWithHashCollisions(key, value) {
@@ -62,11 +61,14 @@ class HashTable {
     this.count++
   }
 
+    //                kvp1
+    //                 |
     // [ null, null, kvp2, null, ] this.data[idx]
 
   insert(key, value) {
     const idx = this.hashMod(key);
 
+    // let curr = this.head
     let curr = this.data[idx];
 
     while (curr && curr.key !== key) {
