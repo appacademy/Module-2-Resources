@@ -45,6 +45,45 @@ function bubbleSort(arr) {
   return arr;
 }
 
+
+function bubbleSort2(arr) {
+
+  const array = [...arr]
+
+  let swapped = false;
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = 0; j < array.length - i; j++) {
+      if (array[j] > array[j+1]) {
+        [array[j], array[j+1]] = [array[j+1], array[j]];
+        // console.log(array.join(","));
+        swapped = true;
+      }
+    }
+    if (!swapped) return array;
+  }
+  return array;
+}
+
+
+
+const arr = [];
+// make the array larger to see the difference in optimization
+const n = 25000
+
+for (let i = 0; i < n; i++) {
+  arr.push(Math.floor(Math.random() * n));
+}
+
+// console.log(arr)
+
+console.time("Bubble Sort");
+bubbleSort(arr);
+console.timeEnd("Bubble Sort");
+
+console.time("Bubble Sort 2");
+bubbleSort2(arr);
+console.timeEnd("Bubble Sort 2");
+
 // [2,4,1,6,8,3,5,7,9]
 
 module.exports = bubbleSort;
