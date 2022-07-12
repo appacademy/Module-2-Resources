@@ -29,7 +29,7 @@ function merge(arrA, arrB) {
   let indexA = 0;
   let indexB = 0;
   // While there are still values in each array...
-  while (indexA < arrA.length || indexB < arrB.length) {
+  while (indexA < arrA.length && indexB < arrB.length) {
     // Compare the first values of each array
     // Add the smaller value to the return array
     // Move the pointer to the next value in that array
