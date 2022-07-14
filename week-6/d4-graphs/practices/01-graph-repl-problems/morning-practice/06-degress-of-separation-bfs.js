@@ -18,8 +18,7 @@ function degreesOfSeparation(start, end) {
     const currentPath = queue.shift();
     const currentNode = currentPath[currentPath.length - 1];
 
-    if (currentNode === end) return  currentPath.length - 1;
-
+    if (currentNode === end) return  currentPath.length - 1;  // [1,2,3]
 
     const neighbors = adjList[currentNode];
 

@@ -30,6 +30,7 @@ function aShortestPath(start, end) {
     neighbors.forEach(neighbor => {
       if (!visited.has(neighbor)) {
 
+
         queue.push([...currentPath, neighbor]); // 
         console.log({queue});
         visited.add(neighbor);
