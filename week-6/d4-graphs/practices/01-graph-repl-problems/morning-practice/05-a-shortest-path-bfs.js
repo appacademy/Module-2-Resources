@@ -9,10 +9,17 @@ const adjList = {
 
 function aShortestPath(start, end) {
   // Your code here
+  const queue = [[start]]
+
+  // while queue has length
+  // shift out the currentPath
+  // currentPath[currentPath.length - 1]
+  
+  // [...currrentPath, neighbor]
 }
 
 console.log("First Test:");
-console.log(aShortestPath(1, 3)); // -> [ 1, 2, 3 ] (One possible solution)
+console.log(aShortestPath(1, 3)); // -> [ 1, 2, 3 ] (One possible solution) [1]
 console.log("Second Test:");
 console.log(aShortestPath(4, 1)); // -> [ 4, 5, 1 ] (One possible solution)
 console.log("Third Test:");
