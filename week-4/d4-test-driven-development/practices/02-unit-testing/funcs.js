@@ -1,19 +1,13 @@
 function isFive(num) {
-  return num === 5 ? true : false;
+  // Your code here
 }
 
 function isOdd(number) {
-  if (!(typeof number === 'number')) throw new Error();
-
-  return (number % 2 === 0) ? false : true;
+  // Your code here
 }
 
 function myRange(min, max, step = 1) {
-  const arr = [];
-  for ( let i = min; i <= max; i += step) {
-    arr.push(i)
-  }
-  return arr;
+  // Your code here
 }
 
 
