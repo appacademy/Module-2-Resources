@@ -3,7 +3,6 @@
 -   Node: A tree component that contains one value and pointers to other nodes
 -   Edge: Another name for a pointer
 -   Root node: The top node in a tree
--   Edge: Another name for a pointer
 -   Parent/child node: A parent node points to child nodes
 -   Neighbor: Either a parent or child node
 -   Subtree: A tree whose root is the child of another node in the tree
@@ -17,6 +16,7 @@
 - The tree starts at the root
 - nodes whose values are less than the current node go to the left
 - nodes whose values are more than the current node go to the left
+- all subtrees are also binary search trees
 - O (log n) search, insertion and deletion complexity
 - Each node has three properties: value, left and right
 
