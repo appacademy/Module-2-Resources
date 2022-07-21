@@ -26,9 +26,6 @@ describe('Hash table insert with hash collisions', () => {
     const pairC = hashTable.data[0];
     const pairB = hashTable.data[1];
     const pairA = hashTable.data[0].next;
-    console.log(pairC)
-    console.log(pairB)
-    console.log(pairA)
 
     expect(pairA.key).to.equal("key-1");
     expect(pairA.value).to.equal("val-1");
