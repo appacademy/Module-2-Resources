@@ -7,8 +7,6 @@ runtime errors.
 
 Clone the starter from the **Download** link at the bottom of this page.
 
-Run `npm install` to install any dependencies.
-
 ## Instructions
 
 Implement the following in the __error-handling.js__ file.

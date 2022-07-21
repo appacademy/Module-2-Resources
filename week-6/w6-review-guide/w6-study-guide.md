@@ -35,8 +35,12 @@
     -Be able to describe the behavior of a binary search
 
 # What to study for coding portion:
-    -Be able to implement a graph similar to the practice assessment
+    -Be able to implement a social graph similar to the practice assessment
     -Be able to implement a breadth first search on a tree
+
+# What to study for Multiple Choice:
+
+---
 
 ## Be able to determine the O(n) of a refactored algorithm:
 
@@ -728,3 +732,13 @@ function binarySearch(arr, target) {
 	return -1;
 }
 ```
+
+---
+
+# What to study for coding portion:
+
+-   Be able to implement a social graph similar to the practice assessment
+    -   Know BFS algo!
+    -   Be comfortable keying into object properties, using Object.entries(obj) to generate an iterable array, and destructuring to isolate object keys and values into variables.
+
+---
