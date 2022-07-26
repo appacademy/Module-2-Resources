@@ -53,7 +53,6 @@ function adoptSmallerDog(weight1, weight2) {
   return `I adopted a dog that weighs ${smallDog} pounds.`;
 }
 
-
 /**************************************************************************/
 /* DO NOT CHANGE THE CODE BELOW */
 module.exports = {
