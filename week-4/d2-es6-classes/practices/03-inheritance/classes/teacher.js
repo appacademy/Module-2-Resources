@@ -2,12 +2,11 @@ const Person = require('./person');
 
 // Your code here
 class Teacher extends Person {
-  constructor(firstName, lastName, subject, manager) {
+  constructor(firstName, lastName, subject, yearsOfExperience) {
     super(firstName, lastName);
     this.subject = subject;
     this.yearsOfExperience = yearsOfExperience;
 
-    if (manager) manager.push(this)
   }
 
   static combinedYearsOfExperience(teachers) {
