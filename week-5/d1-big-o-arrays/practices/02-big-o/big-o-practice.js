@@ -1,3 +1,4 @@
+let animals = ['alligator', 'bear', 'cat', 'dog', 'elephant', 'fish', 'goose', 'hamster', 'iguana', 'jaguar', 'kangaroo'];
 // Count how many animals are in the list
 // Time complexity: O(?)
 // Space complexity: O(?)
