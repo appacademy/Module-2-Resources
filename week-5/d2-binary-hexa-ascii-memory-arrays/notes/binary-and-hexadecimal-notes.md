@@ -24,6 +24,13 @@ You learned to count in a base 10 system. All numbers are based on a 0-9 countin
 0110 - 6
 0111 - 7
 1000 - 8
+1001 - 9
+1010 - 10
+1011 - 11
+1100 - 12
+1101 - 13
+1110 - 14
+1111 - 15
 ```
 
 -   The pattern is: 0 and 1 are the same a base 10, but then you run out of digits.
