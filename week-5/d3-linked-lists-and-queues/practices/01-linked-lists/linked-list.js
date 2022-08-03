@@ -65,10 +65,10 @@ class LinkedList {
   }
 }
 
-const node = new LinkedListNode(1);
-const node2 = new LinkedListNode(2);
-node.next = node2;
+// const node = new LinkedListNode(1);
+// const node2 = new LinkedListNode(2);
+// node.next = node2;
 
-console.log(node)
+// console.log(node)
 
 module.exports = LinkedList;
