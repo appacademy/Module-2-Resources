@@ -56,7 +56,10 @@ class HashTable {
       kvp.next = oldKey;
       this.data[idx] = kvp;
     }
+    // if (this.data[idx]) kvp.next = this.data[idx];
+    // this.data[idx] = kvp;
     this.count++;
+
   }
 
   insert(key, value) {
