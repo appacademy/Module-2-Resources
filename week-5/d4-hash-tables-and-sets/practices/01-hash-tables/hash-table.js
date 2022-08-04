@@ -64,6 +64,38 @@ class HashTable {
 
   insert(key, value) {
     // Your code here
+    // find the index (bucket that we want to use)
+    const idx = this.hashMod(key);
+
+    // grab the head of the bucket this.data[idx] this could be null
+    let currentPair = this.data[idx];
+
+    // loop through the list until we get to the end or find the key
+    // pair with the key we are trying to change the value
+    while (currentPair && currentPair.key !== key) {
+      currentPair = currentPair.next;
+    }
+
+    // if the kvp already exists simply overwrite it's value
+    if (currentPair) {
+      currentPair.value = value;
+    } else {
+      // otherwise create a kvp and insert
+      const kvp = new KeyValuePair(key, value)
+
+      if (this.data[idx]) {
+        // if there is something in the bucket
+        // point the new kvp at this.data[idx]
+        kvp.next = this.data[idx];
+        // reassign this.data[idx] to the new kvp
+        this.data[idx] = kvp
+      } else {
+        // otherwise point this.data[idx] at the new kvp
+        this.data[idx] = kvp;
+      }
+      // increment count property
+      this.count++;
+    }
   }
 
 }
