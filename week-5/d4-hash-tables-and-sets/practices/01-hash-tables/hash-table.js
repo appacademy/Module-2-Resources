@@ -71,7 +71,7 @@ class HashTable {
     let currentPair = this.data[idx];
 
     // loop through the list until we get to the end or find the key
-    // pair with the key we are trying to change the value
+    // value pair with the key we are trying to change the value for
     while (currentPair && currentPair.key !== key) {
       currentPair = currentPair.next;
     }
