@@ -10,7 +10,7 @@ function bubbleSort(arr) {
       console.log(arr.join(","));
 
   // If you get to the end of the array and no swaps have occurred, return
-
+  // Testing a commit
   // Otherwise, repeat from the beginning
 
 }
