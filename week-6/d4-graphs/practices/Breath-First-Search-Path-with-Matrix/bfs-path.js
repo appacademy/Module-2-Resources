@@ -1,4 +1,8 @@
 function findNeighbors(node, matrix) {
+    let row = node[0];
+    let col = node[1];
+    let neighbors = [];
+    
     // Up
     if (row - 1 >= 0) {
         neighbors.push([row - 1, col]);
