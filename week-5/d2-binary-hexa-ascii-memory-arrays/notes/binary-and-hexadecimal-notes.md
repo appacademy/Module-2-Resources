@@ -302,7 +302,7 @@ We simply add a 0 to make it a group of 4 `0100 0111 0101` and apply the same me
 
 `0b10001110101` = `0x475` = `1141`
 
-## Important to Know:
+
 
 ### Bytes, kilobytes, megabytes, gigabytes, terabytes:
 
