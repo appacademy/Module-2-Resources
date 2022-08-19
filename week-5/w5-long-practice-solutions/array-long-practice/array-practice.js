@@ -24,6 +24,7 @@ const runningSum = arr => {
   }
 
   return ret;
+  //!!END
 };
 
 const evenNumOfChars = arr => {

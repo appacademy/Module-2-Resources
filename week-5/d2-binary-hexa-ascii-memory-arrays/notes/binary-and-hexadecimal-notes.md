@@ -24,13 +24,6 @@ You learned to count in a base 10 system. All numbers are based on a 0-9 countin
 0110 - 6
 0111 - 7
 1000 - 8
-1001 - 9
-1010 - 10
-1011 - 11
-1100 - 12
-1101 - 13
-1110 - 14
-1111 - 15
 ```
 
 -   The pattern is: 0 and 1 are the same a base 10, but then you run out of digits.
@@ -225,14 +218,6 @@ console.log(str.charCodeAt(1)); // 66 => B;
 console.log(str.charCodeAt(2)); // 67 => C;
 ```
 
-## More Built in JavaScript Conversion Methods:
-
-```javascript
-// Convert Hexadecimal to Base10 & back`
-let num = parseInt('0xa1', 16); // 161
-let str = num.toString(16); // 'a1'
-```
-
 ## Converting binary to hexadecimal manually
 
 In order to convert binary to hexadecimal or vice versa, we only need to know how to count to 
@@ -302,7 +287,15 @@ We simply add a 0 to make it a group of 4 `0100 0111 0101` and apply the same me
 
 `0b10001110101` = `0x475` = `1141`
 
+## More Built in JavaScript Conversion Methods:
 
+```javascript
+// Convert Hexadecimal to Base10 & back`
+let num = parseInt('0xa1', 16); // 161
+let str = num.toString(16); // 'a1'
+```
+
+## Important to Know:
 
 ### Bytes, kilobytes, megabytes, gigabytes, terabytes:
 

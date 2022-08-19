@@ -10,5 +10,4 @@ These refer to the patterns in which the algorithm will access each node of the 
 depending on factors such as directed or undirected edges and weights.
 
 
-
 */
