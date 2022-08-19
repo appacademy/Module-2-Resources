@@ -9,6 +9,8 @@ function addNums(n) {
 
   return total; // c5
 }  // O(n)
+  
+}
 
 
 // Adds up values of addNums(1) through addNums(n)
@@ -22,6 +24,8 @@ function addManyNums(n) {
 
   return total; //c5
 } // O (n^2)
+  
+}
 
 
 

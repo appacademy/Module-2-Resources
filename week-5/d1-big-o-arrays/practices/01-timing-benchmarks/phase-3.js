@@ -16,6 +16,7 @@ function addNums10Timing(increment) {
   }
   // console.log(sums)
   return sums;
+
 }
 
 
@@ -35,6 +36,8 @@ function addManyNums10Timing(increment) {
   }
 
   return sums;
+// Copy your `addManyNums10` code here
+// Then, add timing code
 }
 
 

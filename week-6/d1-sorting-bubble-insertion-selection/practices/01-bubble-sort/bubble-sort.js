@@ -28,6 +28,17 @@ function bubbleSort(arr) {
     // Otherwise, repeat from the beginning
   }
   return arr;
+  // Iterate through the array
+
+    // If the current value is greater than its neighbor to the right
+      // Swap those values
+
+      // Do not move this console.log
+      console.log(arr.join(","));
+
+  // If you get to the end of the array and no swaps have occurred, return
+  // Testing a commit
+  // Otherwise, repeat from the beginning
 
 }
 
