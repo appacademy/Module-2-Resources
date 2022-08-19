@@ -1,0 +1,21 @@
+{
+  "name": "class-syntax-long-practice",
+  "version": "1.0.0",
+  "description": "practice for class syntax, inheritance, and polymorphism",
+  "main": "all-dragons.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-spies": "^1.0.0",
+    "mocha": "^9.0.3",
+    "sinon": "^11.1.2"
+  }
+}
