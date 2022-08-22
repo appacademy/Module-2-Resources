@@ -17,11 +17,11 @@ This guide will walk you through this process.
 * Next you will run the clone command from your terminal. This may look a little bit different than you have seen, because we are only pulling a specific branch. You will use one of the following commands based on how you set up your authentication with GitHub. 
     - If you are using a PAT you will need the HTTPS URL:
 
-        - `git clone -b 2022-July-Cohort https://github.com/appacademy/Module-2-Resources.git`
+        - `git clone -b 2022-August-Cohort https://github.com/appacademy/Module-2-Resources.git`
 
     - If you are using SSH you will need to use the SSH URL:
 
-        - `git clone -b 2022-July-Cohort git@github.com:appacademy/Module-2-Resources.git`
+        - `git clone -b 2022-August-Cohort git@github.com:appacademy/Module-2-Resources.git`
 
     - What does this command mean?
         
@@ -29,7 +29,7 @@ This guide will walk you through this process.
 
         - The `-b` is short hand for `--branch`. So we are telling git to clone a specific branch. 
 
-        - `2022-July-Cohort` is the specific branch that we want to clone. Without the `-b` and `2022-July-Cohort` you would just clone down the entire repo and be on the `main` branch. So when you pull you would never see the changes we made, until you switched to the proper branch. 
+        - `2022-August-Cohort` is the specific branch that we want to clone. Without the `-b` and `2022-August-Cohort` you would just clone down the entire repo and be on the `main` branch. So when you pull you would never see the changes we made, until you switched to the proper branch. 
 
         - The URL is the address of the entire repo, we just adjust based on our personal authentication settings. 
 
@@ -47,11 +47,11 @@ exists if you don't.
 
 - Next you will run the same command you did above:
 
-    - `git clone -b 2022-July-Cohort https://github.com/appacademy/Module-2-Resources.git My-Mod-2`
+    - `git clone -b 2022-August-Cohort https://github.com/appacademy/Module-2-Resources.git My-Mod-2`
 
     - OR
 
-    - `git clone -b 2022-July-Cohort git@github.com:appacademy/Module-2-Resources.git My-Mod-2`
+    - `git clone -b 2022-August-Cohort git@github.com:appacademy/Module-2-Resources.git My-Mod-2`
 
     - Notice the difference? We simply added `My-Mod-2` on the end. This will give our new clone the name `My-Mod-2`
 
