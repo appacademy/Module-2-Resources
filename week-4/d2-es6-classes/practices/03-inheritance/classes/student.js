@@ -10,9 +10,11 @@ class Student extends Person {
 
   static compareGPA(stood1, stood2) {
 
-    if (stood1.GPA === stood2.GPA) return "Both students have the same GPA."
+    // if (stood1.GPA === stood2.GPA) return "Both students have the same GPA."
     
-    return stood1.GPA > stood2.GPA ? `${stood1.firstName} ${stood1.lastName} has the higher GPA.` : `${stood2.firstName} ${stood2.lastName} has the higher GPA.`
+    // return stood1.GPA > stood2.GPA ? `${stood1.firstName} ${stood1.lastName} has the higher GPA.` : `${stood2.firstName} ${stood2.lastName} has the higher GPA.`
+
+    return stood1.GPA === stood2.GPA ? "Both students have the same GPA." : stood1.GPA > stood2.GPA ? `${stood1.firstName} ${stood1.lastName} has the higher GPA.` : `${stood2.firstName} ${stood2.lastName} has the higher GPA.`
   }
 }
 
