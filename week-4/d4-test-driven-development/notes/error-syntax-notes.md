@@ -4,7 +4,7 @@ Identify the definitions of SyntaxError, ReferenceError, and TypeError
     - encountered at compile-time, ie the code cannot be parsed to determine the instructions
     - since our code cannot be run, SyntaxErrors cannot be caught by a try-catch block
     - common examples would be:
-        - a misspelled function keyword (`function broken() {...}`)
+        - a misspelled function keyword (`funcion broken() {...}`)
         - incorrect number of curly braces
 - ReferenceError
     - when a nonexistent variable is referenced
