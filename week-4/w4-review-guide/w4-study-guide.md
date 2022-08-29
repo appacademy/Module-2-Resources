@@ -34,7 +34,7 @@
 - Writing parent and child classes, including their constructors and setting up instance variables, both ones that are immediately/default set upon instantiation and those created by passing in variables in the constructor.
 - Importing and exporting modules using module.exports (HINT!!: pay attention to how files are pulled into the spec file to tell you how to export them)
 - Writing instance methods that access properties of instances of a class within another class
-- Using instanceOf to see if something is a child of a parent class
+- Using `instanceof` to see if something is a child of a parent class
 - Throwing errors if a condition is not met
 
 
