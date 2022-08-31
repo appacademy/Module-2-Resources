@@ -84,8 +84,8 @@ function getAnimalPairs(animals) {
 
 
 // Return an array containing all possible pairs of animals
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n^3)
+// Space complexity: O(n^3)
 function getAnimalTriples(animals) {
     const triples = [];
     for (let i = 0 ; i < animals.length ; i++) {
@@ -100,8 +100,8 @@ function getAnimalTriples(animals) {
 
 // Returns the index of the animal if it is in the array
 // Returns -1 if it is not in the array
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n)
+// Space complexity: O(1)
 function findAnimal(animals, target) {
     for (let i = 0 ; i < animals.length ; i++) {
         if (animals[i] === target) return i;
