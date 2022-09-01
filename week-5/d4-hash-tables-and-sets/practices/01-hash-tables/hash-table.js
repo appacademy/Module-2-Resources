@@ -31,8 +31,9 @@ class HashTable {
     // Your code here
     const collisionMessage = 'hash collision or same key/value pair already exists!';
     const idx = this.hashMod(key);
-    if (this.data[idx]) throw new Error(collisionMessage);
     let newPair = new KeyValuePair(key, value);
+    
+    if (this.data[idx]) throw new Error(collisionMessage);
     this.data[idx] = newPair;
     this.count++;
   }
