@@ -43,7 +43,7 @@ class BinarySearchTree {
 
   search(val) {
     // Your code here
-    // if (!this.root) return false;
+    if (!this.root) return false;
 
     let curr = this.root;
 
