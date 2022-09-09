@@ -48,11 +48,24 @@ function findMaxBT (rootNode) {
 
 function getHeight (rootNode) {
   //!!START
-  if (!rootNode) return 0;
-
+  if (!rootNode) return -1;
   if (!rootNode.left && !rootNode.right) return 0;
-
   return 1 + Math.max(getHeight(rootNode.left), getHeight(rootNode.right));
+  //!!END
+}
+
+function balancedTree (rootNode) {
+  //!!START
+  let queue = [rootNode];
+  while (queue.length) {
+    let curr = queue.shift();
+
+    if (Math.abs(getHeight(curr.left) - getHeight(curr.right)) <= 1) {
+      if (curr.left) queue.push(curr.left)
+      if (curr.right) queue.push(curr.right)
+    } else return false
+  }
+  return true
   //!!END
 }
 
@@ -61,12 +74,6 @@ function countNodes (rootNode) {
   if (!rootNode) return 0;
 
   return 1 + countNodes(rootNode.left) + countNodes(rootNode.right);
-  //!!END
-}
-
-function balancedTree (rootNode) {
-  //!!START
-  return Math.log2(countNodes(rootNode)) >= getHeight(rootNode);
   //!!END
 }
 
@@ -106,6 +113,7 @@ function inOrderPredecessor (rootNode, target) {
 
     } else if (!current && stack.length > 0) {
       current = stack.pop();
+
       if (current.val === target) {
         if (!predecessor) return null;
         return predecessor.val;
@@ -120,7 +128,6 @@ function inOrderPredecessor (rootNode, target) {
   //!!END
 }
 
-
 function deleteNodeBST(rootNode, target) {
   // Do a traversal to find the node. Keep track of the parent
 
@@ -132,10 +139,13 @@ function deleteNodeBST(rootNode, target) {
   //   return null
 
   // Case 1: Zero children:
-  //   set the parent that points to it to null
+  //   Set the parent that points to it to null
 
   // Case 2: Two children:
-  //   set the value to its in-order predecessor, then delete the predecessor
+  //  Set the value to its in-order predecessor, then delete the predecessor
+  //  Replace target node with the left most child on its right side, 
+  //  or the right most child on its left side.
+  //  Then delete the child that it was replaced with.
 
   // Case 3: One child:
   //   Make the parent point to the child
