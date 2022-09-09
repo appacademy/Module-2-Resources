@@ -4,7 +4,7 @@ const adjList = {
   3: [2, 4],
   4: [3, 5],
   5: [1, 2, 4],
-  6: [2, 3]
+  6: []
 }
 
 function breadthFirstSearch(start, end) {
