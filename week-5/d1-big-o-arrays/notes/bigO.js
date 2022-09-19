@@ -148,7 +148,7 @@ function quadratic(n) {
         //do some stuff
     }
   }
-} // O(n^2)
+}
 
 // O(n^3)
 function cubic(n) {

@@ -13,41 +13,25 @@ class Fish {
 }
 
 const nemo = new Fish('Nemo');
-// const shane = new Fish('Shane');
-
-// const obj = {
-//   name: 'nick'
-// }
-
-// nemo.swim()
-// shane.swim();
-
-// const bound = shane.swim.bind(obj);
-
-// bound()
 
 /********************************* Scenario 1 *********************************/
-// eat(); // "undefined eats fish food."
+// eat(); // ?
 
 
 /********************************* Scenario 2 *********************************/
-// console.log(nemo.eat)
-nemo.eat = eat;
-nemo.eat(); // "Nemo eats fish food."
-// console.log(nemo.eat)
-
-// console.log(shane.eat)
+// nemo.eat = eat;
+// nemo.eat(); // ?
 
 
 /********************************* Scenario 3 *********************************/
 // nemo.eat = eat;
-// eat(); // "undefined eats fish food."
+// eat(); // ?
 
 
 /********************************* Scenario 4 *********************************/
-// nemo.swim(); // "Nemo swimming in the water."
+// nemo.swim(); // ?
 
 
 /********************************* Scenario 5 *********************************/
-const swim = nemo.swim.bind(nemo);
-swim(); // throws an error
+// const swim = nemo.swim;
+// swim(); // ?

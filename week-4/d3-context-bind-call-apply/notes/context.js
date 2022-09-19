@@ -66,7 +66,7 @@ sayAgeFunc() // 'my name is undefined and i am undefined'
 /*
 
 Code Summary
-- we isolate the `narwhal.sayAge` func by saving to variable `sayAgeFunc`
+- we isolate the `narwhal.saveAge` func by saving to variable `sayAgeFunc`
 - thus, we lose the context of the `narwhal`
 - `this` inside the `sayAge` func will no longer reference the `narwhal`,
   it will now reference the value of `this` where the `sayAgeFunc` is invoked,

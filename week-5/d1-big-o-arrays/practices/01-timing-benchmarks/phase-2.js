@@ -5,23 +5,25 @@ function addNums10(increment) {
   // Fill this in
   const sums = [];
 
-  for (let i = 1; i <= 10; i++) {
-    sums.push(addNums(increment * i));
+  for (let i = increment; i <= increment * 10; i += increment) {
+    sums.push(addNums(i));
   }
 
   return sums;
+
 }
 
 // Runs `addManyNums` in 10 increasing increments
 function addManyNums10(increment) {
   // Fill this in
-  const sums = [];
+  const total = [];
 
-  for (let i = 1; i <= 10; i++) {
-    sums.push(addManyNums(increment * i));
+  for (let i = increment; i <= increment * 10; i += increment) {
+    total.push(addManyNums(i));
   }
 
-  return sums;
+  return total;
+
 }
 
 module.exports = [addNums10, addManyNums10];

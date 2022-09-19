@@ -34,6 +34,7 @@ describe('Linked List', () => {
             linkedList.addToHead(2);
             linkedList.addToHead(3);
         });
+
         it('addToHead adds the correct head node', () => {
             expect(linkedList.head.value).to.equal(3);
         });
