@@ -35,12 +35,8 @@
     -Be able to describe the behavior of a binary search
 
 # What to study for coding portion:
-    -Be able to implement a social graph similar to the practice assessment
+    -Be able to implement a matrix graph traversal similar to the practice assessment
     -Be able to implement a breadth first search on a tree
-
-# What to study for Multiple Choice:
-
----
 
 ## Be able to determine the O(n) of a refactored algorithm:
 

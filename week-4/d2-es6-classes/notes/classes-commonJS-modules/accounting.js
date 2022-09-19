@@ -8,6 +8,7 @@ class Invoice {
     return this.client.name;
   }
 }
+
 class Receipt {
   constructor(receiptNum, date) {
     this.receiptNum = receiptNum;
