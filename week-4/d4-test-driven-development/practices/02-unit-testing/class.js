@@ -43,6 +43,32 @@ class Word {
       }
     }
   }
+
+  removeVowelsX() {
+    let vowels = "aeiouAEIOU";
+    let newWord = "";
+    for (let i = 0; i < this.word.length; i++) {
+      let char = this.word[i];
+      if (!vowels.includes(char)) {
+        newWord += char;
+      }
+    }
+    this.word = newWord;
+    return this.word;
+  }
+
+  removeConsonantsX() {
+    let vowels = "aeiouAEIOU";
+    let newWord = "";
+    for (let i = 0; i < this.word.length; i++) {
+      let char = this.word[i];
+      if (vowels.includes(char)) {
+        newWord += char;
+      }
+    }
+    this.word = newWord;
+    return this.word;
+  }
 }
 
 module.exports = { Word };
