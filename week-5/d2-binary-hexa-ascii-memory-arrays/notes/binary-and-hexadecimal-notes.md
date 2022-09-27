@@ -52,7 +52,7 @@ To convert 0b11001010 to decimal, remember the base is 2:
 
 Add all of those sums together to get 2 + 8 + 64 + 128 = 202
 
-To convert 202 to decimal, we divide by the base and keep track of the remainder:
+To convert 202 to binary, we divide by the base and keep track of the remainder:
 
 ```
 r = remainder

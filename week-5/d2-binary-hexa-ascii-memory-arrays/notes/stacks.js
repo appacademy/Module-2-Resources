@@ -10,11 +10,9 @@ Stacks: LIFO(Last In, First Out) data structures.
     -we add to the top of the stack. We remove from the top of the stack.
 
 
-Stacks and Queues are so similar that we can look at both of their properties together:
 
 Stack Property	        Description	                    
 top	                The first node in the Stack	        
-----	            Stacks do not have an equivalent	
 
 length	            The number of nodes in the Stack;   
                     the Stack's length.	                	                       
