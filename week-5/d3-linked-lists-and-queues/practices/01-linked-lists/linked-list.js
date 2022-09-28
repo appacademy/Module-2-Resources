@@ -19,7 +19,7 @@ class LinkedList {
     newNode.next = this.head;
     this.head = newNode;
 
-    this.print();
+    // this.print();
     this.length++;
   }
 
@@ -31,7 +31,7 @@ class LinkedList {
     // Case 1: There are not any nodes in the list
     if (!this.head) {
       this.head = newNode;
-      this.print()
+      // this.print()
       return this;
     }
 
@@ -43,7 +43,7 @@ class LinkedList {
     }
 
     currentNode.next = newNode;
-    this.print();
+    // this.print();
   }
 
   // You can use this function to help debug
