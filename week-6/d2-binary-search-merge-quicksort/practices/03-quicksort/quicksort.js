@@ -11,6 +11,7 @@ function quicksort(arr) {
   const rightHalf = [];
 
   for (let i = 1; i < arr.length; i++) {
+
     const val = arr[i];
     // every number smaller than the pivot is to the left
     if (val <= pivot) leftHalf.push(val);
