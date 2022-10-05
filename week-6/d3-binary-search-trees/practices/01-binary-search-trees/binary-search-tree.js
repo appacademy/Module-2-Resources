@@ -64,20 +64,53 @@ class BinarySearchTree {
     }
     return false;
   }
+//      4
+//    /   \
+//   2     6
+//  / \   / \
+// 1   3 5   7
 
-
+// 4, 2, 1, 3, 6, 5, 7
+  // self, left, right
   preOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return this;
+    console.log(currentNode.val);
+    this.preOrderTraversal(currentNode.left);
+    this.preOrderTraversal(currentNode.right);
   }
 
+//      4
+//    /   \
+//   2     6
+//  / \   / \
+// 1   3 5   7
 
+// 1, 2, 3, 4, 5, 6, 7
+  // left, self, right
   inOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return this;
+    this.inOrderTraversal(currentNode.left);
+    console.log(currentNode.val);
+    this.inOrderTraversal(currentNode.right);
   }
 
+//      4
+//    /   \
+//   2     6
+//  / \   / \
+// 1   3 5   7
 
+// 1, 3, 2, 5, 7, 6, 4
+  // left, right, self
   postOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return this;
+
+    this.postOrderTraversal(currentNode.left);
+    this.postOrderTraversal(currentNode.right);
+    console.log(currentNode.val);
   }
 
     // Breadth First Traversal - Iterative
