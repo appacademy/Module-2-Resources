@@ -234,6 +234,7 @@ function deleteNodeBST(rootNode, target) {
   // Case 3: One child:
   //   Make the parent point to the child
 
+  /* Solution provided by Nick Esqueda */
   // have to make an inner func so the "returns undefined if node not found" spec passes
   const deleteNode = (rootNode, target) => {
     if (!rootNode) return null;
