@@ -24,38 +24,40 @@ class TreeNode {
 // Expected Output -> [ 5, 7, 3, 9, 4 ]
 
 function findMaxEachLevel(root) {
-  const stack = [];
+  // setup
+  const stack = [root]; // add root
   const maxes = [];
 
   root.level = 0;
 
+  // start our traversal
   while (stack.length > 0) {
-      const curr = stack.pop();
+    const curr = stack.shift();
+    // taking off the back here
+    // do the thing part????
+    if (maxes[curr.level]) {
+      maxes[curr.level] = Math.max(curr.value, maxes[curr.level]); // change Math.min to Math.max
+    } else {
+      maxes.push(curr.value);
+    }
 
-      if (maxes[curr.level]) {
-          maxes[curr.level] = Math.min(curr.value, maxes[curr.level]);
-      } else {
-          maxes.push(curr.value);
-      }
-
-      if (curr.left && curr.left >= curr.right) {
-          curr.left.level = curr.level + 1;
-          stack.unshift(curr.left);
-      }
-      if (curr.right && curr.right >= curr.left) {
-          curr.right.level = curr.level + 1;
-          stack.unshift(curr.right);
-      }
+    // gather more child/leaf nodes
+    if (curr.left) {
+      // we removed additional comparison of node objects
+      curr.left.level = curr.level + 1;
+      stack.push(curr.left); // change this to push, not because we needed but for optimization
+      // inserting at the front here
+    }
+    if (curr.right) {
+      // we removed additional comparison of node objects
+      curr.right.level = curr.level + 1;
+      stack.push(curr.right); // change this to push, not because we needed but for optimization
+      // inserting at the front here
+    }
   }
 
   return maxes;
 }
-
-
-
-
-
-
 
 // Uncomment the code below for local testing.
 
