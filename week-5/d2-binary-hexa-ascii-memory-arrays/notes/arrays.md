@@ -12,4 +12,4 @@ The reason that JavaScript arrays allow for different types is because they are
 actually hash tables (we'll get to those soon).
 They contain a sequence of pointers (memory addresses) and each element's type is interpreted at runtime.
 
-[1, 2, 3, 4] = [1, 2, 3, 4, undefined, undefined, undefined, undefined]
+

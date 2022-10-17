@@ -1,7 +1,9 @@
 # Sets
 
-A set is an abstract data type that stores a collection of _unique_ values.
+A set is an abstract data type that stores a collection of _unique_, unordered values.
 The unique part is important as a set can have no duplicate values.
+
+Being unordered is also important. Items are inserted into the set based on the hash valued index.
 
 A big benefit of using a set is that it has a lookup time, using the set.has() method, of O(1)!
 

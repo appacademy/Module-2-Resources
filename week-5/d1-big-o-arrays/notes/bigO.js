@@ -89,7 +89,7 @@ function logarithmic2(n) {
 /*
 O(n) - Linear: linear algorithms access each item in the input
     -increasing the size of the input increases the number of steps
-    -deals with NON-nested loops that rely on n
+    -deals with NON-nested loops
 Examples:
 
 */
@@ -98,9 +98,9 @@ function linear1(n) {
   for (let i = 1; i <= n; i++) {
     console.log(i);
   }
-} //O(n^2)
+}
 
-// O(n), where n is the length of the array 
+// O(n), where n is the length of the array
 function linear2(array) {
   for (let i = 0; i < array.length; i++) {
     console.log(i);
@@ -137,7 +137,7 @@ function loglinear(n) {
 O(n^c) - Polynomial: complexity grows significantly based on the size of the
 input 
     -O(n^2) is better than O(n^3), but they are still both polynomial 
-    -nested loops are a good indicator of polynomial complexity but not always. 
+    -nested loops are a good indicator of polynomial complexity
 
 Examples:
 */

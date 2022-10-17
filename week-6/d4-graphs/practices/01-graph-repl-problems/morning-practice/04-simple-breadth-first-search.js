@@ -9,22 +9,6 @@ const adjList = {
 
 function breadthFirstSearch(start, end) {
   // Your code here
-  const queue = [start];
-  const visited = new Set(queue);
-
-  while (queue.length) {
-    const currentNode = queue.shift();
-
-    if (currentNode === end) return true;
-
-    adjList[currentNode].forEach(neighbor => {
-      if (!visited.has(neighbor)) {
-        queue.push(neighbor);
-        visited.add(neighbor);
-      }
-    });
-  }
-  return false;
 }
 
 console.log("First Test:");
