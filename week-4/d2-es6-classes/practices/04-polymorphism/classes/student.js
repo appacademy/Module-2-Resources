@@ -5,16 +5,24 @@ class Student extends Person {
     super(firstName, lastName);
     this.major = major;
     this.GPA = GPA;
+
+    
   }
 
   static compareGPA(student1, student2) {
-    if (student1.GPA > student2.GPA) {
-      return `${student1.firstName} ${student1.lastName} has the higher GPA.`;
-    } else if (student2.GPA > student1.GPA) {
-      return `${student2.firstName} ${student2.lastName} has the higher GPA.`;
-    } else {
-      return "Both students have the same GPA";
-    }
+    // if (student1.GPA > student2.GPA) {
+    //   return `${student1.firstName} ${student1.lastName} has the higher GPA.`;
+    // } else if (student2.GPA > student1.GPA) {
+    //   return `${student2.firstName} ${student2.lastName} has the higher GPA.`;
+    // } else {
+    //   return "Both students have the same GPA";
+    // }
+
+    return student1.GPA === student2.GPA ? "Both students have the same GPA" : student1.GPA > student2.GPA ? `${student1.firstName} ${student1.lastName} has the higher GPA.` : `${student2.firstName} ${student2.lastName} has the higher GPA.`;
+  }
+
+  introduce() {
+    return `Hello. I am ${this.firstName} ${this.lastName}, and I study ${this.major}.`
   }
 }
 

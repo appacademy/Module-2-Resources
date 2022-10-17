@@ -1,5 +1,10 @@
 // Convert restSum into a multi-line fat-arrow function
-const restSum = function(...otherNums) {
+// const restSum = function(...otherNums) {
+//   let sum = otherNums.reduce((acc, el) => (acc += el));
+//   return sum;
+// };
+
+const restSum = (...otherNums) => {
   let sum = otherNums.reduce((acc, el) => (acc += el));
   return sum;
 };
@@ -8,9 +13,11 @@ console.log('restSum output:');
 console.log(restSum(1, 2, 3)); // 6
 
 // Convert getFullName into a one-liner fat-arrow function with implicit return
-const getFullName = function(person) {
-  person.firstName + " " + person.lastName;
-};
+// const getFullName = function(person) {
+//   person.firstName + " " + person.lastName;
+// };
+
+const getFullName = (person) => person.firstName + " " + person.lastName;
 
 class Person {
   constructor(firstName, lastName) {
@@ -23,19 +30,27 @@ console.log('getFullName output:');
 console.log(getFullName(new Person("Elle", "Woods"))); // Elle Woods
 
 // Convert addFive into a one-liner fat-arrow function with implicit return
+<<<<<<< HEAD
 const addFive = function(num) {
   return num + 5 
 };
+=======
+const addFive = (num) => num + 5;
+>>>>>>> faa3cfeb5fd070808b5c0d9af0ab81ceaaef4213
 
 console.log('addFive output:');
 console.log(addFive(3)); // 8
 
 // Convert coupon and the function it returns into fat-arrow functions
-function coupon(discount) {
-  return function(prices) {
-    return prices.map((price) => (price -= price * discount));
-  };
-}
+// function coupon(discount) {
+//   return function(prices) {
+//     return prices.map((price) => (price -= price * discount));
+//   };
+// }
+
+const coupon = (discount) => (prices) => prices.map((price) => (price -= price * discount));
+
+
 
 console.log('coupon output:');
 console.log(coupon(0.5)([10, 6, 3, 9])); // [ 5, 3, 1.5, 4.5 ]
