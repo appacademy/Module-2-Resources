@@ -3,6 +3,7 @@ const restSum = function(...otherNums) {
   let sum = otherNums.reduce((acc, el) => (acc += el));
   return sum;
 };
+
 console.log('restSum output:');
 console.log(restSum(1, 2, 3)); // 6
 
@@ -22,9 +23,9 @@ console.log('getFullName output:');
 console.log(getFullName(new Person("Elle", "Woods"))); // Elle Woods
 
 // Convert addFive into a one-liner fat-arrow function with implicit return
-function addFive(num) {
-  return num + 5;
-}
+const addFive = function(num) {
+  return num + 5 
+};
 
 console.log('addFive output:');
 console.log(addFive(3)); // 8

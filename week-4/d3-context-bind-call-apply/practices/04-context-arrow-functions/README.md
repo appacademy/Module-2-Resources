@@ -1,6 +1,7 @@
-# Practice: Context with Arrow functions
+# Practice: Review of Arrow functions and Context with Arrow functions
 
-In this practice, you will explore arrow functions and their unique ability to
+In this practice, you will review the difference between a regular function and
+an arrow function. Then explore arrow functions and their unique ability to
 retain the context of where it was defined.
 
 ## Set up
@@ -8,6 +9,12 @@ retain the context of where it was defined.
 Clone the starter from the **Download** link at the bottom of this page.
 
 ## Instructions
+
+## Phase 1: Review of Arrow functions
+
+Convert all the functions in the __review.js__ file into arrow functions.
+
+## Phase 2: Context with Arrow functions
 
 You will be debugging a context bug by using a fat arrow function in the class
 definition.

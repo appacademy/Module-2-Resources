@@ -36,8 +36,8 @@ function printTenAnimals(animals) {
     console.log(animals[9]);
 }
 
-// Time complexity: O(n)
-// Space complexity: O(1)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function printAnimals(animals) {
     for (let i = 0 ; i < animals.length ; i++) {
       console.log(animals[i]); 
