@@ -6,14 +6,14 @@ function addNums10Timing(increment) {
 
   const sums = [];
 
+  console.time('addNums');
   for (let i = increment; i <= increment * 100; i += increment) {
-    // console.time(`i=${i}`)
-    const startTime = Date.now();
+    const start = Date.now();
     sums.push(addNums(i));
-    const endTime = Date.now();
-    // console.timeEnd(`i=${i}`)
-    console.log(`${endTime - startTime}`);
+    const end = Date.now();
+    console.log(end - start);
   }
+  console.timeEnd('addNums');
 
   return sums;
 
@@ -26,26 +26,26 @@ function addManyNums10Timing(increment) {
 
 const total = [];
 
+console.time('addManyNums');
 for (let i = increment; i <= increment * 100; i += increment) {
-  const startTime = Date.now();
-  // console.time(`i=${i}`)
+  const start = Date.now();
   total.push(addManyNums(i));
-  // console.timeEnd(`i=${i}`)
-  const endTime = Date.now();
-  console.log(`${endTime - startTime}`);
+  const end = Date.now();
+  console.log(end - start);
 }
+console.timeEnd('addManyNums');
 
 return total;
 
 }
 
+let n = 100000;
+
+addNums10Timing(n);
+
+console.log('\n*****************\n');
 
 n = 1000
-console.log(`addNums(${n}): `);
-addNums10Timing(10000000);
+addManyNums10Timing(n)
 
-console.log("\n***********\n");
 
-n = 1000
-console.log(`addManyNums(${n}): `);
-addManyNums10Timing(1000);

@@ -52,7 +52,7 @@ To convert 0b11001010 to decimal, remember the base is 2:
 
 Add all of those sums together to get 2 + 8 + 64 + 128 = 202
 
-To convert 202 to decimal, we divide by the base and keep track of the remainder:
+To convert 202 to binary, we divide by the base and keep track of the remainder:
 
 ```
 r = remainder
@@ -217,6 +217,75 @@ console.log(str.charCodeAt(0)); // 65 => A;
 console.log(str.charCodeAt(1)); // 66 => B;
 console.log(str.charCodeAt(2)); // 67 => C;
 ```
+
+## Converting binary to hexadecimal manually
+
+In order to convert binary to hexadecimal or vice versa, we only need to know how to count to 
+15 in each of them. 
+
+```
+0000 - 0 - 0x0
+0001 - 1 - 0x1
+0010 - 2 - 0x2
+0011 - 3 - 0x3
+0100 - 4 - 0x4
+0101 - 5 - 0x5
+0110 - 6 - 0x6
+0111 - 7 - 0x7
+1000 - 8 - 0x8
+1001 - 9 - 0x9
+1010 - 10 - 0xA
+1011 - 11 - 0xB
+1100 - 12 - 0xC
+1101 - 13 - 0xD
+1110 - 14 - 0xE
+1111 - 15 - 0xF
+```
+If we take our binary for 202, which is `0b11001010`, and start at the least significant bit
+(the bit furthest to the right) and split at every 4 bits like so:
+
+``` 1100  1010```
+
+
+We can guarantee that each 4 bit section will amount to no more than 15 (`0b1111`).
+
+If we compare these against the hexadecimal values we will get:
+
+```
+    1100 1010
+     C     A
+```
+The hexadecimal representation of 202 would then be `0xCA`
+
+We evaluate the hexadecimal value starting from the right.
+
+```
+    16^0 * A = 1 * 10 = 10 
+    16^1 * C = 16 * 12 = 192
+    192 + 10 = 202
+```
+
+If our number is not divisible by 4, simply fill in the remaining left hand (most significant) with 0s until it is a group of 4. For instance:
+
+`0b10001110101` would have a group of 3 to the left `100 0111 0101`
+
+We simply add a 0 to make it a group of 4 `0100 0111 0101` and apply the same method from above:
+
+```
+    0100 0111 0101
+      4    7    5
+         0x475
+```
+
+
+```
+    16^0 * 5 = 1 * 5 = 5
+    16^1 * 7 = 16 * 7 = 112
+    16^2 * 4 = 256 * 4 = 1024
+    1024 + 112 + 5 = 1141    
+```
+
+`0b10001110101` = `0x475` = `1141`
 
 ## More Built in JavaScript Conversion Methods:
 

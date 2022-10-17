@@ -5,7 +5,8 @@ class Invoice {
   }
 
   getClientName() {
-    return this.client.name;
+    console.log(this)
+    return this.client;
   }
 }
 class Receipt {
@@ -15,6 +16,10 @@ class Receipt {
   }
 }
 
+let invoice1 = new Invoice(123, 'shane');
+let invoice2 = new Invoice(345, 'nick');
+console.log(invoice1.getClientName())
+console.log(invoice2.getClientName())
 
 module.exports = {
   Invoice, Receipt
