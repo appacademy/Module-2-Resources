@@ -6,6 +6,9 @@ class Student extends Person {
     this.major = major;
     this.GPA = GPA;
   }
+  introduce() {
+    return `Hello. I am ${this.firstName} ${this.lastName}, and I study ${this.major}.`
+  }
 
   static compareGPA(student1, student2) {
     if (student1.GPA > student2.GPA) {
