@@ -16,6 +16,7 @@ class Student extends Person {
       return "Both students have the same GPA";
     }
   }
+
 }
 
 /****************************************************************************/
