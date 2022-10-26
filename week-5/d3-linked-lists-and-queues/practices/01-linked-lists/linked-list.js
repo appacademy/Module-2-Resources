@@ -19,7 +19,7 @@ class LinkedList {
     newNode.next = this.head;
     this.head = newNode;
     this.length++;
-    this.print();
+    // this.print();
   }
 
   addToTail(val) {
@@ -29,7 +29,7 @@ class LinkedList {
     // Case 1: There are NOT any nodes in the list
     if (!this.head) {
       this.head = newNode;
-      this.print();
+      // this.print();
       // return this;
     } else {
       // Case 2: There ARE nodes in the list
@@ -40,7 +40,7 @@ class LinkedList {
       }
   
       currentNode.next = newNode;
-      this.print();
+      // this.print();
     }
 
   }
