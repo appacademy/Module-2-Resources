@@ -61,18 +61,7 @@ class HashTable {
 
   insert(key, value) {
     // Your code here
-    const idx = this.hashMod(key);
-
-    let curr = this.data[idx];
-
-    while (curr && curr.key !== key) curr = curr.next;
-
-    if (curr) {
-      curr.value = value;
-      return this;
-    }
-
-    this.insertWithHashCollisions(key, value);
+    
   }
 
 }
