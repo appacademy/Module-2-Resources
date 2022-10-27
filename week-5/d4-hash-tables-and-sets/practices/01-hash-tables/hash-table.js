@@ -60,7 +60,32 @@ class HashTable {
   }
 
   insert(key, value) {
-    // Your code here
+    // find the index (bucket that we want to use)
+    const idx = this.hashMod(key);
+
+    // grab a reference to the first node of the linked list
+    // this could be null
+    let currentPair = this.data[idx];
+
+    // loop through the list until current node is null
+    // or we find a kvp with the key that matches the key argument
+    while (currentPair && currentPair.key !== key) {
+      currentPair = currentPair.next;
+    }
+    // if the currentPair exists overwrite it's value
+    if (currentPair) {
+      currentPair.value = value;
+      return this;
+    }
+    // otherwise create the new kvp
+    const newPair = new KeyValuePair(key, value);
+    
+    // if there is something in the bucket
+    // point the new kvp at the head 
+    if (this.data[idx]) newPair.next = this.data[idx];
+    // point the head at the kvp
+    this.data[idx] = newPair;
+    this.count++;
     
   }
 
