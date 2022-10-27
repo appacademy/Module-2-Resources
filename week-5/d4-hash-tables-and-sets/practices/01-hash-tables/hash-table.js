@@ -47,12 +47,15 @@ class HashTable {
     const newPair = new KeyValuePair(key, value);
     const idx = this.hashMod(key);
 
-    if (!this.data[idx]) {
-      this.data[idx] = newPair;
-    } else {
-      newPair.next = this.data[idx];
-      this.data[idx] = newPair;
-    }
+    // if (!this.data[idx]) {
+    //   this.data[idx] = newPair;
+    // } else {
+    //   newPair.next = this.data[idx];
+    //   this.data[idx] = newPair;
+    // }
+
+    if (this.data[idx]) newPair.next = this.data[idx];
+    this.data[idx] = newPair;
     this.count++;
   }
 
