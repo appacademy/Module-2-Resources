@@ -52,10 +52,36 @@ class BinarySearchTree {
     }
   }
 
+//       4
+//     /   \
+//    2     7
+//   / \   / \
+//  1   3 5   8
+
   search(val) {
     // Your code here
+    if (!this.root) return false;
+
+    let curr = this.root;
+
+    while (curr) {
+      if (val < curr.val) {
+        curr = curr.left;
+      } else if(val > curr.val) {
+        curr = curr.right;
+      } else {
+        return true;
+      }
+
+    }
+    return false;
   }
 
+//       4
+//     /   \
+//    2     7
+//   / \   / \
+//  1   3 5   8
 
   preOrderTraversal(currentNode = this.root) {
     // Your code here
