@@ -12,14 +12,14 @@ Big picture ideas:
     mathematical term.
     Key Terms:
     n: the size of the input
-    T(n + 1 * 10): an unsimplified mathematical function
-    O(n): the Big-O simplified mathematical function
+    T(f): an unsimplified mathematical function
+    O(f): the Big-O simplified mathematical function
 
     - Simplify Products: if the function is a product of many terms, we drop the
       terms that don't depend on the size of the input.
 
     Unsimplified	        Big-O Simplified
-    T( 5 * n^2 )	            O( n^2 )
+    T( 5 * n2 )	            O( n2 )
     T( 100000 * n )	        O( n )
     T( n / 12 )	            O( n )
     T( 42 * n * log(n) )	O( n * log(n) )
@@ -29,8 +29,8 @@ Big picture ideas:
       with the largest growth rate and drop the other terms.
 
     Unsimplified	        Big-O Simplified
-    T( n^3 + n^2 + n )	    O( n^3 )
-    T( log(n) + 2^n )	    O( 2^n )
+    T( n3 + n2 + n )	    O( n3 )
+    T( log(n) + 2n )	    O( 2n )
     T( n + log(n) )	        O( n )
     T( n! + 10n )	        O( n! )
 
@@ -148,7 +148,7 @@ function quadratic(n) {
         //do some stuff
     }
   }
-} // O(n * n)n -> O(n^2)
+}
 
 // O(n^3)
 function cubic(n) {
