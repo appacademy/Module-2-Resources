@@ -1,11 +1,11 @@
 # Week 6 Test Info:
 -11 multiple choice
--2 coding problems worth 18 points
+-2 coding problems worth 14 points
 	- tree problem worth 6 points
-	- graph problem worth 12 points
--Total points: 29
--Passing points: 23
--Time allowed: 3.5 hours
+	- graph problem worth 8 points
+-Total points: 25
+-Passing points: 20
+-Time allowed: 3 hours 30 minutes
 -Resources Allowed:
     -MDN
     -open.appacademy.io
@@ -741,4 +741,5 @@ function binarySearch(arr, target) {
     -   Know BFS algo!
     -   Be comfortable keying into object properties, using Object.entries(obj) to generate an iterable array, and destructuring to isolate object keys and values into variables.
 
+---
 ---

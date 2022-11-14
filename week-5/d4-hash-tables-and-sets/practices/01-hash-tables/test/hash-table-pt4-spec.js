@@ -31,6 +31,7 @@ describe('Hash table complete insert method', () => {
     expect(pairA.key).to.equal("key-1");
     expect(pairA.value).to.equal("val-100000");
 
+
     expect(pairB.key).to.equal("key-2");
     expect(pairB.value).to.equal("val-2");
 

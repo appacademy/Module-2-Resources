@@ -10,31 +10,50 @@ Consult documentation on how to utilize the following methods:
 /* Base 2 to base 16 */
 function binaryToHexadecimal(blob) {
   // Your code here
+  // const decimal = parseInt(blob.substring(2), 2);
+  // const hexStr = decimal.toString(16);
+  // return '0x' + hexStr;
+
+  return '0x' + parseInt(blob.slice(2), 2).toString(16);
 }
 
 /* Base 16 to base 2 */
 function hexadecimalToBinary(blob) {
   // Your code here
+  return `0b${parseInt(blob).toString(2)}`;
 }
 
 /* Base 10 to ASCII */
 function decimalToAscii(blob) {
-  // Your code here
+  return String.fromCharCode(blob);
 }
 
 /* Base 2 to ASCII */
 function binaryToAscii(blob) {
   // Your code here
+  // const decimal = parseInt(blob.substring(2), 2);
+  // return String.fromCharCode(decimal);
+  return String.fromCharCode(blob);
 }
 
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
   // Your code here
+  return String.fromCharCode(blob);
 }
 
 /* ASCII to base 10 */
 function asciiToDecimal(blob) {
   // Your code here
+  const result = [];
+
+  for (let i in blob) {
+    result.push(blob.charCodeAt(i));
+  }
+
+  return result;
+
+  // return blob.split('').map(char => char.charCodeAt());
 }
 
 // console.log('Binary to hexadecimal:')

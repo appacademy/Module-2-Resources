@@ -27,10 +27,11 @@ const narwhal = {
 	whatIsThis: function () {
 		console.log(this);
 	},
-	sayAge: function () {
+	sayAge:  function() {
 		console.log(`my name is ${this.name} and i am ${this.age}`);
 	}
 };
+
 
 narwhal.whatIsThis(); // { name: 'Wally', age: 20, ... }
 narwhal.sayAge(); // my name is Wally and i am 20
