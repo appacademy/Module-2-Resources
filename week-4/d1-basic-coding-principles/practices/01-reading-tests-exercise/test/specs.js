@@ -8,8 +8,9 @@ describe("isFive(num)", () => {
 
     const actual1 = isFive(num1); 
 
-    expect(actual1).to.be.true;
+    expect(actual1).to.be.true; // evaluate to true
 
+    // expect(isFive(5)).to.be.true;
     const otherInput = "not 5";
     const num2 = 4;
 
