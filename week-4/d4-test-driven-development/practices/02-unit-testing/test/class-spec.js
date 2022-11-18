@@ -11,7 +11,7 @@ describe("Word", function () {
   beforeEach(() => {
     banana = new Word('banana');
     apple = new Word('apple');
-  })
+  });
 
   describe("Word constructor function", function () {
     it('should have a "word" property', function () {
