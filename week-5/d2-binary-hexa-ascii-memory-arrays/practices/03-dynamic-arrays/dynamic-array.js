@@ -3,7 +3,6 @@ class DynamicArray {
   constructor(defaultSize=4) {
 
     // Your code here
-
   }
 
   read(index) {
@@ -12,7 +11,7 @@ class DynamicArray {
   }
 
   unshift(val) {
-
+    
     // Your code here
   }
 
