@@ -11,10 +11,38 @@ class BinarySearchTree {
 
   constructor() {
     // Your code here
+    this.root = null;
   }
 
   insert(val, currentNode=this.root) {
+    
+    const node = new TreeNode(val);
     // Your code here
+    // there is no root
+    if (!currentNode) {
+      this.root = node;
+      return this;
+    }
+
+    // the incoming val is less than currenNode.val
+    if (val < currentNode.val) {
+      // if the left is null
+      if (!currentNode.left){
+        currentNode.left = node;
+      } else {
+        return this.insert(val, currentNode.left)
+      }
+    }
+
+    // the incoming val is greater than currentNode.val
+    if (val > currentNode.val) {
+      // if the left is null
+      if (!currentNode.right){
+        currentNode.right = node;
+      } else {
+        return this.insert(val, currentNode.right)
+      }
+    }
   }
 
   search(val) {
@@ -46,5 +74,11 @@ class BinarySearchTree {
     // your code here
 }
 }
+
+//       4
+//     /   \
+//    2     6
+//   / \   / \
+//  1   3 5   7
 
 module.exports = { BinarySearchTree, TreeNode };
