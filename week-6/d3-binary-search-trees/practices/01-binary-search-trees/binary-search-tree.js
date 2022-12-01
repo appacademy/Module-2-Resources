@@ -69,17 +69,17 @@ class BinarySearchTree {
     return false;
   }
 
-
+  // self, left, right
   preOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-
+  // left, self, right
   inOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-
+  // left, right, self
   postOrderTraversal(currentNode = this.root) {
     // Your code here
   }
