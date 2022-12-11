@@ -3,9 +3,6 @@
 You learned to count in a base 10 system. All numbers are based on a 0-9 counting pattern.
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9....
 
-
-
-
 -   when you get to the last digit, you simply increase the number to the left and start over from 0
 
 ## Binary, base 2:

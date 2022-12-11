@@ -8,28 +8,7 @@ const adjList = {
 }
 
 function printBreadthFirst(start) {
-    // Create a queue and enqueue the starting node
-    const queue = [start];
-    // queue.push(start)
-    // Create a set to store visited nodes
-    const visited = new Set()
-    visited.add(start)
-    // While the queue is not empty, repeat steps 4-6
-    while (queue.length) {
-        // Dequeue the first node
-        const curr = queue.shift();
-        // DO THE THING THAT YOU NEED TO FOR THE DEQUEUED NODE
-        console.log(curr);
-        // For each unvisited neighbor, add it to the visited nodes and to the back of the queue
-        const neighbors = adjList[curr];
-
-        neighbors.forEach(neighbor => {
-            if (!visited.has(neighbor)) {
-                queue.push(neighbor);
-                visited.add(neighbor);
-            }
-        });
-    }
+    // your code here
 }
 
 console.log("First Test:")

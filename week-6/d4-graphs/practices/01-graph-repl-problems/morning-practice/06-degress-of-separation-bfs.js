@@ -8,27 +8,7 @@ const adjList = {
 }
 
 function degreesOfSeparation(start, end) {
-  const queue = [[start]];
-  const visited = new Set([start]);
-  // console.log({queue});
-  // console.log({visited});
-
-  while (queue.length) {
-    const currentPath = queue.shift();
-    const currentNode = currentPath[currentPath.length - 1];
-
-    if (currentNode === end) return currentPath.length - 1;
-
-    adjList[currentNode].forEach(neighbor => {
-      if (!visited.has(neighbor)) {
-        queue.push([...currentPath, neighbor]);
-        visited.add(neighbor);
-        // console.log({queue});
-        // console.log({visited});
-      }
-    });
-  }
-  return false;
+  // Your code here
 }
 
 console.log("First Test:");

@@ -4,7 +4,7 @@ const [addNums, addManyNums] = require("../phase-1.js");
 
 describe ('addNums', function () {
 
-  it('adds all integers 1 th10', function () {
+  it('adds all integers 1-10', function () {
 
     // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
     expect(addNums(10)).to.equal(55);

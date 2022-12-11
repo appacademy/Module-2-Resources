@@ -1,6 +1,4 @@
 //accessing methods on a grandparent class:
-const { Book } = require('./book');
-// console.log(bk1.getTitles)
 
 class GrandParent {
   funcA() {

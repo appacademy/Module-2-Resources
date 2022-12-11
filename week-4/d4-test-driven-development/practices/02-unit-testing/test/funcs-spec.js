@@ -55,7 +55,6 @@ describe("isOdd(number)", () => {
     const object = { i: "am", an: "object" };
     const array = ["i", "am", "an", "array"];
 
-
     expect(() => isOdd(string)).to.throw(Error);
     expect(() => isOdd(object)).to.throw(Error);
     expect(() => isOdd(array)).to.throw(Error);
