@@ -77,6 +77,7 @@ class Dog extends Animal {
 
 let badger = new Dog("badger", .25);
 badger.speak();
+badger.bark();
 ```
 
 Leaving off constructor
