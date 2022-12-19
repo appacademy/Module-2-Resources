@@ -12,8 +12,8 @@ Big picture ideas:
     mathematical term.
     Key Terms:
     n: the size of the input
-    T(f): an unsimplified mathematical function
-    O(f): the Big-O simplified mathematical function
+    T(n): an unsimplified mathematical function
+    O(n): the Big-O simplified mathematical function
 
     - Simplify Products: if the function is a product of many terms, we drop the
       terms that don't depend on the size of the input.
