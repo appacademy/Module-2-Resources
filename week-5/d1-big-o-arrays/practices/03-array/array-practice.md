@@ -5,98 +5,97 @@ justification for your answer. Assume `arr` is an array of length _n_.
 
 ## `arr.push()`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
-
+Time complexity: O(1)*
+Space complexity: O(1)
+Justification: Adding to the END of an array requires no shifting and happens in place.
 [push on MDN][push]
 
 
 ## `arr.pop()`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(1)
+Space complexity: O(1)
+Justification: Removing from the END of an array requires no shifting and happens in place.
 
 [pop on MDN][pop]
 
 ## `arr.shift()`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(n)
+Space complexity: O(1)
+Justification: Removing from the FRONT of an array requires all other values shift to the left to fill the empty space. This happens in place.
 
 [shift on MDN][shift]
 
 ## `arr.unshift()`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(n)
+Space complexity: O(1)
+Justification: Adding to the FRONT of an array requires all other values shift to the right to make an empty space for the incoming element. This happens in place.
 
 [unshift on MDN][unshift]
 
-## `arr.splice()`
+## `arr.splice(start, deleteCount, item1, item2, ...itemN)`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(n)
+Space complexity: O(n)*
+Justification: This will add or remove elements to the middle of an array in place. This requires shifting to fill empty spaces. 
 
 [splice on MDN][splice]
 
 ## `arr.slice()`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(n)
+Space complexity: O(n)
+Justification: This will create a copy of the old array with some or all elements sliced out. The values we slice out need to be copied individually into the NEW array. 
 
 [slice on MDN][slice]
 
 ## `arr.indexOf()`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(n)
+Space complexity: O(1)
+Justification: This will search and visit each element until it finds the target value and returns index. Worst case never finds the value. No new memory is needed. 
 
 [indexOf on MDN][indexOf]
 
 ## `arr.map()`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(n)
+Space complexity: O(n)
+Justification: Map creates a new array with some function mapped to each element. This assumes that the cb function is O(1);
 
 [map on MDN][map]
 
 ## `arr.filter()`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(n)
+Space complexity: O(n)
+Justification: Filter iterates over each element and adds values to a NEW array based on booleans.
 
 [filter on MDN][filter]
 
 ## `arr.reduce()`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(n)
+Space complexity: O(1)
+Justification: Iterates over each element and applies a reducer function. Assumes reducer is O(1). No additional space needed. 
 
 [reduce on MDN][reduce]
 
 ## `arr.reverse()`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(n)
+Space complexity: O(1)
+Justification: Reverse will move all `n` in place.
 
 [reverse on MDN][reverse]
 
 ## `[...arr]`
 
-Time complexity: O(?)
-Space complexity: O(?)
-Justification: _Fill this in_
+Time complexity: O(n)
+Space complexity: O(n)
+Justification: Spread will copy each element into a NEW array without altering the original array. 
 
 [spread on MDN][spread]
 
