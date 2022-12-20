@@ -1,6 +1,6 @@
 // Count how many animals are in the list
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n)
+// Space complexity: O(1)
 function countAnimals(animals) {
     let count = 0;
     for (let i = 0 ; i < animals.length ; i++) {
