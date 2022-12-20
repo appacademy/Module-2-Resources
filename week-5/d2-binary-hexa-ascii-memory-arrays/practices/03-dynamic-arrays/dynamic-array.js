@@ -6,6 +6,8 @@ class DynamicArray {
 
   }
 
+  
+
   read(index) {
 
     // Your code here
