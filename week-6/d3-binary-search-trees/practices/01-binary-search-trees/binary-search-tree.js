@@ -130,6 +130,12 @@ class BinarySearchTree {
     this.inOrderTraversal(currentNode.right);
   }
 
+//        4
+//       / \
+//      2   6
+//     / \ / \
+//    1  3 5  7
+
   // left, right, self
   postOrderTraversal(currentNode = this.root) {
     // Your code here
@@ -139,10 +145,22 @@ class BinarySearchTree {
     console.log(currentNode.val);
   }
 
+//        4
+//       / \
+//      2   6
+//     / \ / \
+//    1  3 5  7
+
     // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
     // your code here
   }
+
+//        4
+//       / \
+//      2   6
+//     / \ / \
+//    1  3 5  7
 
   // Depth First Traversal - Iterative
   depthFirstTraversal() {
