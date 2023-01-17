@@ -1,6 +1,6 @@
 #What is OOP
 
-- approach for breaking down large, complex products into siimple solutions
+- approach for breaking down large, complex products into simple solutions
 - smaller parts can be implemented and tested separately
 - results in higher confidence in overall solution
 - makes it easier to pinpoint issues with code
@@ -77,6 +77,7 @@ class Dog extends Animal {
 
 let badger = new Dog("badger", .25);
 badger.speak();
+badger.bark();
 ```
 
 Leaving off constructor
