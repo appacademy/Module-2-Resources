@@ -18,7 +18,7 @@ describe('Doubly Linked List', () => {
             expect(doublyLinkedList.tail).to.equal(null);
         });
 
-        it('has length property initialized to 0', () => {
+        it('has length property initialzed to 0', () => {
             expect(doublyLinkedList.length).to.equal(0);
         });
     });

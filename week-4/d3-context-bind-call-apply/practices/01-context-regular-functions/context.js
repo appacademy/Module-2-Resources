@@ -1,4 +1,3 @@
-
 function eat() {
   console.log(`${this.name} eats fish food`);
 }
@@ -14,36 +13,25 @@ class Fish {
 }
 
 const nemo = new Fish('Nemo');
-const shane =  new Fish('Shane');
 
 /********************************* Scenario 1 *********************************/
-// eat(); // undefined eats fish food
+// eat(); // ?
 
 
 /********************************* Scenario 2 *********************************/
 // nemo.eat = eat;
-// console.log(nemo)
-// nemo.eat(); // Nemo eats fish food
+// nemo.eat(); // ?
 
 
 /********************************* Scenario 3 *********************************/
 // nemo.eat = eat;
-// console.log(nemo)
-// console.log(shane)
-// eat(); // undefined eats fish food
+// eat(); // ?
 
 
 /********************************* Scenario 4 *********************************/
-// nemo.swim(); // Nemo swimming in the water
+// nemo.swim(); // ?
 
 
 /********************************* Scenario 5 *********************************/
-// const nick = {
-//   name: 'Nick'
-// }
-// const swim = nemo.swim.bind(nick);
-// swim(); // TypeError
-
 // const swim = nemo.swim;
-// swim();
-
+// swim(); // ?
