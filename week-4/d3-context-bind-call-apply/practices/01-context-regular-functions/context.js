@@ -42,4 +42,4 @@ const gary = {
   name: 'gary'
 }
 const swim = nemo.swim.bind(gary);
-swim(); // TypeError
+swim(arg1, arg2); // TypeError
