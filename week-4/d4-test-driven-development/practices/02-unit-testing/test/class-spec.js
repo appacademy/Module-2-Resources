@@ -10,7 +10,7 @@ describe("Word", function () {
   beforeEach(() => {
     apple = new Word('apple');
     banana = new Word('banana');
-  })
+  });
 
   describe("Word constructor function", function () {
     it('should have a "word" property', function () {
