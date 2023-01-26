@@ -5,7 +5,7 @@
 const convertToBase10 = str => {
   //!!START
   if (str.startsWith('0b')) {
-    str = str.substring(2, str.length - 1);
+    str = str.substring(2);
     return parseInt(str, 2);
   }
 
