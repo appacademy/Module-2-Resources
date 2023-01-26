@@ -68,15 +68,27 @@ class HashTable {
     // Your code here
 
     // find index
+    const index = this.hashMod(key);
     // grab a reference to the bucket at the index
+    let currentPair = this.data[index] // THIS COULD BE NULL!!!!
     // while there is a current pair AND the current pair's key 
     //  does not match the passed in key
+    while (currentPair && currentPair.key !== key) {
       // iterate over the linked list
-    
+      currentPair = currentPair.next;
+    } 
     // if the current pair still exists
+    if (currentPair) {
       // overwrite it's value
-
-    // otherwise insert as normal
+      currentPair.value = value;
+    } else {
+      // otherwise insert as normal
+      const newPair = new KeyValuePair(key, value);
+      newPair.next = this.data[index];
+      this.data[index] = newPair;
+      this.count++;
+    }
+    
   }
 
 }
