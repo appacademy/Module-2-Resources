@@ -45,10 +45,38 @@ class HashTable {
 
   insertWithHashCollisions(key, value) {
     // Your code here
+    const newPair = new KeyValuePair(key, value);
+    const index = this.hashMod(key);
+
+    // if (!this.data[index]) {
+    //   this.data[index] = newPair
+    // } else {
+    //   newPair.next = this.data[index];
+    //   this.data[index] = newPair;
+    // }
+
+    // if (this.data[index]) newPair.next = this.data[index];
+    // this.data[index] = newPair;
+
+    newPair.next = this.data[index];
+    this.data[index] = newPair;
+
+    this.count++;
   }
 
   insert(key, value) {
     // Your code here
+
+    // find index
+    // grab a reference to the bucket at the index
+    // while there is a current pair AND the current pair's key 
+    //  does not match the passed in key
+      // iterate over the linked list
+    
+    // if the current pair still exists
+      // overwrite it's value
+
+    // otherwise insert as normal
   }
 
 }
