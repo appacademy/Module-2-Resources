@@ -135,6 +135,13 @@ class BinarySearchTree {
     this.inOrderTraversal(currentNode.right);
   }
 
+//        4
+//      /   \
+//     2     6
+//    / \   / \
+//   1   3 5   7
+
+// cl => 1,3,2,5,7,6,4
   // left, right, self
   postOrderTraversal(currentNode = this.root) {
     // Your code here
