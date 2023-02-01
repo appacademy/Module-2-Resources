@@ -50,6 +50,12 @@ class BinarySearchTree {
     }
   }
 
+//        4
+//      /   \
+//     2     6
+//    / \   / \
+//   1   3 5   7
+
   search(val) {
     // Your code here
   }
