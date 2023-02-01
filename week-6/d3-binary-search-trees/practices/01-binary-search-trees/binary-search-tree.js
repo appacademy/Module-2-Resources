@@ -212,6 +212,7 @@ class BinarySearchTree {
     }
     return this;
   }
+
 }
 
 // const bst = new BinarySearchTree();
@@ -223,6 +224,7 @@ class BinarySearchTree {
 // bst.insert(3)
 // bst.insert(5)
 // bst.insert(7)
+
 
 // console.log(bst.search2(5))
 // console.log(bst.search2(0))
