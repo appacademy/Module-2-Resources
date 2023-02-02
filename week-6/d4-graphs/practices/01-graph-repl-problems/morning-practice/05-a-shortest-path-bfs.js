@@ -11,6 +11,10 @@ function aShortestPath(start, end) {
   // Your code here
 }
 
+// queue = []
+// currentPath = [1,2,3]
+// currentNode = 3
+
 console.log("First Test:");
 console.log(aShortestPath(1, 3)); // -> [ 1, 2, 3 ] (One possible solution)
 console.log("Second Test:");
