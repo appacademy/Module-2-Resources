@@ -9,82 +9,60 @@ function getNeighbors(row, col, matrix) {
   // Check left
   // Check top left
   // Return neighbors
-  
-  //!!START
-    const neighbors = [];
+  const neighbors = [];
 
-    if (row > 0 && matrix[row - 1][col] === 1) neighbors.push([row - 1, col]);
+  for (let i = row - 1; i <= row + 1; i++) {
+    for (let j = col - 1; j <= col + 1; j++) {
+      if (i === row && j === col) continue;
+      if (matrix[i] && matrix[i][j]) {
+        neighbors.push([i,j]);
+      }
+    }
+  }
 
-    if (row > 0 && col < matrix[row].length - 1 && matrix[row - 1][col + 1] === 1) neighbors.push([row - 1, col + 1]);
-
-    if (col < matrix[row].length - 1 && matrix[row][col + 1] === 1) neighbors.push([row, col + 1]);
-
-    if (row < matrix.length - 1 && col < matrix[row].length - 1 && matrix[row + 1][col + 1] === 1) neighbors.push([row + 1, col + 1]);
-
-    if (row < matrix.length - 1 && matrix[row + 1][col] === 1) neighbors.push([row + 1, col]);
-
-    if (row < matrix.length - 1 && col > 0 && matrix[row + 1][col - 1] === 1) neighbors.push([row + 1, col - 1]);
-
-    if (col > 0 &&  matrix[row][col - 1] === 1) neighbors.push([row, col - 1]);
-
-    if (row > 0 && col > 0 && matrix[row - 1][col - 1] === 1) neighbors.push([row - 1, col - 1]);
-
-    return neighbors;
-  //!!END
+  return neighbors;
 }
 
 function countIslands(matrix) {
   
   // Create a visited set to store visited nodes
+  const visited = new Set()
   // Initialize count to 0
+  let count = 0;
   // Iterate through all indices in matrix
-    // If an index contains a 1 and has not been visited, 
-    // increment island count and start traversing neighbors
-      // DO THE THING (increment island count by 1)
-      // Initialize a stack with current index
-      // Add stringified version of current index to the visited set
-      // While stack contains elements
-        // Pop element from stack
-        // Get valid neighbors of current element
-        // Iterate over neigbors
-          // If neighbor has not been visited
-            // Add neighbor to stack
-            // Mark neighbor as visited
-  // Return island count
-  
-  //!!START
-  const visited = new Set();
-  let islandCount = 0;
-
-  for (let i = 0; i < matrix.length; i++) {
-    for (let j = 0; j < matrix[0].length; j++) {
-
-      if (matrix[i][j] === 1 && !visited.has(`${[i, j]}`)) {
-        
-        islandCount++;
-        const stack = [[i, j]];
-        visited.add(`${[i, j]}`)
-
+  for (let row = 0; row < matrix.length; row++) {
+    for (let col = 0; col < matrix[0].length; col++) {
+      // If an index contains a 1 and has not been visited, 
+      if (matrix[row][col] && !visited.has([row,col].toString())) {
+        // increment island count and start traversing neighbors
+        // DO THE THING (increment island count by 1)
+        count++;
+        // Initialize a stack with current index
+        const stack = [[row,col]];
+        // Add stringified version of current index to the visited set
+        visited.add([row,col].toString());
+        // While stack contains elements
         while (stack.length) {
-          
-          const node = stack.pop();
-          const currentRow = node[0];
-          const currentCol = node[1];
-          const neighbors = getNeighbors(currentRow, currentCol, matrix);
-
-          for (const neighbor of neighbors) {
-            if (!visited.has(`${neighbor}`)) {
+          // Pop element from stack
+          const [currRow, currCol] = stack.pop();
+          // Get valid neighbors of current element
+          const neighbors = getNeighbors(currRow, currCol, matrix);
+          // Iterate over neigbors
+          neighbors.forEach(neighbor => {
+            // If neighbor has not been visited
+            if (!visited.has(neighbor.toString())) {
+              // Add neighbor to stack
               stack.push(neighbor);
-              visited.add(`${neighbor}`)
+              // Mark neighbor as visited
+              visited.add(neighbor.toString());
             }
-          }
+          });
         }
       }
     }
   }
-
-  return islandCount;
-  //!!END
+  // Return island count
+  return count;
 }
 
 // Uncomment the lines below for local testing
