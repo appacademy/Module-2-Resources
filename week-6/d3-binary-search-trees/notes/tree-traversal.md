@@ -1,7 +1,6 @@
 ## Breadth-first traversal:
 
-Breadth first traversal works by traveling as deep as possible down each branch
-of a tree before moving to the next. 
+Breadth first traversal works by traveling across each level before moving to the next level. 
 
 Breadth-first traversal cannot be implemented using recursion. It is best implemented using a queue:
 

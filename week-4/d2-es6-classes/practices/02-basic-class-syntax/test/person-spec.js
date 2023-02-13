@@ -47,7 +47,9 @@ describe("Person class", () => {
       const person2 = new Person("jeff", "granoff", 30);
       let introSpy = chai.spy.on(person, "introduce");
       let introSpy2 = chai.spy.on(person2, "introduce");
+      
       Person.introducePeople([person, person2]);
+
       expect(introSpy).to.have.been.called.once;
       expect(introSpy2).to.have.been.called.once;
     });
