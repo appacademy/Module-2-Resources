@@ -9,84 +9,62 @@ Consult documentation on how to utilize the following methods:
 
 /* Base 2 to base 16 */
 function binaryToHexadecimal(blob) {
-  // first convert binary to decimal
-  // then convert decimal to hexadecimal
-  const decimal = parseInt(blob.substring(2), 2)
-  // console.log(decimal)
-  return `0x${decimal.toString(16)}`
+  // Your code here
 }
 
 /* Base 16 to base 2 */
 function hexadecimalToBinary(blob) {
-  const decimal = parseInt(blob, 16)
-  return `0b${decimal.toString(2)}`
+  // Your code here
 }
 
 /* Base 10 to ASCII */
 function decimalToAscii(blob) {
-  return String.fromCharCode(blob)
+  // Your code here
 }
 
 /* Base 2 to ASCII */
 function binaryToAscii(blob) {
-  // const decimal = parseInt(blob.substring(2), 2)
-  // console.log(decimal)
-  // return String.fromCharCode(decimal)
-  return String.fromCharCode(blob)
+  // Your code here
 }
 
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
-  return String.fromCharCode(blob)
+  // Your code here
 }
 
 /* ASCII to base 10 */
 function asciiToDecimal(blob) {
-  // time O(n)  where n is the length of blob
-  // space O(n)
-  // const charCodes = Array(blob.length) = [, , , , , ,]// O(n)
-  const charCodes = []
-
-  for (let i = 0; i < blob.length; i++) {
-    charCodes.push(blob.charCodeAt(i))
-  }
-
-  return charCodes
-
-
-  // time O(n + n) => O(n)
-  // space O(n + n) => O(n)
-  return blob.split('').map(char => char.charCodeAt())
+  // Your code here
 }
 
-console.log('Binary to hexadecimal:')
-console.log(binaryToHexadecimal('0b1010')) // '0xa'
-console.log(binaryToHexadecimal('0b0011')) // '0x3'
-console.log('')
+// console.log('Binary to hexadecimal:')
+// console.log(binaryToHexadecimal('0b1010')) // '0xa'
+// console.log(binaryToHexadecimal('0b0011')) // '0x3'
+// console.log('')
 
-console.log('Hexadecimal to binary:')
-console.log(hexadecimalToBinary('0xa1'))  // '0b10100001'
-console.log(hexadecimalToBinary('0xff'))  // '0b11111111'
-console.log('')
+// console.log('Hexadecimal to binary:')
+// console.log(hexadecimalToBinary('0xa1'))  // '0b10100001'
+// console.log(hexadecimalToBinary('0xff'))  // '0b11111111'
+// console.log('')
 
-console.log('Decimal to ASCII:')
-console.log(decimalToAscii(65))  // 'A'
-console.log(decimalToAscii(97))  // 'a'
-console.log('')
+// console.log('Decimal to ASCII:')
+// console.log(decimalToAscii(65))  // 'A'
+// console.log(decimalToAscii(97))  // 'a'
+// console.log('')
 
-console.log('Binary to ASCII:')
-console.log(binaryToAscii('0b01000010'))  // 'B'
-console.log(binaryToAscii('0b01100010'))  // 'b'
-console.log('')
+// console.log('Binary to ASCII:')
+// console.log(binaryToAscii('0b01000010'))  // 'B'
+// console.log(binaryToAscii('0b01100010'))  // 'b'
+// console.log('')
 
-console.log('Hexadecimal to ASCII:')
-console.log(hexadecimalToAscii('0x43'))  // 'C'
-console.log(hexadecimalToAscii('0x63'))  // 'c'
-console.log('')
+// console.log('Hexadecimal to ASCII:')
+// console.log(hexadecimalToAscii('0x43'))  // 'C'
+// console.log(hexadecimalToAscii('0x63'))  // 'c'
+// console.log('')
 
-console.log('ASCII to decimal:')
-console.log(asciiToDecimal('HELLO'))   // [ 72, 69, 76, 76, 79 ]
-console.log(asciiToDecimal('world!'))  // [ 119, 111, 114, 108, 100, 33 ]
+// console.log('ASCII to decimal:')
+// console.log(asciiToDecimal('HELLO'))   // [ 72, 69, 76, 76, 79 ]
+// console.log(asciiToDecimal('world!'))  // [ 119, 111, 114, 108, 100, 33 ]
 
 module.exports = {
   binaryToHexadecimal,
