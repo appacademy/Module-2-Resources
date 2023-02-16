@@ -32,12 +32,12 @@ function funStuff(str) {
     }
 }
 
-funStuff('hello');
 
-// try {
-//     funStuff(4)
-// } catch (err) {
-//     console.error(err.message)
-//     // throw new Error('what are you doing?')
-// }
+try {
+    funStuff(4)
+    funStuff({});
+} catch (err) {
+    console.error(err.message)
+    // throw new Error('what are you doing?')
+}
 
