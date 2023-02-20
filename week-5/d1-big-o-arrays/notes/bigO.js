@@ -60,7 +60,7 @@ function constant(n) {
 
 function constant2(n) {
     for (let i = 1; i <= 100; i++){
-        console.log(i)
+        console.log(i * n)
     }
 }
 //O(1) => no matter how big n gets, the algorithm doesn't change in complexity
