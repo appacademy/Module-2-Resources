@@ -36,7 +36,6 @@ describe('Dynamic array', () => {
 
 
   it('can read values in the array', function () {
-
     dynamicArr.data[0] = 99;
     dynamicArr.length = 1;
 
@@ -51,22 +50,25 @@ describe('Dynamic array', () => {
     expect(dynamicArr.length).to.equal(0);
     expect(dynamicArr.capacity).to.equal(8);
 
+    // console.log(dynamicArr)
     dynamicArr.unshift(1);
-
+    // console.log(dynamicArr)
     expect(dynamicArr.length).to.equal(1);
     expect(dynamicArr.capacity).to.equal(8);
     expect(dynamicArr.data[0]).to.deep.equal(1);
-
+    
     dynamicArr.unshift(2);
     
-
+    // console.log(dynamicArr)
+    
     expect(dynamicArr.length).to.equal(2);
     expect(dynamicArr.capacity).to.equal(8);
     expect(dynamicArr.data[0]).to.deep.equal(2);
     expect(dynamicArr.data[1]).to.deep.equal(1);
 
     dynamicArr.unshift(3);
-
+    // console.log(dynamicArr)
+    
     expect(dynamicArr.length).to.equal(3);
     expect(dynamicArr.capacity).to.equal(8);
     expect(dynamicArr.data[0]).to.deep.equal(3);
