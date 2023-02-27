@@ -6,7 +6,7 @@ function insertionSort(arr) {
 
   Copy the original array
   Create an array to store the sorted values
-  While the array is not empty:
+  While the copied array is not empty:
   - make sure you have a console.log(sorted.join(',')) as your first line in the while loop
   - Pop a value from the array
   - Create a new spot at the end of the array with null to help with comparisons
