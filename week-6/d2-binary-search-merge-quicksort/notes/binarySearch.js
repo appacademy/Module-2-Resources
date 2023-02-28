@@ -18,9 +18,11 @@ sorting function that can quickly sort your array if it is not presorted
 
 let array = [5, 28, 98, 13, 4, 87, 45, 2];
 array.sort(function (a, b) {
-  if (a > b) return 1;
-  if (a < b) return -1;
-  return 0;
+  // if (a > b) return 1;
+  // if (a < b) return -1;
+  // return 0;
+
+  return a - b;
 });
 console.log(array);
 
