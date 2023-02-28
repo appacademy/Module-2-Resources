@@ -42,7 +42,7 @@ function merge(arrA, arrB) {
 }
 /*
                                                                  m
-                                                       [10,5,2,9,1,8,7,3]
+                                                       [10,
                                                   lh                      rh
                                                     m                       m
                                               [10,5,2,9]               [1,8,7,3]
