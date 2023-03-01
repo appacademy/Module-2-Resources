@@ -63,9 +63,36 @@ class BinarySearchTree {
     }
 
   }
-
+/*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
   search(val) {
     // Your code here
+    // if (!this.root) return false;
+    let curr = this.root;  // this could be NULL
+
+    while (curr) {
+      if (curr.val === val) return true;
+
+      if (val < curr.val) {
+        curr = curr.left;
+      } else {
+        curr = curr.right;
+      }
+    }
+    return false;
+  }
+
+  search2(val, curr=this.root) {
+    if (!curr) return false;
+
+    if (curr.val === val) return true;
+    if (val < curr.val) return this.search2(val, curr.left);
+    if (val > curr.val) return this.search2(val, curr.right);
   }
 
 
