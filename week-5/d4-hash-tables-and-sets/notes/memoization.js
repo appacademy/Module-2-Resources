@@ -48,7 +48,6 @@ function factorialMemo(n) {
   return memo[n]
 }
 
-factorialMemo(6);       // => 720, requires 6 calls
 factorialMemo(6);       // => 720, requires 1 call
 factorialMemo(5);       // => 120, requires 1 call
 factorialMemo(7);       // => 5040, requires 2 calls
