@@ -8,6 +8,5 @@ function greetAfterNameChange(changeName, newName) {
   console.log(`Hi my name is ${name}`);
 }
 
-//                       changeName()
 greetAfterNameChange(michelle.changeName, 'Elle');
   // should print out: Hi my name is Elle

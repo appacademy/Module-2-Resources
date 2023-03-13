@@ -1,5 +1,5 @@
-// function add(num1, num2){
-//     console.log(num1 + num2
+// funtion add(num1, num2){
+//     console.log(num1 + num2)
 // }
 
 // add(1, 2)
@@ -7,37 +7,24 @@
 // const puppy = "puppy";
 // console.log(pupppy); 
 
-// function callPuppy() {
-//     const puppy = "puppy";
+// function sumDiv(n1, n2) {
+    
+    
 // }
-// console.log(puppy); // puppy is not in scope, it was created in the callPuppy function
 
-// let dog; // Remember unassigned variables are undefined!
-// dog(); // TypeError: dog is not a function
-
-// const puppy = "puppy";
-// puppy = "apple"; // TypeError: Assignment to constant variable.
+// console.log(sumDiv())
 
 function funStuff(str) {
-    try{
-        const arr = str.split('')
-        return arr;
-    } catch(e) {
-        if (e instanceof TypeError) {
-            console.log('input must be an array')
-        } else {
-            console.log('not a type error');
-
-        }
-    }
+    const arr = str.split('')
+    return arr;
 }
-
 
 try {
     funStuff(4)
-    funStuff({});
 } catch (err) {
-    console.error(err.message)
+    console.log(err.message)
     // throw new Error('what are you doing?')
 }
 
+const taco = new Array(4).fill(null)
+console.log(taco)

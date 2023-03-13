@@ -126,16 +126,10 @@ class Dog extends Animal {
     console.log("bark bark bark");
     super.speak(); // console.log(`hi my name is ${this.name}`);
   }
-
-  static introduceDogs(...dogs) {
-    dogs.forEach(dog => dog.speak())
-  }
 }
 
 let badger = new Dog("badger", .25);
-let bloo = new Dog('bloo', 2);
 badger.speak();
-Dog.introduceDogs([badger, bloo]);
 ```
 
 THIS

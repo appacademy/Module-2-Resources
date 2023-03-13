@@ -7,9 +7,6 @@ Binary search method first looks at the midpoint of a
 SORTED array, and then checks to see if that element is 
 greater than, less than, or equal to the element you are looking for.
 
-                         lh  
-[1,2,3,4,5               7,                       8,9]
-
 IT ONLY WORKS WITH SORTED ARRAYS, so it is often needed to have a
 sorting function that can quickly sort your array if it is not presorted
 */
@@ -18,11 +15,9 @@ sorting function that can quickly sort your array if it is not presorted
 
 let array = [5, 28, 98, 13, 4, 87, 45, 2];
 array.sort(function (a, b) {
-  // if (a > b) return 1;
-  // if (a < b) return -1;
-  // return 0;
-
-  return a - b;
+  if (a > b) return 1;
+  if (a < b) return -1;
+  return 0;
 });
 console.log(array);
 

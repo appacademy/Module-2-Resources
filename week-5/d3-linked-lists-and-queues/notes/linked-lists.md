@@ -85,7 +85,7 @@ class _Node { // underscore indicates a 'private variable'
   constructor(value) {
     this.value = value;
     this.next = null;
-    // this.prev = null; // used with Doubly Linked Lists
+    this.prev = null; // used with Doubly Linked Lists
   }
 }
 

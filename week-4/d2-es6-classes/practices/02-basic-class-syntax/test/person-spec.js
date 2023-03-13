@@ -7,7 +7,7 @@ const Person = require("../classes/person");
 
 describe("Person class", () => {
   let person;
-  let consoleSpy;
+  let consoleSpy
   beforeEach(() => {
     person = new Person("kristen", "chauncey", 38);
     consoleSpy = chai.spy.on(console, 'log');
