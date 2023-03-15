@@ -14,4 +14,9 @@ class Employee {
     }
 }
 
+const employee = new Employee('shane', 'teacher');
+const employee2 = new Employee('whit', 'teacher');
+console.log(employee)
+console.log(employee2)
+
 module.exports = Employee;
