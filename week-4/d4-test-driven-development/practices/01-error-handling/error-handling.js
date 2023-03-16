@@ -7,6 +7,7 @@ function sum(array) {
   return sum;
 }
 
+
 let res = sum(null);
 console.log(res);
 
@@ -24,3 +25,5 @@ function greet(greeting) {
 
   console.log(greeting);
 }
+
+
