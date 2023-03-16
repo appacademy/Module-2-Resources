@@ -4,11 +4,11 @@ const { isFive, isOdd, myRange } = require("../funcs");
 
 describe("isFive(num)", () => {
   it("should return true if the num is 5 otherwise false", () => {
-    const num1 = 5;
+    const num1 = 5;  // Arrange
 
-    const actual1 = isFive(num1); // should be true
+    const actual1 = isFive(num1); // Act
 
-    expect(actual1).to.be.true;
+    expect(actual1).to.be.true; // Assert
 
     const otherInput = "not 5";
     const num2 = 4;
