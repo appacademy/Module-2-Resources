@@ -5,6 +5,7 @@ function addNums(n) {
   for (let i = 1; i <= n; i++) {
     sum += i;
   } 
+  const end = Date.now()
   return sum;
 } // O(n)
 
@@ -19,5 +20,8 @@ function addManyNums(n) {
   return sum;
 } // O(n^2)
 
+// console.time('addManyNums')
+// addManyNums(100)
+// console.timeEnd('addManyNums')
 
 module.exports = [addNums, addManyNums];

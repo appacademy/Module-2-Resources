@@ -33,6 +33,7 @@ Big picture ideas:
     T( log(n) + 2^n )	    O( 2^n )
     T( n + log(n) )	        O( n )
     T( n! + 10^n )	        O( n! )
+    T(1 + 10 + 1000)        O(1)
 
 */
 
@@ -55,14 +56,21 @@ O(n!)	                    factorial
 //input.
 //Example:
 function constant(n) {
+    ///      c   c
     return n * 2 + 1;
-}
+} // T(1 + 1)
+  // O(1)
 
 function constant2(n) {
+   //       c       (c * 100) (c * 00)
     for (let i = 1; i <= 100; i++){
+        // c * 100
         console.log(i)
     }
-}
+} // T(1 + (1 * 100) + (1 * 100) + 1)
+  // T(1 + 100 + 100 + 1)
+  // T(1 + 1 + 1 + 1)
+  // O(1)
 //O(1) => no matter how big n gets, the algorithm doesn't change in complexity
 
 
@@ -95,10 +103,16 @@ Examples:
 */
 // O(n)
 function linear1(n) {
+  //     c       (c * n)  (c * n)
   for (let i = 1; i <= n; i++) {
+    //   (c * n)
     console.log(i);
   }
-}
+
+} // T(1 + (1 * n) + (1 * n) + (1 * n))
+  // T(1 + n + n + n);
+  // T(3 * n)
+  // O(n)
 
 // O(n), where n is the length of the array
 function linear2(array) {
@@ -144,6 +158,7 @@ Examples:
 // O(n^2)
 function quadratic(n) {
   for (let i = 1; i <= n; i++) {
+    
       for (let j = 1; j <= n; j++) {
         //do some stuff
     }
