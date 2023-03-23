@@ -53,12 +53,31 @@ class HashTable {
 
     if (this.data[index]) kvp.next = this.data[index];
     this.data[index] = kvp;
-    console.log(this.data[index])
+    // console.log(this.data[index])
     this.count++;
   }
 
   insert(key, value) {
     // Your code here
+    const index = this.hashMod(key);
+    
+    let currentKvp = this.data[index]; // => COULD BE NULL!!!
+    
+    while (currentKvp && currentKvp.key !== key) {
+      currentKvp = currentKvp.next
+    }
+    
+    if (currentKvp) {
+      currentKvp.value = value;
+    } else {
+      const kvp = new KeyValuePair(key, value);
+      if (this.data[index]) kvp.next = this.data[index];
+      this.data[index] = kvp;
+      // console.log(this.data[index])
+      this.count++;
+
+    }
+
   
   }
 
