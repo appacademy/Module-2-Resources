@@ -90,17 +90,17 @@ class BinarySearchTree {
     if (curr.val < val) return this.search2(val, curr.right);
   }
 
-
+  // self, left, right
   preOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-
+  // left, self, right
   inOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-
+  // left, right, self
   postOrderTraversal(currentNode = this.root) {
     // Your code here
   }
