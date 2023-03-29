@@ -58,9 +58,36 @@ class BinarySearchTree {
 
   }
 
+/*
+              4 
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
+// target = 3
   search(val) {
     // Your code here
-    
+    let curr = this.root;
+
+    while (curr) {
+      if (curr.val === val) return true;
+
+      if (val < curr.val) {
+        curr = curr.left;
+      } else {
+        curr = curr.right;
+      }
+    }
+
+    return false;
+  }
+
+  search2(val, curr=this.root) {
+    if (!curr) return false;
+    if (curr.val === val) return true;
+    if (curr.val > val) return this.search2(val, curr.left);
+    if (curr.val < val) return this.search2(val, curr.right);
   }
 
 
@@ -88,5 +115,19 @@ class BinarySearchTree {
     // your code here
 }
 }
+
+
+// const bst = new BinarySearchTree();
+// bst.insert(4);
+// bst.insert(2);
+// bst.insert(6);
+// bst.insert(1);
+// bst.insert(3);
+// bst.insert(5);
+// bst.insert(7);
+
+// console.log(bst.root.right.left)
+
+// console.log(bst.search2(5))
 
 module.exports = { BinarySearchTree, TreeNode };
