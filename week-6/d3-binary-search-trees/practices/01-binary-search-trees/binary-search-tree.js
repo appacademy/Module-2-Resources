@@ -6,19 +6,61 @@ class TreeNode {
     this.right = null;
   }
 }
+/*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
 
 class BinarySearchTree {
 
   constructor() {
     // Your code here
+    this.root = null;
   }
 
   insert(val, currentNode=this.root) {
     // Your code here
+    const newNode = new TreeNode(val);
+
+    // if there is no root
+    if (!this.root) {
+      this.root = newNode;
+      return this;
+    }
+
+    // if the value is less than the current node's value
+    if (val < currentNode.val) {
+      // check if there is a node to the left
+      // if not we've found the spot
+      if (!currentNode.left) {
+        currentNode.left = newNode;
+        return this;
+      } else {
+        return this.insert(val, currentNode.left);
+      }
+    }
+
+    // if the value is greater than the current node's value
+    if (val > currentNode.val) {
+      // check if there is a node to the right
+      // if not we've found the spot
+      if (!currentNode.right) {
+        currentNode.right = newNode;
+        return this;
+      } else {
+        return this.insert(val, currentNode.right);
+      }
+    }
+
+
   }
 
   search(val) {
     // Your code here
+    
   }
 
 
