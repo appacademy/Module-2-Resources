@@ -26,7 +26,7 @@ function printBreadthFirst(start) {
                 queue.push(neighbor);
                 visited.add(neighbor);
             }
-        })
+        });
     }
     console.log(res)
     return res;
