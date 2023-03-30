@@ -7,22 +7,22 @@ const adjList = {
     6: [4]
 }
 
-function printBreadthFirst(start) {
+function printBreadthFirst(start) { // => 3
     // your code here
-    const queue = []
-    queue.push(start);
+    const queue = [] 
+    queue.push(start); // => []
     console.log({ queue })
     const visited = new Set();
-    visited.add(start);
+    visited.add(start); // => {3, 2, 4, 1, 5, 6}
     console.log({ visited })
 
-    while (queue.length) {
-        const curr = queue.shift();
+    while (queue.length) { // => []
+        const curr = queue.shift(); // => 6
 
         // DO THE THING
-        console.log(curr);
+        console.log(curr); //=> 6
 
-        const neighbors = adjList[curr];
+        const neighbors = adjList[curr]; // => [4]
         neighbors.forEach(neighbor => {
             if (!visited.has(neighbor)) {
                 queue.push(neighbor);
