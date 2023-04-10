@@ -4,15 +4,15 @@ Linked Lists are data structures that represent a linear sequence of "vertices"
 (or nodes) and track three important properties: 
 
 - head: first node in the list
-- tail: last node in the list
-- count: number of nodes in the list
+- tail: last node in the list (optional)
+- length: number of nodes in the list
 
 Each individual instance of a node tracks some other important properties as
 well:
 
 - value: value represented by the node 
 - next: the next node in the list
-- previous: the previous node in the list
+- previous: the previous node in the list (doubly-linked-lists)
 
 ---
 

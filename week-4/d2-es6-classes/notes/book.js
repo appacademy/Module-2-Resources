@@ -1,10 +1,10 @@
 class Book {
   constructor(title, series, author) {
-    this.title = title;
+    this.title = title; // title: title
     this.series = series;
     this.author = author;
+    this.resources = [];
   }
-
   // Example of an instance method
   getInformation() {
     return `${this.title} by ${this.author}`;
@@ -25,13 +25,22 @@ const fellowshipOfTheRing = new Book(
   "J.R.R. Tolkien"
 );
 
+const returnOfTheKing = new Book(
+  "Return of the King",
+  "The Lord of the Rings",
+  "Whit"
+);
+
 // console.log(fellowshipOfTheRing.getTitles());
-console.log(fellowshipOfTheRing instanceof Book)
-if (fellowshipOfTheRing instanceof Book) {
-  //do some stuff
-}
+console.log(fellowshipOfTheRing)
+console.log(returnOfTheKing)
+console.log(Book.resources)
 
-const newBook = new Book('Song of Ice and Fire', 'Game of Thrones', 'Old Man Winter');
-// console.log(newBook.getInformation());
+// if (fellowshipOfTheRing instanceof Book) {
+//   //do some stuff
+// }
 
-console.log(Book.getTitles([fellowshipOfTheRing, newBook]))
+// const newBook = new Book('Song of Ice and Fire', 'Game of Thrones', 'Old Man Winter');
+// // console.log(newBook.getInformation());
+
+// console.log(Book.getTitles([fellowshipOfTheRing, newBook]))
