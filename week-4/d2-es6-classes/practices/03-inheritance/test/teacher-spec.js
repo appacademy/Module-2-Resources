@@ -15,6 +15,7 @@ describe("Teacher class", () => {
   });
 
   describe("Teacher constructor", () => {
+
     it("should set the firstName property", () => {
       expect(teacher1).to.have.property("firstName");
       expect(teacher1.firstName).to.eql("susan");
