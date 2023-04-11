@@ -32,33 +32,44 @@ const recipes = {
 };
 /* DO NOT CHANGE THE CODE ABOVE */
 
-/*************************** FUNCTION TO REFACTOR ****************************/
-function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
-  // Find the recipe for the pieType specified
-  const recipe = recipes[pieType];
-  // Bake the number of pies specified by the pieQuantity
-  for (let i = 0; i < pieQuantity; i++) {
-    // Print the ingredients for each ingredient in the recipe
-    let combiningMsg = `Combining ingredients for ${pieType}: `
-    combiningMsg += recipe.map(ingredient => ingredient.name).join(', ');
-    console.log(combiningMsg);
+/***************************** HELPER FUNCTIONS ******************************/
+let getRecipe = pieType => recipes[pieType]
 
-    // Print the nth pie that was baked
+function combinePieIngredients(pieType) {
+  const recipe = getRecipe(pieType);
+  let combiningMsg = `Combining ingredients for ${pieType}: `;
+  combiningMsg += recipe.map(ingredient => ingredient.name).join(', ');
+  console.log(combiningMsg);
+}
+
+function bakePies(pieType, quantity) {
+  for (let i = 0; i < quantity; i++) {
+    combinePieIngredients(pieType);
     console.log(`Baked pie ${i + 1}!`);
   }
+}
 
-  // Print the cost of each pie based on the cost of each ingredient
-  const costOfPie = recipe.reduce((prev, current) => {
+function calculatePieCost(pieType) {
+  const ingredients = recipes[pieType];
+  const costOfPie = ingredients.reduce((prev, current) => {
     return prev + current.cost;
-  }, recipe[0].cost);
+  }, ingredients[0].cost);
   console.log(`Cost per pie: ${costOfPie}`);
+  return costOfPie;
+}
 
-  // Calculate the total cost of all the pies
-  const totalCost = costOfPie * pieQuantity;
+function sellPies(costPerPie, quantity, profitMargin=1.2) {
+  let revenue = (costPerPie * profitMargin) * quantity;
+  console.log(`Sold ${quantity} pies for $${revenue.toFixed(2)}!`);
+}
 
-  // Print the total revenue calculated using the given profitMargin
-  const revenue = totalCost * (profitMargin || 1.2);
-  console.log(`Sold ${pieQuantity} pies for $${revenue.toFixed(2)}!`);
+/*************************** FUNCTION TO REFACTOR ****************************/
+function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
+  const recipe = getRecipe(pieType);
+
+  bakePies(pieType, pieQuantity);
+  const costOfPie = calculatePieCost(pieType);
+  sellPies(costOfPie, pieQuantity, profitMargin);
 }
 
 /******************************* LOCAL TESTS *******************************/
