@@ -42,14 +42,14 @@ const shane = new Fish('shane');
 
 
 /********************************* Scenario 5 *********************************/
-const gary = {
-  name: 'gary'
-}
-const swim = nemo.swim.bind(gary);
-const nemoSwim = nemo.swim.bind(nemo);
-const shaneSwim = shane.swim.bind(gary)
-const takeBack = shaneSwim.bind(shane);
-swim(); // undefined swimming in the water
-nemoSwim();
-shaneSwim(); 
-takeBack();
+// const gary = {
+//   name: 'gary'
+// }
+// const swim = nemo.swim.bind(gary);
+// const nemoSwim = nemo.swim.bind(nemo);
+// const shaneSwim = shane.swim.bind(gary)
+// const takeBack = shaneSwim.bind(shane);
+// swim(); // undefined swimming in the water
+// nemoSwim();
+// shaneSwim(); 
+// takeBack();
