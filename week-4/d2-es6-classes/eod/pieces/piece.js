@@ -4,11 +4,11 @@ class Piece {
         this.captured = false;
     }
 
-    isWhite() {
+    _isWhite() {
         return this.white;
     }
 
-    setWhite(white) {
+    _setWhite(white) {
         this.white = white;
     }
 

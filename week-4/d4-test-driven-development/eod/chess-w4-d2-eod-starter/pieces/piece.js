@@ -1,15 +1,16 @@
 class Piece {
     constructor(white=false) {
-        this.white = white;
+        this.white = this._setWhite(white);
         this.captured = false;
     }
 
-    isWhite() {
+    _isWhite() {
         return this.white;
     }
 
-    setWhite(white) {
+    _setWhite(white) {
         this.white = white;
+        return this.white;
     }
 
     isCaptured() {
@@ -31,9 +32,9 @@ class Piece {
     
     checkPieceColor(board, endX, endY) {
         
-        const endPiece = board[endX][endY].piece;
+        const endPiece = board[endX][endY].getPiece();
         
-        return endPiece && endPiece.white === this.white
+        return endPiece && endPiece._isWhite() === this._isWhite()
     }
 
     canMove(board, start, end) {

@@ -7,3 +7,6 @@ a piece on the opposing team.
 The game Board and Squares from EOD have been provided to aid in testing.
 
 To run the specs run `npm test test/<pieceName>.js`
+
+
+

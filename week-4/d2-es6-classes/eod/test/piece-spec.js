@@ -29,22 +29,22 @@ describe('The Piece class', () => {
 
     });
 
-    describe('the isWhite() method', () => {
+    describe('the _isWhite() method', () => {
         it('should return the value of the "white" property', () => {
-            expect(piece1.isWhite()).to.be.false;
-            expect(piece2.isWhite()).to.be.true;
+            expect(piece1._isWhite()).to.be.false;
+            expect(piece2._isWhite()).to.be.true;
         });
     });
 
-    describe('the setWhite() method', () => {
+    describe('the _setWhite() method', () => {
         it('should set the "white" property to the passed in argument', () => {
-            expect(piece1.isWhite()).to.be.false;
-            piece1.setWhite(true);
-            expect(piece1.isWhite()).to.be.true;
+            expect(piece1._isWhite()).to.be.false;
+            piece1._setWhite(true);
+            expect(piece1._isWhite()).to.be.true;
 
-            expect(piece2.isWhite()).to.be.true;
-            piece2.setWhite(false);
-            expect(piece2.isWhite()).to.be.false;
+            expect(piece2._isWhite()).to.be.true;
+            piece2._setWhite(false);
+            expect(piece2._isWhite()).to.be.false;
         });
     });
 

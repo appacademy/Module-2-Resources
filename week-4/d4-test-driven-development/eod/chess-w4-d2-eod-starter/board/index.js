@@ -9,11 +9,9 @@ class Board {
 
     generateBoard() {
         const board = [];
+        
         for (let i = 0; i < 8; i++) {
             board.push([]);
-        }
-
-        for (let i = 0; i < 8; i++) {
             for (let j = 0; j < 8; j++) {
                 board[i][j] = new Square(i, j, null);
             }
@@ -22,5 +20,7 @@ class Board {
         return board;
     }
 }
+// const board = new Board();
+// console.log(board.board)
 
 module.exports = Board;
