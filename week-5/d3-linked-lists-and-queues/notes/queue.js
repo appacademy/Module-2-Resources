@@ -30,7 +30,7 @@ class Queue {
         const oldHead = this.head;
 
         this.head = this.head.next;
-        oldHead.next = null
+        oldHead.next = null;
         return oldHead;
     }
 }
@@ -45,3 +45,9 @@ console.log(q.addToTail([7,8]));
 
 console.log(q.removeFromHead())
 console.log(q)
+
+
+const arr = [1,32,4,5,6];
+
+arr.push(45)
+arr.shift()
