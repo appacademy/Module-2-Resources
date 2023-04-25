@@ -37,11 +37,11 @@ function selectionSortInPlace(arr) {
 
     // Find the index of the minimum value in the unsorted half
     let minIndex = divider;
-    for (let i = divider + 1; i < arr.length; i++) {
+    for (let i = minIndex + 1; i < arr.length; i++) {
       if (arr[i] < arr[minIndex]) minIndex = i;
     }
     // Save the min value
-    const val = arr[minIndex];
+    const val = arr[minIndex]; // => 3
     // Shift every unsorted value to the left of the min value to the right by 1
     for (let i = minIndex; i >= divider; i--) {
       arr[i] = arr[i-1];
@@ -52,7 +52,9 @@ function selectionSortInPlace(arr) {
     divider++;
   }
   return arr;
-}
+  //        d   i
+} // [1,2,3,4,6,8,5,7,9]
+  //            m
 
 
 module.exports = [selectionSort, selectionSortInPlace];
