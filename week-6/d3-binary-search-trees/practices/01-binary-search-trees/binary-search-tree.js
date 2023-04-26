@@ -164,22 +164,62 @@ class BinarySearchTree {
     // Your code here
     if (!currentNode) return this;
     // traverse to the left
-    this.postOrderTraversal(currentNode.right);
     this.postOrderTraversal(currentNode.left);
     // traverse to the right
+    this.postOrderTraversal(currentNode.right);
     // Do the thing
     console.log(currentNode.val);
   }
 
+/*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
+  // queue = []
+  // curr = 7
+  // cl => 4,2,6,1,3,5,7
+
     // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
     // your code here
+    const queue = [this.root]; // => queue.push(this.root)
+    while (queue.length) {
+      const curr = queue.shift();
+      // DO THE THING
+      console.log(curr.val);
+      if (curr.left) queue.push(curr.left);
+      if (curr.right) queue.push(curr.right);
+    }
+    return this;
   }
+
+/*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
+  // stack = []
+  // curr = 1
+  // cl => 4,6,7,5,2,3,1
 
   // Depth First Traversal - Iterative
   depthFirstTraversal() {
     // your code here
-}
+    const stack = [this.root]; // => stack.push(this.root)
+    while (stack.length) {
+      const curr = stack.pop();
+      // DO THE THING
+      console.log(curr.val);
+      if (curr.left) stack.push(curr.left);
+      if (curr.right) stack.push(curr.right);
+    }
+    return this;
+  }
 }
 
 // const bst = new BinarySearchTree();
