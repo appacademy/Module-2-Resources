@@ -58,7 +58,12 @@ class BinarySearchTree {
 
   search(val) {
     // Your code here
+    // if there is a root
+    // set a curr variable
+    // use our > < operators to move through the tree
   }
+
+  
 
 
   preOrderTraversal(currentNode = this.root) {
