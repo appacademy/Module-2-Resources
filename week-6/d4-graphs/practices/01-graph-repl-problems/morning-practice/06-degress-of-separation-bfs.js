@@ -12,7 +12,7 @@ function degreesOfSeparation(start, end) {
 }
 
 console.log("First Test:");
-console.log(degreesOfSeparation(1, 3)); // -> 2
+console.log(degreesOfSeparation(1, 3)); // -> 2 
 console.log("Second Test:");
 console.log(degreesOfSeparation(5, 2)); // -> 1
 console.log("Third Test:");
