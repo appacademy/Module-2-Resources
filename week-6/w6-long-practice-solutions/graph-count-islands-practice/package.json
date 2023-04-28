@@ -1,0 +1,15 @@
+{
+    "name": "count-islands",
+    "version": "1.0.0",
+    "description": "",
+    "main": "countIslands.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "chai": "^4.3.4",
+        "mocha": "^8.3.2"
+    }
+}
