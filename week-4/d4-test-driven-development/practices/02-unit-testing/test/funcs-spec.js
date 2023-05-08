@@ -4,21 +4,18 @@ const { isFive, isOdd, myRange } = require("../funcs");
 
 describe("isFive(num)", () => {
   it("should return true if the num is 5 otherwise false", () => {
-    // Arrange
     const num1 = 5;
-    // Act
-    const actual1 = isFive(num1); // should be true
-    // Assert
-    expect(actual1).to.be.true;
-    // expect(isFive(5)).to.be.true;
 
-    // Arrange
+    const actual1 = isFive(num1); // should be true
+
+    expect(actual1).to.be.true;
+
     const otherInput = "not 5";
     const num2 = 4;
-    // Act
+
     const actual2 = isFive(num2); // should be false
     const actual3 = isFive(otherInput); // should be false
-    // Assert
+
     expect(actual2).to.be.false;
     expect(actual3).to.be.false;
   });
@@ -58,7 +55,7 @@ describe("isOdd(number)", () => {
     const object = { i: "am", an: "object" };
     const array = ["i", "am", "an", "array"];
 
-    expect(isOdd.bind({}, string)).to.throw(Error);
+    expect(() => isOdd(string)).to.throw(Error);
     expect(() => isOdd(object)).to.throw(Error);
     expect(() => isOdd(array)).to.throw(Error);
   });

@@ -1,5 +1,3 @@
-// 'use strict'
-
 function eat() {
   console.log(`${this.name} eats fish food`);
 }
@@ -15,41 +13,25 @@ class Fish {
 }
 
 const nemo = new Fish('Nemo');
-const shane = new Fish('shane');
 
 /********************************* Scenario 1 *********************************/
-// eat(); // undefined eats fish food
+// eat(); // ?
 
 
 /********************************* Scenario 2 *********************************/
-// console.log(shane)
-// console.log(nemo)
 // nemo.eat = eat;
-// nemo.eat(); // Nemo eats fish food
-// console.log(nemo)
-// console.log(shane)
+// nemo.eat(); // ?
 
 
 /********************************* Scenario 3 *********************************/
 // nemo.eat = eat;
-// nemo.eat()
-// eat(); // undefined eats fish food
+// eat(); // ?
 
 
 /********************************* Scenario 4 *********************************/
-// shane.swim()
-// nemo.swim(); // Nemo swimming in the water
+// nemo.swim(); // ?
 
 
 /********************************* Scenario 5 *********************************/
-// const gary = {
-//   name: 'gary'
-// }
-// const swim = nemo.swim.bind(gary);
-// const nemoSwim = nemo.swim.bind(nemo);
-// const shaneSwim = shane.swim.bind(gary)
-// const takeBack = shaneSwim.bind(shane);
-// swim(); // undefined swimming in the water
-// nemoSwim();
-// shaneSwim(); 
-// takeBack();
+// const swim = nemo.swim;
+// swim(); // ?

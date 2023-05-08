@@ -5,97 +5,97 @@ justification for your answer. Assume `arr` is an array of length _n_.
 
 ## `arr.push()`
 
-Time complexity: O(1) * only adding a single element
-Space complexity: O(1) * no resize needs to happen
-Justification: Adding to the end of an array is a constant operation. 
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [push on MDN][push]
 
 
 ## `arr.pop()`
 
-Time complexity: O(1)
-Space complexity: O(1)
-Justification: Removing from the end of an array is a constant operation. No additional space is needed. 
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [pop on MDN][pop]
 
 ## `arr.shift()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: All elements must shift to the left by 1. No additional space is needed. 
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [shift on MDN][shift]
 
 ## `arr.unshift()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: All elements must shift to the right by 1. No additional space is needed.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [unshift on MDN][unshift]
 
 ## `arr.splice()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: All elements must shift to fill empty slots. A new array is returned. 
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [splice on MDN][splice]
 
 ## `arr.slice()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Must copy all elements individually. Returns a new array.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [slice on MDN][slice]
 
 ## `arr.indexOf()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Worst case, target is not in array, must iterate entire array to know. No new space is needed. 
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [indexOf on MDN][indexOf]
 
 ## `arr.map()`
 
-Time complexity: O(n) * call back is O(1)
-Space complexity: O(n)
-Justification: Must iterate over entire array, returns a new array
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [map on MDN][map]
 
 ## `arr.filter()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Must iterate over entire array, returns a new array
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [filter on MDN][filter]
 
 ## `arr.reduce()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Must iterate over entire array. No new space is needed if only returning accumulator as an integer. 
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [reduce on MDN][reduce]
 
 ## `arr.reverse()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Must evaluate each element to move. This happens in place, no new memory is allocated. 
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [reverse on MDN][reverse]
 
 ## `[...arr]`
 
-Time complexity: O(n)
-Space complexity: O(n)
+Time complexity: O(?)
+Space complexity: O(?)
 Justification: _Fill this in_
 
 [spread on MDN][spread]
