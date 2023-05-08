@@ -43,6 +43,13 @@ class Word {
       }
     }
   }
+
+  double() {
+    return this.word + this.word;
+  }
 }
+
+// const apple = new Word('apple');
+
 
 module.exports = { Word };

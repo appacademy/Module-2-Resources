@@ -3,6 +3,15 @@
 You learned to count in a base 10 system. All numbers are based on a 0-9 counting pattern.
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9....
 
+ ``` 10^3     10^2      10^1      10^0
+   1      2           3           4
+1 * 1000  2 * 100    3 * 10     4 * 1
+
+4
+30
+200
+1000
+```
 -   when you get to the last digit, you simply increase the number to the left and start over from 0
 
 ## Binary, base 2:
@@ -52,7 +61,7 @@ To convert 0b11001010 to decimal, remember the base is 2:
 
 Add all of those sums together to get 2 + 8 + 64 + 128 = 202
 
-To convert 202 to decimal, we divide by the base and keep track of the remainder:
+To convert 202 to binary, we divide by the base and keep track of the remainder:
 
 ```
 r = remainder
