@@ -7,7 +7,9 @@ class Student extends Person {
     this.GPA = GPA;
   }
 
-
+  introduce() {
+    return `Hello. I am ${this.firstName} ${this.lastName}, and I study ${this.major}.`
+  }
 
   static compareGPA(student1, student2) {
     if (student1.GPA > student2.GPA) {
@@ -20,10 +22,7 @@ class Student extends Person {
   }
 }
 
-// const shane = new Student('shane', 'wilkey', 'software-engineering', 3.5)
 
-// console.log(shane.introduce())
-// console.log(shane)
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
 
