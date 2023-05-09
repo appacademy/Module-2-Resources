@@ -1,9 +1,13 @@
-// const user = {
-//     name: 'shane',
-//     occupation: 'instructor',
-//     age: 41,
-//     introduce:  () => console.log(`Hi, my name is ${this.name}.`)
-// }
+const user = {
+    name: 'shane',
+    occupation: 'instructor',
+    age: 41,
+    introduce:  () => {
+        console.log(this)
+        console.log(`Hi, my name is ${this.name}.`)
+    }
+}
+
 
 // console.log(user)
 // const user2 = {
@@ -32,14 +36,13 @@ class User {
 
 const shane = new User('shane', 'instructor', 41);
 // console.log(shane)
-shane.introduce()
+// shane.introduce()
 
 const gary = new User('gary', 'instructor', 21);
 // console.log(gary)
 
-
-gary.introduce()
-User.introduceUsers([shane, gary]);
+// gary.introduce()
+// User.introduceUsers([shane, gary]);
 
 const arr = [1,2,3];
 
@@ -47,6 +50,6 @@ arr.push(4);
 
 const arr2 = new Array()
 
-console.log(Array.isArray(arr2))
+// console.log(Array.isArray(arr2))
 
 
