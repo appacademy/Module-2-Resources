@@ -9,7 +9,7 @@ Clone the starter from the **Download** link at the bottom of this page.
 
 ## Instructions
 
-Implement the following in the __employee.js__ file.
+Implement the following in the **employee.js** file.
 
 1. Create a class called `Employee`.
 
@@ -24,7 +24,7 @@ Implement the following in the __employee.js__ file.
 
 5. Export the `Employee` class from the file.
 
-To test your code, implement the following in the __test.js__ file.
+To test your code, implement the following in the **test.js** file.
 
 1. Import the `Employee` class.
 
