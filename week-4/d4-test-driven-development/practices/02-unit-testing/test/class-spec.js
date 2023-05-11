@@ -6,11 +6,13 @@ const { Word } = require("../class");
 describe("Word", function () {
   describe("Word constructor function", function () {
     it('should have a "word" property', function () {
-      expect.fail("replace with your code");
+      const string = new Word("string");
+      expect(string).to.have.property("word");
     });
 
     it('should set the "word" property when a new word is created', function () {
-      expect.fail("replace with your code");
+      const string = new Word("string");
+      expect(string.word).to.equal("string");
     });
   });
 
