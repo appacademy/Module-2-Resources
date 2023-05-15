@@ -13,17 +13,17 @@ function addNums(n) {
 function addManyNums(n) {
   // Fill this in
   let sum = 0;
-  const start = Date.now();
+  // const start = Date.now();
   for (let i = 1; i <= n; i++) {
     sum += addNums(i);
   }
-  const end = Date.now();
-  console.log(end - start);
+  // const end = Date.now();
+  // console.log(end - start);
   return sum;
 } // O(n^2)
 
-console.time("addManyNums");
-addManyNums(100000);
-console.timeEnd("addManyNums");
+// console.time("addManyNums");
+// addManyNums(100000);
+// console.timeEnd("addManyNums");
 
 module.exports = [addNums, addManyNums];
