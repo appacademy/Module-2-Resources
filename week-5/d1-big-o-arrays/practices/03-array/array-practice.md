@@ -80,7 +80,7 @@ Justification: Must iterate over entire array, returns a new array.
 
 Time complexity: O(n)
 Space complexity: O(1) *assuming the accumulator is not an array or object
-Justification: Must iterate over entire array, accumulator could be an integer, no space needed. 
+Justification: Must iterate over entire array, accumulator could be an integer, no space needed.
 
 [reduce on MDN][reduce]
 
