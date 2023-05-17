@@ -20,7 +20,7 @@ class LinkedList {
     newNode.next = this.head;
     this.head = newNode;
     this.length++;
-    this.print();
+    // this.print();
     return this.length;
   }
 
@@ -31,7 +31,7 @@ class LinkedList {
 
     if (!this.head) {
       this.head = newNode;
-      this.print();
+      // this.print();
     } else {
       let curr = this.head;
 
@@ -40,7 +40,7 @@ class LinkedList {
       }
 
       curr.next = newNode;
-      this.print();
+      // this.print();
     }
     return this.length;
   }
