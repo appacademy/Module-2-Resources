@@ -13,6 +13,7 @@ class DoublyLinkedList {
 
   addToHead(val) {
     // Your code here
+    this.print();
   }
 
   addToTail(val) {
@@ -28,7 +29,7 @@ class DoublyLinkedList {
       current = current.next;
     }
 
-    console.log("NULL");
+    console.log('NULL');
   }
 }
 
