@@ -58,13 +58,30 @@ class HashTable {
   insert(key, value) {
     // Your code here
     // grab the index
+    const index = this.hashMod(key);
     // grab a reference to this.data[index] => could be null
+    let currentKvp = this.data[index]; //=> could be null
     // while there is a current
-    // and the current node's key does NOT match the passed in key
-    // current node moves to the next node
+    while (currentKvp) {
+      // and the current node's key does NOT match the passed in key
+      if (currentKvp.key === key) {
+        break;
+      }
+      // current node moves to the next node
+      currentKvp = currentKvp.next;
+    }
     // if there is a current node
-    // overwrite the value and return
-    // other wise create new kvp and insert
+    if (currentKvp) {
+      // overwrite the value and return
+      currentKvp.value = value;
+    } else {
+      // other wise create new kvp and insert
+      const kvp = new KeyValuePair(key, value);
+      kvp.next = this.data[index];
+      this.data[index] = kvp;
+      this.count++;
+    }
+    return this.count;
   }
 }
 
