@@ -47,10 +47,24 @@ class HashTable {
 
   insertWithHashCollisions(key, value) {
     // Your code here
+    const kvp = new KeyValuePair(key, value);
+    const index = this.hashMod(key);
+
+    kvp.next = this.data[index];
+    this.data[index] = kvp;
+    this.count++;
   }
 
   insert(key, value) {
     // Your code here
+    // grab the index
+    // grab a reference to this.data[index] => could be null
+    // while there is a current
+    // and the current node's key does NOT match the passed in key
+    // current node moves to the next node
+    // if there is a current node
+    // overwrite the value and return
+    // other wise create new kvp and insert
   }
 }
 
