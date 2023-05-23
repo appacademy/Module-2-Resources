@@ -27,8 +27,8 @@ console.log({ moreNumbers });
 //   moreNumbers.sort((a, b) => a - b)
 // ); // ???
 
-moreNumbers.sort((a, b) => console.log({ a }, { b }));
-console.log(moreNumbers);
+// moreNumbers.sort((a, b) => console.log({ a }, { b }));
+// console.log(moreNumbers);
 
 // function wat(array) {
 //   for (let i = 0; i < array.length; i++) {
@@ -66,7 +66,7 @@ const petData = [
   { name: 'Venus', age: 3, animal: 'dog', description: 'husky' },
 ];
 
-// console.log('Not sorted: ', petData)
+console.log('Not sorted: ', petData);
 
 function sortPets() {
   return petData.sort((a, b) => {
