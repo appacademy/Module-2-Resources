@@ -175,12 +175,45 @@ class BinarySearchTree {
   breadthFirstTraversal() {
     // your code here
     // Breadth first will utilize an array based queue
+    const queue = [this.root]; // queue.push(this.root)
+    // console.log({ queue });
+    while (queue.length) {
+      // []
+      const curr = queue.shift(); // 7
+
+      // DO THE THING
+      console.log(curr.val); // 4,2,6,1,3,5,7
+      if (curr.left) queue.push(curr.left);
+      if (curr.right) queue.push(curr.right);
+      // console.log({ queue });
+    }
+    return this;
   }
 
+  /*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
+
   // Depth First Traversal - Iterative
-  depthFirstTraversal() {
+  depthFirstTraversal(currentNode = this.root) {
     // your code here
     // Depth first will utilize an array based stack
+    const stack = [this.root];
+
+    while (stack.length) {
+      // []
+      const curr = stack.pop(); // 1
+
+      // DO THE THING
+      console.log(curr.val); // 4,6,7,5,2,3,1
+      if (curr.left) stack.push(curr.left);
+      if (curr.right) stack.push(curr.right);
+    }
+    return this;
   }
 }
 
