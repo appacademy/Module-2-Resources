@@ -16,7 +16,7 @@ function printDepthFirst(start) {
 
   // process each node with a while loop
   while (stack.length) {
-    const curr = stack.pop(); //
+    const curr = stack.pop(); //[]
 
     // DO THE THING
     console.log(curr); // cl =>
