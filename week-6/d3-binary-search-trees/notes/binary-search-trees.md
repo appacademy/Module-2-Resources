@@ -16,7 +16,7 @@
 # Properties of Binary Search Trees
 - The tree starts at the root
 - nodes whose values are less than the current node go to the left
-- nodes whose values are more than the current node go to the right
+- nodes whose values are more than the current node go to the left
 - O (log n) search, insertion and deletion complexity
 - Each node has three properties: value, left and right
 

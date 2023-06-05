@@ -1,24 +1,32 @@
+
 const { expect } = require('chai');
 
 const DynamicArray = require('../dynamic-array.js');
 
-const assert = require('assert');
+const assert = require('assert')
 
 describe('Dynamic array', () => {
+
   let dynamicArr;
 
   beforeEach(function () {
+
     dynamicArr = new DynamicArray(8);
+
   });
 
   it('has data, capacity and length properties', () => {
+
     expect(dynamicArr.length).to.equal(0);
     expect(dynamicArr.capacity).to.equal(8);
     expect(dynamicArr.data instanceof Array).to.be.true;
     expect(dynamicArr.data.length).to.deep.equal(8);
+
   });
 
+
   it('can be initialized to different size', function () {
+
     dynamicArr = new DynamicArray(4);
 
     expect(dynamicArr.length).to.equal(0);
@@ -26,7 +34,9 @@ describe('Dynamic array', () => {
     expect(dynamicArr.data.length).to.deep.equal(4);
   });
 
+
   it('can read values in the array', function () {
+
     dynamicArr.data[0] = 99;
     dynamicArr.length = 1;
 
@@ -34,7 +44,10 @@ describe('Dynamic array', () => {
     expect(dynamicArr.read(1)).to.equal(undefined);
   });
 
+
+
   it('can add values to the front using unshift', function () {
+
     expect(dynamicArr.length).to.equal(0);
     expect(dynamicArr.capacity).to.equal(8);
 
@@ -45,6 +58,7 @@ describe('Dynamic array', () => {
     expect(dynamicArr.data[0]).to.deep.equal(1);
 
     dynamicArr.unshift(2);
+    
 
     expect(dynamicArr.length).to.equal(2);
     expect(dynamicArr.capacity).to.equal(8);
@@ -59,4 +73,6 @@ describe('Dynamic array', () => {
     expect(dynamicArr.data[1]).to.deep.equal(2);
     expect(dynamicArr.data[2]).to.deep.equal(1);
   });
+
 });
+

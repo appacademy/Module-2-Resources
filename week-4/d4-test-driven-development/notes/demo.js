@@ -1,51 +1,30 @@
-// try {
-//   function add(num1, num2) {
-//     console.log(num1 + num2 + num3);
-//   }
-
-//   add(1, 2);
-// } catch (error) {
-//   console.error(error.message);
+// funtion add(num1, num2){
+//     console.log(num1 + num2)
 // }
 
-// try {
-//   const puppy = "puppy";
-//   console.log(pupppy);
-// } catch (e) {
-//   console.error(e.message);
+// add(1, 2)
+
+// const puppy = "puppy";
+// console.log(pupppy); 
+
+// function sumDiv(n1, n2) {
+    
+    
 // }
 
-// try {
-//   let dog; // Remember unassigned variables are undefined!
-//   dog(); // TypeError: dog is not a function
-// } catch (e) {
-//   console.error(e.message);
-// }
+// console.log(sumDiv())
 
-// try {
-//   const puppy = "puppy";
-//   puppy = "apple"; // TypeError: Assignment to constant variable.
-// } catch (e) {
-//   console.error(e.message);
-// }
-
-function iterator(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    const num = arr[i];
-    console.log({ num });
-    try {
-      const res = num + num2;
-      arr[i] = res;
-    } catch (e) {
-      console.error(e.message);
-    }
-  }
-  return arr;
+function funStuff(str) {
+    const arr = str.split('')
+    return arr;
 }
 
-console.log(iterator([1, 2, 3]));
-// try {
+try {
+    funStuff(4)
+} catch (err) {
+    console.log(err.message)
+    // throw new Error('what are you doing?')
+}
 
-// } catch (e) {
-//   console.error(e.message);
-// }
+const taco = new Array(4).fill(null)
+console.log(taco)

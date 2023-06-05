@@ -5,98 +5,99 @@ justification for your answer. Assume `arr` is an array of length _n_.
 
 ## `arr.push()`
 
-Time complexity: O(1) *only when adding a single element
-Space complexity: O(1) *when a resize is not necessary
-Justification: Adding to the End of an array is a constant operation.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [push on MDN][push]
 
 
 ## `arr.pop()`
 
-Time complexity: O(1)
-Space complexity: O(1)
-Justification: Removing from the end of an array is constant, and happens in place
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [pop on MDN][pop]
 
 ## `arr.shift()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Must move each element to the left by one. Happens in place
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
+
 [shift on MDN][shift]
 
 ## `arr.unshift()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Must move each element to the right by one. Happens in place
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [unshift on MDN][unshift]
 
 ## `arr.splice()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Must copy all removed elements to a new array individually as well 
-as shift each element to fill the empty slots
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [splice on MDN][splice]
 
 ## `arr.slice()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Must copy each element to the new array. This creates a new array in memory.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [slice on MDN][slice]
 
 ## `arr.indexOf()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Worst case target is at the end or non-existent. Happens in place.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [indexOf on MDN][indexOf]
 
 ## `arr.map()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Must iterate over entire array, returns a new array.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [map on MDN][map]
 
 ## `arr.filter()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Must iterate over entire array, returns a new array.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [filter on MDN][filter]
 
 ## `arr.reduce()`
 
-Time complexity: O(n)
-Space complexity: O(1) *assuming the accumulator is not an array or object
-Justification: Must iterate over entire array, accumulator could be an integer, no space needed.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [reduce on MDN][reduce]
 
 ## `arr.reverse()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Must visit each element, happens in place.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [reverse on MDN][reverse]
 
 ## `[...arr]`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: See arr.splice()
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
+
 [spread on MDN][spread]
 
 [push]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
