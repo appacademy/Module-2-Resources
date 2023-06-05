@@ -9,14 +9,42 @@ class DoublyLinkedListNode {
 class DoublyLinkedList {
   constructor() {
     // Your code here
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
   }
 
   addToHead(val) {
     // Your code here
+    const newNode = new DoublyLinkedListNode(val);
+    this.length++;
+
+    if (!this.head /*|| !this.tail || !this.length*/) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head.prev = newNode;
+      this.head = newNode;
+    }
+    return this.length;
   }
 
   addToTail(val) {
     // Your code here
+    const newNode = new DoublyLinkedListNode(val);
+
+    if (!this.tail /* || !this.head || !this.length */) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.prev = this.tail;
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+
+    this.length++;
+    return this.length;
   }
 
   // You can use this function to help debug
@@ -28,7 +56,7 @@ class DoublyLinkedList {
       current = current.next;
     }
 
-    console.log("NULL");
+    console.log('NULL');
   }
 }
 
