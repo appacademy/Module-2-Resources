@@ -4,8 +4,8 @@ class Word {
   }
 
   removeVowels() {
-    let vowels = "aeiouAEIOU";
-    let newWord = "";
+    let vowels = 'aeiouAEIOU';
+    let newWord = '';
     for (let i = 0; i < this.word.length; i++) {
       let char = this.word[i];
       if (!vowels.includes(char)) {
@@ -16,8 +16,8 @@ class Word {
   }
 
   removeConsonants() {
-    let vowels = "aeiouAEIOU";
-    let newWord = "";
+    let vowels = 'aeiouAEIOU';
+    let newWord = '';
     for (let i = 0; i < this.word.length; i++) {
       let char = this.word[i];
       if (vowels.includes(char)) {
@@ -28,10 +28,10 @@ class Word {
   }
 
   pigLatin() {
-    let vowels = "aeiouAEIOU";
+    let vowels = 'aeiouAEIOU';
 
     if (vowels.includes(this.word[0])) {
-      return this.word + "yay";
+      return this.word + 'yay';
     }
 
     for (let i = 0; i < this.word.length; i++) {
@@ -39,7 +39,7 @@ class Word {
       if (vowels.includes(char)) {
         let first_half = this.word.slice(0, i);
         let second_half = this.word.slice(i);
-        return second_half + first_half + "ay";
+        return second_half + first_half + 'ay';
       }
     }
   }
