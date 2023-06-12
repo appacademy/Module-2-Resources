@@ -4,7 +4,7 @@ Big-O notation is used to describe the efficiency of algorithms with respect to
 the size of the input.
 
 Big picture ideas:
-1. function should be defined in terms of the size of the input
+1. The Big-O of a function should be defined in terms of the size of the input
 2. Smaller Big-O function is more desireable than a larger one. 
   -We want to use a minimal amount of time and space.
 3. Big-O describes the worst case scenario for our code
@@ -19,20 +19,30 @@ Big picture ideas:
       terms that don't depend on the size of the input.
 
     Unsimplified	        Big-O Simplified
-    T( 5 * n2 )	            O( n2 )
+    T( 5 * n^2 )	            O( n^2 )
     T( 100000 * n )	        O( n )
     T( n / 12 )	            O( n )
     T( 42 * n * log(n) )	O( n * log(n) )
     T( 12 )	                O( 1 )
 
     - Simplify Sums: if the function is a sum of many terms, we keep the term
-      with the largest growth rate and drop the other terms.
+      with the largest growth rate and drop the other terms.\
+      let var = something
+      let var2 = somethingElse
+      for () {
+
+      } // n
+      for () {
+
+      } // n
+
+      n + n => n
 
     Unsimplified	        Big-O Simplified
-    T( n3 + n2 + n )	    O( n3 )
-    T( log(n) + 2n )	    O( 2n )
+    T( n^3 + n^2 + n )	    O( n^3 )
+    T( log(n) + 2^n )	    O( 2^n )
     T( n + log(n) )	        O( n )
-    T( n! + 10n )	        O( n! )
+    T( n! + 10^n )	        O( n! )
 
 */
 
@@ -45,8 +55,8 @@ O(1)	                    constant
 O(log(n))	                logarithmic
 O(n)	                    linear
 O(n * log(n))	            loglinear, linearithmic, quasilinear
-O(nc) - O(n2), O(n3), etc.	polynomial
-O(cn) - O(2n), O(3n), etc.	exponential
+O(n^c) - O(n^2), O(n^3), etc.	polynomial
+O(c^n) - O(2^n), O(3^n), etc.	exponential
 O(n!)	                    factorial
 
 */
@@ -55,22 +65,21 @@ O(n!)	                    factorial
 //input.
 //Example:
 function constant(n) {
-    return n * 2 + 1;
+  return n * 2 + 1;
 }
 
 function constant2(n) {
-    for (let i = 1; i <= 100; i++){
-        console.log(i)
-    }
+  for (let i = 1; i <= 100; i++) {
+    console.log(i);
+  }
 }
 //O(1) => no matter how big n gets, the algorithm doesn't change in complexity
 
-
 //O(log(n)) - Logarithmic: display a sense of continually halving the size of
 //the input. Every time you double the size of the input, it only requires one
-//additional step. 
-    //-larger input sizes will only increase the number of steps required by 
-    //a small amount
+//additional step.
+//-larger input sizes will only increase the number of steps required by
+//a small amount
 //Ex:
 // O(log(n))
 function logarithmic1(n) {
@@ -144,8 +153,8 @@ Examples:
 // O(n^2)
 function quadratic(n) {
   for (let i = 1; i <= n; i++) {
-      for (let j = 1; j <= n; j++) {
-        //do some stuff
+    for (let j = 1; j <= n; j++) {
+      //do some stuff
     }
   }
 }
@@ -154,8 +163,8 @@ function quadratic(n) {
 function cubic(n) {
   for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= n; j++) {
-        for (let k = 1; k <= n; k++) {
-          //do some stuff
+      for (let k = 1; k <= n; k++) {
+        //do some stuff
       }
     }
   }
@@ -203,4 +212,3 @@ function factorial(n) {
     factorial(n - 1);
   }
 }
-
