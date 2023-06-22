@@ -8,7 +8,27 @@ const adjList = {
 };
 
 function aShortestPath(start, end) {
+  // start === 1, end === 3
   // Your code here
+  const queue = [[start]]; // [[[1,5,4]]
+  const visited = new Set([start]); // {1,2,5,3}
+
+  while (queue.length) {
+    const currentPath = queue.shift(); // [1,2,3]
+    const currentNode = currentPath[currentPath.length - 1]; // 3
+
+    // DO THE THING
+    if (currentNode === end) return currentPath; // [1,2,3]
+    //           i
+    adjList[currentNode].forEach((neighbor) => {
+      // [1, 2, 4]
+      if (!visited.has(neighbor)) {
+        queue.push([...currentPath, neighbor]);
+        visited.add(neighbor);
+      }
+    });
+  }
+  return false;
 }
 
 console.log('First Test:');
