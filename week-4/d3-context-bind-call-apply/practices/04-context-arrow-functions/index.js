@@ -9,4 +9,7 @@ function greetAfterNameChange(changeName, newName) {
 }
 
 greetAfterNameChange(michelle.changeName, 'Elle');
-  // should print out: Hi my name is Elle
+// const shane = new User('shane');
+// console.log(michelle);
+// console.log(shane);
+// should print out: Hi my name is Elle

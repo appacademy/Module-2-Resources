@@ -1,4 +1,3 @@
-
 // class Fruit {
 //   constructor(name) {
 //     this.name = name;
@@ -29,7 +28,6 @@
 // const eat = apple.eat;
 // eat();
 
-
 /**************** */
 
 // function greeting(...messages) {
@@ -44,7 +42,6 @@
 
 // const derekMessages = greeting.bind(derek, "Hello class!");
 // console.log(derekMessages("Goodbye class!"));
-
 
 /***************** */
 
@@ -64,8 +61,8 @@
 
 /******************* */
 
-const sum = (...nums) => {
-  return nums.reduce((acc, num) => acc + num);
-};
+// const sum = (...nums) => {
+//   return nums.reduce((acc, num) => acc + num);
+// };
 
-console.log(sum(1, 2, 3));
+// console.log(sum(1, 2, 3));

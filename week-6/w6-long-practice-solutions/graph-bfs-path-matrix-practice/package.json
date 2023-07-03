@@ -1,0 +1,16 @@
+{
+  "name": "graph-bfs-path-matrix",
+  "version": "1.0.0",
+  "description": "The solution for the graph-bft-path-matrix traversal practice.",
+  "main": "bfs-path.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "App Academy Academics",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  },
+  "private": true
+}
