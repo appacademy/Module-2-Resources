@@ -2,15 +2,15 @@
 Context
 - every invoked function will have a context
 - refers to the value of the keyword `this` within a function
-- `this` is dependent to how a function is invoked
+- `this` refers to how a function is invoked
 */
 
-// function sayHello(name) {
-//   console.log(this); // Global object in node, window in browser
-//   console.log('hello ' + name);
-// }
+function sayHello(name) {
+	console.log(this) // Global object in node, window in browser
+	console.log('hello ' + name)
+}
 
-// sayHello('tony'); // hello tony
+sayHello('tony') // hello tony
 /*
 
 Code Summary
@@ -21,19 +21,19 @@ Code Summary
 
 // METHOD STYLE INVOCATION
 
-// const narwhal = {
-//   name: 'Wally',
-//   age: 20,
-//   whatIsThis: function () {
-//     console.log(this);
-//   },
-//   sayAge: function () {
-//     console.log(`my name is ${this.name} and i am ${this.age}`);
-//   },
-// };
+const narwhal = {
+	name: "Wally",
+	age: 20,
+	whatIsThis: function () {
+		console.log(this);
+	},
+	sayAge: function () {
+		console.log(`my name is ${this.name} and i am ${this.age}`);
+	}
+};
 
-// narwhal.whatIsThis(); // { name: 'Wally', age: 20, ... }
-// narwhal.sayAge(); // my name is Wally and i am 20
+narwhal.whatIsThis(); // { name: 'Wally', age: 20, ... }
+narwhal.sayAge(); // my name is Wally and i am 20
 
 /*
 
@@ -49,19 +49,19 @@ Code Summary
 
 // PROBLEMS WITH CONTEXT
 
-// const narwhal = {
-//   name: 'Wally',
-//   age: 20,
-//   sayAge: function () {
-//     console.log(this);
-//     console.log(`my name is ${this.name} and i am ${this.age}`);
-//   },
-// };
 
-// let sayAgeFunc = narwhal.sayAge;
+const narwhal = {
+	name: "Wally",
+	age: 20,
+	sayAge: function () {
+		console.log(`my name is ${this.name} and i am ${this.age}`);
+	}
+};
 
-// // console.log(this); // Global object
-// sayAgeFunc(); // 'my name is undefined and i am undefined'
+let sayAgeFunc = narwhal.sayAge;
+
+console.log(this); // Global object
+sayAgeFunc() // 'my name is undefined and i am undefined'
 
 /*
 
@@ -78,26 +78,15 @@ Code Summary
 // HOW TO ENSURE OUR CONTEXT NEVER CHANGES
 
 const narwhal = {
-  name: 'Wally',
-  age: 20,
-  sayAge: function () {
-    console.log(`my name is ${this.name} and i am ${this.age}`);
-  },
+	name: "Wally",
+	age: 20,
+	sayAge: function () {
+		console.log(`my name is ${this.name} and i am ${this.age}`);
+	}
 };
 
-const shane = {
-  name: 'Shane',
-  age: 41,
-};
-
-let sayAgeFunc = narwhal.sayAge;
-
-let sayAgeBound = sayAgeFunc.bind(shane);
-
-sayAgeBound();
-
-// let boundSayAgeFunc = narwhal.sayAge.bind(narwhal);
-// boundSayAgeFunc(); // my name is Wally and i am 20
+let boundSayAgeFunc = narwhal.sayAge.bind(narwhal);
+boundSayAgeFunc(); // my name is Wally and i am 20
 /*
 
 Code Summary
@@ -111,25 +100,26 @@ Code Summary
 
 // BINDING MULTIPLE CONTEXTS TO CREATE MULTIPLE FUNCS
 
-// const narwhal = {
-// 	name: 'wally',
-// 	age: 20
-// }
+const narwhal = {
+	name: 'wally',
+	age: 20
+}
 
-// const dog = {
-// 	name: 'bodhi',
-// 	age: 5
-// }
+const dog = {
+	name: 'bodhi',
+	age: 5
+}
 
-// function sayAge() {
-// 	console.log(`my name is ${this.name} and i am ${this.age}`);
-// }
+function sayAge() {
+	console.log(`my name is ${this.name} and i am ${this.age}`);
+}
 
-// let narwhalBoundFunc = sayAge.bind(narwhal);
-// let dogBoundFunc = sayAge.bind(dog);
+let narwhalBoundFunc = sayAge.bind(narwhal);
+let dogBoundFunc = sayAge.bind(dog);
 
-// narwhalBoundFunc(); // my name is wally and i am 20
-// dogBoundFunc(); // my name is bodhi and i am 5
+narwhalBoundFunc(); // my name is wally and i am 20
+dogBoundFunc(); // my name is bodhi and i am 5
+
 
 /*
 Code Summary
@@ -146,6 +136,7 @@ Common Misconceptions
 - context: the value of `this` 
 */
 
+
 /*
 # CONTEXT CODE DEMO
 
@@ -157,12 +148,12 @@ Context
 
 // FUNCTION STYLE INVOCATION
 
-// function multiplyByFive(num) {
-// 	console.log(this);
-// 	return num * 5
-// }
+function multiplyByFive(num) {
+	console.log(this);
+	return num * 5
+}
 
-// multiplyByFive(2) // GLOBAL OBJECT
+multiplyByFive(2) // GLOBAL OBJECT
 
 /*
 Code Summary
@@ -170,23 +161,25 @@ Code Summary
   context so the context, i.e `this`, will always be the global object
 */
 
+
 // METHOD STYLE INVOCATION
 
-// const pony = {
-//   name: "Lucy",
-//   whatIsThis: function () {
-//     console.log(this);
-//   },
-//   sayName: function () {
-//     console.log("Hello my name is " + this.name);
-//   },
-//   changeName: function (name) {
-//     this.name = name;
-//   }
-// };
+const pony = {
+  name: "Lucy",
+  whatIsThis: function () {
+    console.log(this);
+  },
+  sayName: function () {
+    console.log("Hello my name is " + this.name);
+  },
+  changeName: function (name) {
+    this.name = name;
+  }
+};
 
-// pony.whatIsThis() // { name: 'lucy', ... }
-// pony.sayName(); // 'hello my name is lucy'
+pony.whatIsThis() // { name: 'lucy', ... }
+pony.sayName(); // 'hello my name is lucy'
+
 
 /*
 Code Summary
@@ -198,17 +191,22 @@ Code Summary
 - `this.name` innside the `sayName` method is going to be `pony.name`
 */
 
+
+
+
 // ISOLATING A METHOD CAUSES METHOD TO LOSE ITS CONTEXT
 
-// const pony = {
-//   name: "Lucy",
-//   sayName: function () {
-//     console.log("Hello my name is " + this.name);
-//   }
-// };
+const pony = {
+  name: "Lucy",
+  sayName: function () {
+    console.log("Hello my name is " + this.name);
+  }
+};
 
-// let sayNameFunc = pony.sayName;
-// sayNameFunc(); // Hello my name is undefined
+let sayNameFunc = pony.sayName;
+sayNameFunc(); // Hello my name is undefined
+
+
 
 /*
 Code Summary
@@ -221,17 +219,19 @@ Code Summary
 - the global object does not have a `name` property so the value is undefined
 */
 
+
+
 // BINDING CONTEXT TO FUNCTIONS SO CONTEXT IS SET
 
-// const pony = {
-//   name: "Lucy",
-//   sayName: function () {
-//     console.log("Hello my name is " + this.name);
-//   }
-// };
+const pony = {
+  name: "Lucy",
+  sayName: function () {
+    console.log("Hello my name is " + this.name);
+  }
+};
 
-// let boundSayNameFunc = pony.sayName.bind(pony);
-// boundSayNameFunc(); // Hello my name is Lucy
+let boundSayNameFunc = pony.sayName.bind(pony);
+boundSayNameFunc(); // Hello my name is Lucy
 
 /*
 Code Summary
@@ -244,24 +244,26 @@ Code Summary
 - `this` will reference the `pony` object instead of the global object
 */
 
+
+
 // CAN BIND FUNCS TO WHATEVER OBJECT WE LIKE
 
-// const pony = {
-//   name: "Lucy",
-//   sayName: function () {
-//     console.log("Hello my name is " + this.name);
-//   }
-// };
+const pony = {
+  name: "Lucy",
+  sayName: function () {
+    console.log("Hello my name is " + this.name);
+  }
+};
 
-// const lizard = {
-//   name: "Lionel"
-// };
+const lizard = {
+  name: "Lionel"
+};
 
-// let ponyNameFunc = pony.sayName.bind(pony);
-// ponyNameFunc(); // Hello my name is Lucy
+let ponyNameFunc = pony.sayName.bind(pony);
+ponyNameFunc(); // Hello my name is Lucy
 
-// let lizardSayName = pony.sayName.bind(lizard);
-// lizardSayName(); // Hello my name is Lionel
+let lizardSayName = pony.sayName.bind(lizard);
+lizardSayName(); // Hello my name is Lionel
 
 /*
 
@@ -282,51 +284,57 @@ Code Summary
 
 // FUNCTION STYLE SYNTAX
 
-// function sayHello(name) {
-// 	return ` hello ${name}`
-// }
+function sayHello(name) {
+	return ` hello ${name}`
+}
 
-// // FAT ARROW SYNTAX
+// FAT ARROW SYNTAX
 
-// // non implicit return
-// const sayHello = (name) => {
-// 	return ` hello ${name}`
-// }
+// non implicit return
+const sayHello = (name) => {
+	return ` hello ${name}`
+}
 
-// // implicit return
-// const sayHello = (name) => `hello ${name}`
+// implicit return
+const sayHello = (name) => `hello ${name}`
+
+
 
 /*Code Summary
 - fat arrows without curly brackets have an implicit return
 - fat arrows with curly braces need an explicit return
 */
 
+
+
+
 // CONTEXT WITH ARROW FUNCS
 
-// const pony = {
-// 	name: "Lucy",
+const pony = {
+	name: "Lucy",
 
-// 	wrappedSayName: function () {
-// 		return function () {
-// 			console.log(this); // GLOBAL
-// 			console.log("Hello my name is " + this.name);
-// 		}
-// 	},
+	wrappedSayName: function () {
+		return function () {
+			console.log(this); // GLOBAL
+			console.log("Hello my name is " + this.name);
+		}
+	},
 
-// 	wrappedArrowSayName: function () {
-// 		console.log(this); // { name: 'lucy', ... }
-// 		return () => {
-// 			console.log(this); // { name: 'lucy', ... }
-// 			console.log("Hello my name is " + this.name);
-// 		};
-// 	}
-// };
+	wrappedArrowSayName: function () {
+		console.log(this); // { name: 'lucy', ... }
+		return () => {
+			console.log(this); // { name: 'lucy', ... }
+			console.log("Hello my name is " + this.name);
+		};
+	}
+};
 
-// let wrapped = pony.wrappedSayName();
-// let arrowWrapped = pony.wrappedArrowSayName();
+let wrapped = pony.wrappedSayName();
+let arrowWrapped = pony.wrappedArrowSayName();
 
-// wrapped(); // Hello my name is undefined
-// arrowWrapped() // Hello my name is lucy
+wrapped(); // Hello my name is undefined
+arrowWrapped() // Hello my name is lucy
+
 
 /*Code Summary
 - arrow funcs automatically bind context to the context that they are defined in,
@@ -343,29 +351,30 @@ Code Summary
 	- thus, we can invoke the `arrowWrapped` func function style and keep the context
 	  of the pony
 */
-// class Dog {
-//     constructor(name, age, breed) {
-//         this.name = name;
-//         this.age = age;
-//         this.breed = breed;
+class Dog {
+    constructor(name, age, breed) {
+        this.name = name;
+        this.age = age;
+        this.breed = breed;
+        
+    }
+    print() {
+        console.log(this)
+    }
 
-//     }
-//     print() {
-//         console.log(this)
-//     }
+    static printDogs(dogs) {
+        return dogs.forEach(dog => {
+            console.log(dog)
+        })
+    }
+    
+}
 
-//     static printDogs(dogs) {
-//         return dogs.forEach(dog => {
-//             console.log(dog)
-//         })
-//     }
+let newDog = new Dog('Badger', .5, 'Great Pyrenees')
+newDog.print() //this refers to the newDog object that is an instance of Dog class;
 
-// }
+let printDog = newDog.print();
+printDog()
 
-// let newDog = new Dog('Badger', .5, 'Great Pyrenees')
-// newDog.print() //this refers to the newDog object that is an instance of Dog class;
+console.log(this)
 
-// let printDog = newDog.print();
-// printDog()
-
-// console.log(this)
