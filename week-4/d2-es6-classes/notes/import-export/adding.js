@@ -1,6 +1,8 @@
-exports.adding = function adding(a, b) {
-    return a + b;
+console.log(module.exports)
+exports.adding = function adding(a, b) { 
+  return a + b;
 }
+console.log(module.exports)
 exports.subtraction = function subtraction(a, b) {
   if (a > b) return a - b;
   return b - a;
