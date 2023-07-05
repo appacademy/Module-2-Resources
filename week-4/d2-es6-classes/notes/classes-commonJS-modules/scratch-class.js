@@ -25,6 +25,7 @@ class User {
     this.email = email;
     this.password = password;
     this.friends = [];
+    // console.log('hi from premium user *********************')
   }
 
   sayHello() {
@@ -42,14 +43,25 @@ class User {
   }
 }
 
+class PremiumUser extends User {
+  constructor(username, email, startingFunds=5) {
+    super(username, email)
+    this.funds = startingFunds
+  }
+}
 
-const shane = new User('shane', 'shane@wilkey.com', 'password')
-const gary = new User('gary', 'gary@song.com', 'not-garys-password')
+const shane = new PremiumUser('shane', 'shane@wilkey.com', 5);
 
-gary.addFriend(shane)
-console.log(gary)
-shane.addFriend(gary)
-console.log(shane);
+console.log(shane)
+// const shane = new User('shane', 'shane@wilkey.com', 'password')
+// const gary = new User('gary', 'gary@song.com', 'not-garys-password')
+// shane.addFriend(gary);
+// console.log(shane)
+
+// gary.addFriend(shane)
+// console.log(gary)
+// shane.addFriend(gary)
+// console.log(shane);
 
 // User.introduceFriends([gary, shane])
 // console.log(shane2.password);
