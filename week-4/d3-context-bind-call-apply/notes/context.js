@@ -51,30 +51,30 @@ Code Summary
 // // PROBLEMS WITH CONTEXT
 
 
-const narwhal = {
-	name: "Wally",
-	age: 20,
-	sayAge: function () {
-    console.log(`my name is ${this.name} and i am ${this.age}`);
-    console.log(this); // Global object
-	}
-};
+// const narwhal = {
+// 	name: "Wally",
+// 	age: 20,
+// 	sayAge: function () {
+//     console.log(`my name is ${this.name} and i am ${this.age}`);
+//     console.log(this); // Global object
+// 	}
+// };
 
-function sayHello(arg1, arg2) {
-  console.log(`hello ${this.name}, ${arg1}, ${arg2}`)
-}
+// function sayHello(arg1, arg2) {
+//   console.log(`hello ${this.name}, ${arg1}, ${arg2}`)
+// }
 
 
-const shane = {
-  name: 'shane',
-  age: 20
-}
-const sayHelloShane = sayHello.bind(shane, 'hello', 'world')
-sayHelloShane('something')
+// const shane = {
+//   name: 'shane',
+//   age: 20
+// }
+// const sayHelloShane = sayHello.bind(shane, 'hello', 'world')
+// sayHelloShane('something')
 
-let sayAgeFunc = narwhal.sayAge.bind(shane);
+// let sayAgeFunc = narwhal.sayAge.bind(shane);
 
-sayAgeFunc() // 'my name is undefined and i am undefined'
+// sayAgeFunc() // 'my name is undefined and i am undefined'
 
 // /*
 
