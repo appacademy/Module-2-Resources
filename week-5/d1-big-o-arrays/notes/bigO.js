@@ -45,8 +45,8 @@ O(1)	                    constant
 O(log(n))	                logarithmic
 O(n)	                    linear
 O(n * log(n))	            loglinear, linearithmic, quasilinear
-O(nc) - O(n2), O(n3), etc.	polynomial
-O(cn) - O(2n), O(3n), etc.	exponential
+O(n^c) - O(n^2), O(n^3), etc.	polynomial
+O(c^n) - O(2^n), O(3^n), etc.	exponential
 O(n!)	                    factorial
 
 */
@@ -59,10 +59,14 @@ function constant(n) {
 }
 
 function constant2(n) {
+    //         1     (1 * 100)  (1 * 100)
     for (let i = 1; i <= 100; i++){
+        // (1 * 100)
         console.log(i)
     }
-}
+} // T(1 + (1 * 100) + (1 * 100) + (1 + 100)) 
+  // T(1 + 100 + 100 + 100)
+  // T(1 + 1 + 1 + 1)
 //O(1) => no matter how big n gets, the algorithm doesn't change in complexity
 
 
@@ -95,15 +99,23 @@ Examples:
 */
 // O(n)
 function linear1(n) {
+  //     1        (1 * n)  (1 * n)
   for (let i = 1; i <= n; i++) {
+    // (1 * n)
     console.log(i);
   }
-}
+} // T(1 + (1*n) + (1*n) + (1*n))
+  // T(1 + n + n + n)
+  // T(n + n + n)
 
 // O(n), where n is the length of the array
 function linear2(array) {
   for (let i = 0; i < array.length; i++) {
     console.log(i);
+  }
+
+  for (let j = 0; j < array.length; j++) {
+    console.log(j)
   }
 }
 
