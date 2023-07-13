@@ -29,14 +29,25 @@ class HashTable {
 
   hashMod(key) {
     // Your code here
-    let hash = this.hash(key);
-    let index = hash % this.capacity;
-    console.log({index})
-    return index
+    // let hash = this.hash(key);
+    // let index = hash % this.capacity;
+    // console.log({index})
+    // return index
+    return this.hash(key) % this.capacity;
   }
 
   insertNoCollisions(key, value) {
     // Your code here
+    const newKvp = new KeyValuePair(key, value);
+    const index = this.hashMod(key);
+
+    if (this.data[index]) {
+      throw new Error('hash collision or same key/value pair already exists!')
+    }
+
+    this.data[index] = newKvp;
+    this.count++;
+    return this.count;
   }
 
   insertWithHashCollisions(key, value) {
