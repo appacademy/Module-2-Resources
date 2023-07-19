@@ -7,14 +7,46 @@ class TreeNode {
   }
 }
 
+/*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
+
 class BinarySearchTree {
 
   constructor() {
     // Your code here
+    this.root = null;
   }
 
   insert(val, currentNode=this.root) {
+    const node = new TreeNode(val);
     // Your code here
+    if (!this.root) {
+      this.root = node;
+      return this;
+    }
+
+    if (val < currentNode.val) {
+      if (!currentNode.left) {
+        currentNode.left = node;
+        return this;
+      } else {
+        return this.insert(val, currentNode.left)
+      }
+    }
+
+    if (val > currentNode.val) {
+      if (!currentNode.right) {
+        currentNode.right = node;
+        return this;
+      } else {
+        return this.insert(val, currentNode.right);
+      }
+    }
   }
 
   search(val) {
