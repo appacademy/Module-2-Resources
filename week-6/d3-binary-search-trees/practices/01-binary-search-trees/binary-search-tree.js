@@ -84,28 +84,92 @@ class BinarySearchTree {
       : this.search(val, curr.right);
   }
 
+  // The traversal strategy the programmer selects depends on the
+  // specific needs of the algorithm being designed.
+  // The goal is speed, so pick the strategy that brings you the nodes
+  //  you require the fastest.
+
+  // If you know you need to explore the roots before inspecting
+  // any leaves, you pick pre-order because you will encounter
+  // all the roots before all of the leaves.
+
+  // If you know you need to explore all the leaves before any nodes,
+  //  you select post-order because you don't waste any time inspecting
+  // roots in search for leaves.
+
+  // If you know that the tree has an inherent sequence in the nodes,
+  // and you want to flatten the tree back into its original sequence,
+  // than an in-order traversal should be used.
+  // The tree would be flattened in the same way it was created.
+
+  // A pre-order or post-order traversal might not unwind the tree back
+  // into the sequence which was used to create it.
+
+
+  /*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
+  // curr = 2
+  // cl => 4,2,1,3,6,5,7
   // self, left, right
   preOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return;
     // DO THE THANG
+    console.log(currentNode.val);
     // Traverse Left
+    this.preOrderTraversal(currentNode.left);
     // Traverse Right
+    this.preOrderTraversal(currentNode.right);
   }
+
+    /*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
+  // curr = 7
+  // cl => 1,2,3,4,5,6,7
 
   // left, self, right
   inOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return;
     // Traverse Left
+    this.inOrderTraversal(currentNode.left);
     // DO THE THANG
+    console.log(currentNode.val);
     // Traverse Right
+    this.inOrderTraversal(currentNode.right);
   }
+
+      /*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
+
+  // curr = 4
+  // cl => 1,3,2,5,7,6,4
 
   // left, right, self
   postOrderTraversal(currentNode = this.root) {
-    // Your code here\
+    // Your code here
+    if (!currentNode) return;
     // Traverse Left
+    this.postOrderTraversal(currentNode.left)
     // Traverse Right
+    this.postOrderTraversal(currentNode.right)
     // DO THE THANG
+    console.log(currentNode.val);
   }
 
     // Breadth First Traversal - Iterative
@@ -119,17 +183,17 @@ class BinarySearchTree {
   }
 }
 
-const bst = new BinarySearchTree();
+// const bst = new BinarySearchTree();
 
-bst.insert(4);
-bst.insert(2);
-bst.insert(6);
-bst.insert(1);
-bst.insert(3);
-bst.insert(5);
-bst.insert(7);
+// bst.insert(4);
+// bst.insert(2);
+// bst.insert(6);
+// bst.insert(1);
+// bst.insert(3);
+// bst.insert(5);
+// bst.insert(7);
 
-console.log(bst.search2(3))
-console.log(bst.search2(33))
+// console.log(bst.search2(3))
+// console.log(bst.search2(33))
 
 module.exports = { BinarySearchTree, TreeNode };
