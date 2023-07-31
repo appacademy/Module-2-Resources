@@ -13,7 +13,7 @@ running the command `node phase-3.js`
 
 1. Copy your `addNums10` and `addManyNums10` code into `addNums10Timing` and
    `addManyNums10Timing`.
-2. Use `console.time()`, `console.timeLog()` and `console.timeStop()` to print
+2. Use `console.time()`, `console.timeLog()` and `console.timeEnd()` to print
    timestamps after each call of `addNums` and `addManyNums`
 3. Use `Date.now()` to print the amount of milliseconds each call takes to
    execute.
