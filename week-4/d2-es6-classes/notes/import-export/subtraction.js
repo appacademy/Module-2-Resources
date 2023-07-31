@@ -3,6 +3,6 @@ function subtraction(a, b) {
     return b - a;
 }
 
-// module.exports = subtraction;
+module.exports = subtraction;
 // module.exports.taco = subtraction;
 // module.exports = {taco: subtraction}

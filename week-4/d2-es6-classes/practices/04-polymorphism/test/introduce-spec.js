@@ -44,7 +44,7 @@ describe("Teacher class", () => {
   });
 
   describe("Teacher instance method introduce", () => {
-      it("should call the unique introduce method for Teacher", () => {
+      it("should call the unique introduce method for Student", () => {
         expect(teacher1.introduce()).to.eql('Hello. I am susan jones, and I have been teaching biology for 5 years.')
     });
   });

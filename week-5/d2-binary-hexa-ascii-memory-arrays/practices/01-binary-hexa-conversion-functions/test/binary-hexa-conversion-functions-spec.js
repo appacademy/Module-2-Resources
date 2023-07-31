@@ -77,7 +77,7 @@ describe('binaryToDecimal: binary to decimal conversion', () => {
       expect(binaryToDecimal(binaryArg)).to.equal(decimalRes)
   })
 
-  it('Convert 0b11110000 to 241', () => {
+  it('Convert 0b11110000 to 240', () => {
       binaryArg = '0b11110001'
       decimalRes = 241
 
