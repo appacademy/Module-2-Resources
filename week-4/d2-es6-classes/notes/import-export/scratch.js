@@ -39,19 +39,19 @@
 // console.log(charlie)
 
 class User {
-  // static count = 0;
+  static count = 0;
   constructor(username, age) {
     this.username = username;
     this.age = age;
     this.friends = [];
-    // count++
+    User.count++
   }
   sayHello() {
     // console.log(this)
     console.log(`Hello! My name is ${this.username}`)
   }
 
-  static introduceUsers([users]) {
+  static introduceUsers(users) {
     // console.log(this)
     users.forEach(user => user.sayHello());
   }
@@ -62,7 +62,7 @@ const charlie = new User('charlie', 25);
 // console.log(shane)
 // shane.sayHello()
 // // console.log(charlie)
-charlie.sayHello()
+// charlie.sayHello()
 
 User.introduceUsers([shane, charlie])
-User.count
+console.log(User.count)
