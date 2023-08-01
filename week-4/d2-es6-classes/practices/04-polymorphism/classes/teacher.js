@@ -23,6 +23,7 @@ class Teacher extends Person {
 const shane = new Teacher('shane', 'wilkey', 'swe', 2);
 console.log(shane.introduce())
 
+
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
 
