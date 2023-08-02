@@ -6,6 +6,7 @@ class GradeBook {
   getAverage(bonus = 0) {
     let sum = 0;
     let graded = 0;
+    console.log("THIS", this)
     this.gradeList.forEach((grade) => {
       sum += grade;
       graded++;

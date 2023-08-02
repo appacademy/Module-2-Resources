@@ -40,6 +40,13 @@ class Film {
         console.log("THIS", this)
         return `${theaterName}'s guests watched ${this.filmName}`
     }
+
+    showFilm2 = (theaterName) => {
+        // Method will not allow you to use global obj as context
+        console.log("THIS", this)
+        return `${theaterName}'s guests watched ${this.filmName}`
+    }
+
 }
 
 const ttmFilm = new Film("Talk to Me", 2023)
@@ -119,8 +126,8 @@ const eeShowFilm = ttmFilm.showFilm.bind(eeFilm)
 // if you try to pass in other unexpected arguments during the bound call,
 // they won't be used
 const ttmSawFilm2 = sawFilm.bind(ttmFilm, "crazy")
-console.log(ttmSawFilm2()) // My friends and I saw the crazy film, Talk to Me
-console.log(ttmSawFilm2("ridiculous")) // My friends and I saw the crazy film, Talk to Me
+// console.log(ttmSawFilm2()) // My friends and I saw the crazy film, Talk to Me
+// console.log(ttmSawFilm2("ridiculous")) // My friends and I saw the crazy film, Talk to Me
 
 
 function sawFilmMoreOpinions(opinion, opinion2) {
@@ -129,5 +136,85 @@ function sawFilmMoreOpinions(opinion, opinion2) {
 }
 
 const ttmSawFilm3 = sawFilmMoreOpinions(ttmFilm, "crazy")
-console.log(ttmSawFilm3()) // My friends and I saw the crazy and undefined film, Talk to Me
-console.log(ttmSawFilm3("ridiculous")) // My friends and I saw the crazy and ridiculous film, Talk to Me
+// console.log(ttmSawFilm3()) // My friends and I saw the crazy and undefined film, Talk to Me
+// console.log(ttmSawFilm3("ridiculous")) // My friends and I saw the crazy and ridiculous film, Talk to Me
+
+
+// Arrow Context
+const sawFilm2 = (opinion) => {
+    console.log("this.filmname: ", this.filmName) // undefined
+    console.log("THIS", this) // {}
+    // this.filmName = "Whatever"
+    // console.log(this)
+
+    return `My friends and I saw the ${opinion} film, ${this.filmName}`
+}
+
+// console.log(sawFilm2("hilarious"))
+
+let menuFilm = {
+    filmName: "The Menu"
+}
+
+const menuSawFilm2 = sawFilm2.bind(menuFilm)
+// console.log(menuSawFilm2("interesting"))
+// My friends and I saw the interesting film, undefined
+
+
+
+
+let ttmShowFilm2 = ttmFilm.showFilm2
+// console.log(ttmShowFilm2("The Best Theater"))
+/*
+THIS Film {
+  showFilm2: [Function: showFilm2],
+  filmName: 'Talk to Me',
+  releaseYear: 2023
+}
+The Best Theater's guests watched Talk to Me
+*/
+
+let menuShowFilm2 = ttmFilm.showFilm2.bind(menuFilm)
+// console.log(menuShowFilm2("Briana"))
+/*
+THIS Film {
+  showFilm2: [Function: showFilm2],
+  filmName: 'Talk to Me',
+  releaseYear: 2023
+}
+Briana's guests watched Talk to Me
+*/
+
+
+let menu2 = new Film("The Menu", 2022)
+
+let menuInstanceShowFilmTtm = ttmFilm.showFilm2.bind(menu2)
+// console.log(menuInstanceShowFilmTtm("Briana"))
+
+/*
+THIS Film {
+  showFilm2: [Function: showFilm2],
+  filmName: 'Talk to Me',
+  releaseYear: 2023
+}
+Briana's guests watched Talk to Me
+*/
+
+const hello = () => {
+    console.log("HELLO WORLD")
+    console.log(this)
+    return "YAYA"
+}
+
+hello()
+// HELLO WORLD
+// {}
+
+hello.call(menu2)
+// HELLO WORLD
+// {}
+
+setTimeout(() => {
+    console.log(this)
+}, 500)
+// {}
