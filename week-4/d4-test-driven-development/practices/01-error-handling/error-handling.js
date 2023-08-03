@@ -1,20 +1,51 @@
 // 1.
-function sum(array) {
-  let sum = 0;
-  for (let i = 0; i < array.length; i++) {
-    sum += array[i];
-  }
-  return sum;
-}
+// function sum(array) {
+//   let sum = 0;
+//   try {
+//     for (let i = 0; i < array.length; i++) {
+//       sum += array[i];
+//     } 
+//   } catch (e) {
+//     if (e instanceof TypeError) {
+//       console.error(e.message)
+//     } else {
+//       console.log('made it here')
+//     }
 
-let res = sum(null);
-console.log(res);
+//   }
+//   return sum;
+// }
+
+// // let res = sum(null);
+// let res = sum([1,2,3]);
+// console.log(res);
+// try {
+// } catch (error) {
+//   console.error(error.name)
+// }
 
 // 2.
 // tests
-sayName("Alex");
-sayName(1);
 // Your code here
+// function sayName(name) {
+//   if (typeof name !== 'string') {
+//     throw new TypeError("Invalid name! Must be a string!")
+//   }
+//   console.log(name)
+// }
+
+// class StringError extends Error {
+//   constructor(...params) {
+//     super(...params)
+//   }
+// }
+
+// try {
+//   sayName("Alex");
+//   sayName(1);
+// } catch (e) {
+//   console.error(e.message)
+// }
 
 // 3.
 function greet(greeting) {
@@ -23,4 +54,11 @@ function greet(greeting) {
   }
 
   console.log(greeting);
+}
+
+try {
+  greet('Howdy')
+  greet(null)
+} catch {
+  console.error('Hello World')
 }
