@@ -10,6 +10,7 @@ class LinkedList {
     // Your code here
     this.head = null;
     this.length = 0;
+    // this.tail = null
   }
 
   addToHead(val) {
