@@ -47,9 +47,9 @@ class HashTable {
   insertNoCollisions(key, value) {
     // Your code here
     const idx = this.hashMod(key)
-    console.log({key, idx})
+    // console.log({key, idx})
 
-    console.log(this.data[idx], " DATA at idx \n\n")
+    // console.log(this.data[idx], " DATA at idx \n\n")
     if (this.data[idx]) {
       throw new Error('hash collision or same key/value pair already exists!')
     }
@@ -65,10 +65,46 @@ class HashTable {
 
   insertWithHashCollisions(key, value) {
     // Your code here
+    const idx = this.hashMod(key)
+    const newPair = new KeyValuePair(key, value)
+
+    // if (this.data[idx]) {
+      newPair.next = this.data[idx]
+    // }
+
+    this.data[idx] = newPair
+    this.count++
+
+    return this.count
   }
 
   insert(key, value) {
     // Your code here
+    // looking for same key, change value
+    // if there's no same key, make new pair and link to data at index
+
+    const idx = this.hashMod(key)
+    let currPair = this.data[idx]
+
+    while (currPair && currPair.key !== key) {
+      currPair = currPair.next
+    }
+
+    // If we break loop and curr is "truthy", we found a pair with the same key
+    // Change that pair's value
+    if (currPair) {
+      currPair.value = value
+    } else {
+      // If we break from while loop and curr is null, we did not find pair with same key
+      // so we'll add new pair with new key
+      const newPair = new KeyValuePair(key, value)
+      newPair.next = this.data[idx]
+      this.data[idx] = newPair
+      this.count++
+    }
+
+
+    return this.count
   }
 
 }
