@@ -130,14 +130,28 @@ class BinarySearchTree {
   breadthFirstTraversal() {
     // your code here
     // start with queue that has rootnode
+    const queue = [this.root]
 
     // while queue has length
-    // remove from front of queue
-    // DO THE THING, may return
-    // Push in children
-      // left
-      // right
+    while (queue.length) {
+      // remove from front of queue
+      const curr = queue.shift()
 
+      // DO THE THING, may return
+      console.log(curr.val)
+
+      // Push in children
+      // left
+      if (curr.left) {
+        queue.push(curr.left)
+      }
+
+      // right
+      if (curr.right) {
+        queue.push(curr.right)
+      }
+
+    }
     // optional return
   }
 
@@ -145,13 +159,23 @@ class BinarySearchTree {
   depthFirstTraversal() {
     // your code here
     // start with stack that has rootnode
+    const stack = [this.root]
 
     // while stack has length
-    // remove from back of stack
-    // DO THE THING, may return
-    // Push in children
+    while (stack.length) {
+      // remove from back of stack
+      const curr = stack.pop()
+
+      // DO THE THING, may return
+      console.log(curr.val)
+
+      // Push in children
       // left
-      // right
+      if (curr.left) stack.push(curr.left)
+
+        // right
+      if (curr.right) stack.push(curr.right)
+    }
 
     // optional return
 }
