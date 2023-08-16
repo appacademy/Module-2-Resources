@@ -78,9 +78,14 @@ class BinarySearchTree {
   preOrderTraversal(currentNode = this.root) {
     // Your code here
 
+    if (!currentNode) return
+
     // Do the thing with currentNode
+    console.log(currentNode.val)
     // left subtree
+    this.preOrderTraversal(currentNode.left)
     // right subtree
+    this.preOrderTraversal(currentNode.right)
   }
 
 
@@ -88,44 +93,84 @@ class BinarySearchTree {
   inOrderTraversal(currentNode = this.root) {
     // Your code here
 
+    if (!currentNode) return
+
     // left subtree
+    this.inOrderTraversal(currentNode.left)
     // Do the thing with currentNode
+    console.log(currentNode.val)
     // right subtree
+    this.inOrderTraversal(currentNode.right)
   }
 
 // left, right, self
   postOrderTraversal(currentNode = this.root) {
     // Your code here
+
+    if (!currentNode) return
+
     // left subtree
+    this.postOrderTraversal(currentNode.left)
     // right subtree
+    this.postOrderTraversal(currentNode.right)
     // Do the thing with currentNode
+    console.log(currentNode.val)
   }
+
+    /*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+
+  */
 
     // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
     // your code here
+    // start with queue that has rootnode
+
+    // while queue has length
+    // remove from front of queue
+    // DO THE THING, may return
+    // Push in children
+      // left
+      // right
+
+    // optional return
   }
 
   // Depth First Traversal - Iterative
   depthFirstTraversal() {
     // your code here
+    // start with stack that has rootnode
+
+    // while stack has length
+    // remove from back of stack
+    // DO THE THING, may return
+    // Push in children
+      // left
+      // right
+
+    // optional return
 }
 }
 
 module.exports = { BinarySearchTree, TreeNode };
 
 
-bst = new BinarySearchTree();
-bst.insert(4);
-bst.insert(2);
-bst.insert(6);
-bst.insert(1);
-bst.insert(3);
-bst.insert(5);
-bst.insert(7);
+// bst = new BinarySearchTree();
+// bst.insert(4);
+// bst.insert(2);
+// bst.insert(6);
+// bst.insert(1);
+// bst.insert(3);
+// bst.insert(5);
+// bst.insert(7);
 
-console.log(
-  bst.search2(1), // true
-  bst.search2(7), // true
-  bst.search2(8) // false
-)
+// console.log(
+//   bst.search2(1), // true
+//   bst.search2(7), // true
+//   bst.search2(8) // false
+// )
