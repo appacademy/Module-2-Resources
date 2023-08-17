@@ -7,8 +7,17 @@ const adjList = {
   6: []
 }
 
+// currentPath = [1,5]
+// currentNode = currentPath[currentPath.length - 1] => 5
+// neighbors = [1, 2, 4]
+
+// queue = [[1,2,3], [1,5,4]]
+
+
 function aShortestPath(start, end) {
   // Your code here
+  
+  
 }
 
 console.log("First Test:");
