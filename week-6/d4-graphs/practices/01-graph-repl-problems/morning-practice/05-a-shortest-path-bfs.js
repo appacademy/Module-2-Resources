@@ -7,17 +7,25 @@ const adjList = {
   6: []
 }
 
-// currentPath = [1,5]
-// currentNode = currentPath[currentPath.length - 1] => 5
-// neighbors = [1, 2, 4]
-
-// queue = [[1,2,3], [1,5,4]]
-
-
 function aShortestPath(start, end) {
   // Your code here
-  
-  
+  const queue = [[start]];
+  const visited = new Set([start]);
+
+  while (queue.length) {
+    const currPath = queue.shift();
+    const currNode = currPath[currPath.length - 1];
+
+    if (currNode === end) return currPath;
+
+    adjList[currNode].forEach(neighbor => {
+      if (!visited.has(neighbor)) {
+        queue.push([...currPath, neighbor]);
+        visited.add(neighbor);
+      }
+    });
+  }
+  return false;
 }
 
 console.log("First Test:");
