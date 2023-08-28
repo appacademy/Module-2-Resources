@@ -4,10 +4,11 @@ const { isFive, isOdd, myRange } = require("../funcs");
 
 describe("isFive(num)", () => {
   it("should return true if the num is 5 otherwise false", () => {
+    // Arrange
     const num1 = 5;
-
+    // Act
     const actual1 = isFive(num1); // should be true
-
+    // Assert
     expect(actual1).to.be.true;
 
     const otherInput = "not 5";
@@ -15,6 +16,9 @@ describe("isFive(num)", () => {
 
     const actual2 = isFive(num2); // should be false
     const actual3 = isFive(otherInput); // should be false
+
+    // expect(isFive(5)).to.be.true;
+    // expect(isFive('not 5')).to.be.false;
 
     expect(actual2).to.be.false;
     expect(actual3).to.be.false;
@@ -61,7 +65,7 @@ describe("isOdd(number)", () => {
   });
 });
 
-describe("myRange(min, max, step)", () => {
+describe("myRange(min, max, step=1)", () => {
   context("if step is not provided", () => {
     it("should return the correct array with default value step=1", () => {
       const [min1, max1] = [0, 5];
