@@ -64,6 +64,10 @@ class ClassicalSong extends Song {
         this.period = period
     }
 
+    // POLYMORPHISM
+    playSong() {
+        console.log(`Playing ${this.name} from the ${this.period} period`)
+    }
 }
 
 const classical1 = new ClassicalSong("Prelude in C# Minor", "Sergei Rachmaninoff", 1892, "Romantic")
@@ -78,6 +82,11 @@ ClassicalSong {
 }
  */
 
-classical1.playSong() // playing Prelude in C# Minor!
+// BEFORE POLYMORPHISM change
+// classical1.playSong() // playing Prelude in C# Minor!
 
-console.log(ClassicalSong.putSongInPlaylist(song3, classical1)) // [ 'Mantra', 'Prelude in C# Minor' ]
+// console.log(ClassicalSong.putSongInPlaylist(song3, classical1)) // [ 'Mantra', 'Prelude in C# Minor' ]
+
+
+// AFTER POLY Change
+classical1.playSong() // Playing Prelude in C# Minor from the Romantic period
