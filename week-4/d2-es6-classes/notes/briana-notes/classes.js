@@ -39,7 +39,7 @@ const song2 = new Song("Viva La Vida", "Coldplay", 2008)
 
 // instance method calls
 
-let arr = [1, 2, 3]
+// let arr = [1, 2, 3]
 // arr.map()
 
 // song1.playSong() // playing The List!
@@ -51,5 +51,42 @@ let arr = [1, 2, 3]
 
 
 const song3 = new Song("Mantra", "Makaya McCraven", 2018)
-console.log(song3 instanceof Song) // true
-console.log(arr instanceof Song) // false
+// console.log(song3 instanceof Song) // true
+// console.log(arr instanceof Song) // false
+
+
+
+
+// INHERITANCE
+class ClassicalSong extends Song {
+    constructor(name, artist, releaseYear, period) {
+        super(name, artist, releaseYear)
+        this.period = period
+    }
+
+    // POLYMORPHISM
+    playSong() {
+        console.log(`Playing ${this.name} from the ${this.period} period`)
+    }
+}
+
+const classical1 = new ClassicalSong("Prelude in C# Minor", "Sergei Rachmaninoff", 1892, "Romantic")
+
+console.log(classical1)
+/*
+ClassicalSong {
+  name: 'Prelude in C# Minor',
+  artist: 'Sergei Rachmaninoff',
+  releaseYear: 1892,
+  period: 'Romantic'
+}
+ */
+
+// BEFORE POLYMORPHISM change
+// classical1.playSong() // playing Prelude in C# Minor!
+
+// console.log(ClassicalSong.putSongInPlaylist(song3, classical1)) // [ 'Mantra', 'Prelude in C# Minor' ]
+
+
+// AFTER POLY Change
+classical1.playSong() // Playing Prelude in C# Minor from the Romantic period
