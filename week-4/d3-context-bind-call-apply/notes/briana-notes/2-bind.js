@@ -59,5 +59,7 @@ const ttmShowFilm = ttm.showFilm.bind(ttm)
 // Bind POJO to method in Film class
 
 const eeShowFilm = ttm.showFilm.bind(ee)
-console.log(eeShowFilm("Cat Theater"))
+// console.log(eeShowFilm("Cat Theater"))
 // Cat Theater's guests watched Everything Everywhere
+
+
