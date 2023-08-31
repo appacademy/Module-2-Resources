@@ -10,17 +10,17 @@ function sum(array) {
 let res = sum(null);
 console.log(res);
 
-// 2.
-// tests
-sayName("Alex");
-sayName(1);
-// Your code here
+// // 2.
+// // tests
+// sayName("Alex");
+// sayName(1);
+// // Your code here
 
-// 3.
-function greet(greeting) {
-  if (!greeting) {
-    throw new Error("There was no greeting given.");
-  }
+// // 3.
+// function greet(greeting) {
+//   if (!greeting) {
+//     throw new Error("There was no greeting given.");
+//   }
 
-  console.log(greeting);
-}
+//   console.log(greeting);
+// }
