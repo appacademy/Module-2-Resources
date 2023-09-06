@@ -3,7 +3,6 @@ class DynamicArray {
   constructor(defaultSize=4) {
 
     // Your code here
-
   }
 
   read(index) {
