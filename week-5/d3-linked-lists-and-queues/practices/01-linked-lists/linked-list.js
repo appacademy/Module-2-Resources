@@ -38,6 +38,8 @@ class LinkedList {
     if (!this.head) {
       this.head = newNode;
     } else {
+      // let obj = { value: 2, next: null }
+      // 2: There are nodes in the list
       let currentNode = this.head;
 
       while (currentNode.next) {
@@ -46,7 +48,6 @@ class LinkedList {
       currentNode.next = newNode;
     }
 
-    // 2: There are nodes in the list
     this.length++;
   }
 
