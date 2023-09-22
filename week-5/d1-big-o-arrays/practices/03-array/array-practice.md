@@ -5,112 +5,98 @@ justification for your answer. Assume `arr` is an array of length _n_.
 
 ## `arr.push()`
 
-[1,2,3]
-
-Time complexity: O(1)
-Space complexity: O(1)
-Justification: Adding to the END of an array, requires no shifting of elements,
-and this happens in place
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [push on MDN][push]
 
+
 ## `arr.pop()`
 
-Time complexity: O(1)
-Space complexity: O(1)
-Justification: Removing from the END of an array requires no shifting, and this
-happens in place.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [pop on MDN][pop]
 
-[0,1,2,3]
-
 ## `arr.shift()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Removing from the FRONT of an array requires shifting each
-element to the left by 1 index. This happens in place.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [shift on MDN][shift]
 
 ## `arr.unshift()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Adding to the FRONT of an array requires shifting each element
-to the right by 1 index. This happens in place.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [unshift on MDN][unshift]
 
 ## `arr.splice()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Must shift any elements after the removed elements to the left to
-fill in the empty space. Returns a new array, which requires space.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [splice on MDN][splice]
 
 ## `arr.slice()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Must iterate each element to copy to the new return array. This does
-not happen in place.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [slice on MDN][slice]
 
 ## `arr.indexOf()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Must iterate over entire array if target is not found. This happens
-in place.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [indexOf on MDN][indexOf]
 
 ## `arr.map()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Must iterate entire array. Returns a new array.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [map on MDN][map]
 
 ## `arr.filter()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Must iterate entire array. Returns a new array.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [filter on MDN][filter]
 
 ## `arr.reduce()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Must iterate entire array. Returns a number.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [reduce on MDN][reduce]
 
 ## `arr.reverse()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: Must iterate entire array, happens in place.
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [reverse on MDN][reverse]
 
 ## `[...arr]`
 
-let arr = [1]
-
-let arr2 = [...arr]
-
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: Functionally the same as arr.slice()
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [spread on MDN][spread]
 

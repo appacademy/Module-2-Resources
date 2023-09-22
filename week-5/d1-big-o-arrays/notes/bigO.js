@@ -4,7 +4,7 @@ Big-O notation is used to describe the efficiency of algorithms with respect to
 the size of the input.
 
 Big picture ideas:
-1. The Big-O function should be defined in terms of the size of the input
+1. function should be defined in terms of the size of the input
 2. Smaller Big-O function is more desireable than a larger one. 
   -We want to use a minimal amount of time and space.
 3. Big-O describes the worst case scenario for our code
@@ -19,22 +19,20 @@ Big picture ideas:
       terms that don't depend on the size of the input.
 
     Unsimplified	        Big-O Simplified
-    T( 5 * n^2 )	            O( n^2 )
+    T( 5 * n2 )	            O( n2 )
     T( 100000 * n )	        O( n )
     T( n / 12 )	            O( n )
     T( 42 * n * log(n) )	O( n * log(n) )
     T( 12 )	                O( 1 )
-    T(42 * n * m)           O(n * m)
 
     - Simplify Sums: if the function is a sum of many terms, we keep the term
       with the largest growth rate and drop the other terms.
 
     Unsimplified	        Big-O Simplified
-    T( n^3 + n^2 + n )	    O( n^3 )
-    T( log(n) + 2^n )	    O( 2^n )
+    T( n3 + n2 + n )	    O( n3 )
+    T( log(n) + 2n )	    O( 2n )
     T( n + log(n) )	        O( n )
-    T( n! + 10^n )	        O( n! )
-    T ( m + n)              O(n + m)
+    T( n! + 10n )	        O( n! )
 
 */
 
@@ -47,8 +45,8 @@ O(1)	                    constant
 O(log(n))	                logarithmic
 O(n)	                    linear
 O(n * log(n))	            loglinear, linearithmic, quasilinear
-O(n^c) - O(n^2), O(n^3), etc.	polynomial
-O(c^n) - O(2^n), O(3^n), etc.	exponential
+O(nc) - O(n2), O(n3), etc.	polynomial
+O(cn) - O(2n), O(3n), etc.	exponential
 O(n!)	                    factorial
 
 */
@@ -57,20 +55,14 @@ O(n!)	                    factorial
 //input.
 //Example:
 function constant(n) {
-        //   1  + 1
     return n * 2 + 1;
-} // T(1 + 1) => O(1)
+}
 
 function constant2(n) {
-    //         1     (1*100) (1*100)
     for (let i = 1; i <= 100; i++){
-        //  (1*100) (1*100)   
-        console.log(i * n)
+        console.log(i)
     }
-} // T (1 + (1*100) + (1*100) + (1*100) + (1*100))
-  // T (1 + 100 + 100 + 100 + 100) => (401)
-  // T (401)
-  // O (1)
+}
 //O(1) => no matter how big n gets, the algorithm doesn't change in complexity
 
 
@@ -103,14 +95,10 @@ Examples:
 */
 // O(n)
 function linear1(n) {
-  //         1    (1 * n) (1 * n)
   for (let i = 1; i <= n; i++) {
-         // (1 * n)
     console.log(i);
   }
-} // T (1 + (1*n) + (1*n) + (1*n))
-  // T (1 + n + n + n) => T (1 + 3n)
-  // O (n)
+}
 
 // O(n), where n is the length of the array
 function linear2(array) {

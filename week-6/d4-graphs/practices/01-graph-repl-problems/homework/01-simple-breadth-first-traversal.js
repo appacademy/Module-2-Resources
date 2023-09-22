@@ -9,39 +9,6 @@ const adjList = {
 
 function printBreadthFirst(start) {
     // your code here
-    // queue - keep track of nodes that we may visit
-    const queue = [start]               // [3]
-    // set - track nodes we've already visited
-    const visited = new Set([start])    // { 3 }
-    //              new Set() => visited.add(start)
-
-    // while loop
-    while (queue.length) {
-        // console.log({queue})
-        // console.log({visited})
-        // take out first node
-        const curr = queue.shift()     // 3
-        // console.log(curr)
-
-        // DO THE THING
-        console.log(curr)
-        // console.log("")
-
-        // get other neighbors
-        const neighbors = adjList[curr]  // [2, 4]
-
-        // add neighbors to queue
-        neighbors.forEach(neighbor => {
-            if (!visited.has(neighbor)) {
-                queue.push(neighbor)
-                visited.add(neighbor)
-            }
-        })
-
-        // queue => [2, 4]   visited => {3, 2, 4}
-    }
-
-    // optional return
 }
 
 console.log("First Test:")
