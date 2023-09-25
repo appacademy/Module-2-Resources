@@ -6,15 +6,15 @@ describe("isFive(num)", () => {
   it("should return true if the num is 5 otherwise false", () => {
     const num1 = 5;
 
-    const actual1 = isFive(num1);
+    const actual1 = isFive(num1); // true
 
     expect(actual1).to.be.true;
 
     const otherInput = "not 5";
     const num2 = 4;
 
-    const actual2 = isFive(num2);
-    const actual3 = isFive(otherInput);
+    const actual2 = isFive(num2);   // false
+    const actual3 = isFive(otherInput); // false
 
     expect(actual2).to.be.false;
     expect(actual3).to.be.false;
@@ -27,9 +27,9 @@ describe("isOdd(number)", () => {
     const num2 = 2953;
     const num3 = -999;
 
-    const actual1 = isOdd(num1);
-    const actual2 = isOdd(num2);
-    const actual3 = isOdd(num3);
+    const actual1 = isOdd(num1); // true
+    const actual2 = isOdd(num2); // true
+    const actual3 = isOdd(num3); // true
 
     expect(actual1).to.be.true;
     expect(actual2).to.be.true;
@@ -41,9 +41,9 @@ describe("isOdd(number)", () => {
     const num2 = 2952;
     const num3 = -998;
 
-    const actual1 = isOdd(num1); 
-    const actual2 = isOdd(num2); 
-    const actual3 = isOdd(num3); 
+    const actual1 = isOdd(num1); // false
+    const actual2 = isOdd(num2); // false
+    const actual3 = isOdd(num3); // false
 
     expect(actual1).to.be.false;
     expect(actual2).to.be.false;
@@ -55,7 +55,7 @@ describe("isOdd(number)", () => {
     const object = { i: "am", an: "object" };
     const array = ["i", "am", "an", "array"];
 
-    expect(() => isOdd(string)).to.throw(Error);
+    expect(() => isOdd(string)).to.throw(Error); // error should be thrown if input is not number
     expect(() => isOdd(object)).to.throw(Error);
     expect(() => isOdd(array)).to.throw(Error);
   });
