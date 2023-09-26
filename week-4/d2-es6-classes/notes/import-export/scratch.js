@@ -47,9 +47,9 @@ class User {
     }
 }
 
-const shane2 = new User('swilkey', 'swilkey@appacademy.io', 'superstrongpassword');
-const gary2 = new User('garebear', 'gsong@appacdemy.io', 'iloveunicorns');
-// const briana = new User('brirob', 'brobinson@appacademy.io')
+const shane2 = new User('swilkey', 'swilkey@aa.io', 'superstrongpassword');
+const gary2 = new User('garebear', 'gsong@aa.io', 'iloveunicorns');
+// const briana = new User('brirob', 'brobinson@aa.io')
 // shane2.greet();
 // gary2.greet();
 console.log(shane2)
