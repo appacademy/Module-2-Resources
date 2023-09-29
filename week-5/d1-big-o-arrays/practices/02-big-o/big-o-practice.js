@@ -8,14 +8,14 @@ function countAnimals(animals) {
     }
     return count;
 }
-  
+
   // Count how many animals are in the list
   // Time complexity: O(?)
   // Space complexity: O(?)
 function countAnimals2(animals) {
     return animals.length;
 }
-  
+
   // Print the first 10 animals in the list
   // Time complexity: O(?)
   // Space complexity: O(?)
@@ -23,7 +23,7 @@ function printTenAnimals(animals) {
     if (animals.length < 10) {
       throw Error("not enough animals")
     }
-  
+
     console.log(animals[0]);
     console.log(animals[1]);
     console.log(animals[2]);
@@ -36,11 +36,11 @@ function printTenAnimals(animals) {
     console.log(animals[9]);
 }
 
-// Time complexity: O(n)
-// Space complexity: O(1)
+// Time complexity: O(?)
+// Space complexity: O(?)
 function printAnimals(animals) {
     for (let i = 0 ; i < animals.length ; i++) {
-      console.log(animals[i]); 
+      console.log(animals[i]);
     }
 }
 
