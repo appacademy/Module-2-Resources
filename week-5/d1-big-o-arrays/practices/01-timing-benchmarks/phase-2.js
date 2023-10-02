@@ -4,7 +4,6 @@ const [addNums, addManyNums] = require("./phase-1");
 function addNums10(increment) {
   // Fill this in
 
-
 }
 
 // Runs `addManyNums` in 10 increasing increments
