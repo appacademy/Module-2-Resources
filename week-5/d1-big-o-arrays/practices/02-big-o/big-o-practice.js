@@ -106,3 +106,4 @@ function findAnimal(animals, target) {
     }
     return -1;
 }
+// arr2.shift(arr.splice(0, arr.length))
