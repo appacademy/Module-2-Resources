@@ -4,6 +4,28 @@ class LinkedListNode {
     this.next = null;
   }
 }
+// class LinkedListNode {
+//   constructor(val, next=null) {
+//     this.value = val;
+//     this.next = next;
+//   }
+// }
+
+// const llNode = new LinkedListNode(1);
+// const node2 = new LinkedListNode(2);
+
+// llNode.next = node2;
+
+// let currentNode = llNode
+
+// while (currentNode) {
+//   console.log(currentNode.value);
+//   currentNode = currentNode.next;
+// }
+
+// console.log({ currentNode })
+
+// console.log({ llNode })
 
 class LinkedList {
   constructor() {
