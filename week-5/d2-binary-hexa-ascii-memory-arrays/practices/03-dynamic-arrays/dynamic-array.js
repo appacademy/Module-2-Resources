@@ -11,6 +11,12 @@ class DynamicArray {
     return this.data[index];
   }
 
+  /*
+    length => 2
+     i
+    [4,3,2,1]
+  */
+
   unshift(val) {
 
     for (let i = this.length; i > 0; i--) {
