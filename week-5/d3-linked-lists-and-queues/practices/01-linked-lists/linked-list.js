@@ -62,7 +62,7 @@ class LinkedList {
       curr.next = newNode;
 
     }
-    
+
     this.length++;
     return this.length;
   }
