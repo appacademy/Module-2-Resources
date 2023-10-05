@@ -51,6 +51,15 @@ class HashTable {
 
   insertWithHashCollisions(key, value) {
     // Your code here
+    const kvp = new KeyValuePair(key, value);
+    const idx = this.hashMod(key);
+
+    // if (this.data[idx]) {}
+
+    kvp.next = this.data[idx];
+    this.data[idx] = kvp;
+    this.count++;
+    return this.count;
   }
 
   insert(key, value) {
