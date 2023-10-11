@@ -171,13 +171,52 @@ class BinarySearchTree {
   }
 
     // Breadth First Traversal - Iterative
+/*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
   breadthFirstTraversal() {
     // your code here
-  }
+    const queue = [this.root]; // []
 
+    while (queue.length) {
+      const curr = queue.shift(); // 7
+
+      // DO THE THANG
+      console.log(curr.val); // 4,2,6,1,3,5,7
+
+      // repopulate the queue
+      if (curr.left) queue.push(curr.left);
+      if (curr.right) queue.push(curr.right);
+    }
+    return this;
+  }
+  
+  /*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
   // Depth First Traversal - Iterative
   depthFirstTraversal() {
-    // your code here
+    const stack = [this.root]; // []
+
+    while (stack.length) {
+      const curr = stack.pop(); // 1
+
+      // DO THE THANG
+      console.log(curr.val); // 4,6,7,5,2,3,1
+
+      // repopulate the stack
+      if (curr.left) stack.push(curr.left);
+      if (curr.right) stack.push(curr.right);
+    }
+    return this;
   }
 }
 
