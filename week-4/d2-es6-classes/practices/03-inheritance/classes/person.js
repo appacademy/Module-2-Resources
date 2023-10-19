@@ -3,7 +3,6 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
-
   }
 
   introduce() {
