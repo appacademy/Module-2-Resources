@@ -1,0 +1,21 @@
+{
+  "name": "single-responsibility-principle",
+  "version": "1.0.0",
+  "description": "practice with Single Responsibility Principle",
+  "main": "practice.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-spies": "^1.0.0",
+    "mocha": "^9.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
