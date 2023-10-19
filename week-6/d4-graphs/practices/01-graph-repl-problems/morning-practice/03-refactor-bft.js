@@ -9,6 +9,30 @@ const adjList = {
 
 function printBreadthFirst(start) {
     // Paste your previous code here and refactor it
+    const queue = [start]
+    const visited = new Set([start])
+
+    const bftArr = []
+
+    while (queue.length) {
+        const curr = queue.shift()
+
+        // Do the thing
+        bftArr.push(curr)
+
+        // Find neighbors
+        const neighbors = adjList[curr]
+
+        neighbors.forEach(neighbor => {
+            if (!visited.has(neighbor)) {
+                queue.push(neighbor)
+                visited.add(neighbor)
+            }
+        })
+    }
+
+ //    return bftArr
+ console.log(bftArr)
 }
 
 console.log("First Test:")

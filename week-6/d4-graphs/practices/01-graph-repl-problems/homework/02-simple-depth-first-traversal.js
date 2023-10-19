@@ -9,6 +9,30 @@ const adjList = {
 
 function printDepthFirst(start) {
     // your code here
+    const stack = [start]
+    const visited = new Set()
+    visited.add(start)
+
+    while (stack.length) {
+        const curr = stack.pop()
+
+
+        // do the thing
+        console.log(curr)
+
+        // Find neighbors
+        const neighbors = adjList[curr]
+
+        // Add neighbors to stack
+        neighbors.forEach(neighbor => {
+            if (!visited.has(neighbor)) {
+                stack.push(neighbor)
+                visited.add(neighbor)
+            }
+        })
+    }
+
+    // optional return
 }
 
 console.log("First Test:")
