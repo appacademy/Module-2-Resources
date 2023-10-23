@@ -6,15 +6,15 @@ describe("isFive(num)", () => {
   it("should return true if the num is 5 otherwise false", () => {
     const num1 = 5;
 
-    const actual1 = isFive(num1);
+    const actual1 = isFive(num1); // true
 
     expect(actual1).to.be.true;
 
     const otherInput = "not 5";
     const num2 = 4;
 
-    const actual2 = isFive(num2);
-    const actual3 = isFive(otherInput);
+    const actual2 = isFive(num2); // false
+    const actual3 = isFive(otherInput); // false
 
     expect(actual2).to.be.false;
     expect(actual3).to.be.false;
@@ -22,6 +22,7 @@ describe("isFive(num)", () => {
 });
 
 describe("isOdd(number)", () => {
+
   it("should return true if number is odd", () => {
     const num1 = 3;
     const num2 = 2953;
@@ -41,9 +42,9 @@ describe("isOdd(number)", () => {
     const num2 = 2952;
     const num3 = -998;
 
-    const actual1 = isOdd(num1); 
-    const actual2 = isOdd(num2); 
-    const actual3 = isOdd(num3); 
+    const actual1 = isOdd(num1); // false
+    const actual2 = isOdd(num2); // false
+    const actual3 = isOdd(num3); // false
 
     expect(actual1).to.be.false;
     expect(actual2).to.be.false;
@@ -67,9 +68,9 @@ describe("myRange(min, max, step)", () => {
       const [min1, max1] = [0, 5];
       const [min2, max2] = [6, 3];
 
-      const actual1 = myRange(min1, max1);
+      const actual1 = myRange(min1, max1); // [0, 1, 2, 3, 4, 5]
       const expected1 = [0, 1, 2, 3, 4, 5];
-      const actual2 = myRange(min2, max2);
+      const actual2 = myRange(min2, max2); // []
       const expected2 = [];
 
       expect(actual1).to.eql(expected1);
@@ -83,11 +84,11 @@ describe("myRange(min, max, step)", () => {
       const [min2, max2, step2] = [0, 5, 2];
       const [min3, max3, step3] = [9, 5, 2];
 
-      const actual1 = myRange(min1, max1, step1);
+      const actual1 = myRange(min1, max1, step1); // [0, 1, 2, 3, 4, 5];
       const expected1 = [0, 1, 2, 3, 4, 5];
-      const actual2 = myRange(min2, max2, step2);
+      const actual2 = myRange(min2, max2, step2); // [0, 2, 4]
       const expected2 = [0, 2, 4];
-      const actual3 = myRange(min3, max3, step3);
+      const actual3 = myRange(min3, max3, step3); // []
       const expected3 = [];
 
       expect(actual1).to.eql(expected1);
