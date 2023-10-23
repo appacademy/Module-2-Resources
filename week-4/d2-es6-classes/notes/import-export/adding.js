@@ -1,17 +1,13 @@
-const { goodbye } = require('./scratch');
-
-console.log(`${goodbye} everybody`)
-
-// exports.adding = function adding(a, b) {
-//     return a + b;
-// }
-// exports.subtraction = function subtraction(a, b) {
-//   if (a > b) return a - b;
-//   return b - a;
-// }
-// exports.division = (num1, num2) => {
-//   return num1 / num2;
-// }
+exports.adding = function adding(a, b) {
+    return a + b;
+}
+exports.subtraction = function subtraction(a, b) {
+  if (a > b) return a - b;
+  return b - a;
+}
+exports.division = (num1, num2) => {
+  return num1 / num2;
+}
 //this function returns the sum of two numbers
 // module.exports = {
 //     adding, subtraction, division
@@ -24,4 +20,4 @@ console.log(`${goodbye} everybody`)
 // module.exports.adding = adding
 //module.exports.subtraction = subtraction;
 
-// console.log(module)
+console.log(module)

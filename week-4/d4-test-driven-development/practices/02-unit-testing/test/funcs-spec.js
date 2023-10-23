@@ -9,7 +9,6 @@ describe("isFive(num)", () => {
     const actual1 = isFive(num1); // should be true
 
     expect(actual1).to.be.true;
-    expect(isFive(5)).to.be.true;
 
     const otherInput = "not 5";
     const num2 = 4;
@@ -56,7 +55,7 @@ describe("isOdd(number)", () => {
     const object = { i: "am", an: "object" };
     const array = ["i", "am", "an", "array"];
 
-    expect(isOdd.bind({}, string)).to.throw(Error);
+    expect(() => isOdd(string)).to.throw(Error);
     expect(() => isOdd(object)).to.throw(Error);
     expect(() => isOdd(array)).to.throw(Error);
   });
@@ -77,8 +76,6 @@ describe("myRange(min, max, step)", () => {
       expect(actual2).to.eql(expected2);
     });
   });
-
-  // [] !== []
 
   context("if step is provided", () => {
     it("should return the correct array", () => {
