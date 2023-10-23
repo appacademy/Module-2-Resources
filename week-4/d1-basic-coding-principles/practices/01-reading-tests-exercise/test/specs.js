@@ -6,15 +6,15 @@ describe("isFive(num)", () => {
   it("should return true if the num is 5 otherwise false", () => {
     const num1 = 5;
 
-    const actual1 = isFive(num1); // should be true
+    const actual1 = isFive(num1);
 
     expect(actual1).to.be.true;
 
     const otherInput = "not 5";
     const num2 = 4;
 
-    const actual2 = isFive(num2); // should be false
-    const actual3 = isFive(otherInput); // should be false
+    const actual2 = isFive(num2);
+    const actual3 = isFive(otherInput);
 
     expect(actual2).to.be.false;
     expect(actual3).to.be.false;
@@ -41,9 +41,9 @@ describe("isOdd(number)", () => {
     const num2 = 2952;
     const num3 = -998;
 
-    const actual1 = isOdd(num1); // should be false
-    const actual2 = isOdd(num2); // should be false
-    const actual3 = isOdd(num3); // should be false
+    const actual1 = isOdd(num1); 
+    const actual2 = isOdd(num2); 
+    const actual3 = isOdd(num3); 
 
     expect(actual1).to.be.false;
     expect(actual2).to.be.false;
