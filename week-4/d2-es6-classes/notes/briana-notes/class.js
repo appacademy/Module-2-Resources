@@ -56,10 +56,15 @@ class ClassicalSong extends Song {
         this.period = period
     }
 
+    // Polymorphism
+    playSong() {
+        console.log(`Playing ${this.name} from the ${this.period} period!`)
+    }
+
 }
 
 const classical1 = new ClassicalSong("Prelude in C# Minor", "Sergei Rachmaninov", 1892, "Romantic")
-console.log(classical1)
+// console.log(classical1)
 /*
 ClassicalSong {
   name: 'Prelude in C# Minor',
@@ -69,6 +74,10 @@ ClassicalSong {
 }
 */
 
-classical1.playSong() // Playing Prelude in C# Minor!
-console.log(classical1 instanceof ClassicalSong) // true
-console.log(classical1 instanceof Song) // true
+// Before polymorphism
+// classical1.playSong() // Playing Prelude in C# Minor!
+// console.log(classical1 instanceof ClassicalSong) // true
+// console.log(classical1 instanceof Song) // true
+
+// After polymorphism
+classical1.playSong() // Playing Prelude in C# Minor from the Romantic period!
