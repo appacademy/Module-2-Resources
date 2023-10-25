@@ -19,7 +19,7 @@ class Film {
 
 const ttm = new Film("Talk to Me", 2023)
 
-// BIND
+// BIND - returns new function that will maintain the same context regardless of where it was invoked
 
 // POJO to regular func
 const eePOJO = {
