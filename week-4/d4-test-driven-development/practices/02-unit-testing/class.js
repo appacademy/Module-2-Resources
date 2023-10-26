@@ -1,6 +1,7 @@
 class Word {
   constructor(word) {
     this.word = word;
+    // console.log(this)
   }
 
   removeVowels() {
@@ -13,6 +14,7 @@ class Word {
       }
     }
     return newWord;
+
   }
 
   removeConsonants() {
