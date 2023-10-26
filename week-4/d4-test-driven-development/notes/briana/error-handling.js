@@ -89,13 +89,12 @@ class BrianaError extends Error {
 function makePlaylist(name, year) {
     // made new instance of Error class
     // throw will stop execution
-    // if (!name || !year) throw new Error("Need name of playlist and number of songs")
-    // if (typeof name !== "string") throw new TypeError("name input must be string data type")
-    // if (typeof year !== "number") throw new TypeError("year input must be number")
+    if (!name || !year) throw new Error("Need name of playlist and number of songs")
+    if (typeof name !== "string") throw new TypeError("name input must be string data type")
+    if (typeof year !== "number") throw new TypeError("year input must be number")
 
     // try {
         name = name.toUpperCase()
-        let hello = undefined
     // } catch (e) {
         // console.log(e.message)
     // }
@@ -115,7 +114,6 @@ function makePlaylist(name, year) {
 
 // TRY/CATCH - try some code, if it hits any error, catch that error, do something else instead
 // will not stop code execution in module
-
 try {
     // good
     const brianaPlaylist = makePlaylist("A few of my favorite songs", 2023)
