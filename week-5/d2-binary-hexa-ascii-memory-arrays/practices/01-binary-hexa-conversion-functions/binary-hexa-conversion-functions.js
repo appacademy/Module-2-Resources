@@ -8,21 +8,38 @@ Consult documentation on how to utilize the following methods:
 /* Base 10 to base 2 */
 function decimalToBinary(blob) {
   // Your code here
+  // console.log(blob.toString(2))
+  // blob = blob.toString(2)
+  return `0b${blob.toString(2)}`
+
 }
 
 /* Base 10 to base 16 */
 function decimalToHexadecimal(blob) {
   // Your code here
+  return `0x${blob.toString(16)}`
 }
 
 /* Base 2 to base 10 */
 function binaryToDecimal(blob) {
   // Your code here
+  // console.log(blob.substring(2))
+  blob = blob.substring(2)
+  const deci = parseInt(blob, 2)
+  return deci
+
+  // this will NOT work
+  // return parseInt(blob)
 }
 
 /* Base 16 to base 10 */
 function hexadecimalToDecimal(blob) {
   // Your code here
+
+  // return parseInt(blob.substring(2), 16)
+
+  // this works because of 0x prefix in blob
+  return parseInt(blob)
 }
 
 // console.log('Decimal to binary:')
