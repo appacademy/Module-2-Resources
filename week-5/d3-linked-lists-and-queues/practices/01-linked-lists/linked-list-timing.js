@@ -7,3 +7,6 @@ Construct a timing test to verify the time complexities of `addToHead` and
 */
 
 // Your code here
+// Could use Date.now
+// Or console.time and console.timeEnd
+
