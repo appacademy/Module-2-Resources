@@ -64,10 +64,33 @@ class HashTable {
 
   insertWithHashCollisions(key, value) {
     // Your code here
+    const newPair = new KeyValuePair(key, value)
+    const idx = this.hashMod(key)
+
+    // console.log(`${idx} is index for key ${key}`)
+    // console.log(this.data[idx], "is the access point for idx \n\n")
+
+
+    // tell newPair's next property to look at whatever is at that idx
+    // whether it's null or not
+    newPair.next = this.data[idx]
+
+    // reassign data at that idx to look at newPair
+    this.data[idx] = newPair
+
+    this.count++
+
+    return this.count
   }
 
   insert(key, value) {
     // Your code here
+
+    // if we're trying to insert a pair with a key that already exists
+    // then overwrite "value" property
+    
+    // if there's nothing in the data at that index
+    // if there is something at that index
   }
 
 }
