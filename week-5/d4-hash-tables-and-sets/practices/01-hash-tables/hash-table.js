@@ -44,6 +44,22 @@ class HashTable {
 
   insertNoCollisions(key, value) {
     // Your code here
+    // making new pair
+    const newPair = new KeyValuePair(key, value)
+
+    // asking hashmod for the insertion index
+    const idx = this.hashMod(key)
+    // console.log(idx)
+
+    if (this.data[idx]) throw new Error('hash collision or same key/value pair already exists!')
+
+    // reassigning the array at that index (bucket) to look at new pair
+    this.data[idx] = newPair
+
+    this.count++
+
+    return this.count
+
   }
 
   insertWithHashCollisions(key, value) {
