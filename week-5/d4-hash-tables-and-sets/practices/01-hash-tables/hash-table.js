@@ -36,5 +36,6 @@ class HashTable {
 
 }
 
+// new Array(whateverSize).fill(null)
 
 module.exports = HashTable;
