@@ -152,15 +152,22 @@ class BinarySearchTree {
     // your code here
 
     // make queue, with rootNode
+    const queue = [this.root]
 
     // while queue has length (there are more nodes to visit)
+    while (queue.length) {
       // retrieve node from the front of queue
+      const curr = queue.shift()
 
       // DO THE THING, may return
+      console.log(curr.val)
 
       // Add the left children to the queue
+      if (curr.left) queue.push(curr.left)
       // Add the right children to the queue
+      if (curr.right) queue.push(curr.right)
 
+    }
 
     // optional return
   }
@@ -170,15 +177,22 @@ class BinarySearchTree {
     // your code here
 
     // make stack, with rootNode
+    const stack = [this.root]
 
     // while stack has length (there are more nodes to visit)
+    while (stack.length) {
       // retrieve node from the back of stack
+      const curr = stack.pop()
 
       // DO THE THING, may return
+      console.log(curr.val)
 
       // Add the left children to the stack
+      if (curr.left) stack.push(curr.left)
       // Add the right children to the stack
+      if (curr.right) stack.push(curr.right)
 
+    }
 
     // optional return
   }
