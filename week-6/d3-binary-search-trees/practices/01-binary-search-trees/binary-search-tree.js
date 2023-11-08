@@ -47,21 +47,59 @@ class BinarySearchTree {
 //    2       6
 //  /   \   /   \
 // 1     3 5     7
-  search(val) {
-    // Your code here
+
+// iterative
+  // search(val) {
+  //   // Your code here
+  //   let curr = this.root
+
+
+  //   while (curr) {
+  //     if (curr.val === val) return true
+
+  //     if (val < curr.val) {
+  //       curr = curr.left
+  //     } else {
+  //       curr = curr.right
+  //     }
+  //   }
+  //   return false
+  // }
+
+
+  // recursive
+  search(val, curr = this.root) {
+    if (!curr) return false
+
+    if (curr.val === val) return true
+
+    if (val < curr.val) {
+      return this.search(val, curr.left)
+    } else {
+      return this.search(val, curr.right)
+    }
   }
 
 
+//        4
+//     /    \
+//    2       6
+//  /   \   /   \
+// 1     3 5     7
+
+  // Recursive
+
+  // self left right
   preOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-
+// left self right
   inOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-
+// left right self
   postOrderTraversal(currentNode = this.root) {
     // Your code here
   }
