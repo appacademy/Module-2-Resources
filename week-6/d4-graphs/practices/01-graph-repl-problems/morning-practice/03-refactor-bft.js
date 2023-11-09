@@ -8,7 +8,7 @@ const adjList = {
 }
 
 function printBreadthFirst(start) {
-    // Paste your previous code here and refactor it
+    // Write BFT again
 }
 
 console.log("First Test:")
