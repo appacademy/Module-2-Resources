@@ -7,6 +7,7 @@ const adjList = {
   6: []
 }
 
+// shortest number of edges between start and end
 function degreesOfSeparation(start, end) {
   // Your code here
 }
