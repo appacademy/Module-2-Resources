@@ -7,6 +7,17 @@ const adjList = {
   6: []
 }
 
+
+/*
+             6
+
+    4---3
+    |   |
+    5---2
+     \ /
+      1
+*/
+
 function aShortestPath(start, end) {
   // Your code here
 }
