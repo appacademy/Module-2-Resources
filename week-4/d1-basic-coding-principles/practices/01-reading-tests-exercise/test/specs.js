@@ -27,9 +27,9 @@ describe("isOdd(number)", () => {
     const num2 = 2953;
     const num3 = -999;
 
-    const actual1 = isOdd(num1); // should be true
-    const actual2 = isOdd(num2); // should be true
-    const actual3 = isOdd(num3); // should be true
+    const actual1 = isOdd(num1); 
+    const actual2 = isOdd(num2); 
+    const actual3 = isOdd(num3); 
 
     expect(actual1).to.be.true;
     expect(actual2).to.be.true;
@@ -41,9 +41,9 @@ describe("isOdd(number)", () => {
     const num2 = 2952;
     const num3 = -998;
 
-    const actual1 = isOdd(num1); // should be false
-    const actual2 = isOdd(num2); // should be false
-    const actual3 = isOdd(num3); // should be false
+    const actual1 = isOdd(num1); 
+    const actual2 = isOdd(num2); 
+    const actual3 = isOdd(num3); 
 
     expect(actual1).to.be.false;
     expect(actual2).to.be.false;
