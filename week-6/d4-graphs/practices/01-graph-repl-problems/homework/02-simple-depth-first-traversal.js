@@ -7,16 +7,49 @@ const adjList = {
     6: [4]
 }
 
+/*
+  6
+   \
+    4---3
+    |   |
+    5---2
+     \ /
+      1
+*/
+
 function printDepthFirst(start) {
     // your code here
+
+    const stack = [start]
+    const visited = new Set([start])
+    // console.log("set at beginning  ====> ", visited)
+
+    while (stack.length) {
+        const curr = stack.pop()
+
+        // Do the thing
+        console.log(curr)
+
+        const neighbors = adjList[curr]
+
+        neighbors.forEach(neighbor => {
+            if (!visited.has(neighbor)) {
+                stack.push(neighbor)
+                visited.add(neighbor)
+            }
+        })
+
+        // console.log({visited})
+        // console.log({stack}, "\n\n")
+    }
 }
 
 console.log("First Test:")
 printDepthFirst(3); // Prints 1 through 6 in Breadth-first order, starting with 3
                     // One possible solution:  3, 4, 6, 5, 1, 2
-console.log("Second Test:")
-printDepthFirst(6); // Prints 1 through 6 in Breadth-first order, starting with 6
-                    // One possible solution:  6, 4, 5, 2, 1, 3
-console.log("Third Test:")
-printDepthFirst(4); // Prints 1 through 6 in Breadth-first order, starting with 4
-                    // One possible solution:  4, 6, 5, 2, 1, 3
+// console.log("Second Test:")
+// printDepthFirst(6); // Prints 1 through 6 in Breadth-first order, starting with 6
+//                     // One possible solution:  6, 4, 5, 2, 1, 3
+// console.log("Third Test:")
+// printDepthFirst(4); // Prints 1 through 6 in Breadth-first order, starting with 4
+//                     // One possible solution:  4, 6, 5, 2, 1, 3

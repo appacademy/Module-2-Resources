@@ -7,8 +7,40 @@ const adjList = {
   6: []
 }
 
+/*
+             6
+
+    4---3
+    |   |
+    5---2
+     \ /
+      1
+*/
+
 function breadthFirstSearch(start, end) {
   // Your code here
+  const queue = [start]
+  const visited = new Set()
+  visited.add(start)
+
+  while (queue.length) {
+    const curr = queue.shift()
+
+    // DO THE THING
+    if (curr === end) return true
+
+    const neighbors = adjList[curr]
+
+    neighbors.forEach(neighbor => {
+      if (!visited.has(neighbor)) {
+        queue.push(neighbor)
+        visited.add(neighbor)
+      }
+    })
+  }
+
+  return false
+
 }
 
 console.log("First Test:");

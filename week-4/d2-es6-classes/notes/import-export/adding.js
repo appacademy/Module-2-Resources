@@ -15,9 +15,9 @@ exports.division = (num1, num2) => {
 // module.exports = {
 //     adding: adding
 // }
- 
+
 
 // module.exports.adding = adding
 //module.exports.subtraction = subtraction;
 
-console.log(module)
+// console.log(module)

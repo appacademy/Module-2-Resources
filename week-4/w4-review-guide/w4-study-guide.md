@@ -7,8 +7,6 @@
 - 13 Coding Specs
 - 21/27 points to pass
 - Resources Allowed:
-  Code you wrote yourself
-  AA Open
   VSCode
   Console
   MDN Documentation

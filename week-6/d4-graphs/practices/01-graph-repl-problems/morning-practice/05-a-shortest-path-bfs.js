@@ -7,8 +7,46 @@ const adjList = {
   6: []
 }
 
+
+/*
+             6
+
+    4---3
+    |   |
+    5---2
+     \ /
+      1
+*/
+
 function aShortestPath(start, end) {
   // Your code here
+  const queue = [[start]] // queue of paths
+  const visited = new Set([start])
+
+  while (queue.length) {
+    console.log({queue})
+    const path = queue.shift()
+    // console.log({path})  // [1]
+
+    const lastNode = path[path.length - 1] // 1
+
+    // DO THE THING
+    if (lastNode === end) return path
+
+    const neighbors = adjList[lastNode]
+
+    neighbors.forEach(neighbor => {
+      if (!visited.has(neighbor)) {
+        visited.add(neighbor)
+
+        // adding new path with original path + new neighbor
+        queue.push([...path, neighbor])
+      }
+    })
+
+  }
+
+  return false
 }
 
 console.log("First Test:");
