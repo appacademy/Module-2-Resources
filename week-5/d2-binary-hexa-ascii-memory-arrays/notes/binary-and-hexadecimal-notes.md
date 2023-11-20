@@ -52,7 +52,7 @@ To convert 0b11001010 to decimal, remember the base is 2:
 
 Add all of those sums together to get 2 + 8 + 64 + 128 = 202
 
-To convert 202 to binary, we divide by the base and keep track of the remainder:
+To convert 202 to decimal, we divide by the base and keep track of the remainder:
 
 ```
 r = remainder
@@ -73,13 +73,12 @@ r = remainder
 const binary = '0b11001010';
 
 const binaryToDecimal = (binaryStr) => {
-    binaryStr = binaryStr.substring(2); // removing "0b"
-    binaryStr = binaryStr.split('').reverse().join(''); // reversing the string to start at "right most digit", now left
+    binaryStr = binaryStr.substring(2);
+    binaryStr = binaryStr.split('').reverse().join('');
 
     let sum = 0;
 
     for (let i = 0; i < binaryStr.length; i++) {
-        // taking the base, raising it to the power of "i" * integer converted from string number
         let num = Math.pow(2, i) * parseInt(binaryStr[i]);
         sum += num;
     }
@@ -179,14 +178,13 @@ const hexChars = {
 const hex1 = '0xF23C';
 
 const hexToDecimal = (hexStr) => {
-    hexStr = hexStr.substring(2); // "0x" removed
-    hexStr = hexStr.split('').reverse().join(''); // "C32F"
+    hexStr = hexStr.substring(2);
+    hexStr = hexStr.split('').reverse().join('');
 
     let sum = 0;
 
     for (let i = 0; i < hexStr.length; i++) {
         if (hexChars[hexStr[i]]) {
-            // hexChars obj has that hex as a key
             let num = Math.pow(16, i) * hexChars[hexStr[i]];
             sum += num;
         } else {

@@ -76,7 +76,7 @@ describe("eatMostTacos(sum1, sum2)", () => {
 
 describe("adoptSmallerDog(weight1, weight2)", () => {
   context("weight1 is bigger than weight2", () => {
-    it("should return 'I adopted a dog that weighs ${weight2} pounds.'", () => {
+    it("should return 'I adopted a dog that weighs ${weight1} pounds.'", () => {
       let weight1 = 30;
       let weight2 = 3;
       let actual = adoptSmallerDog(weight1, weight2); // "I adopted a dog that weighs 3 pounds."

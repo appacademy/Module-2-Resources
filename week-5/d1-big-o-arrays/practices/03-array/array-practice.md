@@ -5,99 +5,98 @@ justification for your answer. Assume `arr` is an array of length _n_.
 
 ## `arr.push()`
 
-
-Time complexity: O(1)
-Space complexity: O(1)
-Justification: keying into the last position of the array (empty), assigning that position to be the element we want to add
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [push on MDN][push]
 
 
 ## `arr.pop()`
 
-Time complexity: O(1)
-Space complexity: O(1)
-Justification: keying into the last element of the array, reassigning that position, returning removed element
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [pop on MDN][pop]
 
 ## `arr.shift()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: iterate over entire array to reposition elements to the left, returning removed element from the front
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [shift on MDN][shift]
 
 ## `arr.unshift()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: iterate over entire array to reposition elements to the right, returning new length, one element was added
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [unshift on MDN][unshift]
 
 ## `arr.splice()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: we could decided to call splice and remove from front, still requesting more space, maybe also adding to old array??
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [splice on MDN][splice]
 
 ## `arr.slice()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: worst case, we could copy the entire array, not sure how big original array is
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [slice on MDN][slice]
 
 ## `arr.indexOf()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: iterate over entire array, target may not be found, returning number (index)
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [indexOf on MDN][indexOf]
 
 ## `arr.map()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: we could copy the entire array with elements altered, not sure how big original array is
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [map on MDN][map]
 
 ## `arr.filter()`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: making new array of elements, we want from original array, worst case, every element in original array is what we want
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [filter on MDN][filter]
 
 ## `arr.reduce()`
 
-Time complexity: O(n)
-Space complexity: O(1), O(n??? occasionally)
-Justification: in most cases, reduce is used to return a sum, but it could be used to make objects every once in a while
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [reduce on MDN][reduce]
 
 ## `arr.reverse()`
 
-Time complexity: O(n)
-Space complexity: O(1)
-Justification: iterating over entire array, happening in place
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [reverse on MDN][reverse]
 
 ## `[...arr]`
 
-Time complexity: O(n)
-Space complexity: O(n)
-Justification: iterating over entire array, copying original elements into new array
+Time complexity: O(?)
+Space complexity: O(?)
+Justification: _Fill this in_
 
 [spread on MDN][spread]
 

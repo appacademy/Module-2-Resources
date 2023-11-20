@@ -3,8 +3,7 @@ class User {
     this.name = name;
   }
 
-  changeName = (newName) => {
-    console.log(this)
+  changeName(newName) {
     this.name = newName;
     return this.name;
   }

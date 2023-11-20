@@ -10,91 +10,31 @@ Consult documentation on how to utilize the following methods:
 /* Base 2 to base 16 */
 function binaryToHexadecimal(blob) {
   // Your code here
-  // blob = blob.substring(2)
-
-  // // bin to deci
-  // blob = parseInt(blob, 2)
-
-  // // deci to hex
-  // blob = blob.toString(16)
-  // // console.log(blob)
-
-  // return `0x${blob}`
-
-  //           bin to deci                   to hex
-  return `0x${parseInt(blob.substring(2), 2).toString(16)}`
 }
 
 /* Base 16 to base 2 */
 function hexadecimalToBinary(blob) {
   // Your code here
-  // hex to deci
-  blob = parseInt(blob.substring(2), 16)
-  // console.log(blob)
-
-  // deci to bin
-  blob = blob.toString(2)
-
-  return `0b${blob}`
 }
 
 /* Base 10 to ASCII */
 function decimalToAscii(blob) {
   // Your code here
-  return String.fromCharCode(blob)
 }
 
 /* Base 2 to ASCII */
 function binaryToAscii(blob) {
   // Your code here
-
-  // bin to deci
-  // blob = parseInt(blob.substring(2), 2)
-
-  // // deci to ascii
-  // blob = String.fromCharCode(blob)
-  // // console.log(blob)
-
-  // return blob
-
-  //     2. deci to ascii               1. bin to deci
-  // return String.fromCharCode(parseInt(blob.substring(2), 2))
-
-  // works because method accepts prefix
-  return String.fromCharCode(blob)
 }
 
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
   // Your code here
-
-  // hex to deci
-  // blob = parseInt(blob.substring(2), 16)
-
-  // // deci to ascii
-  // blob = String.fromCharCode(blob)
-
-  // return blob
-
-  // works because method accepts prefix
-  return String.fromCharCode(blob)
-
 }
 
 /* ASCII to base 10 */
 function asciiToDecimal(blob) {
   // Your code here
-  // let arr = []
-
-  // for (let i = 0; i < blob.length; i++) {
-  //   // arr.push(blob.charCodeAt(i))
-  //   arr.push(blob[i].charCodeAt())
-  // }
-
-  // return arr
-
-  //     string to arr,      each char to deci
-  return blob.split("").map(char => char.charCodeAt())
 }
 
 // console.log('Binary to hexadecimal:')
@@ -123,8 +63,8 @@ function asciiToDecimal(blob) {
 // console.log('')
 
 // console.log('ASCII to decimal:')
-console.log(asciiToDecimal('HELLO'))   // [ 72, 69, 76, 76, 79 ]
-console.log(asciiToDecimal('world!'))  // [ 119, 111, 114, 108, 100, 33 ]
+// console.log(asciiToDecimal('HELLO'))   // [ 72, 69, 76, 76, 79 ]
+// console.log(asciiToDecimal('world!'))  // [ 119, 111, 114, 108, 100, 33 ]
 
 module.exports = {
   binaryToHexadecimal,
