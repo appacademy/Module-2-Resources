@@ -31,7 +31,7 @@ describe("isOdd(number)", () => {
     const actual2 = isOdd(num2); 
     const actual3 = isOdd(num3); 
 
-    expect(actual1).to.be.true;
+    expect(actual1).to.be.true; // should be true;
     expect(actual2).to.be.true;
     expect(actual3).to.be.true;
   });
