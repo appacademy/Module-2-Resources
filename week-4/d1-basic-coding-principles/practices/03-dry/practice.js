@@ -48,15 +48,15 @@ function eatMostTacos(sum1, sum2) {
 }
 
 function adoptSmallerDog(weight1, weight2) {
-  let smallDog;
-  if (weight1 < weight2) {
-    smallDog = weight1;
-    // return `I adopted a dog that weighs ${smallDog} pounds.`;
-  } else {
-    smallDog = weight2;
-    // return `I adopted a dog that weighs ${smallDog} pounds.`;
-  }
-  // smallDog = findBiggerNum(weight1, weight2) === weight1 ? weight2 : weight1;
+  // let smallDog;
+  // if (weight1 < weight2) {
+  //   smallDog = weight1;
+  //   // return `I adopted a dog that weighs ${smallDog} pounds.`;
+  // } else {
+  //   smallDog = weight2;
+  //   // return `I adopted a dog that weighs ${smallDog} pounds.`;
+  // }
+  smallDog = findBiggerNum(weight1, weight2) === weight1 ? weight2 : weight1;
   return `I adopted a dog that weighs ${smallDog} pounds.`;
 }
 
