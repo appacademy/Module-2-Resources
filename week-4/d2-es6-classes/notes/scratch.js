@@ -2,8 +2,8 @@ class Guitar {
     constructor(make, model) {
         this.make = make;
         this.model = model;
-
-        if (!make) throw new Error('Must have make!!!!')
+        console.log('hi from guitar constructor!!!')
+        // if (!make) throw new Error('Must have make!!!!')
     }
 
     setMake(newMake) {
@@ -25,11 +25,20 @@ class Guitar {
 
 }
 
-const guitar1 = new Guitar('Fender', 'Stratocaster');
-const guitar2 = new Guitar('Gibson', 'Les Paul');
-const guitar3 = new Guitar('', 'PRS')
+class AcousticGuitar extends Guitar {
+    constructor(make, model, year) {
+        super(make, model)
+        this.year = year;
+    }
+}
+
+// const guitar1 = new Guitar('Fender', 'Stratocaster');
+const acoustic = new AcousticGuitar('', 'Dreadnaught', 1964);
+console.log(acoustic)
+// const guitar2 = new Guitar('Gibson', 'Les Paul');
+// const guitar3 = new Guitar('', 'PRS')
 
 // console.log(guitar1.showDetails())
 // console.log(guitar2.showDetails())
 
-Guitar.showAllDetails([guitar1, guitar2])
+// Guitar.showAllDetails([guitar1, guitar2])
