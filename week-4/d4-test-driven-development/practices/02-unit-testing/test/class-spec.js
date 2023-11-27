@@ -25,6 +25,8 @@ describe("Word", function () {
     });
   });
 
+
+
   describe("removeVowels function", function () {
     it("should return a word with all vowels removed", function () {
       expect(apple.removeVowels()).to.equal('ppl');
