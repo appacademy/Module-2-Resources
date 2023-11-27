@@ -1,30 +1,44 @@
-// funtion add(num1, num2){
-//     console.log(num1 + num2)
-// }
+// function broken() {}
 
-// add(1, 2)
+// try {
+//     const puppy = "puppy";
+//     console.log(pupppy); // mistyped variable name
+
+// } catch (error) {
+//     console.error(error.message)
+// }
 
 // const puppy = "puppy";
-// console.log(pupppy); 
+// console.log(puppy)
 
-// function sumDiv(n1, n2) {
-    
-    
+// function callPuppy() {
+//     const puppy = "puppy";
+// }
+// console.log(puppy); // puppy is not in scope, it was created in the callPuppy function
+
+// let dog; // Remember unassigned variables are undefined!
+// // dog(); // TypeError: dog is not a function
+// console.log(dog.name)
+
+// puppy = "apple"; // TypeError: Assignment to constant variable.
+
+// function login(credentials) {
+//     // login code
 // }
 
-// console.log(sumDiv())
+// const credentials = {
+//     email: 'email',
+//     password: 'password'
+// }
 
-function funStuff(str) {
-    const arr = str.split('')
-    return arr;
-}
+// class LoginError extends Error {
+//     constructor(message) {
+//         super(message)
+//     }
+// }
 
-try {
-    funStuff(4)
-} catch (err) {
-    console.log(err.message)
-    // throw new Error('what are you doing?')
-}
-
-const taco = new Array(4).fill(null)
-console.log(taco)
+// try {
+//     login(credentials)
+// } catch (e) {
+//     res.send(e.message)
+// }
