@@ -19,7 +19,9 @@ describe("Word", function () {
     });
 
     it('should set the "word" property when a new word is created', function () {
-      expect(apple.word).to.equal('apple');
+      const actual = apple.word;
+      console.log(actual)
+      expect(actual).to.equal('apple');
     });
   });
 
