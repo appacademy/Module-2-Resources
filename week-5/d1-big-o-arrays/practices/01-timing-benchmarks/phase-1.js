@@ -39,12 +39,12 @@ function addManyNums(n) {
 // T(n * n)
 // O(n^2)
 
-console.time("Briana's addNums")
-addNums(100)
-console.timeEnd("Briana's addNums")
+// console.time("Briana's addNums")
+// addNums(100)
+// console.timeEnd("Briana's addNums")
 
-console.log((Date.now()))
-addNums(1000000)
-console.log((Date.now()))
+// console.log((Date.now()))
+// addNums(1000000)
+// console.log((Date.now()))
 
 module.exports = [addNums, addManyNums];
