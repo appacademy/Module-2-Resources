@@ -64,12 +64,28 @@ class HashTable {
 
   insert(key, value) {
     // Your code here
-    const kvp = new KeyValuePair(key, value);
     const index = this.hashMod(key);
+    let curr = this.data[index]; // THIS COULD BE NULL;
 
-    kvp.next = this.data[index]; // could be null
-    this.data[index] = kvp;
-    this.count++;
+    // while (curr) {
+    //   if (curr.key === key) {
+    //     break;
+    //   }
+    //   curr = curr.next;
+    // }
+
+    while (curr && curr.key !== key) {
+      curr = curr.next;
+    }
+
+    if (curr) {
+      curr.value = value;
+    } else {
+      const kvp = new KeyValuePair(key, value);
+      kvp.next = this.data[index]; // could be null
+      this.data[index] = kvp;
+      this.count++;
+    }
     return this.count;
   }
 }
