@@ -25,13 +25,15 @@ function selectionSort(arr) {
 }
 
 function selectionSortInPlace(arr) {
+  // [2,4,6,8,1,3,5,7,9]
   // Set a pointer at zero dividing the array into sorted and unsorted halves
   let divider = 0;
   // Repeat while the unsorted half is not empty:
   while (divider < arr.length) {
     // Do not move this console.log
-    console.log(arr.join(","));
-
+    //                                              d m
+    console.log(arr.join(",")); //[1,2,3,4,5,6,7,8,9]
+    //                                         i
     // Find the index of the minimum value in the unsorted half
     let minIndex = divider;
     for (let i = minIndex + 1; i < arr.length; i++) {
@@ -40,7 +42,7 @@ function selectionSortInPlace(arr) {
       }
     }
     // Save the min value
-    const val = arr[minIndex];
+    const val = arr[minIndex]; // 7
     // Shift every unsorted value to the left of the min value to the right by 1
     for (let i = minIndex; i > divider; i--) {
       arr[i] = arr[i - 1];
