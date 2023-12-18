@@ -3,14 +3,14 @@
 You learned to count in a base 10 system. All numbers are based on a 0-9 counting pattern.
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9....
 
-- when you get to the last digit, you simply increase the number to the left and start over from 0
+-   when you get to the last digit, you simply increase the number to the left and start over from 0
 
 ## Binary, base 2:
 
-- 2 Key points:
-  - binary is all 0s and 1s
-  - binary digits are called bits
-    - a group of 8 bits is a byte
+-   2 Key points:
+    -   binary is all 0s and 1s
+    -   binary digits are called bits
+        -   a group of 8 bits is a byte
 
 ### How to count in binary:
 
@@ -26,11 +26,11 @@ You learned to count in a base 10 system. All numbers are based on a 0-9 countin
 1000 - 8
 ```
 
-- The pattern is: 0 and 1 are the same a base 10, but then you run out of digits.
-  - The right most digit returns to 0 and the digit to the left increments by 1
+-   The pattern is: 0 and 1 are the same a base 10, but then you run out of digits.
+    -   The right most digit returns to 0 and the digit to the left increments by 1
 
-* '0b' prefix identifies string/num as binary: 0b0100 -> 4
-* Avoids confusion, 8 -> 0b1000 to differentiate from base 10 number 1000
+*   '0b' prefix identifies string/num as binary: 0b0100 -> 4
+*   Avoids confusion, 8 -> 0b1000 to differentiate from base 10 number 1000
 
 ## Converting from binary to decimal (base 10):
 
@@ -52,7 +52,7 @@ To convert 0b11001010 to decimal, remember the base is 2:
 
 Add all of those sums together to get 2 + 8 + 64 + 128 = 202
 
-To convert 202 to binary, we divide by the base and keep track of the remainder:
+To convert 202 to decimal, we divide by the base and keep track of the remainder:
 
 ```
 r = remainder
@@ -70,20 +70,20 @@ r = remainder
 
 ```javascript
 // programmatic solution using powers
-const binary = "0b11001010";
+const binary = '0b11001010';
 
 const binaryToDecimal = (binaryStr) => {
-  binaryStr = binaryStr.substring(2);
-  binaryStr = binaryStr.split("").reverse().join("");
+    binaryStr = binaryStr.substring(2);
+    binaryStr = binaryStr.split('').reverse().join('');
 
-  let sum = 0;
+    let sum = 0;
 
-  for (let i = 0; i < binaryStr.length; i++) {
-    let num = Math.pow(2, i) * parseInt(binaryStr[i]);
-    sum += num;
-  }
+    for (let i = 0; i < binaryStr.length; i++) {
+        let num = Math.pow(2, i) * parseInt(binaryStr[i]);
+        sum += num;
+    }
 
-  return sum;
+    return sum;
 };
 
 console.log(binaryToDecimal(binary));
@@ -96,8 +96,8 @@ hex = 6, dec = 10, hence hexadecimal (6 + 10 = 16)
 Counting follows this pattern:
 The digits are 0-9 with A, B, C, D, E and F representing 10, 11, 12, 13, 14 and 15, respectively. Hexadecimal numbers (sometimes called 'hex' for short) are prepended with an '0x' to differentiate them as base-16.
 
-- Hexadecimal is often used as shorthand for representing binary values:
-  - one hex digit can represent four bits.
+-   Hexadecimal is often used as shorthand for representing binary values:
+    -   one hex digit can represent four bits.
 
 ```
 0 = 0b0000 = 0x0
@@ -167,33 +167,33 @@ r = remainder
 ```javascript
 // programmatic solution using powers
 const hexChars = {
-  A: 10,
-  B: 11,
-  C: 12,
-  D: 13,
-  E: 14,
-  F: 15,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
 };
 
-const hex1 = "0xF23C";
+const hex1 = '0xF23C';
 
 const hexToDecimal = (hexStr) => {
-  hexStr = hexStr.substring(2);
-  hexStr = hexStr.split("").reverse().join("");
+    hexStr = hexStr.substring(2);
+    hexStr = hexStr.split('').reverse().join('');
 
-  let sum = 0;
+    let sum = 0;
 
-  for (let i = 0; i < hexStr.length; i++) {
-    if (hexChars[hexStr[i]]) {
-      let num = Math.pow(16, i) * hexChars[hexStr[i]];
-      sum += num;
-    } else {
-      let num = Math.pow(16, i) * parseInt(hexStr[i]);
-      sum += num;
+    for (let i = 0; i < hexStr.length; i++) {
+        if (hexChars[hexStr[i]]) {
+            let num = Math.pow(16, i) * hexChars[hexStr[i]];
+            sum += num;
+        } else {
+            let num = Math.pow(16, i) * parseInt(hexStr[i]);
+            sum += num;
+        }
     }
-  }
 
-  return sum;
+    return sum;
 };
 
 console.log(hexToDecimal(hex1));
@@ -201,7 +201,7 @@ console.log(hexToDecimal(hex1));
 
 ## ASCII:
 
-- `String.fromCharCode()`
+-   `String.fromCharCode()`
 
 ```javascript
 console.log(String.fromCharCode(65)); // = A;
@@ -209,10 +209,10 @@ console.log(String.fromCharCode(66)); // = B;
 console.log(String.fromCharCode(67)); // = C;
 ```
 
-- `String.prototype.charCodeAt()`
+-   `String.prototype.charCodeAt()`
 
 ```javascript
-const str = "ABC";
+const str = 'ABC';
 console.log(str.charCodeAt(0)); // 65 => A;
 console.log(str.charCodeAt(1)); // 66 => B;
 console.log(str.charCodeAt(2)); // 67 => C;
@@ -222,7 +222,7 @@ console.log(str.charCodeAt(2)); // 67 => C;
 
 ```javascript
 // Convert Hexadecimal to Base10 & back`
-let num = parseInt("0xa1", 16); // 161
+let num = parseInt('0xa1', 16); // 161
 let str = num.toString(16); // 'a1'
 ```
 
@@ -232,11 +232,11 @@ let str = num.toString(16); // 'a1'
 
 1 byte = 8 bits
 
-- kilo - thousand
-- mega - million
-- giga - billion
-- tera - trillion
-- peta - quadrillion
-- exa - quintillion
-- zetta - sextillion
-- yotta - septillion
+-   kilo - thousand
+-   mega - million
+-   giga - billion
+-   tera - trillion
+-   peta - quadrillion
+-   exa - quintillion
+-   zetta - sextillion
+-   yotta - septillion

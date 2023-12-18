@@ -8,8 +8,10 @@
 -Time allowed: 3.5 hours
 -Resources Allowed:
     -MDN
+    -open.appacademy.io
     -VSCode
     -Console
+    -Code you wrote yourself
 
 # What to study for Multiple Choice:
     -Be able to determine the O(n) of a refactored algorithm
