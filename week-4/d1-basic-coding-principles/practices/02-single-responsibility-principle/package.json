@@ -9,9 +9,8 @@
   "dependencies": {
     "chai": "^4.3.4",
     "chai-spies": "^1.0.0",
-    "mocha": "^9.0.3"
+    "mocha": "^9.2.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "mocha"
   },

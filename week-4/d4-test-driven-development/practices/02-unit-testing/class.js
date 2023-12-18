@@ -13,6 +13,7 @@ class Word {
       }
     }
     return newWord;
+    // return 'ppl'
   }
 
   removeConsonants() {
@@ -44,5 +45,7 @@ class Word {
     }
   }
 }
+
+
 
 module.exports = { Word };

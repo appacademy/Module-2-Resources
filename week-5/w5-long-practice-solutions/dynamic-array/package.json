@@ -1,0 +1,16 @@
+{
+  "name": "dynamic-array",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dynamic-array.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-spies": "^1.0.0",
+    "mocha": "^10.2.0"
+  }
+}
