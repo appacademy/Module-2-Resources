@@ -7,7 +7,6 @@ function findBiggerNum(num1, num2) {
   //   bigNum = num2;
   //   return bigNum;
   // }
-
   return num1 > num2 ? num1 : num2;
 }
 
