@@ -1,0 +1,19 @@
+{
+  "name": "01-reading-tests-exercise",
+  "version": "1.0.0",
+  "description": "In this exercise, you will deduce what some given test specs are testing for.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  }
+}
