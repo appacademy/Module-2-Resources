@@ -12,7 +12,7 @@ class LinkedList {
     this.length = 0
   }
 
-  addToHead(val) {
+  addToHead(val) { // Time O(1)
     // Your code here
     const newNode = new LinkedListNode(val)
 
@@ -28,7 +28,7 @@ class LinkedList {
     return this.length
   }
 
-  addToTail(val) {
+  addToTail(val) { // Time O(n), n is length of LL, O(1) if tail property is provided
     // Your code here
     const newNode = new LinkedListNode(val)
 
