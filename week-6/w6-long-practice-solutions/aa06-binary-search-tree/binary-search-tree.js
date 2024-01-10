@@ -1,3 +1,7 @@
+// Before starting, copy and paste your guided practice work from
+// `binary-search-tree.js` into this file
+
+// Your code here
 // Do not change this
 class TreeNode {
   constructor(val) {
@@ -7,32 +11,32 @@ class TreeNode {
   }
 }
 
-/*
-              4
-           /     \
-          2       6
-        /   \   /   \
-       1     3 5     7
-*/
-
 class BinarySearchTree {
   constructor() {
     // Your code here
     this.root = null;
   }
 
+  /*
+                  4
+               /     \
+              2       6
+            /   \   /   \
+           1     3 5     7
+    */
+
   insert(val, currentNode = this.root) {
     // Your code here
-    const newNode = new TreeNode(val);
-    // console.log({ newNode });
+    const node = new TreeNode(val);
+
     if (!this.root) {
-      this.root = newNode;
+      this.root = node;
       return this;
     }
 
     if (val < currentNode.val) {
       if (!currentNode.left) {
-        currentNode.left = newNode;
+        currentNode.left = node;
         return this;
       } else {
         return this.insert(val, currentNode.left);
@@ -41,7 +45,7 @@ class BinarySearchTree {
 
     if (val > currentNode.val) {
       if (!currentNode.right) {
-        currentNode.right = newNode;
+        currentNode.right = node;
         return this;
       } else {
         return this.insert(val, currentNode.right);
@@ -49,20 +53,12 @@ class BinarySearchTree {
     }
   }
 
-  /*
-              4
-           /     \
-          2       6
-        /   \   /   \
-       1     3 5     7
-*/
   search(val) {
     // Your code here
     let curr = this.root;
 
     while (curr) {
-      if (val === curr.val) return true;
-
+      if (curr.val === val) return true;
       curr = val < curr.val ? curr.left : curr.right;
 
       // if (val < curr.val) {
@@ -71,29 +67,8 @@ class BinarySearchTree {
       //   curr = curr.right;
       // }
     }
-
     return false;
   }
-
-  search2(val, currentNode = this.root) {
-    if (!currentNode) return false;
-
-    if (val === currentNode.val) return true;
-
-    if (val < currentNode.val) {
-      return this.search2(val, currentNode.left);
-    } else {
-      return this.search2(val, currentNode.right);
-    }
-  }
-
-  /*
-              4
-           /     \
-          2       6
-        /   \   /   \
-       1     3 5     7
-*/
 
   // The traversal strategy the programmer selects depends on the
   // specific needs of the algorithm being designed.
@@ -116,74 +91,110 @@ class BinarySearchTree {
   // A pre-order or post-order traversal might not unwind the tree back
   // into the sequence which was used to create it.
 
+  /*
+                  4
+               /     \
+              2       6
+            /   \   /   \
+           1     3 5     7
+    */
+  // curr = 2
+  // cl => 4,2,1,3,6,5,7
   // self, left, right
   preOrderTraversal(currentNode = this.root) {
-    if (!currentNode) return this;
     // Your code here
+    if (!currentNode) return;
+
+    // Do the thing
     console.log(currentNode.val);
+    // recurse left
     this.preOrderTraversal(currentNode.left);
+    // recurse right
     this.preOrderTraversal(currentNode.right);
   }
+  /*
+                  4
+               /     \
+              2       6
+            /   \   /   \
+           1     3 5     7
+    */
+  // curr = 4
+  // cl => 1,2,3,4,5,6,7
   // left, self, right
   inOrderTraversal(currentNode = this.root) {
     // Your code here
-    if (!currentNode) return this;
+    if (!currentNode) return;
 
+    // recurse left
     this.inOrderTraversal(currentNode.left);
+    // Do the thing
     console.log(currentNode.val);
+    // recurse right
     this.inOrderTraversal(currentNode.right);
   }
+  /*
+                  4
+               /     \
+              2       6
+            /   \   /   \
+           1     3 5     7
+    */
+  // curr = 4
+  // cl => 1,3,2,5,7,6,4
   // left, right, self
   postOrderTraversal(currentNode = this.root) {
     // Your code here
-    if (!currentNode) return this;
+    if (!currentNode) return;
 
     this.postOrderTraversal(currentNode.left);
     this.postOrderTraversal(currentNode.right);
     console.log(currentNode.val);
   }
   /*
-              4
-           /     \
-          2       6
-        /   \   /   \
-       1     3 5     7
-*/
+                  4
+               /     \
+              2       6
+            /   \   /   \
+           1     3 5     7
+    */
+
   // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
     // your code here
-    const queue = [this.root]; // []
+    const queue = [this.root];
 
     while (queue.length) {
+      // []
       const curr = queue.shift(); // 7
 
-      // DO THE THING
-      console.log(curr.val); // 4,2,6,1,3,5,7
+      // Do the thing
+      console.log(curr.val); // => 4,2,6,1,3,5,7
 
       if (curr.left) queue.push(curr.left);
       if (curr.right) queue.push(curr.right);
     }
     return this;
   }
-
   /*
-              4
-           /     \
-          2       6
-        /   \   /   \
-       1     3 5     7
-*/
+                  4
+               /     \
+              2       6
+            /   \   /   \
+           1     3 5     7
+    */
 
   // Depth First Traversal - Iterative
   depthFirstTraversal() {
     // your code here
-    const stack = [this.root]; // []
+    const stack = [this.root];
 
     while (stack.length) {
+      // []
       const curr = stack.pop(); // 1
 
-      // DO THE THING
-      console.log(curr.val); //4,6,7,5,2,3,1
+      // Do the thing
+      console.log(curr.val); // => 4,6,7,5,2,3,1
 
       if (curr.left) stack.push(curr.left);
       if (curr.right) stack.push(curr.right);
@@ -191,18 +202,5 @@ class BinarySearchTree {
     return this;
   }
 }
-
-// const bst = new BinarySearchTree();
-
-// bst.insert(4);
-// bst.insert(2);
-// bst.insert(6);
-// bst.insert(1);
-// bst.insert(3);
-// bst.insert(5);
-// bst.insert(7);
-
-// console.log(bst.search2(1));
-// console.log(bst.search2(10));
 
 module.exports = { BinarySearchTree, TreeNode };
