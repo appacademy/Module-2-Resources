@@ -142,7 +142,13 @@ class BinarySearchTree {
     this.postOrderTraversal(currentNode.right);
     console.log(currentNode.val);
   }
-
+  /*
+              4
+           /     \
+          2       6
+        /   \   /   \
+       1     3 5     7
+*/
   // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
     // your code here
