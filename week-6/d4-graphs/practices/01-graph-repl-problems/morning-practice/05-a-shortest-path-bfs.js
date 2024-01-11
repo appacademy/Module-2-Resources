@@ -4,8 +4,14 @@ const adjList = {
   3: [2, 4],
   4: [3, 5],
   5: [1, 2, 4],
-  6: []
-}
+  6: [],
+};
+
+// [, [1,5,4]] => queue
+
+// [1,2,3] => currPath
+
+// 3=> currNode
 
 function aShortestPath(start, end) {
   // Your code here
