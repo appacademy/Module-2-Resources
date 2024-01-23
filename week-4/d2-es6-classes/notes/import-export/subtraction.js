@@ -1,8 +1,10 @@
 function subtraction(a, b) {
-    if (a > b) return a - b;
-    return b - a;
+  if (a > b) return a - b;
+  return b - a;
 }
 
-module.exports = subtraction;
-// module.exports.taco = subtraction;
-// module.exports = {taco: subtraction}
+function minus2(num) {
+  return num - 2;
+}
+
+module.exports = { subtraction, minus2 };

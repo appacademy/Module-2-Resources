@@ -1,30 +1,46 @@
-// funtion add(num1, num2){
-//     console.log(num1 + num2)
+// funtion add(num1, num2) {
+//   console.log(num1 + num2);
 // }
 
 // add(1, 2)
 
-// const puppy = "puppy";
-// console.log(pupppy); 
-
-// function sumDiv(n1, n2) {
-    
-    
+// try {
+//   const puppy = "puppy";
+//   console.log(pupppy);
+// } catch (error) {
+//   console.error(error.message);
 // }
 
-// console.log(sumDiv())
+// function callPuppy() {
+//   const puppy = "puppy";
+// }
+// console.log(puppy); // puppy is not in scope, it was created in the callPuppy function
 
-function funStuff(str) {
-    const arr = str.split('')
-    return arr;
+// let dog = null; // Remember unassigned variables are undefined!
+// dog(); // TypeError: dog is not a function
+
+class CustomError extends Error {
+  constructor(...params) {
+    super(...params);
+  }
 }
 
-try {
-    funStuff(4)
-} catch (err) {
-    console.log(err.message)
-    // throw new Error('what are you doing?')
+function adder(n1, n2) {
+  try {
+    if (typeof n1 !== "number" || typeof n2 !== "number") {
+      throw new CustomError("Hey, arguments must be numbers!");
+    }
+    return n1 + n2;
+  } catch (e) {
+    console.error(e.message);
+  }
+  console.log("inside of function");
 }
 
-const taco = new Array(4).fill(null)
-console.log(taco)
+console.log(adder("1", {}));
+// try {
+// } catch (e) {
+//   console.error(e.message);
+// }
+
+console.log("here");
