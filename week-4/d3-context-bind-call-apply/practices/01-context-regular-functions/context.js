@@ -12,28 +12,26 @@ class Fish {
   }
 }
 
-const nemo = new Fish("Nemo");
+const nemo = new Fish('Nemo');
 
 /********************************* Scenario 1 *********************************/
-// eat(); // undefined eats fish food
+// eat(); // ?
+
 
 /********************************* Scenario 2 *********************************/
-// console.log(nemo);
 // nemo.eat = eat;
-// // console.log(nemo);
-// nemo.eat(); // Nemo eats fish food
+// nemo.eat(); // ?
+
 
 /********************************* Scenario 3 *********************************/
 // nemo.eat = eat;
-// eat(); // undefined eats fish food
+// eat(); // ?
+
 
 /********************************* Scenario 4 *********************************/
-// nemo.swim(); // Nemo swimming in the water
+// nemo.swim(); // ?
+
 
 /********************************* Scenario 5 *********************************/
-const shane = {
-  name: "shane",
-};
-const swim = nemo.swim.bind(shane);
-swim(); // throws a TypeError because classes are in strict mode.
-console.log(nemo);
+// const swim = nemo.swim;
+// swim(); // ?

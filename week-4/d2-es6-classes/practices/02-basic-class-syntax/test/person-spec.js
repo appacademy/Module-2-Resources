@@ -7,10 +7,10 @@ const Person = require("../classes/person");
 
 describe("Person class", () => {
   let person;
-  let consoleSpy;
+  let consoleSpy
   beforeEach(() => {
     person = new Person("kristen", "chauncey", 38);
-    consoleSpy = chai.spy.on(console, "log");
+    consoleSpy = chai.spy.on(console, 'log');
   });
 
   afterEach(() => {
@@ -38,7 +38,7 @@ describe("Person class", () => {
     it("should call the introduce method", () => {
       person.introduce();
       let expected = `Hi, I'm kristen chauncey, and I'm 38 years old.`;
-      expect(consoleSpy).to.have.been.called.once.with(expected);
+      expect(consoleSpy).to.have.been.called.once.with(expected)
     });
   });
 
@@ -60,12 +60,12 @@ describe("Person class", () => {
       );
     });
 
-    it("should throw an error if array does not contain instances of Person", () => {
-      let input = ["dog", person];
+    it('should throw an error if array does not contain instances of Person', () => {
+      let input = ['dog', person]
       Person.introducePeople(input);
       expect(consoleSpy).to.have.been.called.once.with(
         "All items in array must be Person class instances."
       );
-    });
+    })
   });
 });

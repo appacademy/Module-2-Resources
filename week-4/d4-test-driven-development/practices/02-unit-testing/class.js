@@ -12,11 +12,7 @@ class Word {
         newWord += char;
       }
     }
-    // this.word = newWord;
-    // return this.word;
     return newWord;
-
-    // return "ppl";
   }
 
   removeConsonants() {
