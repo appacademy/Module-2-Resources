@@ -33,7 +33,8 @@ const recipes = {
 /* DO NOT CHANGE THE CODE ABOVE */
 
 /*************************** FUNCTION TO REFACTOR ****************************/
-function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
+
+function combineIngredients(pieType, pieQuantity) {
   // Find the recipe for the pieType specified
   const recipe = recipes[pieType];
   // Bake the number of pies specified by the pieQuantity
@@ -46,12 +47,20 @@ function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
     // Print the nth pie that was baked
     console.log(`Baked pie ${i + 1}!`);
   }
+}
 
+function findPieCost(pieType){
+
+  const recipe = recipes[pieType];
   // Print the cost of each pie based on the cost of each ingredient
   const costOfPie = recipe.reduce((prev, current) => {
     return prev + current.cost;
   }, recipe[0].cost);
   console.log(`Cost per pie: ${costOfPie}`);
+  return costOfPie;
+};
+
+function sellPies(costOfPie,  pieQuantity, profitMargin){
 
   // Calculate the total cost of all the pies
   const totalCost = costOfPie * pieQuantity;
@@ -61,8 +70,16 @@ function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
   console.log(`Sold ${pieQuantity} pies for $${revenue.toFixed(2)}!`);
 }
 
+// console.log(combineIngredients("applePie"));
+function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
+
+  combineIngredients(pieType, pieQuantity)
+  let costOfPie = findPieCost(pieType)
+  sellPies(costOfPie, pieQuantity, profitMargin)
+}
+
 /******************************* LOCAL TESTS *******************************/
-// bakeAndSellPies("applePie", 5, 2.5);
+bakeAndSellPies("applePie", 5, 2.5);
 // bakeAndSellPies("pumpkinPie", 2);
 // bakeAndSellPies("cherryPie", 7, 1.7);
 
