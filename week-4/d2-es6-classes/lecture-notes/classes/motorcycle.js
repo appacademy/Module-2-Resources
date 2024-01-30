@@ -36,12 +36,26 @@ const Car = require('./classes');
 class Motorcycle extends Car {
   constructor(name, make, model, milage) {
     super(name, model, make);
+    // ! inheritance
+    // we inherit all methods and properties from the parent
+    // super lets us follow dry; so we don't have to retype this.name, this.make, this.model
+
+    // can add new properties just make sure to pass to constructor
     this.milage = milage;
+    this.noise = 'braaaap';
+
+    // ! polymorphism
+    // overriding parent static variable
     Motorcycle.numCars += 1;
   };
 
+  // ! polymorphism
   // polymorphism overwrites parent method static variable
   static numCars = 0;
+
+  makeNoise() {
+    return`Motorcycle goes ${this.noise}`
+  }
 }
 
 
@@ -49,4 +63,41 @@ const Harley = new Motorcycle('Harley', 'harley davidson', 'sportster', 50);
 
 // console.log(Harley);
 // console.log(Motorcycle.numCars);
-console.log(Harley.makeNoise())
+console.log(Harley.makeNoise());
+// currently prints Car goes braaaap
+// because it calls the parent makeNoise method
+
+
+/*
+
+
+  Leave off constructor
+  * the parent automatically
+
+
+*/
+
+class Truck extends Car{
+  constructor(name, make, model, numWheels) {
+    super(name, make, model)
+    this.numWheels = numWheels;
+  }
+}
+
+const F150 = new Truck('F150','ford', 'Raptor', 4);
+
+// console.log(F150)
+// Truck { name: 'F150', make: 'ford', model: 'Raptor', noise: 'vrooom' }
+
+
+// function Car(name, make, model) {
+//   this.make =make;
+//   this.name = name;
+//   this.model = model;
+
+//   return function Truck() {
+//     this.name = name;
+//     this.make = make;
+//     this.model = model;
+//   }
+// }
