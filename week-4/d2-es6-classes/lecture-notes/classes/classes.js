@@ -59,6 +59,7 @@ class Car {
     this.name = name;
     this.make = make;
     this.model = model;
+    this.noise = 'vrooom'
     Car.numCars += 1;
   };
 
@@ -68,6 +69,10 @@ class Car {
   getInfo() {
     return `I wish I had a ${this.name} ${this.make} ${this.model}`
   };
+
+  makeNoise() {
+    return`Car goes ${this.noise}`
+  }
 
   // * static method
   // * static method is called upon the class itself
@@ -93,7 +98,7 @@ const Challenger = new Car('Challenger', 'Dodge', 'Hellcat');
 // console.log(Challenger);// Car { name: 'Challenger', make: 'Dodge', model: 'Hellcat' }
 const Mustang = new Car('Mustang', 'Ford', 'Shelby');
 
-console.log(Car.numCars);
+// console.log(Car.numCars);
 // console.log(Mustang);// Car { name: 'Mustang', make: 'Ford', model: 'Shelby' }
 // console.log(Challenger.getInfo());
 // console.log(Mustang.getInfo());
@@ -102,6 +107,7 @@ console.log(Car.numCars);
 const carNames = Car.getCars(Challenger, Mustang);
 // console.log(carNames);// [ 'Challenger', 'Mustang' ]
 
+module.exports = Car;
 /*
   New keyword
   * used to create instance of a class
