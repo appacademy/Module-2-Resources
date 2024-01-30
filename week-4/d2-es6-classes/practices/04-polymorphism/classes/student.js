@@ -15,7 +15,11 @@ class Student extends Person {
     } else {
       return "Both students have the same GPA";
     }
-  }
+  };
+
+  introduce() {
+    return `Hello. I am ${this.firstName} ${this.lastName}, and I study ${this.major}.`;
+  };
 }
 
 /****************************************************************************/
