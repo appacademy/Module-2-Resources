@@ -9,4 +9,4 @@ function greetAfterNameChange(changeName, newName) {
 }
 
 greetAfterNameChange(michelle.changeName, 'Elle');
-  // should print out: Hi my name is Elle
+  // should print out: Hi my name is Ellels
