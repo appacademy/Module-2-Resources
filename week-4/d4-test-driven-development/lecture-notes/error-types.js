@@ -71,13 +71,35 @@ function wrongReference(arg) {
   console.log(args);
 }
 
-try {
-  wrongReference(21);
-  console.log("call successful"); // we will not see this execute
-} catch (error) {
-  if (error instanceof ReferenceError) {
-    console.error("Looks you got a reference error"); // Looks you got a reference error
-  } else {
-    console.log(error.message);
-  }
+// try {
+//   wrongReference(21);
+//   console.log("call successful"); // we will not see this execute
+// } catch (e) {
+//   if (e instanceof ReferenceError) {
+//     console.error("Looks you got a reference error"); // Looks you got a reference error
+//   } else {
+//     console.log(e.message);
+//   }
+// }
+
+// Better comments extension
+// ! note we cannot catch syntax errors
+// ? question
+// * notes
+
+function reverseString(string) {
+  return string.split('').reverse().join('');
 }
+
+
+try {
+  reverseString('cat');// tahw
+  // reverseString(12);// cant reverse a number
+} catch(error){
+  console.error('Cant reverse a number', error); //Cant reverse a number
+} finally {
+  console.log('DONE TESTING REVERSE STRING')
+}
+
+
+// couple lines
