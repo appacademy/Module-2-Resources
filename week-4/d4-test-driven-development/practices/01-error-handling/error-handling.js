@@ -70,3 +70,11 @@ try {
   // }
   // sayBye();
 }
+
+
+// try {
+//   apiCall();
+// } catch(e) {
+//   console.log(e, "Hello World!");
+//   renderLoadingSpinner();
+// }
