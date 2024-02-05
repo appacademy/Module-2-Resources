@@ -59,14 +59,23 @@
 //input.
 //Example:
 function constant(n) {
+  // 1 + 1 + 1
     return n * 2 + 1;
-}
+};
+// T(1 + 1 + 1);
+// T(3)
+// T(1)
 
 function constant2(n) {
+  // 1 + 100 + 100
     for (let i = 1; i <= 100; i++){
+      // 100
         console.log(i)
     }
 }
+// T(1 + 100 + 100 + 100);
+// T(301)
+// T(1)
 //O(1) => no matter how big n gets, the algorithm doesn't change in complexity
 
 
@@ -99,23 +108,44 @@ Examples:
 */
 // O(n)
 function linear1(n) {
+  // we declare i once - 1
+  // do this check n amount of times - (1 * n)
+  // we increment i n amount of times - (1 * n)
+  // we console.log n amount times - (1 * n)
+  // 1 + (1 * n) + (1 * n)
   for (let i = 1; i <= n; i++) {
+    // (1 * n)
     console.log(i);
   }
-}
+};
+// T(  1 + (1 * n) + (1 * n) + (1 * n)   )
+// T(  1 + (n) + (n) + (n)  )
+// T(  1 + 3n);
+// T(n)
 
 // O(n), where n is the length of the array
 function linear2(array) {
+  // 1 + (1 * n) + (1 * n)
   for (let i = 0; i < array.length; i++) {
+    // (1 * n)
     console.log(i);
   }
 }
+// T( 1 + (1 * n) + (1 * n) + (1 * n))
+// T( 1 + n + n + n);
+// T(1 + 3n)
+// T(n)
 
 // O(n)
 function linear3(n) {
+  // 1
   if (n === 1) return;
+  // (1 * n)
   linear3(n - 1);
 }
+// T(1 + 1 * n);
+// T(1 + 1n);
+// T(n);
 
 /*
 O(n * log(n)) - Loglinear: combination of linear and logarithmic behavior
@@ -146,25 +176,38 @@ input
 Examples:
 */
 // O(n^2)
-function quadratic(n) {
+function quadratic(n, m) {
+  let num = 0;
+  // 1 + (1 * n) + (1 * n) + 1 + 1
   for (let i = 1; i <= n; i++) {
-      for (let j = 1; j <= n; j++) {
+    // 1 + (1 * n) + (1 * n)
+      for (let j = 1; j <= m; j++) {
         //do some stuff
     }
   }
-}
+};
+// T( (1 + (1 * n) + (1 * n)) *  (1 + (1 * n) + (1 * n))    )
+// T( (1 + (n) + (n)) *  (1 + (n) + (n))    )
+// T( (2n) *  (2n)    )
+// T( (n) *  (n)    )
+// T(n^2)
+// n amount of work n amount times
 
 // O(n^3)
 function cubic(n) {
+  // n
   for (let i = 1; i <= n; i++) {
+    // n
     for (let j = 1; j <= n; j++) {
+      // n
         for (let k = 1; k <= n; k++) {
           //do some stuff
       }
     }
   }
 }
-
+// T(n * n * n);
+// T(n^3)
 /*
 O(c^n) - Exponential: complexity grows exponentially based on the input size
     - common indicator is recursive code with a constant number of recursive
