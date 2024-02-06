@@ -38,8 +38,8 @@ class DynamicArray {
 // let arr = [1];
 // console.log(arr[1]);// undefined
 
-let myArr = new DynamicArray()
-myArr.unshift(0)
+// let myArr = new DynamicArray()
+// myArr.unshift(0)
 // length - 0
 // this.data = [<e>,<e>,<e>,<e>,<e>,<e> ,<e>,<e>]
 // this.capacity = 8
