@@ -1,9 +1,11 @@
+
+
 class DynamicArray {
 
   constructor(defaultSize=4) {
 
     // Your code here
-
+    this.data = new Array(defaultSize);
   }
 
   read(index) {
