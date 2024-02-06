@@ -10,6 +10,8 @@ Consult documentation on how to utilize the following methods:
 /* Base 2 to base 16 */
 function binaryToHexadecimal(blob) {
   // Your code here
+  // binary -> decimal
+  // decimal -> hex
 }
 
 /* Base 16 to base 2 */
