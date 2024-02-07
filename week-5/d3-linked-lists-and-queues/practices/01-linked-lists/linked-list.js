@@ -7,15 +7,38 @@ class LinkedListNode {
 
 class LinkedList {
   constructor() {
-    // Your code here
+    this.head = null;
+    this.length = 0;
+    // this.tail = null;
   }
 
   addToHead(val) {
-    // Your code here
+    // newNode: { value: 10, next: null }
+    const newNode = new LinkedListNode(val);
+    newNode.next = this.head;
+
+    this.head = newNode;
+
+    this.length++;
   }
 
   addToTail(val) {
-    // Your code here
+    const newNode = new LinkedListNode(val);
+
+    this.length++;
+
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      let currentNode = this.head;
+
+      while (currentNode.next) {
+        currentNode = currentNode.next;
+      }
+
+      currentNode.next = newNode;
+    }
+    // return;
   }
 
   // You can use this function to help debug
@@ -30,5 +53,9 @@ class LinkedList {
     console.log("NULL");
   }
 }
+
+// const ll = new LinkedList();
+// ll.addToHead(10);
+// ll.addToHead(200);
 
 module.exports = LinkedList;

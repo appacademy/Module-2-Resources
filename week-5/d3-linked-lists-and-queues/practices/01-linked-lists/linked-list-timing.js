@@ -7,3 +7,43 @@ Construct a timing test to verify the time complexities of `addToHead` and
 */
 
 // Your code here
+
+
+
+
+
+
+
+
+console.time('start')
+for(let i = 0; i < 10000; i++){
+  LinkedList.addToHead();
+}
+console.time('end')
+// ???
+
+
+
+console.time('start')
+for(let i = 0; i < 10000; i++){
+  LinkedList.addToTail();
+}
+console.time('end')
+// ???
+
+
+
+
+console.time('start')
+for(let i = 0; i < 10000; i++){
+  DoublyLinkedList.addToHead();
+}
+console.time('end')
+// ???
+
+console.time('start')
+for(let i = 0; i < 10000; i++){
+  DoublyLinkedList.addToTail();
+}
+console.time('end')
+// ???
