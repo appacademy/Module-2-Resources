@@ -21,49 +21,44 @@
 */
 
 // create a helper func to break apart the binary string into bytes
-const binaryArrayHelper = str => {
-    //return an array of bytes
-    let binaryArray = [];
+const binaryArrayHelper = (str) => {
+  //return an array of bytes
+  let binaryArray = [];
 
-    // console.log(str.length) // 24 / 8 => 3 bytes
-    for (let i = 0; i < str.length; i += 8){
-        // console.log(i)
-        let sliced = str.slice(i,i+8)
-        // console.log({ sliced })
-        binaryArray.push(sliced)
-    }
+  // console.log(str.length) // 24 / 8 => 3 bytes
+  for (let i = 0; i < str.length; i += 8) {
+    // console.log(i)
+    let sliced = str.slice(i, i + 8);
+    // console.log({ sliced })
+    binaryArray.push(sliced);
+  }
 
-    // console.log(binaryArray) // [ '01100001', '01100010', '01100011' ]
-    return binaryArray
-
-}
+  // console.log(binaryArray) // [ '01100001', '01100010', '01100011' ]
+  return binaryArray;
+};
 
 // console.log(binaryArrayHelper("011000010110001001100011"))
 
-const binaryToAscii = str => {
-    // return an ascii string
-    let ascii = "";
+const binaryToAscii = (str) => {
+  // return an ascii string
+  let ascii = "";
 
-    // grab the binary array from the helper
-    let binaryArray = binaryArrayHelper(str); // [ '01100001', '01100010', '01100011' ]
+  // grab the binary array from the helper
+  let binaryArray = binaryArrayHelper(str); // [ '01100001', '01100010', '01100011' ]
 
-    // iterate through the binary bytes
-    for (let ele of binaryArray) {
-        let charCode = parseInt(ele,2) // ele => '01100011'
-        // console.log({charCode});
-        ascii += String.fromCharCode(charCode)
-    }
+  // iterate through the binary bytes
+  for (let ele of binaryArray) {
+    let charCode = parseInt(ele, 2); // ele => '01100011'
+    // console.log({charCode});
+    ascii += String.fromCharCode(charCode);
+  }
 
-    // console.log(ascii)
-
-    return ascii
-
-}
-
-
+  // console.log(ascii)
+  return ascii;
+};
 
 console.log(binaryToAscii("011000010110001001100011"));
-"abc";
+("abc");
 console.log(binaryToAscii("010000010100001001000011"));
 // "ABC";
 console.log(
