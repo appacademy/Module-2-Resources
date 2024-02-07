@@ -58,7 +58,7 @@ const binaryToAscii = (str) => {
 };
 
 console.log(binaryToAscii("011000010110001001100011"));
-("abc");
+//"abc";
 console.log(binaryToAscii("010000010100001001000011"));
 // "ABC";
 console.log(
