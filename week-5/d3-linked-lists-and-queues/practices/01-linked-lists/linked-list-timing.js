@@ -9,43 +9,40 @@ Construct a timing test to verify the time complexities of `addToHead` and
 // Your code here
 
 
-const ll = new LinkedList()
+let ll = new LinkedList()
 
 
-
-
-
-console.time('start')
+console.time('11 add to head start')
 for(let i = 0; i < 10000; i++){
-  ll.addToHead();
+  ll.addToHead(i);
 }
-console.time('end')
+console.timeEnd('11 add to head start')
 // ???
 
 
 ll = new LinkedList()
-console.time('start')
+console.time('11 add to tail start')
 for(let i = 0; i < 10000; i++){
-  ll.addToTail();
+  ll.addToTail(i);
 }
-console.time('end')
+console.timeEnd('11 add to tail start')
 // ???
 
 
 
 let dll = new DoublyLinkedList();
-console.time('start')
+console.time('dl add to head start')
 for(let i = 0; i < 10000; i++){
-  DoublyLinkedList.addToHead();
+  dll.addToHead(i);
 }
-console.time('end')
+console.timeEnd('dl add to head start')
 // ???
 
 
 dll = new DoublyLinkedList();
-console.time('start')
+console.time('dl add to tail start')
 for(let i = 0; i < 10000; i++){
-  DoublyLinkedList.addToTail();
+  dll.addToTail(i);
 }
-console.time('end')
+console.timeEnd('dl add to tail start')
 // ???
