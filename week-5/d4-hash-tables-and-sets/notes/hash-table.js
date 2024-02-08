@@ -59,7 +59,7 @@ class HashTable {
   };
 
 
-  // *  Finally, you will need a function to convert the key hash into a valid array index
+  // * Finally, you will need a function to convert the key hash into a valid array index
   // * result of modulo will always be in range of 0 - number - 1
   hashMod(key) {
     // Code below will always return an index from 0 through to data.length - 1
@@ -123,7 +123,7 @@ console.log(myHash.hashMod(pair3.key));// 2
 // What do we do?
 // * reduce probability by increasing array size
 // * we can do dynamically by using equation
-// * probability of 1 /buckets.length
+// * probability of 1 / buckets.length
   // * similar to dynamic array resizing
   // * if we resize the buckets; each key will need to be rehashed to determine new bucket
 // * but always still a chance of collision
@@ -155,7 +155,9 @@ console.log(myHash.hashMod(pair3.key));// 2
 // * hash method will use SHA256 instead of our example
 // * will need to npm install js-sha256
 const sha256 = require('js-sha256');
-console.log(sha256("Hello, world!"));
-
+// console.log(sha256("Hello, world!"));
+// console.log(sha256("H"));
+// console.log(sha256("He"));
+// console.log(sha256("He"));
 // ! Note: because the output is to large to parseInt
 // * we will grab only the first 8 characters

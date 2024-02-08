@@ -1,5 +1,7 @@
-const sha256 = require('js-sha256');
 
+
+const sha256 = require('js-sha256');
+// npm i js-sha256'
 class KeyValuePair {
   constructor(key, value) {
     this.key = key;
@@ -16,6 +18,8 @@ class HashTable {
 
   hash(key) {
     // Your code here
+    // grab first 8 characters of the sha256 string
+    // convert to integer parseInt
   }
 
   hashMod(key) {
