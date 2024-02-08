@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css reset file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <!-- project css file -->
+    <link rel="stylesheet" href="index.css">
+    <title>Kitten Image Viewer</title>
+</head>
+<body>
+    <h1>Jan 2024 Cohort Kitten Image Viewer</h1>
+    <div class="main-container">
+        <div class="small-container">
+            <img class="little-image" id="previous-image" />
+            <p class="text">Previous Image</p>
+            <button class="button" id="previous-button"> ⬅️ Previous</button>
+            <button class="small-button" id="delete-head">Delete from Head</button>
+        </div>
+        <div class="small-container">
+            <img class="big-image" id="current-image" />
+            <p class="text">Current Image</p>
+        </div>
+        <div class="small-container">
+            <img class="little-image" id="next-image"/>
+            <p class="text">Next Image</p>
+            <button class ="button" id="next-button">Next ➡️</button>
+            <button class ="small-button" id="delete-tail">Delete from Tail</button>
+        </div>
+    </div>
+    <div class="add-file-container">
+        <label for="file-input">Add a New Image URL:</label>
+        <input name="file-input" type="text" id="file-url-input"/>
+        <div class="button-container">
+            <button class="big-button" id="add-head-button">Add to Head</button>
+            <button class="big-button" id="add-tail-button">Add to Tail</button>
+        </div>
+    </div>
+    <!-- Your JS script link -->
+    <script type="module" src="./image-viewer.js"></script>
+</body>
+</html>
