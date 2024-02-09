@@ -11,8 +11,6 @@
 # Resources allowed For this assessment, you may use the following resources:
 
 - MDN
-- open.appacademy.io
-- code you've written yourself
 - VSCode
 - Console
 
