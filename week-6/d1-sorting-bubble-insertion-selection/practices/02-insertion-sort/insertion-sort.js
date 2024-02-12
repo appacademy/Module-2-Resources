@@ -41,7 +41,28 @@ function insertionSort(arr) {
   return sorted;
 }
 
-console.log(insertionSort([2, 4, 0, 8, 1]));
+// console.log(insertionSort([2, 4, 0, 8, 1]));
+
+/*
+
+  copy: [2, 4, 0, 8 ] val: 1 sorted:  [1]
+  copy: [2, 4, 0,   ] val: 8 sorted:  [1, 8] i: 1
+  copy: [2, 4,      ] val: 0  sorted: [0, 1, 8] i: 0
+  copy: [2,         ] val: 4  sorted: [0, 1, 4, 8] i: 2
+  copy: [           ] val: 2  sorted: [0, 1, 2, 4, 8] i: 2
+
+
+*/
+
+
+
+
+
+
+
+
+
+
 
 // In-place Insertion Sort
 // Mutates the original array
