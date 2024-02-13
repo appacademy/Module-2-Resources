@@ -89,7 +89,7 @@ for (let i = 1; i <= 100; i++){
 // T(1) * simplified
 // n does not change therefore n does not effect output
 
-// ! skip for next week
+
 // O(log(n)) - Logarithmic: display a sense of continually halving the size of the input.
 // * Every time you double the size of the input, it only requires one additional step.
 // * larger input sizes will only increase the number of steps required by a small amount
@@ -105,6 +105,10 @@ if (n <= 1) return;
 // log(n)
 logarithmic1(n / 2);
 };
+// 100 -> 99 -> 98
+// 100 -> 50 -> 25 -> 12 -> 6 -> 3 -> 1
+
+
 // T(   log(n)  )
 
 // O(log(n))
