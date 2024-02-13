@@ -71,24 +71,33 @@ function merge(arrA, arrB) {
     debugger;
     // Compare the first values of each array
     // Add the smaller value to the return array
-    // Move the pointer to the next value in that array
-    if (indexA === arrA.length) {
+    // // Move the pointer to the next value in that array
+
+    if (indexA === arrA.length || arrA[indexA] > arrB[indexB]) {
       returnArr.push(arrB[indexB]);
       indexB++;
-      debugger;
-    } else if (indexB === arrB.length) {
-      returnArr.push(arrA[indexA]);
-      indexA++;
-      debugger;
-    } else if (arrA[indexA] < arrB[indexB]) {
-      returnArr.push(arrA[indexA]);
-      indexA++;
-      debugger;
     } else {
-      returnArr.push(arrB[indexB]);
-      indexB++;
-      debugger;
+      returnArr.push(arrA[indexA]);
+      indexA++;
     }
+
+    // if (indexA === arrA.length) {
+    //   returnArr.push(arrB[indexB]);
+    //   indexB++;
+    //   debugger;
+    // } else if (indexB === arrB.length) {
+    //   returnArr.push(arrA[indexA]);
+    //   indexA++;
+    //   debugger;
+    // } else if (arrA[indexA] < arrB[indexB]) {
+    //   returnArr.push(arrA[indexA]);
+    //   indexA++;
+    //   debugger;
+    // } else {
+    //   returnArr.push(arrB[indexB]);
+    //   indexB++;
+    //   debugger;
+    // }
   }
 
   // Return the return array
@@ -96,7 +105,7 @@ function merge(arrA, arrB) {
 }
 
 
-// let zainyMerge = merge(merge(merge([1], [7]), merge([3], [4])), merge(merge([2], [0]), merge([8], [9])))
+// let zainyMerge = merge(merge(merge([{obj: 'a', value:'2}], [7]), merge([3], [4])), merge(merge([2], [0]), merge([8], [9])))
 
 // console.log(zainyMerge)
 
