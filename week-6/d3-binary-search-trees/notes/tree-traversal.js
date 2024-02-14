@@ -70,6 +70,14 @@ const myTree = new Tree(a);
        2     6
       / \   / \
      1   3 5   7
+
+
+
+    4:{name: 'brandon', age: '28'}
+        /          \
+3: {name: 'maica'}
+      / \          / \
+  apple  half     5   7
 */
 
 /*
@@ -98,4 +106,58 @@ const myTree = new Tree(a);
 
   Depth-first traversals
 
+*/
+
+
+
+/*
+    Pre-order traversal
+    * printing comes before the left and right recursive calls.
+    * console.log before recursive call
+          4
+        /   \
+       2     6
+      / \   / \
+     1   3 5   7
+
+    * 4, 2, 1, 3, 6, 5, 7
+    * we see the logs in the order they are added to the stack
+*/
+
+
+
+/*
+  In-order traversal
+
+          4
+        /   \
+       2     6
+      / \   / \
+     1   3 5   7
+
+  * 1, 2, 3, 4, 5, 6, 7
+  * we will see the left nodes when we start popping them off the stack
+  * we will see the right nodes adding them to the stack
+  * if used on a binary search tree
+    * the nodes will be printed in order
+  ! not until a stack frame popped off will we see the console.log
+  ! left stack frame will be pop of first
+  ! on the way down to the previous frame, before calling the right side we will see the log
+*/
+
+
+/*
+  Post-order traversal
+  * print the values after the recursive calls
+  * console.log after the left and right recursive call
+          4
+        /   \
+       2     6
+      / \   / \
+     1   3 5   7
+
+  * 1, 3, 2, 5, 7, 6, 4
+  * we will see the logs in the order they exit the call stack
+    * last in first out
+    * first in last out
 */
