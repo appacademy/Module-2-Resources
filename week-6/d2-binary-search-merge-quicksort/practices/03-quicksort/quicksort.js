@@ -18,6 +18,9 @@
   Worst case: O(n^2)
   * When the array is sorted in descending order or all the elements are the same in the array, the time complexity jumps to O(n²), since the sub-arrays are highly unbalanced.
 
+
+  O(n log n)
+
   Space complexity
   * O(n) - proportional to size of call stack
 
@@ -42,7 +45,10 @@ function quicksort(arr) {
   if(arr.length <= 1) return arr;
 
   // Pick the first value as the pivot
-  let pivot = arr.shift();
+
+  let pivot = arr.shift();// <-- 
+
+
   // let  [pivot, rest] = arr;
   // let pivot = arr[0];
 
