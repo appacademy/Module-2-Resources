@@ -64,19 +64,22 @@ class BinarySearchTree {
     this.preOrderTraversal(currentNode.right);
   }
 
+  // I copy pasted preOrderTraversal into inOrderTraversal,
   inOrderTraversal(currentNode = this.root) {
 
     if(!currentNode) return;
 
-    this.preOrderTraversal(currentNode.left);
+    this.inOrderTraversal(currentNode.left);
     console.log(currentNode.val);
-    this.preOrderTraversal(currentNode.right);
+    this.inOrderTraversal(currentNode.right);
   }
 
   postOrderTraversal(currentNode = this.root) {
 
-    this.preOrderTraversal(currentNode.left);
-    this.preOrderTraversal(currentNode.right);
+    if(!currentNode) return;
+
+    this.postOrderTraversal(currentNode.left);
+    this.postOrderTraversal(currentNode.right);
     console.log(currentNode.val);
 
   }
