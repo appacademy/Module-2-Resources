@@ -39,6 +39,7 @@ class SocialNetwork {
     follows: { 1:{2}, 2:{1, 3, 4} }
     [2,3], [2,4]
 
+
   */
 
   getFollows(userID) {
@@ -49,34 +50,68 @@ class SocialNetwork {
     const followers = new Set();
 
     for (let id in this.follows) {
-      if (this.follows[id].has(userID)) followers.add(parseInt(id));
-    };
+      if (this.follows[id].has(userID)) followers.add(+id);
+    }
 
     return followers;
   }
 
   getRecommendedFollows(userID, degrees) {
-    // Your code here
-  }
+    const queue = [[userID]];
+
+    const recommended = [];// !
+
+    const visited = new Set([userID]);
+
+    while (queue.length) {
+      let path = queue.shift();
+
+      let id = path[path.length - 1];
+
+      let neighbors = this.follows[id];
+      // console.log(id);
+
+      if(path.length > degrees + 2) break;// !
+
+      if(path.length > 2) recommended.push(id);// !
+
+      neighbors.forEach((neighbor) => {
+        if (!visited.has(neighbor)) {
+          visited.add(neighbor);
+          queue.push([...path, neighbor]);
+        }
+      });
+    };
+
+    return recommended;
+  };
+
+
 }
 
-const socialNetwork = new SocialNetwork();
+// const socialNetwork = new SocialNetwork();
 
-userID1 = socialNetwork.addUser("John Doe");
-userID2 = socialNetwork.addUser("Jane Doe");
+// userID1 = socialNetwork.addUser("User 1");
+// userID2 = socialNetwork.addUser("User 2");
+// userID3 = socialNetwork.addUser("User 3");
+// userID4 = socialNetwork.addUser("User 4");
+// userID5 = socialNetwork.addUser("User 5");
+// userID6 = socialNetwork.addUser("User 6");
 
-user1 = socialNetwork.getUser(1);
-user2 = socialNetwork.getUser(2);
-user3 = socialNetwork.getUser(3);
+// socialNetwork.follow(1, 2);
+// socialNetwork.follow(2, 3);
+// socialNetwork.follow(3, 4);
+// socialNetwork.follow(3, 5);
+// socialNetwork.follow(4, 1);
+// socialNetwork.follow(4, 2);
+// socialNetwork.follow(5, 6);
 
-socialNetwork.follow(1, 2); // true
-socialNetwork.follow(1, 3); // false, userID 3 does not exist
 
+// console.log(socialNetwork.getRecommendedFollows(1, 1));
 // console.log(socialNetwork.getFollows(1)); // Set { 2 }
 // console.log(socialNetwork.getFollows(2)); // Set {}
 
-
-console.log(socialNetwork.getFollowers(1)); // Set {}
-console.log(socialNetwork.getFollowers(2)); // Set { 1 }
+// console.log(socialNetwork.getFollowers(1)); // Set {}
+// console.log(socialNetwork.getFollowers(2)); // Set { 1 }
 
 module.exports = SocialNetwork;
