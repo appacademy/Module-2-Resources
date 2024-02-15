@@ -5,10 +5,9 @@
 	- graph problem worth 8 points
 -Total points: 25
 -Passing points: 20
--Time allowed: 3.5 hours
+-Time allowed: 3.0 hours
 -Resources Allowed:
     -MDN
-    -open.appacademy.io
     -VSCode
     -Console
     -Code you wrote yourself
